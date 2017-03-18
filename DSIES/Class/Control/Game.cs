@@ -10,6 +10,7 @@ namespace DSIES.Class.Control
     class Game
     {
         private bool done;
+
         public bool Done
         {
             get { return done; }
