@@ -11,6 +11,7 @@ namespace DSIES.Class.Control
     {
         private bool done;
 
+
         public bool Done
         {
             get { return done; }
