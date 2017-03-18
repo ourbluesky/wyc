@@ -58,8 +58,10 @@ namespace DSIES.Pages
             //}
             //else
             //{
+
                 EducationSelectPage page = new EducationSelectPage();
                 PageList.Main.setPage(page);
+
                 i++;
             //}
         }

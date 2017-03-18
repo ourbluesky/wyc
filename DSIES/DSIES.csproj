@@ -69,7 +69,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Class\Model\CustomMessageBox.xaml">
+    <Page Include="Pages\CustomMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,7 +86,7 @@
     <Compile Include="Class\Control\GifImage.cs" />
     <Compile Include="Class\Control\LoginData.cs" />
     <Compile Include="Class\Control\Question.cs" />
-    <Compile Include="Class\Model\CustomMessageBox.xaml.cs">
+    <Compile Include="Pages\CustomMessageBox.xaml.cs">
       <DependentUpon>CustomMessageBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class\Model\Encrytor.cs" />
@@ -259,7 +259,6 @@
     <Resource Include="Picture\stop.png" />
     <Resource Include="Picture\分心copy.png" />
     <Resource Include="Picture\背景报表.jpg" />
-    <Content Include="Picture\超速.mp4" />
     <Resource Include="Picture\场景三copy.png" />
     <Resource Include="Picture\场景二copy.png" />
     <Resource Include="Picture\场景一copy.png" />

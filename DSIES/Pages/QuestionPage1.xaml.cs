@@ -1270,33 +1270,32 @@ namespace DSIES.Pages
                 CustomMessageBox.Show("温馨提示：","您第27题未答完，请继续答题！");//您有未答完题目，请继续答题！
             }
 
-            //bool? dr;
-            //dr=CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
-            //if (dr == Yes)
+            var dr = CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
+            if (dr == true)
+            {
 
-            if (PageList.Main.QUESTION.Score1 < 49 && PageList.Main.QUESTION.Score1 > 26)
-            {
-                PageList.Main.QUESTION.Grade1 = "A";
-            }
-            else if (PageList.Main.QUESTION.Score1 < 71 && PageList.Main.QUESTION.Score1 > 48)
-            {
-                PageList.Main.QUESTION.Grade1 = "B";
-            }
-            else if (PageList.Main.QUESTION.Score1 < 93 && PageList.Main.QUESTION.Score1 > 70)
-            {
-                PageList.Main.QUESTION.Grade1 = "C";
-            }
-            else if (PageList.Main.QUESTION.Score1 < 115 && PageList.Main.QUESTION.Score1 > 92)
-            {
-                PageList.Main.QUESTION.Grade1 = "D";
-            }
-            else if (PageList.Main.QUESTION.Score1 < 136 && PageList.Main.QUESTION.Score1 > 114)
-            {
-                PageList.Main.QUESTION.Grade1 = "E";
-            }
+                if (PageList.Main.QUESTION.Score1 < 49 && PageList.Main.QUESTION.Score1 > 26)
+                {
+                    PageList.Main.QUESTION.Grade1 = "A";
+                }
+                else if (PageList.Main.QUESTION.Score1 < 71 && PageList.Main.QUESTION.Score1 > 48)
+                {
+                    PageList.Main.QUESTION.Grade1 = "B";
+                }
+                else if (PageList.Main.QUESTION.Score1 < 93 && PageList.Main.QUESTION.Score1 > 70)
+                {
+                    PageList.Main.QUESTION.Grade1 = "C";
+                }
+                else if (PageList.Main.QUESTION.Score1 < 115 && PageList.Main.QUESTION.Score1 > 92)
+                {
+                    PageList.Main.QUESTION.Grade1 = "D";
+                }
+                else if (PageList.Main.QUESTION.Score1 < 136 && PageList.Main.QUESTION.Score1 > 114)
+                {
+                    PageList.Main.QUESTION.Grade1 = "E";
+                }
 
-
-            flag = 0;//记得删。
+                flag = 0;//记得删。
             if (flag == 0)
             {
 
@@ -1310,6 +1309,14 @@ namespace DSIES.Pages
                 flag = 0;
                 PageList.Main.QUESTION.Score1 = 0;
             }
+
+            }
+            else
+            { 
+
+            }
+
+           
         }
     }
 }

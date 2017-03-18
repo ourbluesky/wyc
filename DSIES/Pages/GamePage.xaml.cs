@@ -100,7 +100,6 @@ namespace DSIES.Pages
             else
             {
                 CustomMessageBox.Show("温馨提示：", "游戏已完成，请进行下一步！");
-
             }
         }
 
@@ -125,7 +124,6 @@ namespace DSIES.Pages
             else
             {
                 CustomMessageBox.Show("温馨提示：", "游戏已完成，请进行下一步！");
-
             }
         }
         private void D_Button_Click(object sender, RoutedEventArgs e)
