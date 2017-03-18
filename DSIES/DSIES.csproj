@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B62E28CE-34ED-4C2D-A2A7-4FDF3950F5FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSIES</RootNamespace>
+    <AssemblyName>DSIES</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts">
+      <HintPath>..\packages\LiveCharts.0.9.4\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.4\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="presentationframework.aero2" />
+    <Reference Include="presentationframework.aerolite" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="PresentationFramework.Royale" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Class\Model\CustomMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class\Control\Education.cs" />
+    <Compile Include="Class\Control\Game.cs" />
+    <Compile Include="Class\Control\GifImage.cs" />
+    <Compile Include="Class\Control\LoginData.cs" />
+    <Compile Include="Class\Control\Question.cs" />
+    <Compile Include="Class\Model\CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Model\Encrytor.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\DataExportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EducationLoadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EducationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EducationSelectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Education_educatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\QuesGameSeclectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\QuestionPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\QuestionPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ScenePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SceneSelectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\UnifiedColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\DataExportPage.xaml.cs">
+      <DependentUpon>DataExportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EducationLoadPage.xaml.cs">
+      <DependentUpon>EducationLoadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EducationPage.xaml.cs">
+      <DependentUpon>EducationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EducationSelectPage.xaml.cs">
+      <DependentUpon>EducationSelectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Education_educatePage.xaml.cs">
+      <DependentUpon>Education_educatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QuesGameSeclectPage.xaml.cs">
+      <DependentUpon>QuesGameSeclectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QuestionPage1.xaml.cs">
+      <DependentUpon>QuestionPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QuestionPage2.xaml.cs">
+      <DependentUpon>QuestionPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ScenePage.xaml.cs">
+      <DependentUpon>ScenePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SceneSelectPage.xaml.cs">
+      <DependentUpon>SceneSelectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UDP\" />
+    <Folder Include="Widget\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Info\Database\creat_user_table.sql">
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Resource Include="Picture\超车.png" />
+    <Resource Include="Picture\超速.png" />
+    <Resource Include="Picture\qu.png" />
+    <Resource Include="Picture\clock.jpg" />
+    <Resource Include="Picture\关闭.png" />
+    <Resource Include="Picture\wenjuan.png" />
+    <Resource Include="Picture\红灯.png" />
+    <Resource Include="Picture\按下分心.png" />
+    <Resource Include="Picture\按下并线.png" />
+    <Resource Include="Picture\按下超车.png" />
+    <Resource Include="Picture\按下超速.png" />
+    <Resource Include="Picture\按下闯红灯.png" />
+    <Resource Include="Picture\bg2.png" />
+    <Resource Include="Picture\按下游戏.png" />
+    <Resource Include="Picture\按下问卷.png" />
+    <Content Include="Video\交叉口.mp4" />
+    <Content Include="Video\分心.mp4" />
+    <Content Include="Video\变道.mp4" />
+    <Content Include="Video\超车.mp4" />
+    <Content Include="Video\超速.mp4" />
+    <Resource Include="Picture\进度条.gif" />
+    <Resource Include="Picture\next.png" />
+    <Resource Include="Picture\pause.png" />
+    <Resource Include="Picture\play.png" />
+    <Resource Include="Picture\ProgressIndicator.gif" />
+    <Resource Include="Picture\start.png" />
+    <Resource Include="Picture\stop.png" />
+    <Resource Include="Picture\分心copy.png" />
+    <Resource Include="Picture\背景报表.jpg" />
+    <Content Include="Picture\超速.mp4" />
+    <Resource Include="Picture\场景三copy.png" />
+    <Resource Include="Picture\场景二copy.png" />
+    <Resource Include="Picture\场景一copy.png" />
+    <Resource Include="Picture\问卷.png" />
+    <Resource Include="Picture\naire1.png" />
+    <Resource Include="Picture\火苗.png" />
+    <Resource Include="Picture\game.png" />
+    <Resource Include="Picture\naire.png" />
+    <Resource Include="Picture\场景3.png" />
+    <Resource Include="Picture\分心.png" />
+    <Resource Include="Picture\场景1.png" />
+    <Resource Include="Picture\场景2.png" />
+    <Resource Include="Picture\并线.png" />
+    <Resource Include="Picture\项目名称.png" />
+    <Resource Include="Picture\登_陆.png" />
+    <Resource Include="Picture\注册.png" />
+    <Resource Include="Picture\框.png" />
+    <Resource Include="Picture\登录.png" />
+    <Resource Include="Picture\登陆.png" />
+    <Resource Include="Picture\left.png" />
+    <Resource Include="Picture\right.png" />
+    <Resource Include="Picture\bg.png" />
+    <Resource Include="Picture\纸牌.jpg" />
+    <Resource Include="Picture\jocker.png" />
+    <Resource Include="Picture\问卷背景.png" />
+    <Resource Include="Picture\tip.png" />
+    <Resource Include="Picture\油门.png" />
+    <Resource Include="Picture\速度.png" />
+    <Resource Include="Picture\加速度.png" />
+    <Resource Include="Picture\返回.png" />
+    <Resource Include="Picture\场景.png" />
+    <Resource Include="Picture\刹车.png" />
+    <Resource Include="Picture\背景.png" />
+    <Resource Include="Picture\shutdown.png" />
+    <Resource Include="Picture\做场景.png" />
+    <Resource Include="Picture\校徽.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

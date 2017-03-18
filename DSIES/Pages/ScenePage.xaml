@@ -1,0 +1,118 @@
+﻿<Page x:Class="DSIES.Pages.ScenePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DSIES"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      Height="650" Width="960"
+      Title="ScenePage">
+    <Grid>
+        <Image x:Name="image" Source="..\Picture\bg.png" Margin="-63,-56,-74,-33" />
+        <Grid x:Name="ContentGrid"
+            Height="650" Width="960">
+
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="130" Margin="640,321,-0.8,0" VerticalAlignment="Top" Width="148">
+                <Grid HorizontalAlignment="Left" Height="130" Margin="-1" VerticalAlignment="Top" Width="148">
+                    <Button Style="{DynamicResource Shut_down_ButtonStyle}" x:Name="back_button" Content="Button" Click="back_button_Click" HorizontalAlignment="Left" Height="74" Margin="36,19,0,0" VerticalAlignment="Top" Width="73"/>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="80" Margin="639,241,-0.8,0" VerticalAlignment="Top" Width="149">
+                <Grid HorizontalAlignment="Left" Height="79" Margin="0.2,0.2,-2,-0.8" VerticalAlignment="Top" Width="149">
+                    <Label x:Name="label_Copy2" Content="刹车：" HorizontalAlignment="Left" Height="43" Margin="5,21,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
+                    <TextBlock x:Name="Accelerator_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,21,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.548,4.205" FontSize="25" Foreground="#FFE9F304"/>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="80" Margin="640,0,-0.8,0" VerticalAlignment="Top" Width="148">
+                <Grid HorizontalAlignment="Left" Height="80" Margin="0,0,-2.4,-1.6" VerticalAlignment="Top" Width="148">
+                    <Label x:Name="label" Content="速度：" HorizontalAlignment="Left" Height="43" Margin="1,22,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
+                    <TextBlock x:Name="Speed_textBlock" HorizontalAlignment="Left" Height="43" Margin="72,22,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="81" Margin="639,80,-0.8,0" VerticalAlignment="Top" Width="149">
+                <Grid HorizontalAlignment="Left" Height="79" Margin="0.2,0,0,-0.6" VerticalAlignment="Top" Width="147">
+                    <TextBlock x:Name="Acceleration_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                    <Label x:Name="label_Copy" Content="加速度：" HorizontalAlignment="Left" Height="43" Margin="0,26,0,0" VerticalAlignment="Top" Width="84" FontSize="20" Foreground="#FFDDCF00"/>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="80" Margin="639,161,-0.8,0" VerticalAlignment="Top" Width="149">
+                <Grid HorizontalAlignment="Left" Height="80" Margin="0,0,-1.8,-1.6" VerticalAlignment="Top" Width="149">
+                    <Label x:Name="label_Copy1" Content="油门：" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00" Margin="0,26,0,0"/>
+                    <TextBlock x:Name="Break_textBlock" HorizontalAlignment="Left" Height="43" Margin="68,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="187" VerticalAlignment="Top" Width="640">
+                <Grid HorizontalAlignment="Left" Height="186" Margin="0.2,0.2,-1.4,-0.6" VerticalAlignment="Top" Width="638">
+                    <Button Style="{DynamicResource Speed_ButtonStyle}" x:Name="Speed_Button" Click="Speed_Button_Click" HorizontalAlignment="Left" Height="26" Margin="37,10,0,0" VerticalAlignment="Top" Width="103" Background="Black"/>
+                    <Button Style="{DynamicResource Acceleration_ButtonStyle}" x:Name="Acceleration_button" Click="Acceleration_button_Click" Content="Button" HorizontalAlignment="Left" Height="26" Margin="37,52,0,0" VerticalAlignment="Top" Width="103"/>
+                    <Button Style="{DynamicResource Break_ButtonStyle}" x:Name="Break_Button" Content="Button" Click="Break_Button_Click" HorizontalAlignment="Left" Height="26" Margin="37,93,0,0" VerticalAlignment="Top" Width="103"/>
+                    <Button Style="{DynamicResource Accelerator_ButtonStyle}" x:Name="Accelerator_Button" Click="Accelerator_Button_Click" Content="Button" HorizontalAlignment="Left" Height="26" Margin="37,134,0,0" VerticalAlignment="Top" Width="103"/>
+                    <lvc:CartesianChart x:Name="Chart_Big" Margin="176,0,37,10">
+                        <lvc:CartesianChart.Series>
+                            <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
+                            <!-- 注意此处绑定了值为Points -->
+                            <lvc:LineSeries x:Name="Speed" Fill="Transparent" Values="{Binding PointsM}" Visibility="Visible" />
+                            <lvc:LineSeries x:Name="Acceleration" Fill="Transparent" Values="{Binding PointsN}" Visibility="Hidden" />
+                            <lvc:LineSeries x:Name="Break" Fill="Transparent" Values="{Binding PointsN}" Visibility="Hidden" />
+                            <lvc:LineSeries x:Name="Accelerator" Fill="Transparent" Values="{Binding PointsM}" Visibility="Hidden" />
+                        </lvc:CartesianChart.Series>
+                    </lvc:CartesianChart>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="134" Margin="428,187,0,0" VerticalAlignment="Top" Width="212">
+                <Grid HorizontalAlignment="Left" Height="134" Margin="-0.8,0.2,0,-3" VerticalAlignment="Top" Width="210">
+                    <Label x:Name="label3" Content="油门" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006" Margin="-0.8,-0.8,0,0"/>
+                    <lvc:CartesianChart x:Name="Chart_Small_2" Margin="29,24,0,0" RenderTransformOrigin="0.493,0.424">
+                        <lvc:CartesianChart.Series>
+                            <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
+                            <!-- 注意此处绑定了值为Points -->
+                            <lvc:LineSeries x:Name="Acceleration_small" Fill="Transparent" Values="{Binding PointsM}"/>
+                        </lvc:CartesianChart.Series>
+                    </lvc:CartesianChart>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="134" Margin="428,321,0,-3.8" VerticalAlignment="Top" Width="212">
+                <Grid HorizontalAlignment="Left" Height="133" Margin="0,0,-2.4,-0.2" VerticalAlignment="Top" Width="212">
+                    <Label x:Name="label4" Content="刹车" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006"/>
+                    <lvc:CartesianChart x:Name="Chart_Small_4" Margin="31,22,0,0" RenderTransformOrigin="0.52,0.404">
+                        <lvc:CartesianChart.Series>
+                            <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
+                            <!-- 注意此处绑定了值为Points -->
+                            <lvc:LineSeries x:Name="Accelerator_small" Fill="Transparent" Values="{Binding PointsM}"/>
+                        </lvc:CartesianChart.Series>
+                    </lvc:CartesianChart>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="134" Margin="221,187,0,0" VerticalAlignment="Top" Width="207">
+                <Grid HorizontalAlignment="Left" Height="133" Margin="0,0,-0.2,-1.8" VerticalAlignment="Top" Width="205">
+                    <Label x:Name="label1" Content="速度" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006"/>
+                    <lvc:CartesianChart x:Name="Chart_Small_1" Margin="24,23,0,0">
+                        <lvc:CartesianChart.Series>
+                            <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
+                            <!-- 注意此处绑定了值为Points -->
+                            <lvc:LineSeries x:Name="Speed_small" Fill="Transparent" Values="{Binding PointsM}" />
+                        </lvc:CartesianChart.Series>
+                    </lvc:CartesianChart>
+                </Grid>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="134" Margin="221,321,0,-3.8" VerticalAlignment="Top" Width="207"/>
+            <Grid HorizontalAlignment="Left" Height="134" Margin="221,321,0,-3.8" VerticalAlignment="Top" Width="207">
+                <Label x:Name="label2" Content="加速度" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006"/>
+                <lvc:CartesianChart x:Name="Chart_Small_3" Margin="26,23,0,0">
+                    <lvc:CartesianChart.Series>
+                        <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
+                        <!-- 注意此处绑定了值为Points -->
+                        <lvc:LineSeries x:Name="Break_small" Fill="Transparent" Values="{Binding PointsM}"/>
+                    </lvc:CartesianChart.Series>
+                </lvc:CartesianChart>
+            </Grid>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="264" Margin="0,187,0,0" VerticalAlignment="Top" Width="221">
+                <Grid HorizontalAlignment="Left" Height="264" Margin="0,0,-1.8,-1.6" VerticalAlignment="Top" Width="221">
+                    <Image x:Name="image1" Source="..\Picture\场景.png" HorizontalAlignment="Left" Height="434" Margin="0,25,0,-195" VerticalAlignment="Top" Width="221"/>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,360 @@
+﻿<Page x:Class="DSIES.Pages.QuestionPage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+ 
+    
+        Title="问卷调查 QUESTIONNAIRE" Height="640" Width="960">
+
+    <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Width="960" Height="640">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Name="scollviewer1">
+            <Border BorderBrush="Black" BorderThickness="2" Padding="15">
+                <Border.Background>
+                    <ImageBrush ImageSource="..\Picture\wenjuan.png"></ImageBrush>
+                </Border.Background>
+                <StackPanel Margin="100,0,0,0">
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
+
+
+                    <Image Source="..\Picture\naire1.png"  Margin="600,0,60,-10" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="120" Width="120"/>
+
+
+                    <Label Content="尊敬的驾驶员，请结合您日常驾驶中的驾驶行为在从1-5的答案中勾选。" FontSize="18" FontWeight="Bold" Margin="50,-70,0,10"/>
+
+                    <Label FontWeight="Bold" Content="1、跟随前车时距离过近，以至于紧急状况下难以及时停车。" FontSize="16" Margin="0,0,0,10"/>
+
+                    <Grid>
+                        <RadioButton GroupName="1" x:Name="button_1A"  Checked="RadioButton_Checked_1" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="1" x:Name="button_1B"  Checked="RadioButton_Checked_2" Content="B 有点愤怒 " FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="1" x:Name="button_1C"  Checked="RadioButton_Checked_3" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="1" x:Name="button_1D"  Checked="RadioButton_Checked_4" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="1" x:Name="button_1E"  Checked="RadioButton_Checked_5" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10" />
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="2、对于当时的路况，有辆车开的过快。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="2" x:Name="button_2A" Checked="RadioButton_Checked_6" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10" />
+                        <RadioButton GroupName="2" x:Name="button_2B" Checked="RadioButton_Checked_7" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10" />
+                        <RadioButton GroupName="2" x:Name="button_2C" Checked="RadioButton_Checked_8" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10" />
+                        <RadioButton GroupName="2" x:Name="button_2D" Checked="RadioButton_Checked_9" Content="D 十分愤怒"  FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="2" x:Name="button_2E" Checked="RadioButton_Checked_10" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="3、一位缓慢过街的行人，降低了你的车速。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="3" x:Name="button_3A" Checked="RadioButton_Checked_11" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="3" x:Name="button_3B" Checked="RadioButton_Checked_12" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="3" x:Name="button_3C" Checked="RadioButton_Checked_13" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="3" x:Name="button_3D" Checked="RadioButton_Checked_14" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="3" x:Name="button_3E" Checked="RadioButton_Checked_15" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="4、在行车道上，有辆车开的过慢而堵塞了交通。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="4" x:Name="button_4A" Checked="RadioButton_Checked_16" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="4" x:Name="button_4B" Checked="RadioButton_Checked_17" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="4" x:Name="button_4C" Checked="RadioButton_Checked_18" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="4" x:Name="button_4D" Checked="RadioButton_Checked_19" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="4" x:Name="button_4E" Checked="RadioButton_Checked_20" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="5、有辆车直接碰到了你的后保险杠。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="5"  x:Name="button_5A" Checked="RadioButton_Checked_21" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="5"  x:Name="button_5B" Checked="RadioButton_Checked_22" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="5"  x:Name="button_5C" Checked="RadioButton_Checked_23" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="5"  x:Name="button_5D" Checked="RadioButton_Checked_24" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="5"  x:Name="button_5E" Checked="RadioButton_Checked_25" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="6、有辆车在车流中来回穿梭。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="6"  x:Name="button_6A" Checked="RadioButton_Checked_26" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="6"  x:Name="button_6B" Checked="RadioButton_Checked_27" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="6"  x:Name="button_6C" Checked="RadioButton_Checked_28" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="6"  x:Name="button_6D" Checked="RadioButton_Checked_29" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="6"  x:Name="button_6E" Checked="RadioButton_Checked_30" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="7、有辆车在快车道上加到你前面。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="7"  x:Name="button_7A" Checked="RadioButton_Checked_31" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="7"  x:Name="button_7B" Checked="RadioButton_Checked_32" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="7"  x:Name="button_7C" Checked="RadioButton_Checked_33" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="7"  x:Name="button_7D" Checked="RadioButton_Checked_34" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="7"  x:Name="button_7E" Checked="RadioButton_Checked_35" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="8、有辆车加塞抢了你等候的车位。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="8"  x:Name="button_8A" Checked="RadioButton_Checked_36" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="8"  x:Name="button_8B" Checked="RadioButton_Checked_37" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="8"  x:Name="button_8C" Checked="RadioButton_Checked_38" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="8"  x:Name="button_8D" Checked="RadioButton_Checked_39" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="8"  x:Name="button_8E" Checked="RadioButton_Checked_40" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="9、对于当时的车流，有辆车开的过慢。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="9"  x:Name="button_9A" Checked="RadioButton_Checked_41" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="9"  x:Name="button_9B" Checked="RadioButton_Checked_42" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="9"  x:Name="button_9C" Checked="RadioButton_Checked_43" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="9"  x:Name="button_9D" Checked="RadioButton_Checked_44" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="9"  x:Name="button_9E" Checked="RadioButton_Checked_45" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="10、山路上，有一辆缓慢的车不愿意靠边停车让其他车通过。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="10"  x:Name="button_10A" Checked="RadioButton_Checked_46" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="10"  x:Name="button_10B" Checked="RadioButton_Checked_47" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="10"  x:Name="button_10C" Checked="RadioButton_Checked_48" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="10"  x:Name="button_10D" Checked="RadioButton_Checked_49" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="10"  x:Name="button_10E" Checked="RadioButton_Checked_50" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="11、你看到一辆警车在隐蔽位置观察车流。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="11"  x:Name="button_11A" Checked="RadioButton_Checked_51" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="11"  x:Name="button_11B" Checked="RadioButton_Checked_52" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="11"  x:Name="button_11C" Checked="RadioButton_Checked_53" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="11"  x:Name="button_11D" Checked="RadioButton_Checked_54" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="11"  x:Name="button_11E" Checked="RadioButton_Checked_55" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="12、有辆车从你正前面倒车，里面司机看都不看。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="12"  x:Name="button_12A"  Checked="RadioButton_Checked_56" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="12"  x:Name="button_12B" Checked="RadioButton_Checked_57" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="12"  x:Name="button_12C" Checked="RadioButton_Checked_58" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="12"  x:Name="button_12D" Checked="RadioButton_Checked_59" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="12"  x:Name="button_12E" Checked="RadioButton_Checked_60" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="13、有辆车闯红灯。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="13"  x:Name="button_13A" Checked="RadioButton_Checked_61" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="13"  x:Name="button_13B" Checked="RadioButton_Checked_62" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="13"  x:Name="button_13C" Checked="RadioButton_Checked_63" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="13"  x:Name="button_13D" Checked="RadioButton_Checked_64" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="13"  x:Name="button_13E" Checked="RadioButton_Checked_65" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="14、夜晚，有辆车开着前灯驶向你。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="14"  x:Name="button_14A" Checked="RadioButton_Checked_66" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="14"  x:Name="button_14B" Checked="RadioButton_Checked_67" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="14"  x:Name="button_14C" Checked="RadioButton_Checked_68" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="14"  x:Name="button_14D" Checked="RadioButton_Checked_69" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="14"  x:Name="button_14E" Checked="RadioButton_Checked_70" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="15、夜晚，有辆车开着大灯在你后面行驶。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="15"  x:Name="button_15A" Checked="RadioButton_Checked_71" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="15"  x:Name="button_15B" Checked="RadioButton_Checked_72" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="15"  x:Name="button_15C" Checked="RadioButton_Checked_73" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="15"  x:Name="button_15D" Checked="RadioButton_Checked_74" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="15"  x:Name="button_15E" Checked="RadioButton_Checked_75" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="16、你经过一台雷达测速器。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="16"  x:Name="button_16A" Checked="RadioButton_Checked_76" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="16"  x:Name="button_16B" Checked="RadioButton_Checked_77" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="16"  x:Name="button_16C" Checked="RadioButton_Checked_78" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="16"  x:Name="button_16D" Checked="RadioButton_Checked_79" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="16"  x:Name="button_16E" Checked="RadioButton_Checked_80" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="17、当你准备超车时，这辆车开始加速。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="17"  x:Name="button_17A" Checked="RadioButton_Checked_81" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="17"  x:Name="button_17B" Checked="RadioButton_Checked_82" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="17"  x:Name="button_17C" Checked="RadioButton_Checked_83" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="17"  x:Name="button_17D" Checked="RadioButton_Checked_84" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="17"  x:Name="button_17E" Checked="RadioButton_Checked_85" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="18、有辆车在缓慢停车，堵塞了交通。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="18"  x:Name="button_18A" Checked="RadioButton_Checked_86" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="18"  x:Name="button_18B" Checked="RadioButton_Checked_87" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="18"  x:Name="button_18C" Checked="RadioButton_Checked_88" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="18"  x:Name="button_18D" Checked="RadioButton_Checked_89" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="18"  x:Name="button_18E" Checked="RadioButton_Checked_90" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="19、你陷入了交通堵塞。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="19"  x:Name="button_19A" Checked="RadioButton_Checked_91" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="19"  x:Name="button_19B" Checked="RadioButton_Checked_92" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="19"  x:Name="button_19C" Checked="RadioButton_Checked_93" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="19"  x:Name="button_19D" Checked="RadioButton_Checked_94" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="19"  x:Name="button_19E" Checked="RadioButton_Checked_95" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="20、有辆车从你左前侧并入。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="20"  x:Name="button_20A" Checked="RadioButton_Checked_96" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="20"  x:Name="button_20B" Checked="RadioButton_Checked_97" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="20"  x:Name="button_20C" Checked="RadioButton_Checked_98" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="20"  x:Name="button_20D" Checked="RadioButton_Checked_99" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="20"  x:Name="button_20E" Checked="RadioButton_Checked_100" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="21、有人向你做不雅手势以鄙视你的驾驶。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="21"  x:Name="button_21A" Checked="RadioButton_Checked_101" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="21"  x:Name="button_21B" Checked="RadioButton_Checked_102" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="21"  x:Name="button_21C" Checked="RadioButton_Checked_103" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="21"  x:Name="button_21D" Checked="RadioButton_Checked_104" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="21"  x:Name="button_21E" Checked="RadioButton_Checked_105" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="22、你撞上了一个未标记的路面深坑。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="22"  x:Name="button_22A" Checked="RadioButton_Checked_106" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="22"  x:Name="button_22B" Checked="RadioButton_Checked_107" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="22"  x:Name="button_22C" Checked="RadioButton_Checked_108" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="22"  x:Name="button_22D" Checked="RadioButton_Checked_109" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="22"  x:Name="button_22E" Checked="RadioButton_Checked_110" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="23、有辆车朝你鸣笛以表达对你驾驶的不满。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="23"  x:Name="button_23A" Checked="RadioButton_Checked_111" Content="A 从来没有" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="23"  x:Name="button_23B"  Checked="RadioButton_Checked_112" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="23"  x:Name="button_23C" Checked="RadioButton_Checked_113" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="23"  x:Name="button_23D" Checked="RadioButton_Checked_114" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="23"  x:Name="button_23E" Checked="RadioButton_Checked_115" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="24、有辆车远远超速行驶。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="24"  x:Name="button_24A" Checked="RadioButton_Checked_116" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="24"  x:Name="button_24B" Checked="RadioButton_Checked_117" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="24"  x:Name="button_24C" Checked="RadioButton_Checked_118" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="24"  x:Name="button_24D" Checked="RadioButton_Checked_119" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="24"  x:Name="button_24E" Checked="RadioButton_Checked_120" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="25、有人朝你叫嚷以表达对你驾驶的不满。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="25"  x:Name="button_25A" Checked="RadioButton_Checked_121" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="25"  x:Name="button_25B" Checked="RadioButton_Checked_122" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="25"  x:Name="button_25C" Checked="RadioButton_Checked_123" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="25"  x:Name="button_25D" Checked="RadioButton_Checked_124" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="25"  x:Name="button_25E" Checked="RadioButton_Checked_125" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="26、警察让你靠边停车。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="26"  x:Name="button_26A" Checked="RadioButton_Checked_126" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="26"  x:Name="button_26B" Checked="RadioButton_Checked_127" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="26"  x:Name="button_26C" Checked="RadioButton_Checked_128" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="26"  x:Name="button_26D" Checked="RadioButton_Checked_129" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="26"  x:Name="button_26E" Checked="RadioButton_Checked_130" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="27、行驶在一辆冒浓烟或者柴油黑烟的车后面。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="27"  x:Name="button_27A" Checked="RadioButton_Checked_131" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="27"  x:Name="button_27B" Checked="RadioButton_Checked_132" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="27"  x:Name="button_27C" Checked="RadioButton_Checked_133" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="27"  x:Name="button_27D" Checked="RadioButton_Checked_134" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="27"  x:Name="button_27E" Checked="RadioButton_Checked_135" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="28、一辆卡车扬起的沙土砾石落到你车上。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="28"  x:Name="button_28A" Checked="RadioButton_Checked_136" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="28"  x:Name="button_28B" Checked="RadioButton_Checked_137" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="28"  x:Name="button_28C" Checked="RadioButton_Checked_138" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="28"  x:Name="button_28D" Checked="RadioButton_Checked_139" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="28"  x:Name="button_28E" Checked="RadioButton_Checked_140" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="29、行驶在一辆大卡车后面，被挡住无法看到前面。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="29"  x:Name="button_29A" Checked="RadioButton_Checked_141" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="29"  x:Name="button_29B" Checked="RadioButton_Checked_142" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="29"  x:Name="button_29C" Checked="RadioButton_Checked_143" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="29"  x:Name="button_29D" Checked="RadioButton_Checked_144" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="29"  x:Name="button_29E" Checked="RadioButton_Checked_145" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="30、你遇到道路建设和改道。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="30"  x:Name="button_30A" Checked="RadioButton_Checked_146" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="30"  x:Name="button_30B" Checked="RadioButton_Checked_147" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="30"  x:Name="button_30C" Checked="RadioButton_Checked_148" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="30"  x:Name="button_30D" Checked="RadioButton_Checked_149" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="30"  x:Name="button_30E" Checked="RadioButton_Checked_150" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="31、有人在车道正中间骑自行车，使得车速缓慢。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="31"  x:Name="button_31A" Checked="RadioButton_Checked_151" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="31"  x:Name="button_31B" Checked="RadioButton_Checked_152" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="31"  x:Name="button_31C" Checked="RadioButton_Checked_153" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="31"  x:Name="button_31D" Checked="RadioButton_Checked_154" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="31"  x:Name="button_31E" Checked="RadioButton_Checked_155" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+                    <Label FontWeight="Bold" Content="32、在车流中，有辆警车离你很近行驶。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="32"  x:Name="button_32A" Checked="RadioButton_Checked_156" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="32"  x:Name="button_32B" Checked="RadioButton_Checked_157" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="32"  x:Name="button_32C" Checked="RadioButton_Checked_158" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="32"  x:Name="button_32D" Checked="RadioButton_Checked_159" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="32"  x:Name="button_32E" Checked="RadioButton_Checked_160" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10"/>
+                    </Grid>
+
+
+                    <Label FontWeight="Bold" Content="33、行驶在一辆卡车后面，上面的东西撒落在后方。" FontSize="16"  Margin="0,0,0,10"/>
+                    <Grid>
+                        <RadioButton GroupName="33"  x:Name="button_33A" Checked="RadioButton_Checked_161" Content="A 一点也不愤怒" FontSize="16"  Margin="0,0,0,10"/>
+                        <RadioButton GroupName="33"  x:Name="button_33B" Checked="RadioButton_Checked_162" Content="B 有点愤怒" FontSize="16"  Margin="170,0,0,10"/>
+                        <RadioButton GroupName="33"  x:Name="button_33C" Checked="RadioButton_Checked_163" Content="C 有些愤怒" FontSize="16"  Margin="310,0,0,10"/>
+                        <RadioButton GroupName="33"  x:Name="button_33D" Checked="RadioButton_Checked_164" Content="D 十分愤怒" FontSize="16"  Margin="450,0,0,10"/>
+                        <RadioButton GroupName="33"  x:Name="button_33E" Checked="RadioButton_Checked_165" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10" />
+                    </Grid>
+                    <!-- <Button  Content="提交!" Height="Auto" Width="Auto" Click="Button_Click"/>-->
+                    <Button Style="{DynamicResource ButtonStyle7}"  x:Name="Button"  Content="提交!" Click="Button_Click" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="80" Width="80" Grid.ColumnSpan="2" />
+
+
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+
+</Page>
+
+
+
