@@ -13,7 +13,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid>
-            <Image x:Name="image" Source="..\Picture\bg.png" Margin="-80,-34,-66,-33" RenderTransformOrigin="0.5,0.559" />
+            <!--<Image x:Name="image" Source="..\Picture\bg.png" Margin="-80,-34,-66,-33" RenderTransformOrigin="0.5,0.559" />-->
             <Image x:Name="police" Source="..\Picture\做场景.png" Margin="0,136,501,114" />
             <local:GifImage x:Name="GIFCtrl" Margin="509,398,148,220"/>
             <Button Style="{DynamicResource Stop_ButtonStyle}" x:Name="button" Click="button_Click" Content="Button" HorizontalAlignment="Left" Margin="804,500,0,0" VerticalAlignment="Top" Width="90" Height="90" RenderTransformOrigin="4.651,0.84"/>

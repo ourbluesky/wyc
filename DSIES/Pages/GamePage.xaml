@@ -12,7 +12,7 @@
             </Grid.ColumnDefinitions>
             <Grid>
 
-                <Image x:Name="image" Source="..\Picture\bg.png" Margin="-80,-34,-66,-33" />
+                <!--<Image x:Name="image" Source="..\Picture\bg.png" Margin="-80,-34,-66,-33" />-->
                 <TextBlock x:Name="textBlock_score" HorizontalAlignment="Left" Height="50" Margin="384,115,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100" FontSize="25" Foreground="Gold"/>
                 <TextBlock x:Name="textBlock_times" HorizontalAlignment="Left" Height="50" Margin="384,165,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100" FontSize="25" Foreground="Gold"/>
                 <Button Style="{DynamicResource ButtonStyle9}"  x:Name="Enter_Button" Click="Enter_Button_Click" Margin="0,494,36,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="64" Width="67" />
