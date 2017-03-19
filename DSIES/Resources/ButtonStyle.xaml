@@ -471,5 +471,42 @@
         </Setter>
     </Style>
 
+    <Style x:Key="maxmum_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\最大化.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="resize_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\还原.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="minmum_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\最小化.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
 </ResourceDictionary>
 

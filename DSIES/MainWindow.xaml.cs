@@ -202,10 +202,14 @@ namespace DSIES
             if (this.WindowState != System.Windows.WindowState.Maximized)
             {
                 this.WindowState = System.Windows.WindowState.Maximized;
+                MaxmumBtn.Visibility = System.Windows.Visibility.Hidden;
+                ResizeBtn.Visibility = System.Windows.Visibility.Visible;
             }
             else
             {
                 this.WindowState = System.Windows.WindowState.Normal;
+                ResizeBtn.Visibility = System.Windows.Visibility.Hidden;
+                MaxmumBtn.Visibility = System.Windows.Visibility.Visible;
             }
         }
 
@@ -221,6 +225,11 @@ namespace DSIES
                 ResizeBtn.Content = "Full Screen";
                 ResizeBtn.ToolTip = "Maximum the window";
             }
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
 
     }

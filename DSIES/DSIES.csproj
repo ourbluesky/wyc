@@ -244,6 +244,9 @@
     <Resource Include="Picture\bg2.png" />
     <Resource Include="Picture\按下游戏.png" />
     <Resource Include="Picture\按下问卷.png" />
+    <Resource Include="Picture\还原.png" />
+    <Resource Include="Picture\最大化.png" />
+    <Resource Include="Picture\最小化.png" />
     <Content Include="Video\交叉口.mp4" />
     <Content Include="Video\分心.mp4" />
     <Content Include="Video\变道.mp4" />
