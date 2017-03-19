@@ -246,7 +246,7 @@ namespace DSIES
         //    static Page currentEvaluation;
         //     static Page currentAbout;
         //     static EvaluationPage evaluation;
-        //    static DataExportPage dataExport;
+        static DataExportPage dataExport;
 
         public static MainWindow Main //主页面
         {
@@ -390,17 +390,17 @@ namespace DSIES
         }
 
 
-        //public static DataExportPage DataExport
-        //{
-        //    get
-        //    {
-        //        if (dataExport == null)
-        //        {
-        //            dataExport = new DataExportPage();
-        //        }
-        //        return dataExport;
-        //    }
-        //}
+        public static DataExportPage DataExport
+        {
+            get
+            {
+                if (dataExport == null)
+                {
+                    dataExport = new DataExportPage();
+                }
+                return dataExport;
+            }
+        }
 
 
         //   public bool testConnection()

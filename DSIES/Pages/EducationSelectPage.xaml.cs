@@ -128,6 +128,8 @@ namespace DSIES.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            CustomMessageBox.Show("温馨提示：", "驾驶行为教育评测已结束，点击YES打印报表！");
+            PageList.Main.setPage(PageList.DataExport);
         }
 
     }

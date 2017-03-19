@@ -30,7 +30,7 @@
             <Button Style="{DynamicResource Lighting_copy_ButtonStyle}"  x:Name="Lighting_button_Copy"  Visibility="Hidden" HorizontalAlignment="Left" Height="178" Margin="499,392,0,0" VerticalAlignment="Top" Width="236" Background="#FFC2F902"/>
             <Button Style="{DynamicResource Distraction_copy_ButtonStyle}"  x:Name="Distraction_button_Copy"  Visibility="Hidden" HorizontalAlignment="Left" Height="155" Margin="760,440,0,0" VerticalAlignment="Top" Width="235" Background="#FFC2F902"/>
 
-            <Button Style="{DynamicResource ButtonStyle7}"  x:Name="Button" Visibility="Hidden" Click="Button_Click" Margin="600,440,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="60" Width="60" Grid.ColumnSpan="2" />
+            <Button Style="{DynamicResource ButtonStyle7}"  x:Name="Button"  Click="Button_Click" Margin="0,580,136,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="60" Width="60" RenderTransformOrigin="-0.843,1.97" />
         </Grid>
     </Grid>
 </Page>

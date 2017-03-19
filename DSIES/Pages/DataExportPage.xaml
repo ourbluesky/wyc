@@ -20,7 +20,7 @@
                 <Label Content="危险预测教育驾驶行为评定表 " HorizontalAlignment="Left" Margin="382,22,0,0" VerticalAlignment="Top" FontFamily="Niagara Engraved" FontWeight="Bold" FontSize="40"/>
                 <Button Content="打印" HorizontalAlignment="Left" Margin="593,1310,0,0" VerticalAlignment="Top" Width="93" Height="54"/>
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="428" Margin="84,599,0,0" VerticalAlignment="Top" Width="1125">
-                    <Label Content="驾驶建议：" HorizontalAlignment="Left" Margin="0,0,0,0" Width="1125"/>
+                    <Label Content="驾驶建议：" HorizontalAlignment="Left" Margin="0,0,0,0" Width="1125" FontSize="16"/>
                 </Border>
                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="266" Margin="856,333,0,0" VerticalAlignment="Top" Width="353">
                     <Grid HorizontalAlignment="Left" Height="265" Margin="-0.8,-0.8,0,-0.2" VerticalAlignment="Top" Width="351">
@@ -76,7 +76,7 @@
                         <TextBlock x:Name="Angry_info" HorizontalAlignment="Left" Margin="140,25,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="100"  FontSize="16"/>
                     </Grid>
                 </Border>
-                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="80" Margin="687,165,0,0" VerticalAlignment="Top" Width="522" >
+                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="80" Margin="686,165,0,0" VerticalAlignment="Top" Width="522" >
                     <Grid HorizontalAlignment="Left" Height="80" Margin="-0.8,-0.8,-1.2,-0.8" VerticalAlignment="Top" Width="522">
                         <Label Content="事故类型：" HorizontalAlignment="Left" Margin="50,25,0,0" VerticalAlignment="Top" FontSize="16"/>
                         <TextBlock x:Name="shiguleixing_info" HorizontalAlignment="Left" Margin="150,25,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="101" FontSize="16"/>

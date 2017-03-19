@@ -233,7 +233,6 @@
     <Resource Include="Picture\超车.png" />
     <Resource Include="Picture\超速.png" />
     <Resource Include="Picture\qu.png" />
-    <Resource Include="Picture\clock.jpg" />
     <Resource Include="Picture\关闭.png" />
     <Resource Include="Picture\wenjuan.png" />
     <Resource Include="Picture\红灯.png" />
@@ -254,11 +253,9 @@
     <Resource Include="Picture\next.png" />
     <Resource Include="Picture\pause.png" />
     <Resource Include="Picture\play.png" />
-    <Resource Include="Picture\ProgressIndicator.gif" />
     <Resource Include="Picture\start.png" />
     <Resource Include="Picture\stop.png" />
     <Resource Include="Picture\分心copy.png" />
-    <Resource Include="Picture\背景报表.jpg" />
     <Resource Include="Picture\场景三copy.png" />
     <Resource Include="Picture\场景二copy.png" />
     <Resource Include="Picture\场景一copy.png" />
@@ -283,7 +280,6 @@
     <Resource Include="Picture\bg.png" />
     <Resource Include="Picture\纸牌.jpg" />
     <Resource Include="Picture\jocker.png" />
-    <Resource Include="Picture\问卷背景.png" />
     <Resource Include="Picture\tip.png" />
     <Resource Include="Picture\油门.png" />
     <Resource Include="Picture\速度.png" />
