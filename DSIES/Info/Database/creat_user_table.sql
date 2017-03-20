@@ -2,9 +2,8 @@
 	telphone        TEXT NOT NULL UNIQUE,
 	name			TEXT NOT NULL, 
 	password		TEXT NOT NULL,
-	regDate			TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
-	lastDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
-
+	--regDate			TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
+	--lastDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	PRIMARY KEY(telphone)
 );
 

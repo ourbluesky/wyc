@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Json">
+      <HintPath>..\packages\JSON.1.0.1\lib\net40\Json.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts">
       <HintPath>..\packages\LiveCharts.0.9.4\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -69,6 +72,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\Model\Action.cs" />
+    <Compile Include="Class\Model\Admin.cs" />
+    <Compile Include="Class\Model\BrakeAct.cs" />
+    <Compile Include="Class\Model\Raction.cs" />
+    <Compile Include="Class\Model\Regular.cs" />
+    <Compile Include="Class\Model\User.cs" />
+    <Compile Include="Class\Control\SettingManager.cs" />
+    <Compile Include="Class\Model\Svframe.cs" />
+    <Compile Include="Class\Control\UDPManager.cs" />
+    <Compile Include="UDP\Udp.cs" />
+    <Compile Include="UDP\UDPSetting.cs" />
     <Page Include="Pages\CustomMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,7 +95,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UDP\BytesCoverter.cs" />
+    <Compile Include="UDP\CentralUnit.cs" />
     <Compile Include="Class\Control\Education.cs" />
+    <Compile Include="Class\Control\FileManager.cs" />
     <Compile Include="Class\Control\Game.cs" />
     <Compile Include="Class\Control\GifImage.cs" />
     <Compile Include="Class\Control\LoginData.cs" />
@@ -215,12 +232,14 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Setting\app.json" />
+    <None Include="Setting\offset.json" />
+    <None Include="Setting\udp.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UDP\" />
     <Folder Include="Widget\" />
   </ItemGroup>
   <ItemGroup>

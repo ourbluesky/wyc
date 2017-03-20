@@ -53,10 +53,11 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Height="25" Width="80" Grid.Column="0" x:Name="LogOutBtn" Click="LogOutButton_Click" ToolTip="Log out" >Log out</Button>
+                <Button Height="25" Width="80" Grid.Column="0" x:Name="LogOutBtn" Click="LogOutButton_Click" ToolTip="Log out" Margin="10,12" >Log out</Button>
+                <Button Height="25" Width="80" Grid.Column="0" x:Name="AdminBtn" Click="AdminButton_Click" ToolTip="Administrator" Margin="-91,12,111,12" RenderTransformOrigin="0.69,0.395" >Admin</Button>
                 <Button Height="25" Width="80" Grid.Column="1" ToolTip="Help Document" >Help</Button>
                 <Button Height="25" Width="80" Grid.Column="2" >About us</Button>
-                <Button Height="25" Grid.Column="3" Click="Resize_Click" x:Name="MinmumBtn" ToolTip="Manimum the window" Style="{DynamicResource minmum_ButtonStyle}" Margin="33,12,36,12" RenderTransformOrigin="0.943,0.48">Full Screen</Button>
+                <Button Height="25" Grid.Column="3" Click="Min_Click" x:Name="MinmumBtn" ToolTip="Minimum the window" Style="{DynamicResource minmum_ButtonStyle}" Margin="33,12,36,12" RenderTransformOrigin="0.943,0.48">Min Screen</Button>
                 <Button Height="25" Grid.Column="3" Click="Resize_Click" x:Name="MaxmumBtn" ToolTip="Maximum the window" Style="{DynamicResource maxmum_ButtonStyle}" Margin="85,12,84,12" RenderTransformOrigin="0.943,0.48" Grid.ColumnSpan="2">Full Screen</Button>
                 <Button Height="25" Grid.Column="3" Click="Resize_Click" x:Name="ResizeBtn" ToolTip="Resize the window" Style="{DynamicResource resize_ButtonStyle}"  Visibility="Hidden" Margin="85,12,84,12" RenderTransformOrigin="0.943,0.48" Grid.ColumnSpan="2">Resize Screen</Button>
                 <Button Height="25" Grid.Column="4" Click="CloseButton_Click" ToolTip="Close the application" Style="{DynamicResource close_ButtonStyle}" Margin="41,12,24,12" RenderTransformOrigin="0.943,0.48">Close</Button>

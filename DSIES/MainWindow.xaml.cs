@@ -213,6 +213,11 @@ namespace DSIES
             }
         }
 
+        private void Min_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = System.Windows.WindowState.Minimized;
+        }
+
         private void WindowStateChange(object sender, EventArgs e)
         {
             if (this.WindowState == System.Windows.WindowState.Maximized)
