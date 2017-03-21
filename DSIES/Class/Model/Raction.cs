@@ -20,8 +20,6 @@ namespace DSIES.Class.Model
                 return Time - Start.Time;
             else
                 return Time;
-
-
         }
 
         public float EndAct(Svframe frame)

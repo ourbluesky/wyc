@@ -40,12 +40,11 @@ namespace DSIES.Pages
             float speed;
             float brake;
             float acc;
-            time = frame.Time;
-            
-
-
+            time = frame.Time;          
             speed = frame.Speed;
-            CU.MG_UDP.EndReceive();
+            brake = frame.Brake;
+            acc = frame.Acc;
+            CU.MG_UDP.EndReceive();//关闭
         }
 
 

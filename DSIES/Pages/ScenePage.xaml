@@ -98,7 +98,7 @@
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="184" Margin="277,466,0,0" VerticalAlignment="Top" Width="266">
                 <Grid HorizontalAlignment="Left" Height="184" Margin="-0.8,-0.8,-1.2,-0.8" VerticalAlignment="Top" Width="266">
                     <Label x:Name="label2" Content="加速度" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006"/>
-                    <lvc:CartesianChart x:Name="Chart_Small_3" Margin="17,23,10,0">
+                    <lvc:CartesianChart x:Name="Chart_Small_3" Margin="17,23,10,10">
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->

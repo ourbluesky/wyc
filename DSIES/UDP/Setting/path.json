@@ -6,7 +6,7 @@
 		"app": "/UDP/Setting/app.json"
     },
     "database": {
-        "db": "/Info/database/user.db",
-        "create_sql": "/Info/database/create_user_table.sql"		
+        "db": "/Info/Database/user.db",
+        "create_sql": "/Info/Database/creat_user_table.sql"		
     }
 }

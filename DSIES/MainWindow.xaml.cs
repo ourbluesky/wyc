@@ -198,6 +198,27 @@ namespace DSIES
             LogOutBtn.Visibility = System.Windows.Visibility.Hidden;
         }
 
+        private void AdminButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isSceneing())
+            {
+                CustomMessageBox.Show("Warning", "Can't log in as an administrator before the end of user's experience!");
+                return;
+            }
+           // this.setPage(PageList.AdminLogin);
+            //    this.init();//init上边有定义
+        }
+
+        public void AdminButtonVisiable() //重新登录
+        {
+            AdminBtn.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        public void AdminButtonInvisiable() //重新登录
+        {
+            AdminBtn.Visibility = System.Windows.Visibility.Hidden;
+        }
+
         private void Resize_Click(object sender, RoutedEventArgs e)
         {
             if (this.WindowState != System.Windows.WindowState.Maximized)

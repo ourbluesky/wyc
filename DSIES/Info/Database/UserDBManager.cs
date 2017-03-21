@@ -13,7 +13,7 @@ namespace DSIES.Info.Database
     class UserDBManager
     {
 
-        enum LoginState
+         public enum LoginState
         {
             NOTEXIST,
             WRONGPASSWORD,
@@ -169,8 +169,8 @@ namespace DSIES.Info.Database
 
                     user.Name = reader["name"] as string;
                     user.Password = reader["password"] as string;
-                    //  user.RegDate = (DateTime)reader["regDate"];
-                    // user.LastDate = (DateTime)reader["lastDate"];
+                    user.RegDate = (DateTime)reader["regDate"];
+                    user.LastDate = (DateTime)reader["lastDate"];
 
                     users.Add(user);
                 }
