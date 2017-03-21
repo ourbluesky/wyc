@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Configurations;
 using DSIES.Pages;
+using DSIES.UDP;
 
 namespace DSIES.Pages
 {
@@ -28,8 +29,23 @@ namespace DSIES.Pages
             InitializeComponent();
             SetChart();
             ContentGrid.DataContext = this;     // 这个是必要的，绑定数据，否则画不出来
+            //
 
-          
+
+            CU.MG_UDP.PrepareReceive();
+            Svframe frame = CU.MG_UDP.ReceiveFrame();
+            if (frame != null)
+                Console.WriteLine(frame.Time);
+            float time;
+            float speed;
+            float brake;
+            float acc;
+            time = frame.Time;
+            
+
+
+            speed = frame.Speed;
+            CU.MG_UDP.EndReceive();
         }
 
 

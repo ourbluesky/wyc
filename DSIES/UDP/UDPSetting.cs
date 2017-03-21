@@ -9,37 +9,38 @@ using System.Net;
 
 namespace DSIES.UDP
 {
-    class UDPSetting
+  
+   class UDPSetting
     {
         public UDPSetting()
         {
             setDefault();
         }
 
+        private IPAddress serverIP;     // 服务器IP （备用）
+        private int serverPort;         // 服务器监听端口 （备用） 
+        private IPAddress ip;           // 本机IP
+        private int port;               // 监听端口
+        private int timeOut;            // 接收、发送消息超时时长，单位：毫秒
+        private int bufferSize;         // 接受的字节数，默认为0表示所有
 
-        private IPAddress severIP;
-        private int severPort;
-        private IPAddress ip;
-        private int port;
-        private int timeOut;
-        private int bufferSize;
         public delegate void ClientChangeHandler(UDPSetting setting);
         public ClientChangeHandler ClientChangeAction;
 
-        public IPAddress serverIP
+        public IPAddress ServerIP
         {
             get { return serverIP; }
-            set
-            {
+            set 
+            { 
                 serverIP = value;
             }
         }
 
-        public int serverPort
+        public int ServerPort
         {
             get { return serverPort; }
-            set
-            {
+            set 
+            { 
                 serverPort = value;
             }
         }
@@ -47,7 +48,7 @@ namespace DSIES.UDP
         public IPAddress IP
         {
             get { return ip; }
-            set
+            set 
             {
                 ip = value;
                 ClientChange();
@@ -57,8 +58,8 @@ namespace DSIES.UDP
         public int Port
         {
             get { return port; }
-            set
-            {
+            set 
+            { 
                 port = value;
                 ClientChange();
             }
@@ -67,7 +68,7 @@ namespace DSIES.UDP
         public int TimeOut
         {
             get { return timeOut; }
-            set { timeOut = value; }
+            set { timeOut = value;}
         }
 
         public int BufferSize
@@ -81,8 +82,9 @@ namespace DSIES.UDP
             serverIP = IPAddress.Broadcast;
             serverPort = 9999;
             ip = GetLocalIP();
-            port = 9999;
+            port = 6000;
             timeOut = 3000;
+            bufferSize = 260;
         }
 
         private IPAddress GetLocalIP()
@@ -102,4 +104,3 @@ namespace DSIES.UDP
         }
     }
 }
-

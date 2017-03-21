@@ -59,6 +59,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\traffic\SQLite-1.0.66.0-binaries\bin\System.Data.SQLite.DLL</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -84,13 +87,15 @@
     <Compile Include="Class\Model\Raction.cs" />
     <Compile Include="Class\Model\Regular.cs" />
     <Compile Include="Class\Model\User.cs" />
-    <Compile Include="Class\Control\SettingManager.cs" />
-    <Compile Include="Class\Model\Svframe.cs" />
-    <Compile Include="Class\Control\UDPManager.cs" />
+    <Compile Include="Info\Database\UserDBManager.cs" />
     <Compile Include="Info\Report\ReportGenerator.cs" />
     <Compile Include="UDP\BytesConverter.cs" />
     <Compile Include="UDP\CentralUnit.cs" />
-    <Compile Include="UDP\Udp.cs" />
+    <Compile Include="UDP\FileManager.cs" />
+    <Compile Include="UDP\SettingManager.cs" />
+    <Compile Include="UDP\Svframe.cs" />
+    <Compile Include="UDP\UDP.cs" />
+    <Compile Include="UDP\UDPManager.cs" />
     <Compile Include="UDP\UDPSetting.cs" />
     <Page Include="Pages\CustomMessageBox.xaml">
       <SubType>Designer</SubType>
@@ -105,7 +110,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\Control\Education.cs" />
-    <Compile Include="Class\Control\FileManager.cs" />
     <Compile Include="Class\Control\Game.cs" />
     <Compile Include="Class\Control\GifImage.cs" />
     <Compile Include="Class\Control\LoginData.cs" />
@@ -239,9 +243,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Setting\app.json" />
-    <None Include="Setting\offset.json" />
-    <None Include="Setting\udp.json" />
+    <None Include="UDP\Setting\app.json" />
+    <None Include="UDP\Setting\offset.json" />
+    <None Include="UDP\Setting\path.json" />
+    <None Include="UDP\Setting\udp.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

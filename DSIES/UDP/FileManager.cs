@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using System.IO;
 
 
-namespace DSIES.Class.Control
+namespace DSIES.UDP
 {
     static class FileManager
     {
@@ -65,7 +65,7 @@ namespace DSIES.Class.Control
         # endregion
 
         # region GET
-      
+
         public static Dictionary<string, string> GetUDPSetting()
         {
             string path = GetPath("setting", "udp");
@@ -82,11 +82,11 @@ namespace DSIES.Class.Control
             string path = GetPath("setting", "app");
             return ReadJson<Dictionary<string, Dictionary<string, string>>>(path);
         }
-       
 
-       
 
-        
+
+
+
 
         public static T ReadJson<T>(string path)
         {
@@ -105,8 +105,8 @@ namespace DSIES.Class.Control
         }
         #endregion
         #region Save
-    
-      
+
+
 
         public static bool SaveUDPSetting(Dictionary<string, string> udp)
         {

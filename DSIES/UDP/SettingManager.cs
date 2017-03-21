@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DSIES.Class.Control;
 
 namespace DSIES.UDP
 {
@@ -11,8 +10,9 @@ namespace DSIES.UDP
     {
         public SettingManager()
         {
-
+            LoadAppSetting();
             LoadUDP();
+
 
         }
 
@@ -32,12 +32,10 @@ namespace DSIES.UDP
 
             UDPOffset = FileManager.GetOffset();
         }
-
         private void LoadAppSetting()
         {
             App = FileManager.GetAppSetting();
         }
-
 
 
         public Dictionary<string, Dictionary<string, string>> Text

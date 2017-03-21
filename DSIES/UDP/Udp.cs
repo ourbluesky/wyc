@@ -14,14 +14,14 @@ namespace DSIES.UDP
     public delegate void ReceiveTimeOutAction();
     public delegate void SendTimeOutAction();
 
-    class Udp
+    class UDP
     {
 
         private UDPSetting setting;
         private UdpClient client;
         private IPEndPoint clientEndPoint;  // 本机一律视为客户端
         private IPEndPoint serverEndPoint;  // 接收目标或发送目标一律视为服务端
-        public Udp(UDPSetting setting)
+        public UDP(UDPSetting setting)
         {
             this.setting = setting;
         }
@@ -57,7 +57,7 @@ namespace DSIES.UDP
 
         private void InitServer(UDPSetting setting)
         {
-            serverEndPoint = new IPEndPoint(setting.serverIP, setting.serverPort);
+            serverEndPoint = new IPEndPoint(setting.ServerIP, setting.ServerPort);
         }
 
         public bool Send(byte[] message)
@@ -89,12 +89,13 @@ namespace DSIES.UDP
             }
             catch
             {
-                ReceiveTimeOutHandler.Invoke();
+                if (ReceiveTimeOutHandler != null)
+                    ReceiveTimeOutHandler.Invoke();
                 return null;
             }
 
-            setting.serverIP = serverEndPoint.Address;
-            setting.serverPort = serverEndPoint.Port;
+            setting.ServerIP = serverEndPoint.Address;
+            setting.ServerPort = serverEndPoint.Port;
 
             return message;
         }

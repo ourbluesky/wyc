@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
-using DSIES.Class.Model;
-using DSIES.UDP;
 
-namespace DSIES.Class.Model
+namespace DSIES.UDP
 {
     class UDPManager
     {
         public UDPManager(UDPSetting setting)
         {
             this.udpSetting = setting;
-            this.udp = new Udp(setting);
+            this.udp = new UDP(setting);
+            get_offset = FileManager.GetOffset();
         }
-        private Udp udp;
+        private UDP udp;
         private UDPSetting udpSetting;
         private bool Testing;
         private bool Receiving;
+        private Dictionary<string, int> get_offset;
 
         public ReceiveTimeOutAction ReceiveTimeOutAction
         {
@@ -48,8 +48,8 @@ namespace DSIES.Class.Model
         public void PrepareReceive()
         {
             Receiving = true;
-             if (Testing)
-             Thread.Sleep(udpSetting.TimeOut);
+            if (Testing)
+                Thread.Sleep(udpSetting.TimeOut);
             udp.Open();
         }
 
@@ -82,7 +82,7 @@ namespace DSIES.Class.Model
             float[] floats = BytesConverter.ToFloatArray(bytes);
             Svframe frame = new Svframe();
 
-            foreach (var item in CU.MG_Set.UDPOffset)
+            foreach (var item in get_offset)
             {
                 var name = item.Key;
                 var offset = item.Value;
