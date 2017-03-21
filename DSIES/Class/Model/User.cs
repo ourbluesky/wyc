@@ -63,17 +63,17 @@ namespace DSIES.Class.Model
         }
 
 
-        public DateTime RegDate
-        {
-            get { return regDate; }
-            set { regDate = value; }
-        }
+        //public DateTime RegDate
+        //{
+        //    get { return regDate; }
+        //    set { regDate = value; }
+        //}
 
-        public DateTime LastDate
-        {
-            get { return lastDate; }
-            set { lastDate = value; }
-        }
+        //public DateTime LastDate
+        //{
+        //    get { return lastDate; }
+        //    set { lastDate = value; }
+        //}
 
         public string Telphone
         {

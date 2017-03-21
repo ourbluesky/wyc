@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace DSIES.UDP
 {
-    class BytesCoverter
-    {
         static class BytesConverter
         {
             public static float[] ToFloatArray(byte[] bytes)
@@ -32,5 +30,6 @@ namespace DSIES.UDP
                 return convertFunc(bytes);
             }
         }
-    }
-}
+ }
+
+

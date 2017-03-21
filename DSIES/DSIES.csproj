@@ -44,6 +44,12 @@
     <Reference Include="LiveCharts.Wpf">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.4\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.17.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\packages\Newtonsoft.Json.Net20.dll.3.5.0\lib\2.0\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="presentationframework.aero2" />
     <Reference Include="presentationframework.aerolite" />
@@ -81,6 +87,9 @@
     <Compile Include="Class\Control\SettingManager.cs" />
     <Compile Include="Class\Model\Svframe.cs" />
     <Compile Include="Class\Control\UDPManager.cs" />
+    <Compile Include="Info\Report\ReportGenerator.cs" />
+    <Compile Include="UDP\BytesConverter.cs" />
+    <Compile Include="UDP\CentralUnit.cs" />
     <Compile Include="UDP\Udp.cs" />
     <Compile Include="UDP\UDPSetting.cs" />
     <Page Include="Pages\CustomMessageBox.xaml">
@@ -95,8 +104,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UDP\BytesCoverter.cs" />
-    <Compile Include="UDP\CentralUnit.cs" />
     <Compile Include="Class\Control\Education.cs" />
     <Compile Include="Class\Control\FileManager.cs" />
     <Compile Include="Class\Control\Game.cs" />

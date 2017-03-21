@@ -28,7 +28,11 @@ namespace DSIES.Pages
             InitializeComponent();
             SetChart();
             ContentGrid.DataContext = this;     // 这个是必要的，绑定数据，否则画不出来
+
+          
         }
+
+
         public ChartValues<Point> PointsM { get; set; }
         public ChartValues<Point> PointsN { get; set; }
 
@@ -70,7 +74,7 @@ namespace DSIES.Pages
             Accelerator_textBlock.DataContext = 4;
         }
     // Point类，表示折线图上的一个坐标点
-    public class Point
+        public class Point
     {
         public Point(float x, float y)
         {
@@ -80,7 +84,8 @@ namespace DSIES.Pages
         public float X { get; set; }
         public float Y { get; set; }
     }
-    private void Speed_Button_Click(object sender, RoutedEventArgs e)
+
+        private void Speed_Button_Click(object sender, RoutedEventArgs e)
         {
             Speed.Visibility = System.Windows.Visibility.Visible;
             Acceleration.Visibility = System.Windows.Visibility.Hidden;

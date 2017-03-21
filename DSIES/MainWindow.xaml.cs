@@ -30,7 +30,7 @@ namespace DSIES
     {
         //   UDPController udpControl;
         //    UserSelections selection;
-        //   User user;
+        //  User user;
         //     Player player;
         Question question = new Question();
         internal Question QUESTION
@@ -68,22 +68,23 @@ namespace DSIES
             set { player = value; }
         }*/
 
-        /* internal User User
-         {
-             get { return user; }
-             set
-             {
-                 user = value;
-                 if (user != null)
-                 {
-                     LogOutButtonVisiable();
-                 }
-                 else
-                 {
-                     LogOutButtonInvisiable();
-                 }
-             }
-         }*/
+        //User user = new User();
+        // internal User User
+        // {
+        //     get { return user; }
+        //     set
+        //     {
+        //         user = value;
+        //         if (user != null)
+        //         {
+        //             LogOutButtonVisiable();
+        //         }
+        //         else
+        //         {
+        //             LogOutButtonInvisiable();
+        //         }
+        //     }
+        // }
 
         /*internal UserSelections Selection
         //{
