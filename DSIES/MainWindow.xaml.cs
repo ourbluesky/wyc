@@ -38,7 +38,12 @@ namespace DSIES
             get { return question; }
             set { question = value; }
         }
-
+        LoginData logindadta = new LoginData();
+        internal LoginData LOGINDATA
+        {
+            get { return logindadta; }
+            set { logindadta = value; }
+        }
         Game game = new Game();
         internal Game GAME
         {
