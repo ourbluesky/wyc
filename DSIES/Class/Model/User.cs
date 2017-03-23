@@ -12,7 +12,8 @@ namespace DSIES.Class.Model
         REGULAR
     }
     public enum UserVariable
-    {
+    {        
+        Telphone,
         Name,
         Password,
         RegDate,
@@ -21,19 +22,21 @@ namespace DSIES.Class.Model
         Age,
         DriAge,//驾龄
         Career,
-        Telphone,
-        Group,
-        DeepSight_right,
-        Deepsight_left,
-        Reagency,
-        Sight_right,
+        Group,        
         Sight_left,
-        Breaktime,
-        Score,
+        Sight_right,
+        Deepsight_left,
+        DeepSight_right,
+        Reagency,
+        Grade,
+        Score1, 
         Grade1,
+        Score2,
         Grade2,
-        Score1,
-        Score2
+        Totalscore_frist,
+        Totalscore_final,
+        Credit
+       
     }
 
     public abstract class User
@@ -45,23 +48,29 @@ namespace DSIES.Class.Model
         private string telphone;
         private UserGroup group;
 
+        public string Telphone
+        {
+            get { return telphone; }
+            set { telphone = value; }
+        }
 
-        public UserGroup Group
-        {
-            get { return group; }
-            set { group = value; }
-        }
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
         public string Password
         {
             get { return password; }
             set { password = value; }
         }
 
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public UserGroup Group
+        {
+            get { return group; }
+            set { group = value; }
+        }
 
         public DateTime RegDate
         {
@@ -73,12 +82,6 @@ namespace DSIES.Class.Model
         {
             get { return lastDate; }
             set { lastDate = value; }
-        }
-
-        public string Telphone
-        {
-            get { return telphone; }
-            set { telphone = value; }
         }
 
     }

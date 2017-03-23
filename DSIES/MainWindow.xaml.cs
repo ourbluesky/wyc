@@ -283,10 +283,7 @@ namespace DSIES
         static Education_educatePage education_educate;
         static EducationSelectPage educationSelect;
 
-        //   static Page currentExperience;
-        //    static Page currentEvaluation;
-        //     static Page currentAbout;
-        //     static EvaluationPage evaluation;
+
         static DataExportPage dataExport;
 
         public static MainWindow Main //主页面

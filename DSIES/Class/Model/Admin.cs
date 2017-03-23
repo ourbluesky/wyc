@@ -9,19 +9,26 @@ namespace DSIES.Class.Model
     public class Admin : User
     {
         public Admin() { }
-        public Admin(string name, string password, string telphone)
-        {
-            this.Name = name;
+
+        public Admin(
+             string telphone,
+             string password,
+             string name,
+             string grantUserName)
+        {            
+            this.Telphone = telphone;          
             this.Password = password;
-            this.Telphone = telphone;
+            this.Name = name;
+            this.grantUserName = grantUserName;
         }
 
-        string telphone;
+        string grantUserName;
 
-        public string Telphone
+        public string GrantUserName
         {
-            get { return telphone; }
-            set { Telphone = value; }
+            get { return grantUserName; }
+            set { grantUserName = value; }
         }
     }
 }
+

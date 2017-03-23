@@ -16,14 +16,13 @@ namespace DSIES.UDP
          */
         static CU()
         {
-            SET_UDP = new UDPSetting();
+            SET_UDP =  new UDPSetting();
             MG_UDP = new UDPManager(SET_UDP);
 
         }
 
         public static UDPManager MG_UDP;
         public static UDPSetting SET_UDP;
-
 
         public static void Hit() { }
     }

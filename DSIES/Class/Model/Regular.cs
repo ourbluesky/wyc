@@ -8,27 +8,9 @@ using DSIES.Class.Model;
 namespace DSIES.Class.Model
 {
    public class Regular:User
-    {
-       private string name;
-       private string password;
-       private string telphone; 
-       private string age;
-       private string driAge;
-       private string carrer;
-       private string gender;
-       private string deepSight_left;
-       private string deepSight_right;
-       private string sight_left;
-       private string sight_right;
-       private string reagency;
-       private string breaktime;
-       private string score;
-       private string grade1;
-       private string grade2;
-       private string score1;
-       private string score2;
-       
+    {       
        public Regular() { }
+
        public Regular
            (
            string name,
@@ -43,33 +25,63 @@ namespace DSIES.Class.Model
            string sight_left,
            string sight_right,
            string reagency,
-           string breaktime,
-           string score,
-           string grade1,
-           string grade2,
+           string accident_times,
+           string grade,
            string score1,
-           string score2
+           string grade1,
+           string score2,
+           string grade2,
+           string totalscore_frist,
+           string totalscore_final,
+           string credit
+           
            )
        {
            this.Name = name;
            this.Telphone = telphone;
            this.Password = password;
+           this.gender = gender;
            this.age = age;
            this.driAge = driAge;
-           this.carrer = carrer;
-           this.gender = gender;
+           this.carrer = carrer;       
            this.deepSight_left = deepSight_left;
            this.deepSight_right = deepSight_right;
            this.sight_right = sight_right;
            this.sight_left = sight_left;
            this.reagency = reagency;
-           this.breaktime = breaktime;
-           this.score = score;
+           this.accident_times = accident_times; 
            this.score1 = score1;
            this.score2 = score2;
            this.grade1 = grade1;
            this.grade2 = grade2;
+           this.totalscore_frist=totalscore_frist;
+           this.totalscore_final=totalscore_final;
+           this.credit = credit;
        }
+
+     //  private string name;
+     //  private string password;
+     //  private string telphone;
+       private string gender;
+       private string age;
+       private string driAge;
+       private string carrer;
+       private string accident_times;     
+       private string sight_left;
+       private string sight_right; 
+       private string deepSight_left;
+       private string deepSight_right;
+       private string reagency;     
+       private string grade;
+       private string grade1;
+       private string grade2;
+       private string score1;
+       private string score2;
+       private string totalscore_frist;
+       private string totalscore_final;
+       private string credit;
+   
+
        public string Gender
        {
            get { return gender; }
@@ -90,6 +102,21 @@ namespace DSIES.Class.Model
            get { return carrer; }
            set { carrer = value; }
        }
+       public string Accident_times
+       {
+           get { return accident_times; }
+           set { accident_times = value; }
+       }    
+       public string Sight_left
+       {
+           get { return sight_left; }
+           set { sight_left = value; }
+       }
+       public string Sight_right
+       {
+           get { return sight_right; }
+           set { sight_right = value; }
+       }
        public string DeepSight_left
        {
            get { return deepSight_left; }
@@ -103,19 +130,12 @@ namespace DSIES.Class.Model
        public string Reagency
        {
            get { return reagency; }
-           set { reagency = value; }
-       
-       }   
-       
-       public string Breaktime
-        {
-            get { return breaktime; }
-            set { breaktime = value; }
-        }
-       public string Score
+           set { reagency = value; }     
+       }  
+       public string Grade
        {
-           get { return score; }
-           set { score = value; }
+           get { return grade; }
+           set { grade = value; }
        }
        public string Score1
        {
@@ -137,15 +157,20 @@ namespace DSIES.Class.Model
            get { return grade2; }
            set { grade2 = value; }
        }
-       public string Sight_left
+       public string Totalscore_frist
        {
-           get { return sight_left; }
-           set { sight_left = value; }
-       }
-       public string Sight_right
-       {
-           get { return sight_right; }
-           set { sight_right = value; }
-       }
+           get { return totalscore_frist; }
+           set { totalscore_frist = value; }
+       } 
+       public string Totalscore_final
+      {
+          get { return totalscore_final; }
+          set { totalscore_final = value; }
+      }
+      public string Credit
+      {
+          get { return credit; }
+          set { credit = value; }
+      }
     }
 }

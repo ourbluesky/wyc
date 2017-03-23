@@ -7,12 +7,10 @@ using DSIES.Class.Model;
 using System.IO;
 using System.Data.SQLite;
 using DSIES.UDP;
+using DSIES.Info;
 
 namespace DSIES.Info.Database
 {
-    class UserDBManager
-    {
-
          public enum LoginState
         {
             NOTEXIST,
@@ -21,6 +19,8 @@ namespace DSIES.Info.Database
             SUCCESS
         }
 
+        class UserDBManager
+       {
         public UserDBManager()
             {
 
@@ -154,12 +154,12 @@ namespace DSIES.Info.Database
                             regular.Age = reader["age"] as string;
                             regular.DriAge = reader["driage"] as string;
                             regular.Career = reader["career"] as string;
-                            regular.Score = reader["score"] as string;
+                            regular.Grade = reader["grade"] as string;
                             regular.Score1 = reader["score1"] as string;
                             regular.Score2 = reader["score2"] as string;
                             regular.Grade1 = reader["grade1"] as string;
                             regular.Grade2 = reader["grade2"] as string;
-                            regular.Breaktime = reader["breaktime"] as string; ;
+                            regular.Accident_times = reader["accident_times"] as string; ;
 
                             break;
                         default:
@@ -167,8 +167,9 @@ namespace DSIES.Info.Database
                             break;
                     }
 
-                    user.Name = reader["name"] as string;
+                    user.Telphone = reader["telphone"] as string;
                     user.Password = reader["password"] as string;
+                    user.Name = reader["name"] as string;
                     user.RegDate = (DateTime)reader["regDate"];
                     user.LastDate = (DateTime)reader["lastDate"];
 
@@ -189,36 +190,38 @@ namespace DSIES.Info.Database
                     case UserGroup.ADMIN:
                         Admin admin = user as Admin;
                         sql = "insert into " + admin.Group
-                            + " (name, password, telphone) values ('"
-                            + admin.Name + "', '"
+                            + " ( telphone,name, password,grantUserName) values ('"
+                            + admin.Telphone + "', '"
                             + Encryptor.GetMD5(admin.Password) + "', '"
-
-                            + admin.Password + "') ";
+                            + admin.Name + "', '"
+                            + admin.GrantUserName + "') ";
                         break;
                     case UserGroup.REGULAR:
                         Regular regular = user as Regular;
                         sql = "insert into " + regular.Group
-                            + " (name, telphone, password, gender, "
-                            + "age, driAge, career,deepSight,sight,rengency,breaktime) values ('"
-                            + regular.Name + "', '"
+                            + " ( telphone,name, password, gender, "
+                            + "age, driAge, career,deepSight,sight,rengency,totalscore_frist) values ('"                          
                             + regular.Telphone + "', '"
+                            + regular.Name + "', '"
                             + Encryptor.GetMD5(regular.Password) + "', '"
                             + regular.Gender + "',"
                             + regular.Age + ", "
                             + regular.DriAge + ", '"
                             + regular.Career + "', '"
-                            + regular.Score + "', '"
-                            + regular.Score1 + "', '"
-                            + regular.Score2 + "', '"
+                            + regular.Accident_times + "', '"
                             + regular.Sight_left + "', '"
-                            + regular.Sight_right + "', '"
-                            + regular.DeepSight_right + "', '"
+                            + regular.Sight_right + "', '"                      
                             + regular.DeepSight_left + "', '"
-                            + regular.Reagency + "', '"
-                            + regular.Breaktime + "')'"
+                            + regular.DeepSight_right + "', '"
+                            + regular.Reagency + "', '"           
+                            + regular.Grade + "', '"
+                            + regular.Score1 + "', '" 
                             + regular.Grade1 + "', '"
+                            + regular.Score2 + "', '"                           
                             + regular.Grade2 + "', '"
-                           ;
+                            + regular.Totalscore_frist + "', '"
+                            + regular.Totalscore_final + "', '"
+                            + regular.Credit + "', '";        
                         break;
                     default:
                         return false;
@@ -236,30 +239,32 @@ namespace DSIES.Info.Database
                         Admin admin = user as Admin;
                         sql = "update " + admin.Group + " set "
                             + "name = '" + admin.Name + "' "
-                            + "telphone =" + admin.Telphone + "'"
-                            + "where name = " + admin.Name;
+                            + "where telphone = " + admin.Telphone;
                         break;
                     case UserGroup.REGULAR:
                         Regular regular = user as Regular;
                         sql = "update " + regular.Group + " set "
                             + "name = " + regular.Name + "', "
-                            + "telphone = " + regular.Telphone + "', "
-                            + "age = " + regular.Age + ", "
+                            + "telphone = " + regular.Telphone + "', "                           
                             + "gender = '" + regular.Gender + "', "
+                            + "age = " + regular.Age + ", "
                             + "driAge = " + regular.DriAge + ", "
                             + "career = '" + regular.Career + "',"
-                            + "deepsight_right = " + regular.DeepSight_right + ", "
+                            + "accident_times = '" + regular.Accident_times + "' "                          
                             + "deepsight_left = " + regular.DeepSight_left + ", "
-                            + "sight_right = " + regular.Sight_right + ", "
+                            + "deepsight_right = " + regular.DeepSight_right + ", "                            
                             + "sight_left = " + regular.Sight_left + ", "
-                            + "score=" + regular.Score + ", "
-                            + "score1=" + regular.Score1 + ", "
-                            + "score2=" + regular.Score2 + ", "
-                            + "grade1=" + regular.Grade1 + ", "
-                            + "grade2=" + regular.Grade2 + ", "
+                            + "sight_right = " + regular.Sight_right + ", "
                             + "reagency = " + regular.Reagency + "', "
-                            + "breaktime = '" + regular.Breaktime + "' "
-                            + "where name = " + regular.Name;
+                            + "grade=" + regular.Grade + ", "
+                            + "score1=" + regular.Score1 + ", "
+                            + "grade1=" + regular.Grade1 + ", "
+                            + "score2=" + regular.Score2 + ", "                         
+                            + "grade2=" + regular.Grade2 + ", "
+                            + "totalscore_frist"+regular.Totalscore_frist + "', '"
+                            + "totalscore_final"+regular.Totalscore_final + "', '"
+                            + "credit"+regular.Credit + "', '"                          
+                            + "where telphone = " + regular.Telphone;
                         break;
                     default:
                         return false;
@@ -268,11 +273,11 @@ namespace DSIES.Info.Database
                 return ExecuteNonQuery(sql);
             }
 
-            public bool UpdatePassword(string name, string password, UserGroup group)
+            public bool UpdatePassword(string telphone, string password, UserGroup group)
             {
                 string sql = "update " + group
                     + " set password = '" + Encryptor.GetMD5(password)
-                    + "' where name = " + name;
+                    + "' where telphone = " + telphone;
 
                 return ExecuteNonQuery(sql);
             }
