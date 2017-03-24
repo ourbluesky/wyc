@@ -1,0 +1,94 @@
+﻿<Page x:Class="DSIES.Pages.Admin.InquiryUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="960"
+	Title="InquiryUserPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DSIES;component/Resources/UnifiedColor.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid x:Name="ContentGrid" 
+            Height="640" Width="960">
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="150">
+                <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,-1,-326" VerticalAlignment="Top" Width="149">
+                    <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="30" Margin="30,10,0,0" VerticalAlignment="Top" Width="103" Background="Black"/>
+                    <Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,50,0,0" VerticalAlignment="Top" Width="103"/>
+                    <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,90,0,0" VerticalAlignment="Top" Width="103"/>
+                    <Button Style="{DynamicResource update_admin_ButtonStyle}" x:Name="update_admin_Button" Click="update_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,130,0,0" VerticalAlignment="Top" Width="103"/>
+                    <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,170,0,0" VerticalAlignment="Top" Width="103"/>
+                    <Button Style="{DynamicResource inquiry_user_ButtonStyle_copy}" x:Name="inquiry_user_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,10,0,0" VerticalAlignment="Top" Width="103" Background="#FF050000" Visibility="Hidden"/>
+                    <Button Style="{DynamicResource update_user_ButtonStyle_copy}" x:Name="update_user_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,50,0,0" VerticalAlignment="Top" Width="103" Background="#FF050000" Visibility="Hidden"/>
+                    <Button Style="{DynamicResource print_report_ButtonStyle_copy}" x:Name="print_report_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,90,0,0" VerticalAlignment="Top" Width="103" Background="#FF050000" Visibility="Hidden"/>
+                    <Button Style="{DynamicResource update_admin_ButtonStyle_copy}" x:Name="update_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,130,0,0" VerticalAlignment="Top" Width="103" Background="#FF050000" Visibility="Hidden"/>
+                    <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="30" Margin="30,170,0,0" VerticalAlignment="Top" Width="103" Background="#FF050000" Visibility="Hidden"/>
+                </Grid>
+            </Border>
+            <Grid  HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="810"  Margin="150,0,0,0" Background="WhiteSmoke" >
+                <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="20" Margin="224,0,236,590"/>
+                <Label Content="  请输入所要查询的信息！" Height="50" Width="350" FontSize="16" Margin="10,29,450,561"/>
+                <Label Content="电话(用户名)" Margin="150,70,561,540" Height="30" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+                <Label Content="姓名" Margin="44,70,716,540" Height="30" Width="50" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+                <Label Content="性别" Margin="315,70,445,540" Height="30" Width="50" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+                <Label Content="年龄" Margin="451,70,309,540" Height="30" Width="50" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+                <Label Content="驾齡" Margin="586,70,174,540" Height="30" Width="50" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+                <Label Content="职业" Margin="716,70,44,540" Height="30" Width="50" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+                <Label Content="至" Margin="460,105,324,505" Height="30" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+                <Label Content="至" Margin="595,105,189,505" Height="30" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
+
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox  Foreground="Gray" x:Name="name" Height="30" Width="100" Margin="20,105,15,505" FontSize="16"/>
+                    <TextBox  Foreground="Gray" x:Name="telphone" Height="30" Margin="10,105,10,505" FontSize="16" Grid.Column="1"/>
+                    <TextBox  Foreground="Gray" x:Name="sex" Height="30" Margin="25,105,25,505" FontSize="16" Grid.Column="2"/>
+                    <TextBox  Foreground="Gray" x:Name="age1" Height="30" Margin="10,105,80,505" FontSize="16" Grid.Column="3"/>
+                    <TextBox  Foreground="Gray" x:Name="age2" Height="30" Margin="80,105,10,505" FontSize="16" Grid.Column="3" RenderTransformOrigin="2.089,0.567"/>
+                    <TextBox  Foreground="Gray" x:Name="driage1" Height="30" Margin="10,105,80,505" FontSize="16" Grid.Column="4"/>
+                    <TextBox  Foreground="Gray" x:Name="driage2" Height="30" Margin="80,105,10,505" FontSize="16" Grid.Column="4"/>
+                    <TextBox  Foreground="Gray" x:Name="career" Height="30" Margin="20,105,30,505" FontSize="16" Grid.Column="5"/>
+
+                    <!--<ComboBox Foreground="#ffeeeeee" x:Name="telphoneComboBox"  Loaded="ComboBox_Loaded" 
+								Grid.Column="4"  Style="{StaticResource ComboBoxStyle}" 
+								Height="30" Margin="10,105,80,505" RenderTransformOrigin="0.431,-0.686"/>
+                    <ComboBox Foreground="#ffeeeeee" x:Name="sexComboBox"  Loaded="ComboBox_Loaded" 
+								Grid.Column="2"  Style="{StaticResource ComboBoxStyle}" 
+								Height="30" Margin="27,105,36,505" RenderTransformOrigin="0.431,-0.686"/>
+                    <ComboBox Foreground="Gray" x:Name="age1ComboBox"  Height="30" Margin="10,105,80,505"
+								Style="{DynamicResource ComboBoxStyle}" Grid.Column="3" />
+                    <ComboBox Foreground="#ffeeeeee" x:Name="age2ComboBox"  Loaded="ComboBox_Loaded" 
+								Grid.Column="3"  Style="{StaticResource ComboBoxStyle}" 
+								Height="30" Margin="80,105,10,505" RenderTransformOrigin="0.431,-0.686"/>
+                    <ComboBox Foreground="#ffeeeeee" x:Name="driageComboBox"  Loaded="ComboBox_Loaded" 
+								Grid.Column="4"  Style="{StaticResource ComboBoxStyle}" 
+								Height="30" Margin="80,105,10,505" RenderTransformOrigin="0.431,-0.686"/>
+                    <ComboBox Foreground="#ffeeeeee" x:Name="careerComboBox"  Loaded="ComboBox_Loaded" 
+								Grid.Column="5"  Style="{StaticResource ComboBoxStyle}" 
+								Height="30" Width="100" Margin="10,105,25,505" RenderTransformOrigin="0.431,-0.686"/>-->
+
+                </Grid>
+
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+
+</Page>

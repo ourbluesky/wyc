@@ -14,12 +14,14 @@ namespace DSIES.Class.Model
              string telphone,
              string password,
              string name,
-             string grantUserName)
+             string grantUserName,
+             string grantpassword)
         {            
             this.Telphone = telphone;          
             this.Password = password;
             this.Name = name;
             this.grantUserName = grantUserName;
+            this.grantpassword = grantpassword;
         }
 
         string grantUserName;
@@ -28,6 +30,14 @@ namespace DSIES.Class.Model
         {
             get { return grantUserName; }
             set { grantUserName = value; }
+        }
+
+        string grantpassword;
+
+        public string GrantPassword
+        {
+            get { return grantpassword; }
+            set { grantpassword = value; }
         }
     }
 }

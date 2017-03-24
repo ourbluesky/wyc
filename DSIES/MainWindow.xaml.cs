@@ -11,12 +11,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-//using DSIES.UDP;
-//using DSIES.Class.Model;
-//using DSIES.Control.Operation;
-//using DSIES.Control.User;
 using System.Windows.Input;
+//using DSIES.UDP;
+using DSIES.Class.Model;
+using DSIES.Pages.Admin;
 //using DSIES.Widget;
 //using DSIES.Info.Database;
 
@@ -38,12 +36,21 @@ namespace DSIES
             get { return question; }
             set { question = value; }
         }
-        LoginData logindadta = new LoginData();
+
+        LoginData logindata = new LoginData();
         internal LoginData LOGINDATA
         {
-            get { return logindadta; }
-            set { logindadta = value; }
+            get { return logindata; }
+            set { logindata = value; }
         }
+
+        AdminLoginData adminlogindata = new AdminLoginData();
+        internal AdminLoginData ADMINLOGINDATA
+        {
+            get { return adminlogindata; }
+            set { adminlogindata = value; }
+        }
+
         Game game = new Game();
         internal Game GAME
         {
@@ -127,10 +134,6 @@ namespace DSIES
 
         public void setPage(Page page)
         {
-            //if (page.Equals(PageList.SceneSelect) || page.Equals(PageList.Experience))
-            //{
-            //    PageList.CurrentExperience = page;
-            //}//不明白
 
             MainFrame.Content = page;
         }
@@ -210,16 +213,16 @@ namespace DSIES
                 CustomMessageBox.Show("Warning", "Can't log in as an administrator before the end of user's experience!");
                 return;
             }
-           // this.setPage(PageList.AdminLogin);
+           this.setPage(PageList.AdminLogin);
             //    this.init();//init上边有定义
         }
 
-        public void AdminButtonVisiable() //重新登录
+        public void AdminButtonVisiable() //管理员登录
         {
             AdminBtn.Visibility = System.Windows.Visibility.Visible;
         }
 
-        public void AdminButtonInvisiable() //重新登录
+        public void AdminButtonInvisiable() //管理员登录
         {
             AdminBtn.Visibility = System.Windows.Visibility.Hidden;
         }
@@ -271,6 +274,7 @@ namespace DSIES
     {
         static MainWindow main = (MainWindow)Application.Current.MainWindow;
         static LoginPage login;
+        static AdminLoginPage adminlogin;
         static QuesGameSeclectPage questionandgame;
         static GamePage game;
         static QuestionPage1 question1;
@@ -282,9 +286,81 @@ namespace DSIES
         static EducationLoadPage educationLoad;
         static Education_educatePage education_educate;
         static EducationSelectPage educationSelect;
-
-
         static DataExportPage dataExport;
+
+        static AdminMainPage adminmain;
+        static InquiryUserPage inquiryuser;
+        static UpdateUserPage updateuser;
+        static PrintReportPage printreport;
+        static UpdateAdminPage updateadmin;
+      
+
+        public static AdminMainPage AdminMain
+        {
+            get
+            {
+                if (adminmain == null)
+                {
+                    adminmain = new AdminMainPage();
+                }
+                //     login.ToDefault();
+                return adminmain;
+            }
+        }
+
+        public static InquiryUserPage InquiryUser
+        {
+            get
+            {
+                if (inquiryuser == null)
+                {
+                    inquiryuser = new InquiryUserPage();
+                }
+                //     login.ToDefault();
+                return inquiryuser;
+            }
+        }
+
+        public static UpdateUserPage UpdateUser
+        {
+            get
+            {
+                if (updateuser == null)
+                {
+                    updateuser = new UpdateUserPage();
+                }
+                //     login.ToDefault();
+                return updateuser;
+            }
+        }
+
+        public static PrintReportPage PrintReport
+        {
+            get
+            {
+                if (printreport == null)
+                {
+                    printreport = new PrintReportPage();
+                }
+                //     login.ToDefault();
+                return printreport;
+            }
+        }
+
+        public static UpdateAdminPage UpdateAdmin
+        {
+            get
+            {
+                if (updateadmin == null)
+                {
+                    updateadmin = new UpdateAdminPage();
+                }
+                //     login.ToDefault();
+                return updateadmin;
+            }
+        }
+
+       
 
         public static MainWindow Main //主页面
         {
@@ -301,6 +377,19 @@ namespace DSIES
                 }
                 //     login.ToDefault();
                 return login;
+            }
+        }
+
+        public static AdminLoginPage AdminLogin
+        {
+            get
+            {
+                if (adminlogin == null)
+                {
+                    adminlogin = new AdminLoginPage();
+                }
+                //     login.ToDefault();
+                return adminlogin;
             }
         }
 
@@ -426,7 +515,6 @@ namespace DSIES
                 return educationSelect;
             }
         }
-
 
         public static DataExportPage DataExport
         {

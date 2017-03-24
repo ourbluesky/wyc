@@ -507,6 +507,125 @@
         </Setter>
     </Style>
 
+    <Style x:Key="inquiry_user_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\查询个人信息.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="update_user_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\修改个人信息.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="print_report_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\修改管理员信息.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="update_admin_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\打印测试报表.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="quit_admin_ButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\退出系统.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="inquiry_user_ButtonStyle_copy" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下查询个人信息.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="update_user_ButtonStyle_copy" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下修改个人信息.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="print_report_ButtonStyle_copy" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下修改管理员信息.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="update_admin_ButtonStyle_copy" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下打印测试报表.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="quit_admin_ButtonStyle_copy" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下退出系统.png" Stretch="Fill" />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>
 

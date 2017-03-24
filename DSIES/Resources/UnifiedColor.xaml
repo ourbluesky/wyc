@@ -11,6 +11,7 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="FontWeight" Value="Bold"/>
     </Style>
+    
     <Style x:Key="TabsNormalStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource TabsStyle}">
         <Setter Property="Foreground" Value="#ff666666"/>
         <Style.Triggers>
@@ -48,6 +49,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    
     <Style x:Key="SelectionBorderChosenStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource BorderStyle}">
         <Setter Property="BorderBrush" Value="White"/>
         <Setter Property="Background" Value="#ff666666"/>
@@ -314,6 +316,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style TargetType="{x:Type ComboBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="true"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
