@@ -21,6 +21,7 @@ namespace DSIES.UDP
             float acc,
             float stwAngle,
             float offset,
+            float accelerograph,
             float brake,
             float distance,
             float braking,
@@ -39,6 +40,7 @@ namespace DSIES.UDP
             this.offset = offset;
             this.brake = brake;
             this.distance = distance;
+            this.accelerograph = accelerograph;
             this.braking = braking;
             this.reacting = reacting;
             this.area = area;
@@ -54,6 +56,7 @@ namespace DSIES.UDP
         private float acc;          // 加速度
         private float stwAngle;     // 方向盘转角
         private float offset;       // 偏离道路中性线距离
+        private float accelerograph;//油门踏板
         private float brake;        // 刹车踏板
         private float distance;     // 总行驶距离
         private float braking;      // 刹车状态 0-否 1-是
@@ -102,6 +105,11 @@ namespace DSIES.UDP
         {
             get { return offset; }
             set { offset = value; }
+        }
+        public float Accelerograph
+        {
+            get { return accelerograph; }
+            set { accelerograph = value; }
         }
 
         public float Brake

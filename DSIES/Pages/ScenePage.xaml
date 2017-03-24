@@ -20,25 +20,25 @@
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="94" Margin="790,290,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="93" Margin="0.2,0.2,-1.2,-0.4" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label_Copy2" Content="刹车：" HorizontalAlignment="Left" Height="43" Margin="5,21,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
-                    <TextBlock x:Name="Accelerator_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,21,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.548,4.205" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Break_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,21,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.548,4.205" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="790,0,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="99" Margin="0.2,0.2,-1.2,-1.6" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label" Content="速度：" HorizontalAlignment="Left" Height="43" Margin="1,22,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
-                    <TextBlock x:Name="Speed_textBlock" HorizontalAlignment="Left" Height="43" Margin="72,22,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Speed_textBlock" HorizontalAlignment="Left" Height="43" Margin="72,22,0,0" TextWrapping="Wrap" Text="{Binding SpeedChart.y}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="93" Margin="790,100,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="92" Margin="0.2,0.2,-1.2,-1" VerticalAlignment="Top" Width="169">
-                    <TextBlock x:Name="Acceleration_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Acc_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
                     <Label x:Name="label_Copy" Content="加速度：" HorizontalAlignment="Left" Height="43" Margin="0,26,0,0" VerticalAlignment="Top" Width="84" FontSize="20" Foreground="#FFDDCF00"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="97" Margin="790,193,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="96" Margin="0.2,0.2,-1.2,-1.8" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label_Copy1" Content="油门：" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00" Margin="0,26,0,0"/>
-                    <TextBlock x:Name="Break_textBlock" HorizontalAlignment="Left" Height="43" Margin="68,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Accelerator_textBlock" HorizontalAlignment="Left" Height="43" Margin="68,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="314" VerticalAlignment="Top" Width="790">
@@ -51,10 +51,10 @@
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
-                            <lvc:LineSeries x:Name="Speed" Fill="Transparent" Values="{Binding PointsM}" Visibility="Visible" />
-                            <lvc:LineSeries x:Name="Acceleration" Fill="Transparent" Values="{Binding PointsN}" Visibility="Hidden" />
-                            <lvc:LineSeries x:Name="Break" Fill="Transparent" Values="{Binding PointsN}" Visibility="Hidden" />
-                            <lvc:LineSeries x:Name="Accelerator" Fill="Transparent" Values="{Binding PointsM}" Visibility="Hidden" />
+                            <lvc:LineSeries x:Name="Speed" Fill="Transparent" Values="{Binding SpeedChart}" Visibility="Visible" />
+                            <lvc:LineSeries x:Name="Acceleration" Fill="Transparent" Values="{Binding AccelerationChart}" Visibility="Hidden" />
+                            <lvc:LineSeries x:Name="Break" Fill="Transparent" Values="{Binding BreakChart}" Visibility="Hidden" />
+                            <lvc:LineSeries x:Name="Accelerator" Fill="Transparent" Values="{Binding AcceleratorChart}" Visibility="Hidden" />
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
@@ -66,7 +66,7 @@
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
-                            <lvc:LineSeries x:Name="Acceleration_small" Fill="Transparent" Values="{Binding PointsM}"/>
+                            <lvc:LineSeries x:Name="Acceleration_small" Fill="Transparent" Values="{Binding AcceleratorChart}"/>
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
@@ -78,7 +78,7 @@
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
-                            <lvc:LineSeries x:Name="Accelerator_small" Fill="Transparent" Values="{Binding PointsM}"/>
+                            <lvc:LineSeries x:Name="Accelerator_small" Fill="Transparent" Values="{Binding BreakChart}"/>
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
@@ -90,7 +90,7 @@
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
-                            <lvc:LineSeries x:Name="Speed_small" Fill="Transparent" Values="{Binding PointsM}" />
+                            <lvc:LineSeries x:Name="Speed_small" Fill="Transparent" Values="{Binding SpeedChart}" />
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
@@ -102,7 +102,7 @@
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
-                            <lvc:LineSeries x:Name="Break_small" Fill="Transparent" Values="{Binding PointsM}"/>
+                            <lvc:LineSeries x:Name="Break_small" Fill="Transparent" Values="{Binding AccelerationChart}"/>
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
