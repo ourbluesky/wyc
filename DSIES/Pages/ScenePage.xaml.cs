@@ -34,16 +34,22 @@ namespace DSIES.Pages
 
             CU.MG_UDP.PrepareReceive();
             Svframe frame = CU.MG_UDP.ReceiveFrame();
-            if (frame != null)
-                Console.WriteLine(frame.Time);
             float time;
             float speed;
             float brake;
+            float accelerograph;
             float acc;
-            time = frame.Time;          
-            speed = frame.Speed;
-            brake = frame.Brake;
-            acc = frame.Acc;
+            if (frame != null)
+            {
+                time = frame.Time;
+                speed = frame.Speed;
+                brake = frame.Brake;
+                accelerograph = frame.Accelerograph;
+                acc = frame.Acc;
+            }
+            else
+                CustomMessageBox.Show("","Error!");          
+
             CU.MG_UDP.EndReceive();//关闭
         }
 
@@ -128,6 +134,7 @@ namespace DSIES.Pages
         public ChartValues<Point> CenterChart { get; set; }
         public ChartValues<Point> SpeedChart { get; set; }
         public ChartValues<Point> AccelerographChart { get; set; }
+        public ChartValues<Point> AccChart { get; set; }
         public ChartValues<Point> OffsetChart { get; set; }
         public ChartValues<Point> STWAngleChart { get; set; }
         public ChartValues<Point> FarToFrontChart { get; set; }
@@ -138,12 +145,14 @@ namespace DSIES.Pages
         private void ClearValues()
         {
             TSpeed = new ChartValues<Point>();
+            TAcc = new ChartValues<Point>();
             TAccelerograph = new ChartValues<Point>();
             TOffset = new ChartValues<Point>();
             TSTWAngle = new ChartValues<Point>();
             TFarToFront = new ChartValues<Point>();
             TBreak = new ChartValues<Point>();
             DSpeed = new ChartValues<Point>();
+            DAcc = new ChartValues<Point>();
             DAccelerograph = new ChartValues<Point>();
             DOffset = new ChartValues<Point>();
             DSTWAngle = new ChartValues<Point>();
@@ -160,6 +169,7 @@ namespace DSIES.Pages
         {
             CenterChart = TSpeed;
             SpeedChart = TSpeed;
+            AccChart = TAcc;
             AccelerographChart = TAccelerograph;
             BreakChart = TBreak;
             OffsetChart = TOffset;
@@ -171,6 +181,7 @@ namespace DSIES.Pages
         {
             CenterChart = DSpeed;
             SpeedChart = DSpeed;
+            AccChart = DAcc;
             AccelerographChart = DAccelerograph;
             BreakChart = DBreak;
             OffsetChart = DOffset;
@@ -204,12 +215,14 @@ namespace DSIES.Pages
         {
             CacheTSpeed = new ChartValues<Point>();
             CacheTAccelerograph = new ChartValues<Point>();
+            CacheTAcc = new ChartValues<Point>();
             CacheTOffset = new ChartValues<Point>();
             CacheTSTWAngle = new ChartValues<Point>();
             CacheTFarToFront = new ChartValues<Point>();
             CacheTBreak = new ChartValues<Point>();
             CacheDSpeed = new ChartValues<Point>();
             CacheDAccelerograph = new ChartValues<Point>();
+            CacheDAcc = new ChartValues<Point>();
             CacheDOffset = new ChartValues<Point>();
             CacheDSTWAngle = new ChartValues<Point>();
             CacheDFarToFront = new ChartValues<Point>();
@@ -224,11 +237,13 @@ namespace DSIES.Pages
 
             CacheTSpeed.Add(new Point(t, f.Speed));
             CacheTAccelerograph.Add(new Point(t, f.Accelerograph));
+            CacheTAcc.Add(new Point(t, f.Acc));
             CacheTOffset.Add(new Point(t, f.Offset));
             CacheTSTWAngle.Add(new Point(t, f.StwAngle));
             CacheTFarToFront.Add(new Point(t, f.FarToFront));
             CacheTBreak.Add(new Point(t, f.Brake));
             CacheDSpeed.Add(new Point(d, f.Speed));
+            CacheDAcc.Add(new Point(d, f.Acc));
             CacheDAccelerograph.Add(new Point(d, f.Accelerograph));
             CacheDOffset.Add(new Point(d, f.Offset));
             CacheDSTWAngle.Add(new Point(d, f.StwAngle));
@@ -239,12 +254,14 @@ namespace DSIES.Pages
         private void FlushCache()
         {
             TSpeed.AddRange(CacheTSpeed);
+            TAcc.AddRange(CacheTAcc);
             TAccelerograph.AddRange(CacheTAccelerograph);
             TOffset.AddRange(CacheTOffset);
             TSTWAngle.AddRange(CacheTSTWAngle);
             TFarToFront.AddRange(CacheTFarToFront);
             TBreak.AddRange(CacheTBreak);
             DSpeed.AddRange(CacheDSpeed);
+            DAcc.AddRange(CacheDAcc);
             DAccelerograph.AddRange(CacheDAccelerograph);
             DOffset.AddRange(CacheDOffset);
             DSTWAngle.AddRange(CacheDSTWAngle);

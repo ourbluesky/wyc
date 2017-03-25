@@ -52,7 +52,7 @@
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
                             <lvc:LineSeries x:Name="Speed" Fill="Transparent" Values="{Binding SpeedChart}" Visibility="Visible" />
-                            <lvc:LineSeries x:Name="Acceleration" Fill="Transparent" Values="{Binding AccelerationChart}" Visibility="Hidden" />
+                            <lvc:LineSeries x:Name="Acceleration" Fill="Transparent" Values="{Binding AccChart}" Visibility="Hidden" />
                             <lvc:LineSeries x:Name="Break" Fill="Transparent" Values="{Binding BreakChart}" Visibility="Hidden" />
                             <lvc:LineSeries x:Name="Accelerator" Fill="Transparent" Values="{Binding AcceleratorChart}" Visibility="Hidden" />
                         </lvc:CartesianChart.Series>
@@ -62,7 +62,7 @@
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="152" Margin="543,314,0,0" VerticalAlignment="Top" Width="247">
                 <Grid HorizontalAlignment="Left" Height="134" Margin="-0.8,0.2,0,-3" VerticalAlignment="Top" Width="210">
                     <Label x:Name="label3" Content="油门" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006" Margin="-0.8,-0.8,0,0"/>
-                    <lvc:CartesianChart x:Name="Chart_Small_2" Margin="29,24,0,0" RenderTransformOrigin="0.493,0.424">
+                    <lvc:CartesianChart x:Name="Chart_Small_2" Margin="29,10,-14,0" RenderTransformOrigin="0.493,0.424">
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
@@ -86,7 +86,7 @@
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="152" Margin="277,314,0,0" VerticalAlignment="Top" Width="266">
                 <Grid HorizontalAlignment="Left" Height="133" Margin="0,0,-0.2,-1.8" VerticalAlignment="Top" Width="205">
                     <Label x:Name="label1" Content="速度" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006"/>
-                    <lvc:CartesianChart x:Name="Chart_Small_1" Margin="24,23,0,0">
+                    <lvc:CartesianChart x:Name="Chart_Small_1" Margin="24,10,-41,0">
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
@@ -102,7 +102,7 @@
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
-                            <lvc:LineSeries x:Name="Break_small" Fill="Transparent" Values="{Binding AccelerationChart}"/>
+                            <lvc:LineSeries x:Name="Break_small" Fill="Transparent" Values="{Binding AccChart}"/>
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
