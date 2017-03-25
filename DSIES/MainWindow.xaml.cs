@@ -30,6 +30,7 @@ namespace DSIES
         //    UserSelections selection;
         //  User user;
         //     Player player;
+        public int scene;
         Question question = new Question();
         internal Question QUESTION
         {

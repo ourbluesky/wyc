@@ -32,6 +32,7 @@ namespace DSIES.Pages
             PageList.Main.setPage(page);
             scene_one_button.Visibility = System.Windows.Visibility.Hidden;
             scene_one_button_copy.Visibility = System.Windows.Visibility.Visible;
+            PageList.Main.scene = 1;
         }
 
         private void scenen_two_button_Click(object sender, RoutedEventArgs e)
@@ -40,6 +41,7 @@ namespace DSIES.Pages
             PageList.Main.setPage(page);
             scene_two_button.Visibility = System.Windows.Visibility.Hidden;
             scene_two_button_copy.Visibility = System.Windows.Visibility.Visible;
+            PageList.Main.scene = 2;
         }
 
         private void scene_three_button_Click(object sender, RoutedEventArgs e)
@@ -48,24 +50,25 @@ namespace DSIES.Pages
             PageList.Main.setPage(page);
             scene_three_button.Visibility = System.Windows.Visibility.Hidden;
             scene_three_button_copy.Visibility = System.Windows.Visibility.Visible;
+            PageList.Main.scene = 3;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            //if (i >= 3 || (Speeding == true && Line == true && Overtake == true && Lighting == true && Distraction == true))
-            //{
-            //    PageList.Main.setPage(DataExportPage);//报告
-            //}
-            //else
-            //{
-
+            if (i >= 3 || (PageList.Main.EDUCATION.Speeding == true && PageList.Main.EDUCATION.Line == true && PageList.Main.EDUCATION.Overtake == true && PageList.Main.EDUCATION.Lighting == true && PageList.Main.EDUCATION.Distraction == true))
+            {
+                PageList.Main.setPage(PageList.DataExport);//报告
+            }
+            else
+            {
+               PageList.Main.scene = 0;
                 EducationSelectPage page = new EducationSelectPage();
                 PageList.Main.setPage(page);
-
+ 
                 i++;
-            //}
+            }
         }
 
-      
+
     }
 }

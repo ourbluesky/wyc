@@ -16,6 +16,7 @@ using LiveCharts;
 using LiveCharts.Configurations;
 using DSIES.Pages;
 using DSIES.UDP;
+using DSIES.Class.Control;
 
 namespace DSIES.Pages
 {
@@ -232,6 +233,10 @@ namespace DSIES.Pages
         private void Cache(Svframe record)
         {
             Svframe f = record;
+            Data_DealClass act = new Data_DealClass();
+            act.SPEED = f.Speed;
+            act.LINE = f.Lane;
+            act.LEFT_distence = f.Distance;
             float t = f.Time;
             float d = f.Distance;
 
@@ -249,6 +254,11 @@ namespace DSIES.Pages
             CacheDSTWAngle.Add(new Point(d, f.StwAngle));
             CacheDFarToFront.Add(new Point(d, f.FarToFront));
             CacheDBreak.Add(new Point(t, f.Brake));
+            PageList.Main.EDUCATION.Speeding = act.speeding_judge();
+            PageList.Main.EDUCATION.Line = act.line_judge(f.X,f.Y);
+            PageList.Main.EDUCATION.Overtake = act.overtake_judge(f.X, f.Y);
+            PageList.Main.EDUCATION.Lighting = act.lighting_judge(f.X, f.Y);
+            PageList.Main.EDUCATION.Distraction = act.distrationg_judge(f.X, f.Y);
             CacheCount++;
         }
         private void FlushCache()
