@@ -14,6 +14,8 @@ namespace DSIES.UDP
          * This static Class is the center of the System.
          * It holds all Resources except Thread and File.
          */
+
+        //加
         static CU()
         {
             SET_UDP =  new UDPSetting();

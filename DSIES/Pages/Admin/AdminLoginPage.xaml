@@ -6,27 +6,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       Title="AdminLoginPage"  Height="640" Width="1214">
+    <Grid >
 
-            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0"  >
+        <Image x:Name="image" Source="..\..\Picture\登_陆.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="0,-72,0,-52" Grid.ColumnSpan="2" >
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/DSIES;component/Picture/bg.png" TileMode="Tile"/>
+            </Image.OpacityMask>
+        </Image>
+        <Label x:Name="subject" Content="D S I E S" Height="108" Margin="263,182,515,350" Width="374" Foreground="White" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" FontFamily="Modern No. 20" Grid.Column="1"/>
+
+        <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Grid.ColumnSpan="3">
 
 
-                <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="31*"/>
-                        <ColumnDefinition Width="576*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid x:Name="In" HorizontalAlignment="Left" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Grid.Column="1" >
-                        <Grid.Background>
-                            <ImageBrush ImageSource="..\..\Picture\框.png"/>
-                        </Grid.Background>
-                        <Label x:Name="login_label" Content="&#xD;&#xA;欢迎进入后台管理系统！&#xD;&#xA;&#xD;&#xA;请输入管理员信息登录！" HorizontalAlignment="Left" Height="81" Margin="23,26,0,0" VerticalAlignment="Top" Width="148" Background="{x:Null}" Foreground="White"/>
-                        <Label x:Name="grantusername" Content="用户名:" HorizontalAlignment="Left" Height="27" Margin="22,138,0,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
-                        <Label x:Name="password" Content="密   码:" Height="27" Margin="22,165,113,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
-                        <TextBox x:Name="textBlock_grantusername" HorizontalAlignment="Left" Height="19" Margin="90,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87" Foreground="White" Background="{x:Null}"/>
-                        <TextBox x:Name="textBlock_grantpassword" HorizontalAlignment="Left" Height="19" Margin="90,169,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="88" Foreground="White" Background="{x:Null}"/>
-                        <Button Style="{DynamicResource forword_ButtonStyle}"  x:Name="In_Button" Click="In_Button_Click" Margin="0,242,29,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
-                    </Grid>
-                </Grid>
+            <Grid x:Name="In" HorizontalAlignment="Left" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Grid.Column="1" >
+                <Grid.Background>
+                    <ImageBrush ImageSource="..\..\Picture\框.png"/>
+                </Grid.Background>
+                <Label x:Name="login_label" Content="&#xD;&#xA;欢迎进入后台管理系统！&#xD;&#xA;&#xD;&#xA;请输入管理员信息登录！" HorizontalAlignment="Left" Height="81" Margin="23,26,0,0" VerticalAlignment="Top" Width="148" Background="{x:Null}" Foreground="White"/>
+                <Label x:Name="grantusername" Content="用户名:" HorizontalAlignment="Left" Height="27" Margin="22,138,0,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
+                <Label x:Name="password" Content="密   码:" Height="27" Margin="22,165,113,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
+                <TextBox x:Name="textBlock_grantusername" HorizontalAlignment="Left" Height="19" Margin="90,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87" Foreground="White" Background="{x:Null}"/>
+                <TextBox x:Name="textBlock_grantpassword" HorizontalAlignment="Left" Height="19" Margin="90,169,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="88" Foreground="White" Background="{x:Null}"/>
+                <Button Style="{DynamicResource forword_ButtonStyle}"  x:Name="In_Button" Click="In_Button_Click" Margin="0,242,29,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
             </Grid>
-        </Page>
+        </Grid>
+    </Grid>
+</Page>

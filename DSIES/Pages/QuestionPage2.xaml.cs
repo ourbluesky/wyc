@@ -1561,7 +1561,7 @@ namespace DSIES.Pages
                 }
 
 
-                flag = 0;//记得删
+              //  flag = 0;//记得删
                 if (flag == 0)
                 {
                     CustomMessageBox.Show("温馨提示：", "您的答案已提交！");

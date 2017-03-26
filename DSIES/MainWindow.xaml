@@ -38,13 +38,14 @@
             </Grid>
 
             <Border Grid.Column="2" Name="Line" BorderBrush="#ff999999" Margin="10,12" Height="26" VerticalAlignment="Center" BorderThickness="0.5"/>
-            <Grid Grid.Column="3" VerticalAlignment="Stretch" Width="500" HorizontalAlignment="Right">
+            <Grid Grid.Column="3" VerticalAlignment="Stretch" Margin="407,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
+                    
                 </Grid.ColumnDefinitions>
                 <Button Height="25" Width="80" Grid.Column="0" x:Name="LogOutBtn" Click="LogOutButton_Click" ToolTip="Log out" Margin="10,12" >Log out</Button>
                 <Button Height="25" Width="80" Grid.Column="0" x:Name="AdminBtn" Click="AdminButton_Click" ToolTip="Administrator" Margin="-91,12,111,12" RenderTransformOrigin="0.69,0.395" >Admin</Button>

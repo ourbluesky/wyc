@@ -14,11 +14,8 @@
         </Grid.ColumnDefinitions>
 
         <Grid Margin="10,0,-10,0" >
-
-            <Image x:Name="background" Source="..\Picture\bg.png" Margin="-32,44,32,-44" />
-            <!--<Image x:Name="logo" Source="..\Picture\校徽.png" HorizontalAlignment="Left" Height="150" Margin="20,20,0,0" VerticalAlignment="Top" Width="150"/>-->
-            <Image x:Name="police" Source="..\Picture\做场景.png" HorizontalAlignment="Left" Height="327" Margin="44,357,0,-44" VerticalAlignment="Top" Width="381"/>
-            <Label x:Name="label" Content="请按照您所违反&#xD;&#xA;的事项依次进行&#xD;&#xA;教育。" HorizontalAlignment="Left" Height="70" Margin="265,392,0,0" Foreground="Blue" VerticalAlignment="Top" Width="122" FontSize="16"/>
+            <Image x:Name="police" Source="..\Picture\做场景.png" HorizontalAlignment="Left" Height="327" Margin="12,333,0,-20" VerticalAlignment="Top" Width="381"/>
+            <Label x:Name="label" Content="请按照您所违反&#xD;&#xA;的事项依次进行&#xD;&#xA;教育。" HorizontalAlignment="Left" Height="89" Margin="223,354,0,0" Foreground="Blue" VerticalAlignment="Top" Width="157" FontSize="20"/>
             <Button Style="{DynamicResource Speeding_ButtonStyle}" x:Name="Speeding_button" Click="scene_one_button_Click" HorizontalAlignment="Left" Height="169" Margin="760,118,0,0" VerticalAlignment="Top" Width="235" Visibility="Visible"/>
             <Button Style="{DynamicResource Line_ButtonStyle}" x:Name="Line_button"  Click="scene_two_button_Click" HorizontalAlignment="Left" Height="138" Margin="541,149,0,0" VerticalAlignment="Top" Width="214" Visibility="Visible"/>
             <Button Style="{DynamicResource Overtake_ButtonStyle}"  x:Name="Overtake_button"  Click="scene_three_button_Click" HorizontalAlignment="Left" Height="157" VerticalAlignment="Top" Width="217" Margin="351,235,0,0" Visibility="Visible" RenderTransformOrigin="0.092,0.758"/>
@@ -30,7 +27,7 @@
             <Button Style="{DynamicResource Lighting_copy_ButtonStyle}"  x:Name="Lighting_button_Copy"  Visibility="Hidden" HorizontalAlignment="Left" Height="178" Margin="499,392,0,0" VerticalAlignment="Top" Width="236" Background="#FFC2F902"/>
             <Button Style="{DynamicResource Distraction_copy_ButtonStyle}"  x:Name="Distraction_button_Copy"  Visibility="Hidden" HorizontalAlignment="Left" Height="155" Margin="760,440,0,0" VerticalAlignment="Top" Width="235" Background="#FFC2F902"/>
 
-            <Button Style="{DynamicResource ButtonStyle7}"  x:Name="Button"  Click="Button_Click" Margin="0,580,136,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="60" Width="60" RenderTransformOrigin="-0.843,1.97" />
+            <Button Style="{DynamicResource ButtonStyle7}"  x:Name="Button"  Click="Button_Click" Margin="0,570,64,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="60" Width="60" RenderTransformOrigin="-0.843,1.97" />
         </Grid>
     </Grid>
 </Page>

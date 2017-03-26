@@ -29,7 +29,7 @@ namespace DSIES.Pages
         public GamePage()
         {
             InitializeComponent();
-            CustomMessageBox.Show("尊敬的驾驶员，您好！", "下面进入游戏测试，请根据游戏规则完成游戏。");
+            CustomMessageBox.Show("尊敬的驾驶员，您好！", "下面进入游戏测试，请根据游戏规则完成游戏。");            
             textBlock_score.DataContext = game.Score;
             textBlock_times.DataContext = game.Times;
            
@@ -37,16 +37,16 @@ namespace DSIES.Pages
 
         private void Enter_Button_Click(object sender, RoutedEventArgs e)
         {
-            //if (game.Times < 60)
-            //{
-            //    CustomMessageBox.Show("温馨提示：", "请继续游戏！");
-            //}
-            //else
-            //{
-            //    game.Done = true;
-            //    success(game);
-            //    PageList.Main.setPage(PageList.Questionandgame);
-            //}
+            if (game.Times < 60)
+            {
+                CustomMessageBox.Show("温馨提示：", "请继续游戏！");
+            }
+            else
+            {
+                game.Done = true;
+                success(game);
+                PageList.Main.setPage(PageList.Questionandgame);
+            }
             PageList.Main.setPage(PageList.Questionandgame);//别忘记恢复。
         }
 
@@ -123,7 +123,7 @@ namespace DSIES.Pages
             }
             else
             {
-                CustomMessageBox.Show("温馨提示：", "游戏已完成，请进行下一步！");
+                 CustomMessageBox.Show("温馨提示：", "游戏已完成，请进行下一步！");
             }
         }
         private void D_Button_Click(object sender, RoutedEventArgs e)
@@ -149,7 +149,6 @@ namespace DSIES.Pages
             else
             {
                 CustomMessageBox.Show("温馨提示：", "游戏已完成，请进行下一步！");
-
             }
         }
     }

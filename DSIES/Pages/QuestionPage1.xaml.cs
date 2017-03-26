@@ -1295,7 +1295,7 @@ namespace DSIES.Pages
                     PageList.Main.QUESTION.Grade1 = "E";
                 }
 
-                flag = 0;//记得删。
+             //   flag = 0;//记得删。
             if (flag == 0)
             {
 

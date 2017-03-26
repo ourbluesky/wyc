@@ -32,7 +32,7 @@ namespace DSIES.Pages.Admin
         private void In_Button_Click(object sender, RoutedEventArgs e)
         {
           //  if （textBlock_grantusername="dsiesadmin"&&textBlock_grantpassword="dsies"）
-        //｛ PageList.Main.setPage(PageList.);｝
+         PageList.Main.setPage(PageList.AdminMain);
           // else{CustomMessageBox.Show （"温馨提示","管理员用户名或密码错误！");}
         }
 
