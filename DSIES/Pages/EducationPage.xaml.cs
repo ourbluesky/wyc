@@ -43,26 +43,6 @@ namespace DSIES.Pages
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (PageList.Main.EDUCATION.Speeding == false)
-            {
-                PageList.Main.EDUCATION.Speeding = true;
-            }
-            if (PageList.Main.EDUCATION.Line == false)
-            {
-                PageList.Main.EDUCATION.Line = true;
-            }
-            if (PageList.Main.EDUCATION.Overtake == false)
-            {
-                PageList.Main.EDUCATION.Overtake = true;
-            }
-            if (PageList.Main.EDUCATION.Lighting == false)
-            {
-                PageList.Main.EDUCATION.Lighting = true;
-            }
-            if (PageList.Main.EDUCATION.Distraction == false)
-            {
-                PageList.Main.EDUCATION.Distraction = true;             
-            }
             PageList.Main.setPage(PageList.Education_educate);
             
         }

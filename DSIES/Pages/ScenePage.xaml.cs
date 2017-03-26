@@ -47,13 +47,28 @@ namespace DSIES.Pages
                 brake = frame.Brake;
                 accelerograph = frame.Accelerograph;
                 acc = frame.Acc;
+                SetPage(frame);
             }
             else
-                CustomMessageBox.Show("","Error!");          
-
+                CustomMessageBox.Show("", "Error!");
+            
             CU.MG_UDP.EndReceive();//关闭
         }
 
+
+        public void SetPage(Svframe record)
+        {
+            this.Dispatcher.BeginInvoke((System.Action)(delegate ()
+            {
+                UpdateChart(record);
+            }));
+        }
+
+        public void ResetPage()
+        {
+            ClearValues();
+            ChartInit();
+        }
 
         //public ChartValues<Point> PointsM { get; set; }
         //public ChartValues<Point> PointsN { get; set; }
@@ -95,7 +110,7 @@ namespace DSIES.Pages
         //    Break_textBlock.DataContext = 3;
         //    Accelerator_textBlock.DataContext = 4;
         //}
- 
+
         /* Points. T for Time, D for Distance */
         private ChartValues<Point> TSpeed;
         private ChartValues<Point> TAcc;
@@ -255,7 +270,7 @@ namespace DSIES.Pages
             CacheDFarToFront.Add(new Point(d, f.FarToFront));
             CacheDBreak.Add(new Point(t, f.Brake));
             PageList.Main.EDUCATION.Speeding = act.speeding_judge();
-            PageList.Main.EDUCATION.Line = act.line_judge(f.X,f.Y);
+            PageList.Main.EDUCATION.Line = act.line_judge(f.X, f.Y);
             PageList.Main.EDUCATION.Overtake = act.overtake_judge(f.X, f.Y);
             PageList.Main.EDUCATION.Lighting = act.lighting_judge(f.X, f.Y);
             PageList.Main.EDUCATION.Distraction = act.distrationg_judge(f.X, f.Y);
@@ -279,17 +294,17 @@ namespace DSIES.Pages
             DBreak.AddRange(CacheDBreak);
             CacheCount = 0;
         }
-    //    // Point类，表示折线图上的一个坐标点
-    //    public class Point
-    //{
-    //    public Point(float x, float y)
-    //    {
-    //        this.X = x;
-    //        this.Y = y;
-    //    }
-    //    public float X { get; set; }
-    //    public float Y { get; set; }
-    //}
+        //    // Point类，表示折线图上的一个坐标点
+        //    public class Point
+        //{
+        //    public Point(float x, float y)
+        //    {
+        //        this.X = x;
+        //        this.Y = y;
+        //    }
+        //    public float X { get; set; }
+        //    public float Y { get; set; }
+        //}
 
         private void Speed_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -329,4 +344,5 @@ namespace DSIES.Pages
             PageList.Main.setPage(PageList.SceneSelect);
         }
     }
+
 }

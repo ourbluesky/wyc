@@ -88,7 +88,7 @@ namespace DSIES.Pages
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
         {
             PageList.Main.EDUCATION.path = path1;
-
+            PageList.Main.EDUCATION.Speeding = true;
             PageList.Main.setPage(PageList.EducationLoad);
             Speeding_button.Visibility = System.Windows.Visibility.Hidden;
             Speeding_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -97,6 +97,7 @@ namespace DSIES.Pages
         private void scene_two_button_Click(object sender, RoutedEventArgs e)
         {
             PageList.Main.EDUCATION.path = path2;
+            PageList.Main.EDUCATION.Line = true;
             PageList.Main.setPage(PageList.EducationLoad);
             Line_button.Visibility = System.Windows.Visibility.Hidden;
             Line_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -105,6 +106,7 @@ namespace DSIES.Pages
         private void scene_three_button_Click(object sender, RoutedEventArgs e)
         {
             PageList.Main.EDUCATION.path = path3;
+            PageList.Main.EDUCATION.Overtake = true;
             PageList.Main.setPage(PageList.EducationLoad);
             Overtake_button.Visibility = System.Windows.Visibility.Hidden;
             Overtake_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -113,6 +115,7 @@ namespace DSIES.Pages
         private void scene_four_button_Click(object sender, RoutedEventArgs e)
         {
             PageList.Main.EDUCATION.path = path4;
+            PageList.Main.EDUCATION.Lighting = true;
             PageList.Main.setPage(PageList.EducationLoad);
             Lighting_button.Visibility = System.Windows.Visibility.Hidden;
             Lighting_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -121,6 +124,7 @@ namespace DSIES.Pages
         private void scene_five_button_Click(object sender, RoutedEventArgs e)
         {
             PageList.Main.EDUCATION.path = path5;
+            PageList.Main.EDUCATION.Distraction = true;
             PageList.Main.setPage(PageList.EducationLoad);
             Distraction_button.Visibility = System.Windows.Visibility.Hidden;
             Distraction_button_Copy.Visibility = System.Windows.Visibility.Visible;

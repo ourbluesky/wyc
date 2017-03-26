@@ -47,7 +47,6 @@ namespace DSIES.Pages
                 success(game);
                 PageList.Main.setPage(PageList.Questionandgame);
             }
-            PageList.Main.setPage(PageList.Questionandgame);//别忘记恢复。
         }
 
         private void success(Game game)
