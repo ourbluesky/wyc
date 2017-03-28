@@ -26,7 +26,11 @@ namespace DSIES.Pages
         public QuesGameSeclectPage()
         {
             InitializeComponent();
-      
+          if(PageList.Main.GAME.Done==true&&question.Flagquestion==true)
+            {
+                SceneSelectPage page = new SceneSelectPage();
+                PageList.Main.setPage(page);
+            }
         }
    
 

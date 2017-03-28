@@ -24,7 +24,7 @@ namespace DSIES.Pages
         public EducationPage()
         {
             InitializeComponent();
-            mediaElement.Source = new Uri(PageList.Main.EDUCATION.Path, UriKind.Relative);
+            mediaElement.Source = new Uri(sceneselectData.education.Path, UriKind.Relative);
             mediaElement.Play();
         }
         private void play_Button_Click(object sender, RoutedEventArgs e)

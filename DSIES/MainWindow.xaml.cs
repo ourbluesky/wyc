@@ -30,7 +30,7 @@ namespace DSIES
         //    UserSelections selection;
         //  User user;
         //     Player player;
-        public int scene;
+        public int i = 0;
         Question question = new Question();
         internal Question QUESTION
         {
@@ -59,19 +59,18 @@ namespace DSIES
             set { game = value; }
         }
 
-        Education education = new Education();
-        internal Education EDUCATION
-        {
-            get { return education; }
-            set { education = value; }
-        }
+        //Education education = new Education();
+        //internal Education EDUCATION
+        //{
+        //    get { return education; }
+        //    set { education = value; }
+        //}
 
         public MainWindow()
         {
             InitializeComponent();
             //init();
             setPage(PageList.Login);
-
         }
 
         Regular regular = new Regular();
@@ -80,7 +79,7 @@ namespace DSIES
             get { return regular; }
             set { regular = value; }
          }
-
+       
         /*   internal Player Player
         {
             get { return player; }

@@ -150,15 +150,15 @@ namespace DSIES.Pages
                 CustomMessageBox.Show("温馨提示：", "游戏已完成，请进行下一步！");
             }
         }
-        private bool  Game_score()
+        private string  Game_score()
         {
             if(game.ATimes+game.BTimes<=game.CTimes+game.DTimes)
             {
-                return false;
+                return "false";
             }
             else
             {
-                return true;
+                return "true";
             }
         }
     }

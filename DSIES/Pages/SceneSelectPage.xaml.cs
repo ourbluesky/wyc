@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DSIES.Class.Control;
 
 namespace DSIES.Pages
 {
@@ -20,10 +21,10 @@ namespace DSIES.Pages
     /// </summary>
     public partial class SceneSelectPage : Page
     {
-        int i = 0;
+
         public SceneSelectPage()
         {
-              InitializeComponent();
+            InitializeComponent();
         }
 
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
@@ -32,7 +33,7 @@ namespace DSIES.Pages
             PageList.Main.setPage(page);
             scene_one_button.Visibility = System.Windows.Visibility.Hidden;
             scene_one_button_copy.Visibility = System.Windows.Visibility.Visible;
-            PageList.Main.scene = 1;
+            sceneselectData.scene = 1;
         }
 
         private void scenen_two_button_Click(object sender, RoutedEventArgs e)
@@ -41,7 +42,7 @@ namespace DSIES.Pages
             PageList.Main.setPage(page);
             scene_two_button.Visibility = System.Windows.Visibility.Hidden;
             scene_two_button_copy.Visibility = System.Windows.Visibility.Visible;
-            PageList.Main.scene = 2;
+            sceneselectData.scene = 2;
         }
 
         private void scene_three_button_Click(object sender, RoutedEventArgs e)
@@ -50,25 +51,36 @@ namespace DSIES.Pages
             PageList.Main.setPage(page);
             scene_three_button.Visibility = System.Windows.Visibility.Hidden;
             scene_three_button_copy.Visibility = System.Windows.Visibility.Visible;
-            PageList.Main.scene = 3;
+            sceneselectData.scene = 3;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (i >= 3 || (PageList.Main.EDUCATION.Speeding == true && PageList.Main.EDUCATION.Line == true && PageList.Main.EDUCATION.Overtake == true && PageList.Main.EDUCATION.Lighting == true && PageList.Main.EDUCATION.Distraction == true))
+            if (PageList.Main.i >= 3 || (sceneselectData.education.Speeding == true && sceneselectData.education.Overtake == true && sceneselectData.education.Lighting == true && sceneselectData.education.Distraction == true))
             {
+                if (PageList.Main.i == 3)
+                    PageList.Main.Regular.Credit = "B";
                 PageList.Main.setPage(PageList.DataExport);//报告
             }
             else
             {
-               PageList.Main.scene = 0;
+                sceneselectData.scene = 0;
                 EducationSelectPage page = new EducationSelectPage();
                 PageList.Main.setPage(page);
- 
-                i++;
+                PageList.Main.i++;
             }
         }
 
 
     }
+     static class sceneselectData                 
+    {
+        static sceneselectData()
+        {
+            education = new Education();
+        }
+        public static Education education;
+        public static int scene;
+    }
+
 }

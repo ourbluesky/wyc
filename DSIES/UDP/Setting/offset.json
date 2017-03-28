@@ -3,7 +3,7 @@
 	"StwAngle": 1,
 	"Accelerograph":2,
 	"Brake": 3, 
-	"TrLight": 6
+	"TrLight": 6,
 	"Speed": 12,
     "X": 15,
     "Y": 16,    

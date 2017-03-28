@@ -155,11 +155,11 @@ namespace DSIES.Info.Database
                             regular.DriAge = reader["driage"] as string;
                             regular.Career = reader["career"] as string;
                             regular.Grade = reader["grade"] as string;
-                            regular.Score1 = reader["score1"] as string;
-                            regular.Score2 = reader["score2"] as string;
+                            //regular.Score1 = reader["score1"] as string;
+                            //regular.Score2 = reader["score2"] as string;
                             regular.Grade1 = reader["grade1"] as string;
                             regular.Grade2 = reader["grade2"] as string;
-                            regular.Accident_times = reader["accident_times"] as string; ;
+                            regular.Accident_times = reader["accident_times"] as string; 
 
                             break;
                         default:

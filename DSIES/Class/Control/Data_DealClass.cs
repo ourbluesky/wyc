@@ -33,8 +33,14 @@ namespace DSIES.Class.Control
         public bool speeding_judge()    //超速行为
         {
             speed_change();
-            if ( speed_out> 5)
+            if (speed_out > 5)
+            {
+                if (PageList.Main.i <= 1)
+                    PageList.Main.Regular.Score1 -= 1;
+                else
+                    PageList.Main.Regular.Score2 -= 1;
                 return true;
+            }
             return false;
         }
         public bool line_judge(float x,float y)   //并线行为
@@ -43,8 +49,14 @@ namespace DSIES.Class.Control
             {
                 actline = this.line;              
             }
-            if(speed_change()==true&&y<=3287&&y>=3087)
-                 return true;
+            if (speed_change() == true && y <= 3287 && y >= 3087)
+            {
+                if (PageList.Main.i <= 1)
+                    PageList.Main.Regular.Score1 -= 1;
+                else
+                    PageList.Main.Regular.Score2 -= 1;
+                return true;
+            }
             return false;
         }
         public bool overtake_judge(float x, float y)  //超车行为
@@ -53,20 +65,38 @@ namespace DSIES.Class.Control
             {
                 actline = this.line;
             }
-            if (back == true && y >= 2733 && y <= 3200&&left_distence<30)
+            if (back == true && y >= 2733 && y <= 3200 && left_distence < 30)
+            {
+                if (PageList.Main.i <= 1)
+                    PageList.Main.Regular.Score1 -= 1;
+                else
+                    PageList.Main.Regular.Score2 -= 1;
                 return true;
+            }
             return false;
         }
         public bool lighting_judge(float x,float y)
         {
-            if(y<-390&&y>-457&& this.speed ==0)
-                 return true;
+            if (y < -390 && y > -457 && this.speed == 0)
+            {
+                if (PageList.Main.i <= 1)
+                    PageList.Main.Regular.Score1 -= 1;
+                else
+                    PageList.Main.Regular.Score2 -= 1;
+                return true;
+            }
             return false;
         }   //闯红灯行为
         public bool distrationg_judge(float x,float y)
         {
             if (x < 2052 && x > 1652 && this.speed == 0)
+            {
+                if (PageList.Main.i <= 1)
+                    PageList.Main.Regular.Score1 -= 1;
+                else
+                    PageList.Main.Regular.Score2 -= 1;
                 return true;
+            }
             return false;
         }   //分心行为
         public bool speed_change()
