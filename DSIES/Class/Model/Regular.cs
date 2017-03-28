@@ -26,7 +26,7 @@ namespace DSIES.Class.Model
            string sight_right,
            string reagency,
            string accident_times,
-           string grade,
+           bool grade,    //true代表AB点击次数大于CD点击次数   ,false代表相反
            string score1,
            string grade1,
            string score2,
@@ -72,7 +72,7 @@ namespace DSIES.Class.Model
        private string deepSight_left;
        private string deepSight_right;
        private string reagency;     
-       private string grade;
+       private bool grade;
        private string grade1;
        private string grade2;
        private string score1;
@@ -132,7 +132,7 @@ namespace DSIES.Class.Model
            get { return reagency; }
            set { reagency = value; }     
        }  
-       public string Grade
+       public bool Grade
        {
            get { return grade; }
            set { grade = value; }

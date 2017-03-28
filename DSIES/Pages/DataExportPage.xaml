@@ -15,7 +15,7 @@
                     <ImageBrush ImageSource="..\Picture\qu.png"/>
                 </Grid.Background>
                 <Border BorderBrush="Black" BorderThickness="1" Width="1125" Margin="84,1032,59,86" RenderTransformOrigin="0.5,0">
-                    <TextBox DataContext="in" HorizontalAlignment="Left" Margin="-0.8,-0.8,-1,-1" Width="1125"/>
+                    <Label DataContext="in" HorizontalAlignment="Left" Margin="-0.8,-0.8,-1,-1" Width="1125"/>
                 </Border>
                 <Label Content="危险预测教育驾驶行为评定表 " HorizontalAlignment="Left" Margin="382,22,0,0" VerticalAlignment="Top" FontFamily="Niagara Engraved" FontWeight="Bold" FontSize="40"/>
                 <Button Content="打印" HorizontalAlignment="Left" Margin="593,1310,0,0" VerticalAlignment="Top" Width="93" Height="54"/>
