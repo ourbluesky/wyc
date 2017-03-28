@@ -32,7 +32,10 @@ namespace DSIES.Class.Control
 
         public bool speeding_judge()    //超速行为
         {
-            speed_change();
+            if (this.speed >= 85)
+            {
+                speed_out += 1;
+            }
             if (speed_out > 5)
             {
                 if (PageList.Main.i <= 1)
@@ -49,7 +52,7 @@ namespace DSIES.Class.Control
             {
                 actline = this.line;              
             }
-            if (speed_change() == true && y <= 3287 && y >= 3087)
+            if ( y <= 3287 && y >= 3087)
             {
                 if (PageList.Main.i <= 1)
                     PageList.Main.Regular.Score1 -= 1;
@@ -99,17 +102,8 @@ namespace DSIES.Class.Control
             }
             return false;
         }   //分心行为
-        public bool speed_change()
-        {
-            if (speed_change() == true && this.speed <= 85)           
-                return false;
-            if (speed_change() == false && this.speed >= 85)
-            {
-                speed_out += 1;
-                return true;
-            }
-            return speed_change();
-        }
+
+
         public bool line_change()
         {
             if (line_change() == true && this.line == actline)
