@@ -55,7 +55,7 @@ namespace DSIES.UDP
         private float speed;        // 速度
         private float acc;          // 加速度
         private float stwAngle;     // 方向盘转角
-        private float offset;       // 偏离道路中性线距离
+        private float offset;       // 偏离道路中心线距离
         private float accelerograph;//油门踏板
         private float brake;        // 刹车踏板
         private float distance;     // 总行驶距离
@@ -63,8 +63,9 @@ namespace DSIES.UDP
         private float reacting;     // 反应状态 0-未进入反应阶段或反应结束 1-反应中
         private float area;         // 区域标记
         private float farToFront;   // 与前车的距离
+        private float farToBehind;  // 与后车的距离
         private float lane;         // 车道
-        private float trLight;      // 信号灯
+        private float trLight;      // 信号灯.0关1左转2右转
 
         public float Time
         {
@@ -146,6 +147,12 @@ namespace DSIES.UDP
         {
             get { return farToFront; }
             set { farToFront = value; }
+        }
+
+         private float FarToBehind
+        {
+            get { return farToBehind; }
+            set { farToBehind = value; }
         }
 
         public float Lane

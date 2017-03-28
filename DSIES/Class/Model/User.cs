@@ -22,7 +22,8 @@ namespace DSIES.Class.Model
         Age,
         DriAge,//驾龄
         Career,
-        Group,        
+        Group,
+        Accident_times,
         Sight_left,
         Sight_right,
         Deepsight_left,

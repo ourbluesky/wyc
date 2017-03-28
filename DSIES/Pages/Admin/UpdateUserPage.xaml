@@ -7,13 +7,21 @@
       d:DesignHeight="640" d:DesignWidth="960"
 	Title="UpdateUserPage">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/ButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
     <Grid>
         <Grid x:Name="ContentGrid"
             Height="640" Width="960">
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="150" >
                 <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,-1,-326" VerticalAlignment="Top" Width="149">
                     <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,10,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
-                   <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144"/>
+                    <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144"/>
                     <Button Style="{DynamicResource update_admin_ButtonStyle}" x:Name="update_admin_Button" Click="update_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,130,0,0" VerticalAlignment="Top" Width="144"/>
                     <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,250,0,0" VerticalAlignment="Top" Width="144"/>
                     <Button Style="{DynamicResource update_user_ButtonStyle_copy}" x:Name="update_user_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,70,0,0" VerticalAlignment="Top" Width="144" Background="#FF050000" />
@@ -24,6 +32,205 @@
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="810"  Margin="150,0,0,0" Background="WhiteSmoke">
                 <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="20" Margin="224,0,236,590"/>
             </Border>
+
+
+
+            <Grid Height="640" VerticalAlignment="Top" Width="810"  Margin="150,0,0,0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid Margin="50">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Border Style="{StaticResource TitleBorder}">
+                            <Grid>
+                                <TextBlock Style="{StaticResource Title}">用户信息</TextBlock>
+                                <Button Grid.Column="1"
+                            Style="{StaticResource TitleButton}"
+                                x:Name="InfoEditButton"
+                                Click="InfoEditButton_Click">
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Padding="3"><Run Text="编辑"/></TextBlock>
+
+                                    </StackPanel>
+                                </Button>
+                                <Button Grid.Column="1"
+                          
+                                Visibility="Hidden"
+                                x:Name="InfoSaveButton"
+                                Click="InfoSaveButton_Click">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Padding="3"><Run Text="保存"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <StackPanel 
+                    Grid.Row="1">
+                        <TextBlock  >用户名（联系方式）</TextBlock>
+                        <TextBox 
+                         x:Name="iTelphone" />
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="2">
+                        <TextBlock>姓名</TextBlock>
+                        <TextBox  
+                         x:Name="iName"/>
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="3">
+                        <TextBlock >性别</TextBlock>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton GroupName="Gender" Content="男"  IsChecked="True"  x:Name="iMale">
+                            </RadioButton>
+                            <RadioButton Grid.Column="1" GroupName="Gender" Content="女" x:Name="iFemale">
+                            </RadioButton>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="4">
+                        <TextBlock >年龄</TextBlock>
+                        <TextBox  
+                         x:Name="iAge"/>
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="5">
+                        <TextBlock ><Run Text="驾龄"/></TextBlock>
+                        <TextBox  
+                    		x:Name="iDriAge"/>
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="6">
+                        <TextBlock>职业</TextBlock>
+                        <TextBox  
+                         x:Name="iCareer"/>
+                    </StackPanel>
+                    <StackPanel
+                    Grid.Row="7">
+                        <TextBlock >三年内违章次数</TextBlock>
+                        <TextBox  
+                         x:Name="iAccident_times"/>
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="8">
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.ColumnSpan="1">
+
+                                <TextBlock >左眼视力</TextBlock>
+                                <TextBox  
+                         x:Name="iSight_left"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2">
+                                <TextBlock ><Run Text="右眼视力"/></TextBlock>
+                                <TextBox  
+                            		x:Name="iSight_right"/>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel 
+                    Grid.Row="9">
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.ColumnSpan="1">
+
+                                <TextBlock >左眼深视力</TextBlock>
+                                <TextBox  
+                         x:Name="iDeepsight_left"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2">
+                                <TextBlock ><Run Text="右眼深视力"/></TextBlock>
+                                <TextBox  
+                            		x:Name="iDeepsight_right"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="10">
+                        <TextBlock >反应力</TextBlock>
+                        <TextBox  
+                         x:Name="iReaction"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Margin="50"
+              Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Border Style="{StaticResource TitleBorder}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Style="{StaticResource Title}">密码修改</TextBlock>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <StackPanel 
+                    Grid.Row="1">
+                        <TextBlock >原始密码</TextBlock>
+                        <PasswordBox  
+                             x:Name="OldPassword"/>
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="2">
+                        <TextBlock >新的密码</TextBlock>
+                        <PasswordBox 
+                             x:Name="NewPassword"/>
+                    </StackPanel>
+                    <StackPanel 
+                    Grid.Row="3"
+                        VerticalAlignment="Bottom"/>
+                    <Button Style="{StaticResource SaveButton}"
+                    	Click="SavePasswordButton_Click"  Content="保 存" Grid.Row="9"/>
+                </Grid>
+            </Grid>
+
+
         </Grid>
+
+
+
+
+
+
+
     </Grid>
 </Page>

@@ -38,12 +38,12 @@ namespace DSIES
             set { question = value; }
         }
 
-        LoginData logindata = new LoginData();
-        internal LoginData LOGINDATA
-        {
-            get { return logindata; }
-            set { logindata = value; }
-        }
+        //LoginData logindata = new LoginData();
+        //internal LoginData LOGINDATA
+        //{
+        //    get { return logindata; }
+        //    set { logindata = value; }
+        //}
 
         AdminLoginData adminlogindata = new AdminLoginData();
         internal AdminLoginData ADMINLOGINDATA
@@ -74,6 +74,12 @@ namespace DSIES
 
         }
 
+        Regular regular = new Regular();
+        internal Regular Regular
+        {
+            get { return regular; }
+            set { regular = value; }
+         }
 
         /*   internal Player Player
         {
@@ -82,22 +88,22 @@ namespace DSIES
         }*/
 
         //User user = new User();
-        // internal User User
-        // {
-        //     get { return user; }
-        //     set
-        //     {
-        //         user = value;
-        //         if (user != null)
-        //         {
-        //             LogOutButtonVisiable();
-        //         }
-        //         else
-        //         {
-        //             LogOutButtonInvisiable();
-        //         }
-        //     }
-        // }
+        //internal User User
+        //{
+        //    get { return user; }
+        //    set
+        //    {
+        //        user = value;
+        //        if (user != null)
+        //        {
+        //            LogOutButtonVisiable();
+        //        }
+        //        else
+        //        {
+        //            LogOutButtonInvisiable();
+        //        }
+        //    }
+        //}
 
         /*internal UserSelections Selection
         //{

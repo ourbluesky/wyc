@@ -30,19 +30,19 @@ namespace DSIES.Pages
         }
 
         public void printData()
-        {  
-            name_info.DataContext = PageList.Main.LOGINDATA.Name;
-            gender_info.DataContext = PageList.Main.LOGINDATA.Sex;
-            age_info.DataContext = PageList.Main.LOGINDATA.Age;
-            DrivingYears_info.DataContext = PageList.Main.LOGINDATA.Year;
-            weizhang_info.DataContext= PageList.Main.LOGINDATA.Times;
-            job_info.DataContext =PageList.Main.LOGINDATA.Job;
-            tele_info.DataContext= PageList.Main.LOGINDATA.Phone;
-            leftsight.DataContext= PageList.Main.LOGINDATA.Left_Sight;
-            rightsight.DataContext= PageList.Main.LOGINDATA.Right_Sight;
-            leftdeepsight.DataContext =PageList.Main.LOGINDATA.Left_Deep_Sight;
-            rightdeepsight.DataContext= PageList.Main.LOGINDATA.Right_Deep_Sight;
-            reaction.DataContext= PageList.Main.LOGINDATA.Reation;
+        {
+            name_info.DataContext =  PageList.Main.Regular.Name;
+            gender_info.DataContext =  PageList.Main.Regular.Gender;
+            age_info.DataContext = PageList.Main.Regular.Age;
+            DrivingYears_info.DataContext = PageList.Main.Regular.DriAge;
+            weizhang_info.DataContext= PageList.Main.Regular.Accident_times;
+            job_info.DataContext =PageList.Main.Regular.Career ;
+            tele_info.DataContext= PageList.Main.Regular .Telphone ;
+            leftsight.DataContext= PageList.Main.Regular .Sight_left;
+            rightsight.DataContext= PageList.Main.Regular .Sight_right ;
+            leftdeepsight.DataContext =PageList.Main.Regular .DeepSight_left;
+            rightdeepsight.DataContext= PageList.Main.Regular .DeepSight_right;
+            reaction.DataContext= PageList.Main.Regular .Reagency;
 
         }
     }

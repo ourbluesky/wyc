@@ -72,17 +72,18 @@ namespace DSIES.UDP
             return ReadJson<Dictionary<string, string>>(path);
         }
 
-        public static Dictionary<string, int> GetOffset()
-        {
-            string path = GetPath("setting", "offset");
-            return ReadJson<Dictionary<string, int>>(path);
-        }
         public static Dictionary<string, Dictionary<string, string>> GetAppSetting()
         {
             string path = GetPath("setting", "app");
             return ReadJson<Dictionary<string, Dictionary<string, string>>>(path);
         }
 
+        public static Dictionary<string, int> GetOffset()
+        {
+            string path = GetPath("setting", "offset");
+            return ReadJson<Dictionary<string, int>>(path);
+        }
+   
 
         public static T ReadJson<T>(string path)
         {

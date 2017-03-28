@@ -1559,9 +1559,9 @@ namespace DSIES.Pages
                 {
                     PageList.Main.QUESTION.Grade2 = "E";
                 }
+                PageList.Main.Regular.Grade2 = PageList.Main.QUESTION.Grade2;
 
-
-              //  flag = 0;//记得删
+             flag = 0;//记得删
                 if (flag == 0)
                 {
                     CustomMessageBox.Show("温馨提示：", "您的答案已提交！");

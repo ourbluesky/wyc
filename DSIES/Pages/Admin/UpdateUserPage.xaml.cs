@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DSIES.Class.Model;
+using DSIES.UDP;
+
 
 namespace DSIES.Pages.Admin
 {
@@ -24,6 +27,7 @@ namespace DSIES.Pages.Admin
         {
             InitializeComponent();
         }
+
         private void inquiry_user_Button_Click(object sender, RoutedEventArgs e)
         {
             InquiryUserPage page = new InquiryUserPage();
@@ -61,9 +65,92 @@ namespace DSIES.Pages.Admin
             {
                 quit_admin_Button_copy.Visibility = System.Windows.Visibility.Hidden;
                 quit_admin_Button.Visibility = System.Windows.Visibility.Visible;
-          
+
             }
         }
 
+        private void InfoEditButton_Click(object sender, RoutedEventArgs e)
+        {
+            InfoEditButton.Visibility = System.Windows.Visibility.Hidden;
+            InfoSaveButton.Visibility = System.Windows.Visibility.Visible;
+            SetEditable();
+        }
+
+        private void InfoSaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            InfoEditButton.Visibility = System.Windows.Visibility.Visible;
+            InfoSaveButton.Visibility = System.Windows.Visibility.Hidden;
+            SetUneditable();
+            UpdateInfo();
+        }
+
+        public void SetPage(Regular regular)
+        {
+            iName.Text = regular.Name;
+            iTelphone.Text = regular.Telphone;
+            iMale.IsChecked = regular.Gender == "Male" ? true : false;
+            iAge.Text = regular.Age;
+            iDriAge.Text = regular.DriAge;
+            iCareer.Text = regular.Career;
+            iAccident_times.Text = regular.Accident_times;
+            iSight_left.Text = regular.Sight_left;
+            iSight_right.Text = regular.Sight_right;
+            iDeepsight_left.Text = regular.DeepSight_left;
+            iDeepsight_right.Text = regular.DeepSight_right;
+            iReaction.Text = regular.Reagency;
+
+            SetUneditable();
+        }
+
+        private void SetEditable()
+        {
+            iTelphone.IsEnabled = true;
+            iName.IsEnabled = true;
+            iMale.IsEnabled = true;
+            iFemale.IsEnabled = true;
+            iAge.IsEnabled = true;
+            iDriAge.IsEnabled = true;
+            iCareer.IsEnabled = true;
+            iAccident_times.IsEnabled = true;
+            iSight_left.IsEnabled = true;
+            iSight_right.IsEnabled = true;
+            iDeepsight_left.IsEnabled = true;
+            iDeepsight_right.IsEnabled = true;
+            iReaction.IsEnabled = true;
+        }
+
+        private void SetUneditable()
+        {
+            iTelphone.IsEnabled = false;
+            iName.IsEnabled = false;
+            iMale.IsEnabled = false;
+            iFemale.IsEnabled = false;
+            iAge.IsEnabled = false;
+            iDriAge.IsEnabled = false;
+            iCareer.IsEnabled = false;
+            iAccident_times.IsEnabled = false;
+            iSight_left.IsEnabled = false;
+            iSight_right.IsEnabled = false;
+            iDeepsight_left.IsEnabled = false;
+            iDeepsight_right.IsEnabled = false;
+            iReaction.IsEnabled = false;
+        }
+
+        private void UpdateInfo()
+        {
+            Regular regular = new Regular();
+            //TODO
+            //CU.MG_User.UpdateUser(regular);
+        }
+
+        private void ChangePassword()
+        {
+            CU.MG_User.UpdatePassword(OldPassword.Password, NewPassword.Password);
+        }
+
+        private void SavePasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePassword();
+        }
     }
 }
