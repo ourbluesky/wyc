@@ -302,10 +302,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="UDP\Setting\app.json" />
-    <None Include="UDP\Setting\offset.json" />
-    <None Include="UDP\Setting\path.json" />
-    <None Include="UDP\Setting\udp.json" />
+    <None Include="Setting\app.json" />
+    <None Include="Setting\offset.json" />
+    <None Include="Setting\path.json" />
+    <None Include="Setting\udp.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -397,13 +397,17 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>rd /S /Q "$(ProjectDir)$(OutDir)UDP\Setting"
+    <PreBuildEvent>rd /S /Q "$(ProjectDir)$(OutDir)Setting"
 
-mkdir  "$(ProjectDir)$(OutDir)UDP\Setting"
+rd /S /Q "$(ProjectDir)$(OutDir)Info"
 
-xcopy "$(ProjectDir)UDP\Setting" "$(ProjectDir)$(OutDir)UDP\Setting" /e
+mkdir  "$(ProjectDir)$(OutDir)Setting"
 
-</PreBuildEvent>
+mkdir  "$(ProjectDir)$(OutDir)Info"
+
+xcopy "$(ProjectDir)Setting" "$(ProjectDir)$(OutDir)Setting" /e
+
+xcopy "$(ProjectDir)Info" "$(ProjectDir)$(OutDir)Info" /e</PreBuildEvent>
   </PropertyGroup>
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net451\System.Data.SQLite.Core.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

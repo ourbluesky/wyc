@@ -28,6 +28,7 @@ namespace DSIES.UDP
             float reacting,
             float area,
             float farToFront,
+            float farToBehind,
             float lane,
             float trLight)
         {
@@ -45,6 +46,7 @@ namespace DSIES.UDP
             this.reacting = reacting;
             this.area = area;
             this.farToFront = farToFront;
+            this.farToBehind = farToBehind;
             this.lane = lane;
             this.trLight = trLight;
         }
@@ -148,8 +150,8 @@ namespace DSIES.UDP
             get { return farToFront; }
             set { farToFront = value; }
         }
-
-         private float FarToBehind
+        
+         public float FarToBehind
         {
             get { return farToBehind; }
             set { farToBehind = value; }
