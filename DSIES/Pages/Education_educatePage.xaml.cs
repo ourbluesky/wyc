@@ -25,7 +25,7 @@ namespace DSIES.Pages
     public partial class Education_educatePage : Page
     {
         DispatcherTimer timer = new DispatcherTimer();
-        public void Education_educatePagee()
+        public Education_educatePage()
         {
             InitializeComponent();
             timer.Tick += new EventHandler(timer_Tick);

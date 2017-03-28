@@ -6,7 +6,7 @@
 		"app": "\\Setting\\app.json"
     },
     "database": {
-        "db": "/Info/Database/user.db",
-        "create_sql": "/Info/Database/creat_user_table.sql"		
+        "db": "\\Info\\Database\\user.db",
+        "create_sql": "\\Info\\Database\\creat_user_table.sql"		
     }
 }
