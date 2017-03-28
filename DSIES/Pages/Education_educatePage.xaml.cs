@@ -25,7 +25,7 @@ namespace DSIES.Pages
     public partial class Education_educatePage : Page
     {
         DispatcherTimer timer = new DispatcherTimer();
-        public Education_educatePage()
+        public void Education_educatePagee()
         {
             InitializeComponent();
             timer.Tick += new EventHandler(timer_Tick);
@@ -38,14 +38,14 @@ namespace DSIES.Pages
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            EducationPage page = new EducationPage();
-            PageList.Main.setPage(page);
+         PageList.Main.setPage(PageList.EducationSelect);
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
             GIFCtrl.StartAnimate();
         }
+
     }
 
 }
