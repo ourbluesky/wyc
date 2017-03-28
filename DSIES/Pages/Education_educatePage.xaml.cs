@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Forms;
 using DSIES.Pages;
 using DSIES.Class.Control;
+using System.Windows.Threading;
 
 namespace DSIES.Pages
 {
@@ -23,19 +24,22 @@ namespace DSIES.Pages
     /// </summary>
     public partial class Education_educatePage : Page
     {
-         DateTime now = DateTime.Now; 
-
-
+        DispatcherTimer timer = new DispatcherTimer();
         public Education_educatePage()
         {
             InitializeComponent();
-            textBlock.DataContext = now.ToString();
-
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Interval = TimeSpan.FromSeconds(0.1);
+            timer.Start();
         }
-
+        void timer_Tick(object sender, EventArgs e)
+        {
+            textBlock.DataContext = string.Concat(DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"));
+        }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            PageList.Main.setPage(PageList.EducationSelect);
+            EducationPage page = new EducationPage();
+            PageList.Main.setPage(page);
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
