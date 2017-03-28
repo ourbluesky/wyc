@@ -56,9 +56,9 @@ namespace DSIES.Pages
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (PageList.Main.i >= 3 || (sceneselectData.education.Speeding == true && sceneselectData.education.Overtake == true && sceneselectData.education.Lighting == true && sceneselectData.education.Distraction == true))
+            if (PageList.Main.i >=2 || (sceneselectData.education.Speeding == true && sceneselectData.education.Overtake == true && sceneselectData.education.Lighting == true && sceneselectData.education.Distraction == true))
             {
-                if (PageList.Main.i == 3)
+                if (PageList.Main.i == 2)
                     PageList.Main.Regular.Credit = "B";
                 PageList.Main.setPage(PageList.DataExport);//报告
             }
