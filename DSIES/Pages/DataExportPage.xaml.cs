@@ -21,12 +21,16 @@ namespace DSIES.Pages
     /// </summary>
     public partial class DataExportPage : Page
     {
+        private double _value;
+        private double _value2;
         public DataExportPage()
         {
             InitializeComponent();
             printData();
-            
-           //  name_info.DataContext=
+            Value = 170;
+            Value2 = 80;
+            DataContext = this;
+            //  name_info.DataContext=
         }
 
         public void printData()
@@ -44,6 +48,30 @@ namespace DSIES.Pages
             rightdeepsight.DataContext= PageList.Main.Regular .DeepSight_right;
             reaction.DataContext= PageList.Main.Regular .Reagency;
 
+        }
+        public double Value
+        {
+            get { return _value; }
+            set
+            {
+                _value = value;
+                OnPropertyChanged("Value");
+            }
+        }
+        public double Value2
+        {
+            get { return _value2; }
+            set
+            {
+                _value2 = value;
+                OnPropertyChanged("Value2");
+            }
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName = null)
+        {
+            if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
