@@ -27,32 +27,34 @@ namespace DSIES.Pages
     {
         public ScenePage()
         {
+
             InitializeComponent();
             //SetChart();
-            ContentGrid.DataContext = this;     // 这个是必要的，绑定数据，否则画不出来
+            // 这个是必要的，绑定数据，否则画不出来
             //
-
+            ContentGrid.DataContext = this;
 
             CU.MG_UDP.PrepareReceive();
             Svframe frame = CU.MG_UDP.ReceiveFrame();
-            float time;
-            float speed;
-            float brake;
-            float accelerograph;
-            float acc;
+            //float time;
+            //float speed;
+            //float brake;
+            //float accelerograph;
+            //float acc;
             if (frame != null)
             {
-                time = frame.Time;
-                speed = frame.Speed;
-                brake = frame.Brake;
-                accelerograph = frame.Accelerograph;
-                acc = frame.Acc;
+                //time = frame.Time;
+                //speed = frame.Speed;
+                //brake = frame.Brake;
+                //accelerograph = frame.Accelerograph;
+                //acc = frame.Acc;
+                //SetPage(frame);
                 SetPage(frame);
             }
             else
                 CustomMessageBox.Show("", "Error!");
-            
-            CU.MG_UDP.EndReceive();//关闭
+
+            //CU.MG_UDP.EndReceive();//关闭
         }
 
 
@@ -64,11 +66,11 @@ namespace DSIES.Pages
             }));
         }
 
-        public void ResetPage()
-        {
-            ClearValues();
-            ChartInit();
-        }
+        //public void ResetPage()
+        //{
+        //    ClearValues();
+        //    ChartInit();
+        //}
 
         //public ChartValues<Point> PointsM { get; set; }
         //public ChartValues<Point> PointsN { get; set; }
@@ -193,17 +195,17 @@ namespace DSIES.Pages
             FarToFrontChart = TFarToFront;
         }
 
-        private void BindDistance()
-        {
-            CenterChart = DSpeed;
-            SpeedChart = DSpeed;
-            AccChart = DAcc;
-            AccelerographChart = DAccelerograph;
-            BreakChart = DBreak;
-            OffsetChart = DOffset;
-            STWAngleChart = DSTWAngle;
-            FarToFrontChart = DFarToFront;
-        }
+        //private void BindDistance()
+        //{
+        //    CenterChart = DSpeed;
+        //    SpeedChart = DSpeed;
+        //    AccChart = DAcc;
+        //    AccelerographChart = DAccelerograph;
+        //    BreakChart = DBreak;
+        //    OffsetChart = DOffset;
+        //    STWAngleChart = DSTWAngle;
+        //    FarToFrontChart = DFarToFront;
+        //}
 
         private void SetMapper()
         {
@@ -247,9 +249,9 @@ namespace DSIES.Pages
 
         private void Cache(Svframe record)
         {
-            Svframe f = record;
+            Svframe f =new Svframe();
             Data_DealClass act = new Data_DealClass();
-            act.SPEED = f.Speed;
+            //act.SPEED = f.Speed;
             act.LINE = f.Lane;
             act.LEFT_distence = f.Distance;
             float t = f.Time;

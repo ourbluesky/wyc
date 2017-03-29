@@ -50,7 +50,6 @@ namespace DSIES.UDP
             this.lane = lane;
             this.trLight = trLight;
         }
-
         private float time;         // 行驶时间
         private float x;            // 车的坐标x
         private float y;            // 车的坐标y
