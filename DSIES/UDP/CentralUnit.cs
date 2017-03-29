@@ -21,13 +21,13 @@ namespace DSIES.UDP
             SET_UDP = new UDPSetting();
             MG_UDP = new UDPManager(SET_UDP);
             MG_User = new UserManager();
-
+            Player = new Player();
         }
 
         public static UDPManager MG_UDP;
         public static UDPSetting SET_UDP;
         public static UserManager MG_User;
-
+        public static Player Player;
 
         public static void Hit() { }
     }

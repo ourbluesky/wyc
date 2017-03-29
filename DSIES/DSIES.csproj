@@ -105,6 +105,9 @@
     </ApplicationDefinition>
     <Compile Include="Class\Control\AdminLoginData.cs" />
     <Compile Include="Class\Control\Data_DealClass.cs" />
+    <Compile Include="Class\Control\Player.cs" />
+    <Compile Include="Class\Control\Recorder.cs" />
+    <Compile Include="Class\Control\ThreadManager.cs" />
     <Compile Include="Class\Control\UserManager.cs" />
     <Compile Include="Class\Model\Action.cs" />
     <Compile Include="Class\Model\Admin.cs" />
