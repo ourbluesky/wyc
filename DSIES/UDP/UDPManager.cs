@@ -81,9 +81,12 @@ namespace DSIES.UDP
         {
             float[] floats = BytesConverter.ToFloatArray(bytes);
             Svframe frame = new Svframe();
+            
 
             foreach (var item in get_offset)
             {
+
+                float aaa = floats[item.Value];
                 var name = item.Key;
                 var offset = item.Value;
                 frame.GetType().GetProperty(name).SetValue(frame, floats[item.Value]);

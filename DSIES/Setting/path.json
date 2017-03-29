@@ -1,0 +1,12 @@
+﻿{
+    "setting": {
+        "path": "\\Setting\\path.json",   
+        "udp": "\\Setting\\udp.json",
+		"offset": "\\Setting\\offset.json",
+		"app": "\\Setting\\app.json"
+    },
+    "database": {
+        "db": "\\Info\\Database\\user.db",
+        "create_sql": "\\Info\\Database\\creat_user_table.sql"		
+    }
+}
