@@ -42,11 +42,11 @@ namespace DSIES.Class.Model
 
     public abstract class User
     {
-        private string name;
-        private string password;
+        private string name="";
+        private string password="";
         private DateTime regDate;
         private DateTime lastDate;
-        private string telphone;
+        private string telphone="";
         private UserGroup group;
 
         public string Telphone

@@ -22,8 +22,9 @@ namespace DSIES.Pages
     {
         public LoginPage()
         {
+            
             InitializeComponent();
-            Read_Login_Data();
+           
         }
         private void Read_Login_Data()
         {
@@ -69,7 +70,8 @@ namespace DSIES.Pages
         }
         private void login_in_Button_Click(object sender, RoutedEventArgs e)
         {
-          //  App.Current.Shutdown(); //改
+            //  App.Current.Shutdown(); //改
+            Read_Login_Data();
             PageList.Main.setPage(PageList.SceneSelect);//qestionandgame别忘改
         }
     }

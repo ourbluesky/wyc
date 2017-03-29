@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.ComponentModel;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -25,8 +26,9 @@ namespace DSIES.Pages
         private double _value2;
         public DataExportPage()
         {
+            
             InitializeComponent();
-            printData();
+           printData();
             Value = 170;
             Value2 = 80;
             DataContext = this;

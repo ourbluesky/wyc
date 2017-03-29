@@ -62,24 +62,24 @@ namespace DSIES.Class.Model
      //  private string name;
      //  private string password;
      //  private string telphone;
-       private string gender;
-       private string age;
-       private string driAge;
-       private string carrer;
-       private string accident_times;     
-       private string sight_left;
-       private string sight_right; 
-       private string deepSight_left;
-       private string deepSight_right;
-       private string reagency;     
-       private string grade;
-       private string   grade1;
-       private string grade2;
+       private string gender="";
+       private string age="";
+       private string driAge = "";
+       private string carrer = "";
+       private string accident_times = "";     
+       private string sight_left = "";
+       private string sight_right = ""; 
+       private string deepSight_left = "";
+       private string deepSight_right = "";
+       private string reagency = "";     
+       private string grade = "";
+       private string   grade1 = "";
+       private string grade2 = "";
        private int score1=100;
        private int score2=100;
-       private string totalscore_frist;
-       private string totalscore_final;
-       private string credit;
+       private string totalscore_frist = "";
+       private string totalscore_final = "";
+       private string credit = "";
    
 
        public string Gender
