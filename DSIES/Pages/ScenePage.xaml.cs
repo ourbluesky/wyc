@@ -50,7 +50,7 @@ namespace DSIES.Pages
                 SetPage(frame);
             }
             else
-                CustomMessageBox.Show("", "Error!");
+                CustomMessageBox.Show("", "Please connect the simulation module!");
             
             CU.MG_UDP.EndReceive();//关闭
         }

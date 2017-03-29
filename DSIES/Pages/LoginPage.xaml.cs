@@ -72,7 +72,7 @@ namespace DSIES.Pages
         {
             //  App.Current.Shutdown(); //改
             Read_Login_Data();
-            PageList.Main.setPage(PageList.SceneSelect);//qestionandgame别忘改
+            PageList.Main.setPage(PageList.Questionandgame);//qestionandgame别忘改
         }
     }
 }

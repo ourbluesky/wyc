@@ -154,11 +154,11 @@ namespace DSIES.Pages
         {
             if(game.ATimes+game.BTimes<=game.CTimes+game.DTimes)
             {
-                return "false";
+                return "非冒险型";
             }
             else
             {
-                return "true";
+                return "冒险型";
             }
         }
     }
