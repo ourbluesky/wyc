@@ -16,8 +16,8 @@ namespace DSIES.Class.Model
         Telphone,
         Name,
         Password,
-        RegDate,
-        LastDate,
+        //RegDate,
+        //LastDate,
         Gender,//性别
         Age,
         DriAge,//驾龄
@@ -44,8 +44,8 @@ namespace DSIES.Class.Model
     {
         private string name="";
         private string password="";
-        private DateTime regDate;
-        private DateTime lastDate;
+        //private DateTime regDate;
+        //private DateTime lastDate;
         private string telphone="";
         private UserGroup group;
 
@@ -73,17 +73,17 @@ namespace DSIES.Class.Model
             set { group = value; }
         }
 
-        public DateTime RegDate
-        {
-            get { return regDate; }
-            set { regDate = value; }
-        }
+        //public DateTime RegDate
+        //{
+        //    get { return regDate; }
+        //    set { regDate = value; }
+        //}
 
-        public DateTime LastDate
-        {
-            get { return lastDate; }
-            set { lastDate = value; }
-        }
+        //public DateTime LastDate
+        //{
+        //    get { return lastDate; }
+        //    set { lastDate = value; }
+        //}
 
     }
 }

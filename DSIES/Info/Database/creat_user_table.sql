@@ -3,8 +3,8 @@
 	name			TEXT NOT NULL, 
 	password		TEXT NOT NULL,
 	grantUserName   TEXT NOT NULL,
-	regDate			TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
-	lastDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
+	--regDate			TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
+	--lastDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	PRIMARY KEY(telphone)
 );
 
@@ -12,8 +12,8 @@ CREATE TABLE regular (
 	telphone    TEXT NOT NULL UNIQUE,
 	name		TEXT NOT NULL ,
 	password	TEXT,
-	regDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
-	lastDate	TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
+	--regDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
+	--lastDate	TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	gender		TEXT NOT NULL,
 	age			INTEGER NOT NULL,
 	driAge		INTEGER NOT NULL,

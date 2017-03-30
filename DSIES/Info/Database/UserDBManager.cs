@@ -170,9 +170,8 @@ namespace DSIES.Info.Database
                     user.Telphone = reader["telphone"] as string;
                     user.Password = reader["password"] as string;
                     user.Name = reader["name"] as string;
-                    user.RegDate = (DateTime)reader["regDate"];
-                    user.LastDate = (DateTime)reader["lastDate"];
-
+                    //user.RegDate = (DateTime)reader["regDate"];
+                    //user.LastDate = (DateTime)reader["lastDate"];
                     users.Add(user);
                 }
 

@@ -53,7 +53,7 @@
                         <Label Content="职业：" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" FontSize="16"/>
                         <Label Content="联系方式：" HorizontalAlignment="Left" Margin="273,80,0,0" VerticalAlignment="Top" FontSize="16"/>
                         <Label Content="三年内违章次数：" HorizontalAlignment="Left" Margin="25,115,0,0" VerticalAlignment="Top" FontSize="16"/>
-                        <Label Content="视力：" HorizontalAlignment="Left" Margin="25,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
+                        <Label Content="动视力：" HorizontalAlignment="Left" Margin="25,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
                         <Label Content="深视力：" HorizontalAlignment="Left" Margin="24,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
                         <Label Content="反应力：" HorizontalAlignment="Left" Margin="24,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
                         <TextBlock x:Name="name_info" HorizontalAlignment="Left" Margin="80,15,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>

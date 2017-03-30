@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using DSIES.UDP;
 
+
 namespace DSIES.Class.Control
 {
-    class Recorder
+    public class Recorder
     {
         private Svframe currentFrame ;
+        private bool START;//hj
+
         public Svframe CurrentFrame
         {
             get { return currentFrame; }
@@ -26,6 +29,7 @@ namespace DSIES.Class.Control
         private void Init()
         {
             currentFrame = new Svframe(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            START = false;//hj
         }
     }
 }

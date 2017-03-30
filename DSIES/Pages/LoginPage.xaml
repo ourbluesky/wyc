@@ -47,7 +47,7 @@
                 <Label x:Name="timeslabel" Content="三年内的违章次数:" HorizontalAlignment="Left" Height="28" Margin="22,69,0,0" VerticalAlignment="Top" Width="114" Foreground="White" Background="{x:Null}"/>
                 <Label x:Name="joblabel" Content="职业:" HorizontalAlignment="Left" Height="27" Margin="22,92,0,0" VerticalAlignment="Top" Width="36" Foreground="White" Background="{x:Null}"/>
                 <Label x:Name="phone_set" Content="联系方式:" HorizontalAlignment="Left" Height="27" Margin="22,120,0,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
-                <Label x:Name="sight" Content="视力:" HorizontalAlignment="Left" Height="24" Margin="22,145,0,0" VerticalAlignment="Top" Width="63" Foreground="White" Background="{x:Null}"/>
+                <Label x:Name="sight" Content="动视力:" HorizontalAlignment="Left" Height="27" Margin="22,145,0,0" VerticalAlignment="Top" Width="63" Foreground="White" Background="{x:Null}"/>
                 <Label x:Name="deep_sight" Content="深视力:" HorizontalAlignment="Left" Height="27" Margin="22,170,0,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
                 <Label x:Name="reaction" Content="反应力:" HorizontalAlignment="Left" Height="27" Margin="22,197,0,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
                 <Label x:Name="password_set" Content="创建密码:" HorizontalAlignment="Left" Height="27" Margin="22,217,0,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>

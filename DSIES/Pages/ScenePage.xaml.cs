@@ -17,6 +17,7 @@ using LiveCharts.Configurations;
 using DSIES.Pages;
 using DSIES.UDP;
 using DSIES.Class.Control;
+using DSIES.Class.Model;
 
 namespace DSIES.Pages
 {
@@ -52,31 +53,32 @@ namespace DSIES.Pages
                 SetPage(frame);
             }
             else
-<<<<<<< HEAD
-                CustomMessageBox.Show("", "Please connect the simulation module!");
+
+                //CustomMessageBox.Show("", "Please connect the simulation module!");
             
             CU.MG_UDP.EndReceive();//关闭
-=======
-                CustomMessageBox.Show("", "Error!");
+
+            CustomMessageBox.Show("tips", "Connect Error!");
 
             //CU.MG_UDP.EndReceive();//关闭
->>>>>>> 7598e59ae365e586ab6bbe5bc40576a511f96dad
+
         }
 
 
-        public void SetPage(Svframe record)
+        public void SetPage(Svframe record) //Svframe
         {
+
             this.Dispatcher.BeginInvoke((System.Action)(delegate ()
             {
                 UpdateChart(record);
             }));
         }
 
-        //public void ResetPage()
-        //{
-        //    ClearValues();
-        //    ChartInit();
-        //}
+        public void ResetPage()
+        {
+            ClearValues();
+            ChartInit();
+        }
 
         //public ChartValues<Point> PointsM { get; set; }
         //public ChartValues<Point> PointsN { get; set; }
@@ -227,11 +229,10 @@ namespace DSIES.Pages
                 FlushCache();
             if (CacheCount == 0)
                 ClearCache();
-            Speed_textBlock.DataContext = record.Speed;
+            Speed_textBlock.DataContext = record.Speed;//
             Acc_textBlock.DataContext = record.Acc;
             Break_textBlock.DataContext = record.Brake;
             Accelerator_textBlock.DataContext = record.Accelerograph;
-
             Cache(record);
         }
 
@@ -351,6 +352,102 @@ namespace DSIES.Pages
         {
             PageList.Main.setPage(PageList.SceneSelect);
         }
+
+        /* For Action Binding. Action Binding Only Once */
+        private bool first;
+        public bool FirstRun
+        {
+            get
+            {
+                bool tmp = first;
+                first = false;
+                return tmp;
+            }
+
+            set
+            {
+                first = value;
+            }
+        }
+
+
+        #region GamePlay
+        /* 
+         * This runs only once to get GameRealTime Page ready 
+         * and binds actions before, during and after game. 
+         */
+        private void GameFirstStep()   //绑定的事件
+        {
+            if (this.FirstRun)
+            {
+                SetUDPRefreshAction();
+                //SetUDPTimeOutAction();
+                SetEndAction();
+            }
+        }
+
+        public void GameStartAction()
+        {
+            GameFirstStep();
+            this.ResetPage();//初始化
+            PageList.Main.setPage(PageList.Scene);
+           // CurrentPage = PageCluster.GameRealTime;
+
+            /* Start the UDP receiving thread */
+            CU.Player.Start();
+        }
+      
+
+        private void SetUDPRefreshAction( )
+        {
+            CU.Player.RefreshHandler += SetPage(record);//PageList.Main.setPage(PageList.Scene);
+        }
+
+        //private void SetUDPTimeOutAction()
+        //{
+        //    CU.MG_UDP.ReceiveTimeOutAction += () =>
+        //    {
+        //        if (current == PageCluster.GameRealTime)
+        //        {
+        //            Application.Current.Dispatcher.BeginInvoke((System.Action)(delegate()
+        //            {
+        //                if (!Ending && !Warning)
+        //                {
+        //                    Warning = true;
+        //                    CustomMessageBox.Show("UDP连接超时，请检查网络是否正常连通！");
+        //                    Warning = false;
+        //                    GameEndAction();
+        //                }
+        //            }));
+        //        }
+        //    };
+        //}
+
+        private void SetEndAction()//我觉得没什么用
+        {
+            //CU.Player.StopHandler += SaveExp;
+        }
+
+        //private void SaveExp(Exp exp)
+        //{
+        //    CU.MG_Exp.AddExp(exp, bool.Parse(CU.MG_Set.App["evaluation"]["after_exp"]));
+        //    CU.MG_Exp.ThreadSave(CU.MG_User.User as Regular);
+        //}
+
+        //public void GameEndAction()
+        //{
+        //    //Ending = true;
+        //    //ExpType type = ExpTypeBox.Show();
+        //    //if (type != ExpType.Cancel)
+        //    //{
+        //    //    CU.Player.End(type);
+        //    CurrentPage = PageCluster.GameSelect;
+
+        //    this.SetPage = PageList.Main.setPage(PageList.SceneSelect);
+        //    //}
+        //    //Ending = false;
+        //}
+        #endregion
     }
 
 }
