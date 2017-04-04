@@ -26,6 +26,7 @@ namespace DSIES.Pages
     /// </summary>
     public partial class ScenePage : Page
     {
+
         public ScenePage()
         {
 
@@ -64,7 +65,7 @@ namespace DSIES.Pages
 
         }
 
-
+        
         public void SetPage(Svframe record) //Svframe
         {
 
@@ -400,7 +401,7 @@ namespace DSIES.Pages
 
         private void SetUDPRefreshAction( )
         {
-            CU.Player.RefreshHandler += SetPage(record);//PageList.Main.setPage(PageList.Scene);
+            CU.Player.RefreshHandler += SetPage;//PageList.Main.setPage(PageList.Scene);
         }
 
         //private void SetUDPTimeOutAction()

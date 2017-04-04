@@ -21,7 +21,7 @@ namespace DSIES.Class.Control
         private bool _refreshEnable;
 
         public delegate void StartAction();
-        public delegate void RefreshAction(Recorder recorder);
+        public delegate void RefreshAction(Svframe recorder);
         public delegate void StopAction();
 
         public StartAction StartHandler = null;
@@ -68,7 +68,7 @@ namespace DSIES.Class.Control
                 if (frame != null)
                 {
                     if (recorder.Record(frame))
-                        RefreshHandler.Invoke(recorder);//执行触发
+                        RefreshHandler.Invoke(frame);//执行触发
                 }
                 else
                     StopRefreshThread();
