@@ -141,8 +141,7 @@ namespace DSIES.Pages
             // }
             ////else
             //{ 
-                CustomMessageBox.Show("温馨提示：", "此次教育测试已结束！");//yes or no,设一个参数  
-            //}
+                 //}
             SceneSelectPage page = new SceneSelectPage();
             PageList.Main.setPage(page);
         }

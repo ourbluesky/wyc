@@ -1269,40 +1269,39 @@ namespace DSIES.Pages
                 flag += 1;
                 CustomMessageBox.Show("温馨提示：","您第27题未答完，请继续答题！");//您有未答完题目，请继续答题！
             }
-
-            var dr = CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
-            if (dr == true)
-            {
-
-                if (PageList.Main.QUESTION.Score1 < 49 && PageList.Main.QUESTION.Score1 > 26)
-                {
-                    PageList.Main.QUESTION.Grade1 = "A";
-                }
-                else if (PageList.Main.QUESTION.Score1 < 71 && PageList.Main.QUESTION.Score1 > 48)
-                {
-                    PageList.Main.QUESTION.Grade1 = "B";
-                }
-                else if (PageList.Main.QUESTION.Score1 < 93 && PageList.Main.QUESTION.Score1 > 70)
-                {
-                    PageList.Main.QUESTION.Grade1 = "C";
-                }
-                else if (PageList.Main.QUESTION.Score1 < 115 && PageList.Main.QUESTION.Score1 > 92)
-                {
-                    PageList.Main.QUESTION.Grade1 = "D";
-                }
-                else if (PageList.Main.QUESTION.Score1 < 136 && PageList.Main.QUESTION.Score1 > 114)
-                {
-                    PageList.Main.QUESTION.Grade1 = "E";
-                }
-                PageList.Main.Regular.Grade1 = PageList.Main.QUESTION.Grade1;
+            
 
               flag = 0;//记得删。
             if (flag == 0)
             {
+                var dr = CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
+                if (dr == true)
+                {
 
-                CustomMessageBox.Show("尊敬的驾驶员，您好！","您的答案已提交！\n下面进入驾驶愤怒量表测验。");
-                //  CustomMessageBox.Show("您的答案已提交！\n驾驶行为得分：" + PageList.Main.QUESTION.Score1.ToString() + "\n驾驶行为等级为：" + grade1.ToString(), "温馨提示：");
-                PageList.Main.setPage(PageList.Question2);
+                    if (PageList.Main.QUESTION.Score1 < 49 && PageList.Main.QUESTION.Score1 > 26)
+                    {
+                        PageList.Main.QUESTION.Grade1 = "A";
+                    }
+                    else if (PageList.Main.QUESTION.Score1 < 71 && PageList.Main.QUESTION.Score1 > 48)
+                    {
+                        PageList.Main.QUESTION.Grade1 = "B";
+                    }
+                    else if (PageList.Main.QUESTION.Score1 < 93 && PageList.Main.QUESTION.Score1 > 70)
+                    {
+                        PageList.Main.QUESTION.Grade1 = "C";
+                    }
+                    else if (PageList.Main.QUESTION.Score1 < 115 && PageList.Main.QUESTION.Score1 > 92)
+                    {
+                        PageList.Main.QUESTION.Grade1 = "D";
+                    }
+                    else if (PageList.Main.QUESTION.Score1 < 136 && PageList.Main.QUESTION.Score1 > 114)
+                    {
+                        PageList.Main.QUESTION.Grade1 = "E";
+                    }
+                    CustomMessageBox.Show("尊敬的驾驶员，您好！","您的答案已提交！\n下面进入驾驶愤怒量表测验。");
+                    //  CustomMessageBox.Show("您的答案已提交！\n驾驶行为得分：" + PageList.Main.QUESTION.Score1.ToString() + "\n驾驶行为等级为：" + grade1.ToString(), "温馨提示：");
+                    PageList.Main.Regular.Grade1 = PageList.Main.QUESTION.Grade1;
+                    PageList.Main.setPage(PageList.Question2);
                 //DB
             }
             else

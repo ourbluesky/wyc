@@ -22,13 +22,14 @@ namespace DSIES.UDP
             MG_UDP = new UDPManager(SET_UDP);
             MG_User = new UserManager();
             Player = new Player();
+            MG_Page = new SceneManager();
         }
 
         public static UDPManager MG_UDP;
         public static UDPSetting SET_UDP;
         public static UserManager MG_User;
         public static Player Player;
-
+        public static SceneManager MG_Page;
         public static void Hit() { }
     }
 }

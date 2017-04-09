@@ -46,7 +46,7 @@ namespace DSIES.Class.Control
 
         private void StartRefreshThread()
         {
-            StartHandler.Invoke();// StartHandler?.Invoke();//？表示可空
+            StartHandler?.Invoke();// StartHandler?.Invoke();//？表示可空
 
             _refreshEnable = true;
             ThreadManager.StartThread(ThreadCluster.PlayerRefresh);
@@ -68,13 +68,13 @@ namespace DSIES.Class.Control
                 if (frame != null)
                 {
                     if (recorder.Record(frame))
-                        RefreshHandler.Invoke(frame);//执行触发
+                        RefreshHandler?.Invoke(frame);//执行触发
                 }
                 else
                     StopRefreshThread();
             }
 
-            CU.MG_UDP.EndReceive();
+            ////CU.MG_UDP.EndReceive();
         }
 
         //public void End()//没用

@@ -31,8 +31,9 @@ namespace DSIES.Pages
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
         {
             //CU.Player.Start();
-            ScenePage page = new ScenePage();
-            PageList.Main.setPage(page);
+            //ScenePage page = new ScenePage();
+            //PageList.Main.setPage(page); 
+            CU.MG_Page.GameStartAction();
             scene_one_button.Visibility = System.Windows.Visibility.Hidden;
             scene_one_button_copy.Visibility = System.Windows.Visibility.Visible;
             sceneselectData.scene = 1;
@@ -62,6 +63,7 @@ namespace DSIES.Pages
             {
                 if (PageList.Main.i == 2)
                     PageList.Main.Regular.Credit = "B";
+                CustomMessageBox.Show("温馨提示：", "此次教育测试已结束！");//yes or no,设一个参数  
                 PageList.Main.setPage(PageList.DataExport);//报告
             }
             else

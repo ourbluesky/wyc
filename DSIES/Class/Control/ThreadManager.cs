@@ -11,8 +11,7 @@ namespace DSIES.Class.Control
     {
         PlayerRefresh,
         UDPTest,
-        LoadExp,
-        SaveExp
+      
     }
 
     /*
