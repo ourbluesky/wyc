@@ -256,14 +256,14 @@ namespace DSIES.Info.Database
                             + "sight_left = " + regular.Sight_left + ", "
                             + "sight_right = " + regular.Sight_right + ", "
                             + "reagency = " + regular.Reagency + "', "
-                            + "grade=" + regular.Grade + ", "
-                            + "score1=" + regular.Score1 + ", "
-                            + "grade1=" + regular.Grade1 + ", "
-                            + "score2=" + regular.Score2 + ", "                         
-                            + "grade2=" + regular.Grade2 + ", "
-                            + "totalscore_frist"+regular.Totalscore_frist + "', '"
-                            + "totalscore_final"+regular.Totalscore_final + "', '"
-                            + "credit"+regular.Credit + "', '"                          
+                            //+ "grade=" + regular.Grade + ", "
+                            //+ "score1=" + regular.Score1 + ", "
+                            //+ "grade1=" + regular.Grade1 + ", "
+                            //+ "score2=" + regular.Score2 + ", "                         
+                            //+ "grade2=" + regular.Grade2 + ", "
+                            //+ "totalscore_frist"+regular.Totalscore_frist + "', '"
+                            //+ "totalscore_final"+regular.Totalscore_final + "', '"
+                            //+ "credit"+regular.Credit + "', '"                          
                             + "where telphone = " + regular.Telphone;
                         break;
                     default:

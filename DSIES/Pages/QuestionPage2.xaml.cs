@@ -1535,39 +1535,45 @@ namespace DSIES.Pages
                 CustomMessageBox.Show( "温馨提示：","您第33题未答完，请继续答题！");//您有未答完题目，请继续答题！
             }
 
-            var dr = CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
-            if (dr == true)
-            {
-
-                if (PageList.Main.QUESTION.Score2 < 59 && PageList.Main.QUESTION.Score2 > 32)
-                {
-                    PageList.Main.QUESTION.Grade2 = "A";
-                }
-                else if (PageList.Main.QUESTION.Score2 < 85 && PageList.Main.QUESTION.Score2 > 58)
-                {
-                    PageList.Main.QUESTION.Grade2 = "B";
-                }
-                else if (PageList.Main.QUESTION.Score2 < 111 && PageList.Main.QUESTION.Score2 > 84)
-                {
-                    PageList.Main.QUESTION.Grade2 = "C";
-                }
-                else if (PageList.Main.QUESTION.Score2 < 137 && PageList.Main.QUESTION.Score2 > 110)
-                {
-                    PageList.Main.QUESTION.Grade2 = "D";
-                }
-                else if (PageList.Main.QUESTION.Score2 < 165 && PageList.Main.QUESTION.Score2 > 136)
-                {
-                    PageList.Main.QUESTION.Grade2 = "E";
-                }
-                PageList.Main.Regular.Grade2 = PageList.Main.QUESTION.Grade2;
+            
+              
 
              flag = 0;//记得删
                 if (flag == 0)
                 {
+                var dr = CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
+                if (dr == true)
+                {
+
+                    if (PageList.Main.QUESTION.Score2 < 59 && PageList.Main.QUESTION.Score2 > 32)
+                    {
+                        PageList.Main.QUESTION.Grade2 = "A";
+                    }
+                    else if (PageList.Main.QUESTION.Score2 < 85 && PageList.Main.QUESTION.Score2 > 58)
+                    {
+                        PageList.Main.QUESTION.Grade2 = "B";
+                    }
+                    else if (PageList.Main.QUESTION.Score2 < 111 && PageList.Main.QUESTION.Score2 > 84)
+                    {
+                        PageList.Main.QUESTION.Grade2 = "C";
+                    }
+                    else if (PageList.Main.QUESTION.Score2 < 137 && PageList.Main.QUESTION.Score2 > 110)
+                    {
+                        PageList.Main.QUESTION.Grade2 = "D";
+                    }
+                    else if (PageList.Main.QUESTION.Score2 < 165 && PageList.Main.QUESTION.Score2 > 136)
+                    {
+                        PageList.Main.QUESTION.Grade2 = "E";
+                    }
                     CustomMessageBox.Show("温馨提示：", "您的答案已提交！");
                     //  MessageBox.Show("您的答案已提交！\n驾驶行为得分：" + PageList.Main.QUESTION.Score2.ToString() + "\n驾驶行为等级为：" + grade2.ToString());
-                    PageList.Main.setPage(PageList.SceneSelect);
-                    PageList.Main.QUESTION.Flagquestion = false;
+                    PageList.Main.Regular.Grade2 = PageList.Main.QUESTION.Grade2;
+                    PageList.Main.QUESTION.Flagquestion = true;
+                    if (PageList.Main.GAME.Done == true)
+                        PageList.Main.setPage(PageList.SceneSelect);
+                    else
+                        PageList.Main.setPage(PageList.Questionandgame);
+                   
                 }
                 else
                 {

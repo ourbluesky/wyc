@@ -45,7 +45,10 @@ namespace DSIES.Pages
             {
                 game.Done = true;
                 success(game);
-                PageList.Main.setPage(PageList.Questionandgame);
+                if (PageList.Main.QUESTION.Flagquestion == true)
+                    PageList.Main.setPage(PageList.SceneSelect);
+                else
+                    PageList.Main.setPage(PageList.Questionandgame);
             }
         }
 
