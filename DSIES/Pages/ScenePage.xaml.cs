@@ -26,6 +26,7 @@ namespace DSIES.Pages
     /// </summary>
     public partial class ScenePage : Page
     {
+
         public ScenePage()
         {
 
@@ -55,12 +56,12 @@ namespace DSIES.Pages
             else
 
                 //CustomMessageBox.Show("", "Please connect the simulation module!");
-            
-            CU.MG_UDP.EndReceive();//关闭
+
+             //   CU.MG_UDP.EndReceive();//关闭
 
             CustomMessageBox.Show("tips", "Connect Error!");
 
-            //CU.MG_UDP.EndReceive();//关闭
+            CU.MG_UDP.EndReceive();//关闭
 
         }
 
@@ -68,7 +69,7 @@ namespace DSIES.Pages
         public void SetPage(Svframe record) //Svframe
         {
 
-            this.Dispatcher.BeginInvoke((System.Action)(delegate ()
+            this.Dispatcher.BeginInvoke((System.Action)(delegate()
             {
                 UpdateChart(record);
             }));
@@ -256,7 +257,7 @@ namespace DSIES.Pages
 
         private void Cache(Svframe record)
         {
-            Svframe f =new Svframe();
+            Svframe f = new Svframe();
             Data_DealClass act = new Data_DealClass();
             //act.SPEED = f.Speed;
             act.LINE = f.Lane;
@@ -391,16 +392,16 @@ namespace DSIES.Pages
             GameFirstStep();
             this.ResetPage();//初始化
             PageList.Main.setPage(PageList.Scene);
-           // CurrentPage = PageCluster.GameRealTime;
+            // CurrentPage = PageCluster.GameRealTime;
 
             /* Start the UDP receiving thread */
             CU.Player.Start();
         }
-      
 
-        private void SetUDPRefreshAction( )
+
+        private void SetUDPRefreshAction()
         {
-            CU.Player.RefreshHandler += SetPage(record);//PageList.Main.setPage(PageList.Scene);
+            CU.Player.RefreshHandler += SetPage;//PageList.Main.setPage(PageList.Scene);
         }
 
         //private void SetUDPTimeOutAction()

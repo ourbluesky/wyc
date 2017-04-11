@@ -30,7 +30,7 @@ namespace DSIES.Pages
 
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
         {
-            //CU.Player.Start();
+            CU.Player.Start();
             ScenePage page = new ScenePage();
             PageList.Main.setPage(page);
             scene_one_button.Visibility = System.Windows.Visibility.Hidden;

@@ -359,6 +359,7 @@
     <Resource Include="Picture\按下打印测试报表.png" />
     <Resource Include="Picture\按下查询个人信息.png" />
     <Resource Include="Picture\按下退出系统.png" />
+    <Resource Include="Picture\Print3.jpg" />
     <Content Include="Video\交叉口.mp4" />
     <Content Include="Video\分心.mp4" />
     <Content Include="Video\变道.mp4" />

@@ -10,7 +10,7 @@ namespace DSIES.Class.Control
 {
     public class Recorder
     {
-        private Svframe currentFrame ;
+        private Svframe currentFrame;
         private bool START;//hj
 
         public Svframe CurrentFrame

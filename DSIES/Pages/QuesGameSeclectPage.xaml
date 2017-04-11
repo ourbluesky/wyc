@@ -11,11 +11,11 @@
         <!--<Image x:Name="background" Source="..\Picture\bg.png" Margin="0,-100,0,-100" />-->
         <Image x:Name="police" Source="..\Picture\做场景.png" Margin="10,92,491,199" />
         <!--<Image x:Name="logo" Source="..\Picture\校徽.png" HorizontalAlignment="Left" Height="150" Margin="20,20,0,0" VerticalAlignment="Top" Width="150"/>-->
-        <Button Style="{DynamicResource naire_ButtonStyle}"  x:Name="QuestionButton"  Click="Question_Button_Click" Margin="378,307,415,77" Height="160" Width="160" RenderTransformOrigin="1.124,0.643" />
-        <Button Style="{DynamicResource game_ButtonStyle}"  x:Name="GameButton"   Click="Game_Button_Click" Margin="618,307,179,77" Height="160" Width="160" RenderTransformOrigin="0.51,0.176" />
+        <Button Style="{DynamicResource naire_ButtonStyle}"  x:Name="QuestionButton"  Click="Question_Button_Click" Margin="618,307,179,77" Height="160" Width="160" RenderTransformOrigin="1.124,0.643" />
+        <Button Style="{DynamicResource game_ButtonStyle}"  x:Name="GameButton"   Click="Game_Button_Click" Margin="378,307,415,77" Height="160" Width="160" RenderTransformOrigin="0.51,0.176" />
         <Label x:Name="rule" Content="  下面为调查问卷和&#xD;&#xA;爱荷华游戏，准备好后&#xD;&#xA;请点击按钮进入。" Margin="382,126,388,414" Foreground="Blue" FontSize="20" />
-        <Button Style="{DynamicResource naire_copy_ButtonStyle}" x:Name="QuestionButton_copy"  Content="Button" Margin="378,307,415,77" Height="160" Width="160"    Visibility="Hidden"/>
-        <Button Style="{DynamicResource game_copy_ButtonStyle}" x:Name="GameButton_copy"  Content="Button"  Margin="618,307,179,77" Height="160" Width="160"   Visibility="Hidden"/>
+        <Button Style="{DynamicResource naire_copy_ButtonStyle}" x:Name="QuestionButton_copy"  Content="Button" Margin="618,307,179,77" Height="160" Width="160"    Visibility="Hidden"/>
+        <Button Style="{DynamicResource game_copy_ButtonStyle}" x:Name="GameButton_copy"  Content="Button"  Margin="378,307,415,77" Height="160" Width="160"   Visibility="Hidden"/>
 
     </Grid>
 </Page>

@@ -24,14 +24,14 @@ CREATE TABLE regular (
 	deep_sight_left   TEXT NOT NULL,
 	deep_sight_right   TEXT NOT NULL,
 	reagency     TEXT NOT NULL,
-	grade        TEXT NOT NULL,
-	score1       INTEGER NOT NULL,
-	grade1       TEXT NOT NULL,
-	score2       INTEGER NOT NULL,  
-	grade2       TEXT NOT NULL,
-	totalscore_frist    INTEGER NOT NULL,
-	totalscore_final   INTEGER NOT NULL,
-	credit       TEXT NOT NULL,
+	--grade        TEXT NOT NULL,
+	--score1       INTEGER NOT NULL,
+	--grade1       TEXT NOT NULL,
+	--score2       INTEGER NOT NULL,  
+	--grade2       TEXT NOT NULL,
+	--totalscore_frist    INTEGER NOT NULL,
+	--totalscore_final   INTEGER NOT NULL,
+	--credit       TEXT NOT NULL,
 	PRIMARY KEY(telphone)
 );
 

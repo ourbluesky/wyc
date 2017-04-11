@@ -21,7 +21,7 @@ namespace DSIES.Class.Control
         private bool _refreshEnable;
 
         public delegate void StartAction();
-        public delegate void RefreshAction(Recorder recorder);
+        public delegate void RefreshAction(Svframe recorder);
         public delegate void StopAction();
 
         public StartAction StartHandler = null;
@@ -33,7 +33,7 @@ namespace DSIES.Class.Control
 
         public void Start()
         {
-            recorder.Start( );
+            recorder.Start();
             DefineRefreshThread();
             StartRefreshThread();
         }
@@ -46,8 +46,10 @@ namespace DSIES.Class.Control
 
         private void StartRefreshThread()
         {
-            StartHandler.Invoke();// StartHandler?.Invoke();//？表示可空
-
+            if (StartHandler != null)
+            {
+                StartHandler.Invoke();// StartHandler?.Invoke();//？表示可空
+            }
             _refreshEnable = true;
             ThreadManager.StartThread(ThreadCluster.PlayerRefresh);
         }
@@ -60,7 +62,7 @@ namespace DSIES.Class.Control
         private void Refresh()
         {
             CU.MG_UDP.PrepareReceive();
-            
+
             while (_refreshEnable)
             {
                 Svframe frame = CU.MG_UDP.ReceiveFrame();
@@ -68,7 +70,7 @@ namespace DSIES.Class.Control
                 if (frame != null)
                 {
                     if (recorder.Record(frame))
-                        RefreshHandler.Invoke(recorder);//执行触发
+                        RefreshHandler.Invoke(frame);//执行触发
                 }
                 else
                     StopRefreshThread();
