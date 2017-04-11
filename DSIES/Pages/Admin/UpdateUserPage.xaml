@@ -84,7 +84,7 @@
                     Grid.Row="1">
                         <TextBlock  >用户名（联系方式）</TextBlock>
                         <TextBox 
-                         x:Name="iTelphone" />
+                         x:Name="iTelephone" />
                     </StackPanel>
                     <StackPanel 
                     Grid.Row="2">

@@ -60,18 +60,18 @@ namespace DSIES.Info.Database
                 return ExecuteNonQuery(sql);
             }
 
-            public Tuple<LoginState, User> ValidateUser(string telphone,
+            public Tuple<LoginState, User> ValidateUser(string telephone,
                 string password, UserGroup group)
             {
                 LoginState state;
-                User user = GetUser(telphone, group);
+                User user = GetUser(telephone, group);
 
                 if (user == null)
                     state = LoginState.NOTEXIST;
                 else if (Encryptor.GetMD5(password).Equals(user.Password))
                 {
                     state = LoginState.SUCCESS;
-              //      UpdateLastDate(telphone, group);
+              //      UpdateLastDate(telephone, group);
                 }
                 else
                     state = LoginState.WRONGPASSWORD;
@@ -79,19 +79,19 @@ namespace DSIES.Info.Database
                 return new Tuple<LoginState, User>(state, user);
             }
 
-            //private bool UpdateLastDate(string telphone, UserGroup group)
+            //private bool UpdateLastDate(string telephone, UserGroup group)
             //{
             //    string sql = "update " + group
             //        + " set lastDate = (datetime('now','localtime'))"
-            //        + " where telphone = '" + telphone + "'";
+            //        + " where telephone = '" + telephone + "'";
 
             //    return ExecuteNonQuery(sql);
             //}
 
-            public User GetUser(string telphone, UserGroup group)
+            public User GetUser(string telephone, UserGroup group)
             {
                 string sql = "select * from " + group
-                    + " where telphone = '" + telphone + "'";
+                    + " where telephone = '" + telephone + "'";
 
                 List<User> users = GetUsers(sql, group);
 
@@ -109,10 +109,10 @@ namespace DSIES.Info.Database
                 return users;
             }
 
-            public List<User> GetAllGrantedUsers(string telphone)
+            public List<User> GetAllGrantedUsers(string telephone)
             {
                 string sql = "select * from " + UserGroup.ADMIN
-                    + " where telphone = " + telphone;
+                    + " where telephone = " + telephone;
                 List<User> users = GetUsers(sql, UserGroup.ADMIN);
 
                 return users;
@@ -139,7 +139,7 @@ namespace DSIES.Info.Database
                         case UserGroup.ADMIN:
                             user = new Admin();
                             (user as Admin).Group = UserGroup.ADMIN;
-                            (user as Admin).Telphone = reader[" Telphone"] as string;
+                            (user as Admin).Telephone = reader[" Telephone"] as string;
                             break;
                         case UserGroup.REGULAR:
                             user = new Regular();
@@ -167,7 +167,7 @@ namespace DSIES.Info.Database
                             break;
                     }
 
-                    user.Telphone = reader["telphone"] as string;
+                    user.Telephone = reader["telephone"] as string;
                     user.Password = reader["password"] as string;
                     user.Name = reader["name"] as string;
                     //user.RegDate = (DateTime)reader["regDate"];
@@ -189,8 +189,8 @@ namespace DSIES.Info.Database
                     case UserGroup.ADMIN:
                         Admin admin = user as Admin;
                         sql = "insert into " + admin.Group
-                            + " ( telphone,name, password,grantUserName) values ('"
-                            + admin.Telphone + "', '"                            
+                            + " ( telephone,name, password,grantUserName) values ('"
+                            + admin.Telephone + "', '"                            
                             + admin.Name + "', '"
                             + Encryptor.GetMD5(admin.Password) + "', '"
                             + admin.GrantUserName + "') ";
@@ -198,9 +198,9 @@ namespace DSIES.Info.Database
                     case UserGroup.REGULAR:
                         Regular regular = user as Regular;
                         sql = "insert into " + regular.Group
-                            + " (telphone,name,password,gender,age,driAge,career,accident_times,sight_left,sight_right,deep_sight_left,deep_sight_left,reagency)  values ('"
+                            + " (telephone,name,password,gender,age,driAge,career,accident_times,sight_left,sight_right,deep_sight_left,deep_sight_left,reagency)  values ('"
                             //grade,score1,grade1,score2,grade2 ,totalscore_frist,totalscore_final,credit) values ('"                          
-                            + regular.Telphone + "', '"
+                            + regular.Telephone + "', '"
                             + regular.Name + "', '"
                             + Encryptor.GetMD5(regular.Password) + "', '"
                             + regular.Gender + "',"
@@ -212,7 +212,7 @@ namespace DSIES.Info.Database
                             + regular.Sight_right + "', '"            
                             + regular.DeepSight_left + "', '"
                             + regular.DeepSight_right + "', '"
-                            + regular.Reagency + "', '"           
+                            + regular.Reagency + "') "          
                             //+ regular.Grade + "', '"
                             //+ regular.Score1 + "', '" 
                             //+ regular.Grade1 + "', '"
@@ -220,7 +220,7 @@ namespace DSIES.Info.Database
                             //+ regular.Grade2 + "', '"
                             //+ regular.Totalscore_frist + "', '"
                             //+ regular.Totalscore_final + "', '"
-                            //+ regular.Credit + "', '"
+                            //+ regular.Credit + "') "
                             ;        
                         break;
                     default:
@@ -239,13 +239,13 @@ namespace DSIES.Info.Database
                         Admin admin = user as Admin;
                         sql = "update " + admin.Group + " set "
                             + "name = '" + admin.Name + "' "
-                            + "where telphone = " + admin.Telphone;
+                            + "where telephone = " + admin.Telephone;
                         break;
                     case UserGroup.REGULAR:
                         Regular regular = user as Regular;
                         sql = "update " + regular.Group + " set "
                             + "name = " + regular.Name + "', "
-                            + "telphone = " + regular.Telphone + "', "                           
+                            + "telephone = " + regular.Telephone + "', "                           
                             + "gender = '" + regular.Gender + "', "
                                       + "age = " + regular.Age + ", "
                             + "driAge = " + regular.DriAge + ", "
@@ -264,7 +264,7 @@ namespace DSIES.Info.Database
                             //+ "totalscore_frist"+regular.Totalscore_frist + "', '"
                             //+ "totalscore_final"+regular.Totalscore_final + "', '"
                             //+ "credit"+regular.Credit + "', '"                          
-                            + "where telphone = " + regular.Telphone;
+                            + "where telephone = " + regular.Telephone;
                         break;
                     default:
                         return false;
@@ -273,11 +273,11 @@ namespace DSIES.Info.Database
                 return ExecuteNonQuery(sql);
             }
 
-            public bool UpdatePassword(string telphone, string password, UserGroup group)
+            public bool UpdatePassword(string telephone, string password, UserGroup group)
             {
                 string sql = "update " + group
                     + " set password = '" + Encryptor.GetMD5(password)
-                    + "' where telphone = " + telphone;
+                    + "' where telephone = " + telephone;
 
                 return ExecuteNonQuery(sql);
             }

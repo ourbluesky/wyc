@@ -13,7 +13,7 @@ namespace DSIES.Class.Model
     }
     public enum UserVariable
     {        
-        Telphone,
+        Telephone,
         Name,
         Password,
         //RegDate,
@@ -46,13 +46,13 @@ namespace DSIES.Class.Model
         private string password="";
         //private DateTime regDate;
         //private DateTime lastDate;
-        private string telphone="";
+        private string telephone="";
         private UserGroup group;
 
-        public string Telphone
+        public string Telephone
         {
-            get { return telphone; }
-            set { telphone = value; }
+            get { return telephone; }
+            set { telephone = value; }
         }
 
         public string Password

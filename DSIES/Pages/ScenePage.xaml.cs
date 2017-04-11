@@ -56,13 +56,6 @@ namespace DSIES.Pages
             //else
 
                 //CustomMessageBox.Show("", "Please connect the simulation module!");
-<<<<<<< HEAD
-
-             //   CU.MG_UDP.EndReceive();//关闭
-=======
-            
-            //CU.MG_UDP.EndReceive();//关闭
->>>>>>> 346802e9ab130205353d7c474bf7c1bde68b9955
 
             //CustomMessageBox.Show("tips", "Connect Error!");
 
@@ -345,25 +338,23 @@ namespace DSIES.Pages
          * and binds actions before, during and after game. 
          */
 
-<<<<<<< HEAD
-        public void GameStartAction()
-        {
-            GameFirstStep();
-            this.ResetPage();//初始化
-            PageList.Main.setPage(PageList.Scene);
-            // CurrentPage = PageCluster.GameRealTime;
 
-            /* Start the UDP receiving thread */
-            CU.Player.Start();
-        }
+        //public void GameStartAction()
+        //{
+        //    GameFirstStep();
+        //    this.ResetPage();//初始化
+        //    PageList.Main.setPage(PageList.Scene);
+        //    // CurrentPage = PageCluster.GameRealTime;
+
+        //    /* Start the UDP receiving thread */
+        //    CU.Player.Start();
+        //}
 
 
         private void SetUDPRefreshAction()
         {
             CU.Player.RefreshHandler += SetPage;//PageList.Main.setPage(PageList.Scene);
         }
-=======
->>>>>>> 346802e9ab130205353d7c474bf7c1bde68b9955
 
         //private void SetUDPTimeOutAction()
         //{

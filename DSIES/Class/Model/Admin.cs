@@ -11,13 +11,13 @@ namespace DSIES.Class.Model
         public Admin() { }
 
         public Admin(
-             string telphone,
+             string telephone,
              string password,
              string name,
              string grantUserName,
              string grantpassword)
         {            
-            this.Telphone = telphone;          
+            this.Telephone = telephone;          
             this.Password = password;
             this.Name = name;
             this.grantUserName = grantUserName;

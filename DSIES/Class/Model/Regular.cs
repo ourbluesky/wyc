@@ -15,7 +15,7 @@ namespace DSIES.Class.Model
            (
            string name,
            string password,
-           string telphone,
+           string telephone,
            string age,
            string driAge,
            string carrer,
@@ -38,7 +38,7 @@ namespace DSIES.Class.Model
            )
        {
            this.Name = name;
-           this.Telphone = telphone;
+           this.Telephone = telephone;
            this.Password = password;
            this.gender = gender;
            this.age = age;
@@ -61,7 +61,7 @@ namespace DSIES.Class.Model
 
      //  private string name;
      //  private string password;
-     //  private string telphone;
+     //  private string telephone;
        private string gender="";
        private string age="";
        private string driAge = "";

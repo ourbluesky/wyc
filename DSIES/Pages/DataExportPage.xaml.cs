@@ -45,7 +45,7 @@ namespace DSIES.Pages
             DrivingYears_info.DataContext = PageList.Main.Regular.DriAge;
             weizhang_info.DataContext= PageList.Main.Regular.Accident_times;
             job_info.DataContext =PageList.Main.Regular.Career ;
-            tele_info.DataContext= PageList.Main.Regular.Telphone ;
+            tele_info.DataContext= PageList.Main.Regular.Telephone ;
             leftsight.DataContext= PageList.Main.Regular.Sight_left;
             rightsight.DataContext= PageList.Main.Regular.Sight_right ;
             leftdeepsight.DataContext =PageList.Main.Regular.DeepSight_left;

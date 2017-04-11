@@ -16,7 +16,7 @@ namespace DSIES.Class.Control
         DBFAILED,
         VALIDATED,
         GRANTUSERNOTEXIST,
-        TELPHONEEMPTY,
+        TelephoneEMPTY,
         PASSWORDEMPTY,
         NAMEEMPTY,
         REALNAMEEMPTY,
@@ -53,13 +53,13 @@ namespace DSIES.Class.Control
 
         public User User { get { return user; } }
 
-        public LoginState Login(string telphone, string password, UserGroup group)
+        public LoginState Login(string telephone, string password, UserGroup group)
         {
             if (group == UserGroup.ADMIN && password.Equals(""))
                 return LoginState.NEEDPASSWORD;
 
             Tuple<LoginState, User> result
-                = dbManger.ValidateUser(telphone, password, group);
+                = dbManger.ValidateUser(telephone, password, group);
             if (result.Item1 == LoginState.SUCCESS)
             {
                 user = result.Item2;
@@ -91,18 +91,18 @@ namespace DSIES.Class.Control
         {
             switch (variable)
             {
-                case UserVariable.Telphone:
+                case UserVariable.Telephone:
                     if (value.Equals(""))
                     {
-                        UpdateRegisterState(RegisterState.TELPHONEEMPTY);
-                        return RegisterState.TELPHONEEMPTY;
+                        UpdateRegisterState(RegisterState.TelephoneEMPTY);
+                        return RegisterState.TelephoneEMPTY;
                     }
                     if (dbManger.GetUser(value, registerUser.Group) != null)
                     {
                         UpdateRegisterState(RegisterState.USEREXIST);
                         return RegisterState.USEREXIST;
                     }
-                    registerUser.Telphone = value;
+                    registerUser.Telephone = value;
                     break;
 
                 case UserVariable.Password:

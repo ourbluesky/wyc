@@ -57,7 +57,7 @@
                 <TextBox x:Name="textBlock_driage" HorizontalAlignment="Left" Height="19" Margin="141,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_accident_times" HorizontalAlignment="Left" Height="19" Margin="141,72,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="37" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_career" HorizontalAlignment="Left" Height="19" Margin="63,96,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="115" Foreground="White" Background="{x:Null}"/>
-                <TextBox x:Name="textBlock_telphone" HorizontalAlignment="Left" Height="19" Margin="90,121,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87" Foreground="White" Background="{x:Null}"/>
+                <TextBox x:Name="textBlock_telephone" HorizontalAlignment="Left" Height="19" Margin="90,121,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_Left_Sight" HorizontalAlignment="Left" Height="19" Margin="70,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_Right_Sight" HorizontalAlignment="Left" Height="19" Margin="127,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_Left_DeepSight" HorizontalAlignment="Left" Height="19" Margin="70,172,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50" Foreground="White" Background="{x:Null}"/>

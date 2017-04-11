@@ -1,17 +1,17 @@
 ﻿CREATE TABLE admin (
-	telphone        TEXT NOT NULL UNIQUE,
+	telephone        TEXT NOT NULL UNIQUE,
 	name			TEXT NOT NULL, 
 	password		TEXT NOT NULL,
 	grantUserName   TEXT NOT NULL,
 	--regDate			TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	--lastDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
-	PRIMARY KEY(telphone)
+	PRIMARY KEY(telephone)
 );
 
 CREATE TABLE regular (
-	telphone    TEXT NOT NULL UNIQUE,
-	name		TEXT NOT NULL ,
-	password	TEXT,
+	telephone    TEXT NOT NULL UNIQUE,
+	name		TEXT NOT NULL,
+	password	TEXT NOT NULL,
 	--regDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	--lastDate	TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	gender		TEXT NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE regular (
 	--totalscore_frist    INTEGER NOT NULL,
 	--totalscore_final   INTEGER NOT NULL,
 	--credit       TEXT NOT NULL,
-	PRIMARY KEY(telphone)
+	PRIMARY KEY(telephone)
 );
 
 

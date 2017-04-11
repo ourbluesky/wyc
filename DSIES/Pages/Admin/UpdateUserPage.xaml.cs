@@ -87,7 +87,7 @@ namespace DSIES.Pages.Admin
         public void SetPage(Regular regular)
         {
             iName.Text = regular.Name;
-            iTelphone.Text = regular.Telphone;
+            iTelephone.Text = regular.Telephone;
             iMale.IsChecked = regular.Gender == "Male" ? true : false;
             iAge.Text = regular.Age;
             iDriAge.Text = regular.DriAge;
@@ -104,7 +104,7 @@ namespace DSIES.Pages.Admin
 
         private void SetEditable()
         {
-            iTelphone.IsEnabled = true;
+            iTelephone.IsEnabled = true;
             iName.IsEnabled = true;
             iMale.IsEnabled = true;
             iFemale.IsEnabled = true;
@@ -121,7 +121,7 @@ namespace DSIES.Pages.Admin
 
         private void SetUneditable()
         {
-            iTelphone.IsEnabled = false;
+            iTelephone.IsEnabled = false;
             iName.IsEnabled = false;
             iMale.IsEnabled = false;
             iFemale.IsEnabled = false;

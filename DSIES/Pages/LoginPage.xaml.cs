@@ -34,7 +34,7 @@ namespace DSIES.Pages
             PageList.Main.Regular.DriAge = textBlock_driage.Text;
             PageList.Main.Regular.Accident_times= textBlock_accident_times.Text;
             PageList.Main.Regular.Career= textBlock_career.Text;
-            PageList.Main.Regular.Telphone = textBlock_telphone.Text;
+            PageList.Main.Regular.Telephone = textBlock_telephone.Text;
             PageList.Main.Regular.Sight_left =textBlock_Left_Sight.Text;
             PageList.Main.Regular.Sight_right = textBlock_Right_Sight.Text;
             PageList.Main.Regular.DeepSight_left =textBlock_Left_DeepSight.Text;
