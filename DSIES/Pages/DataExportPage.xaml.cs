@@ -136,5 +136,13 @@ namespace DSIES.Pages
                 word += "态度不端正的解释";
             return word;
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog dialog = new PrintDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                dialog.PrintVisual(printArea, "Print Test");
+            }
+        }
     }
 }
