@@ -238,11 +238,20 @@ namespace DSIES.Pages
             CacheDSTWAngle.Add(new Point(d, f.StwAngle));
             CacheDFarToFront.Add(new Point(d, f.FarToFront));
             CacheDBreak.Add(new Point(t, f.Brake));
-            sceneselectData.education.Speeding = act.speeding_judge();
-            sceneselectData.education.Line = act.line_judge(f.X, f.Y);
-            sceneselectData.education.Overtake = act.overtake_judge(f.X, f.Y);
-            sceneselectData.education.Lighting = act.lighting_judge(f.X, f.Y);
-            sceneselectData.education.Distraction = act.distrationg_judge(f.X, f.Y);
+            switch (sceneselectData.scene)
+            {
+                case '1':
+                        sceneselectData.education.Speeding = act.speeding_judge();
+                        sceneselectData.education.Line = act.line_judge(f.X, f.Y);
+                        sceneselectData.education.Overtake = act.overtake_judge(f.X, f.Y);
+                    break;
+                case '2':
+                    sceneselectData.education.Lighting = act.lighting_judge(f.X, f.Y);
+                    break;
+                case '3':
+                    sceneselectData.education.Distraction = act.distrationg_judge(f.X, f.Y);
+                    break;
+            }
             CacheCount++;
         }
         private void FlushCache()

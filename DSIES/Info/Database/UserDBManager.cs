@@ -200,6 +200,7 @@ namespace DSIES.Info.Database
                         sql = "insert into " + regular.Group
                             + " (telephone,name,password,gender,age,driAge,career,accident_times,sight_left,sight_right,deep_sight_left,deep_sight_right,reagency)  values ('"
                             //grade,score1,grade1,score2,grade2,totalscore_frist,totalscore_final,credit) values ('"                          
+
                             + regular.Telephone + "', '"
                             + regular.Name + "', '"
                             + Encryptor.GetMD5(regular.Password) + "', '"
