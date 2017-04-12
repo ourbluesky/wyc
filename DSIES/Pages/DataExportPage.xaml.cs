@@ -53,13 +53,13 @@ namespace DSIES.Pages
             reaction.DataContext= PageList.Main.Regular .Reagency;
             score1_text.DataContext = Value;
             score2_text.DataContext =Value2;
-            shiguleixing_info.DataContext = "分心驾驶";
+            shiguleixing_info.DataContext = shigu();
             Angry_info.DataContext = PageList.Main.Regular.Grade2;
             shiguqingxiang_score.DataContext = PageList.Main.Regular.Grade1;
             aihehua_score.DataContext = PageList.Main.Regular.Grade;
-            first_qingxiang_grade.DataContext = "分心驾驶";
+            first_qingxiang_grade.DataContext = shigu();
             shiguqingxiang_explain.DataContext = Sglx_Explain(PageList.Main.Regular.Grade1);
-            first_qingxiang_explain.DataContext = "驾驶员分心是驾驶员自愿或非自愿的转移驾驶任务（不是由于酒精、药物、疲劳等因素），转移任务是因为驾驶员执行另外的任务而短暂地将注意力集中在与驾驶无关的事件、物体和人上，这种转变降低了驾驶员的环境意识、决策水平和操作技能，您在驾驶过程中分心驾驶倾向严重，请您小心驾驶";
+            first_qingxiang_explain.DataContext = shigu_explain();
             Angry_explain.DataContext = Angre_Explain(PageList.Main.Regular.Grade1);
             jianyi.DataContext = "从您的驾驶测试中我们发现您是一个愤怒等级一般并且驾驶行为倾向一般的驾驶员，在驾驶过程中您的事故倾向是分心驾驶，故而有一下几点建议给您：\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
         }
@@ -112,6 +112,29 @@ namespace DSIES.Pages
                 default: break;
             }
             return "";
+        }
+        public String shigu( )
+        {
+            string word = null ;
+            if (sceneselectData.education.Speeding == true || sceneselectData.education.Line == true || sceneselectData.education.Overtake == true)
+                word += "直觉行为缺失";
+            if (sceneselectData.education.Lighting == true)
+                word+= "行为不规范";
+            if (sceneselectData.education.Distraction == true)
+                word+= "态度不端正";
+            return word;
+        }
+
+        public String shigu_explain()
+        {
+            string word = null;
+            if (sceneselectData.education.Speeding == true || sceneselectData.education.Line == true || sceneselectData.education.Overtake == true)
+                word += "直觉行为缺失的解释";
+            if (sceneselectData.education.Lighting == true)
+                word += "行为不规范的解释";
+            if (sceneselectData.education.Distraction == true)
+                word += "态度不端正的解释";
+            return word;
         }
     }
 }
