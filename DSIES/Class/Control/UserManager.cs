@@ -226,6 +226,7 @@ namespace DSIES.Class.Control
             user = null;
         }
 
+        //这个有什么用// regularInfo//CU.MG_User.UpdateUser(regular);
         public bool UpdateUser(User user)
         {
             return dbManger.UpdateUserInfo(user);

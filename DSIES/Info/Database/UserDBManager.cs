@@ -101,24 +101,24 @@ namespace DSIES.Info.Database
                     return null;
             }
 
-            public List<User> GetAllRegulars()
-            {
-                string sql = "select * from " + UserGroup.REGULAR;
-                List<User> users = GetUsers(sql, UserGroup.REGULAR);
+            //public List<User> GetAllRegulars()
+            //{
+            //    string sql = "select * from " + UserGroup.REGULAR;
+            //    List<User> users = GetUsers(sql, UserGroup.REGULAR);
 
-                return users;
-            }
+            //    return users;
+            //}
 
-            public List<User> GetAllGrantedUsers(string telephone)
-            {
-                string sql = "select * from " + UserGroup.ADMIN
-                    + " where telephone = " + telephone;
-                List<User> users = GetUsers(sql, UserGroup.ADMIN);
+            //public List<User> GetAllGrantedUsers(string telephone)//?
+            //{
+            //    string sql = "select * from " + UserGroup.ADMIN
+            //        + " where telephone = " + telephone;
+            //    List<User> users = GetUsers(sql, UserGroup.ADMIN);
 
-                return users;
-            }
+            //    return users;
+            //}
 
-            private List<User> GetUsers(string sql, UserGroup group)
+            private List<User> GetUsers(string sql, UserGroup group)//干什么用的？
             {
                 OpenConnection();
                 SQLiteDataReader reader = ExecuteQuery(sql);
@@ -198,8 +198,8 @@ namespace DSIES.Info.Database
                     case UserGroup.REGULAR:
                         Regular regular = user as Regular;
                         sql = "insert into " + regular.Group
-                            + " (telephone,name,password,gender,age,driAge,career,accident_times,sight_left,sight_right,deep_sight_left,deep_sight_left,reagency)  values ('"
-                            //grade,score1,grade1,score2,grade2 ,totalscore_frist,totalscore_final,credit) values ('"                          
+                            + " (telephone,name,password,gender,age,driAge,career,accident_times,sight_left,sight_right,deep_sight_left,deep_sight_right,reagency)  values ('"
+                            //grade,score1,grade1,score2,grade2,totalscore_frist,totalscore_final,credit) values ('"                          
                             + regular.Telephone + "', '"
                             + regular.Name + "', '"
                             + Encryptor.GetMD5(regular.Password) + "', '"
@@ -247,7 +247,7 @@ namespace DSIES.Info.Database
                             + "name = " + regular.Name + "', "
                             + "telephone = " + regular.Telephone + "', "                           
                             + "gender = '" + regular.Gender + "', "
-                                      + "age = " + regular.Age + ", "
+                            + "age = " + regular.Age + ", "
                             + "driAge = " + regular.DriAge + ", "
                             + "career = '" + regular.Career + "',"
                             + "accident_times = '" + regular.Accident_times + "' "                          

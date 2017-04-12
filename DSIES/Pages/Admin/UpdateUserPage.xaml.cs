@@ -140,7 +140,7 @@ namespace DSIES.Pages.Admin
         {
             Regular regular = new Regular();
             //TODO
-            //CU.MG_User.UpdateUser(regular);
+            CU.MG_User.UpdateUser(regular);//更新信息，一开始没用到
         }
 
         private void ChangePassword()
