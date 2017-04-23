@@ -54,7 +54,7 @@
                             <lvc:LineSeries x:Name="Speed" Fill="Transparent" Values="{Binding SpeedChart}" Visibility="Visible" />
                             <lvc:LineSeries x:Name="Acceleration" Fill="Transparent" Values="{Binding AccChart}" Visibility="Hidden" />
                             <lvc:LineSeries x:Name="Break" Fill="Transparent" Values="{Binding BreakChart}" Visibility="Hidden" />
-                            <lvc:LineSeries x:Name="Accelerator" Fill="Transparent" Values="{Binding AcceleratorChart}" Visibility="Hidden" />
+                            <lvc:LineSeries x:Name="Accelerator" Fill="Transparent" Values="{Binding AccelerographChart}" Visibility="Hidden" />
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
@@ -66,7 +66,7 @@
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->
                             <!-- 注意此处绑定了值为Points -->
-                            <lvc:LineSeries x:Name="Acceleration_small" Fill="Transparent" Values="{Binding AcceleratorChart}"/>
+                            <lvc:LineSeries x:Name="Acceleration_small" Fill="Transparent" Values="{Binding AccelerographChart}" Visibility="Visible"/>
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
