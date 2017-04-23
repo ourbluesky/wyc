@@ -33,10 +33,6 @@ namespace DSIES.Pages
             CU.Player.Start();
             ScenePage page = new ScenePage();
             PageList.Main.setPage(page);
-
-            //CU.Player.Start();
-            //ScenePage page = new ScenePage();
-            //PageList.Main.setPage(page); 
             CU.MG_Page.GameStartAction();
             scene_one_button.Visibility = System.Windows.Visibility.Hidden;
             scene_one_button_copy.Visibility = System.Windows.Visibility.Visible;
@@ -45,6 +41,8 @@ namespace DSIES.Pages
 
         private void scenen_two_button_Click(object sender, RoutedEventArgs e)
         {
+            CU.Player.Start();
+            CU.MG_Page.GameStartAction();
             ScenePage page = new ScenePage();
             PageList.Main.setPage(page);
             scene_two_button.Visibility = System.Windows.Visibility.Hidden;
@@ -54,6 +52,8 @@ namespace DSIES.Pages
 
         private void scene_three_button_Click(object sender, RoutedEventArgs e)
         {
+            CU.Player.Start();
+            CU.MG_Page.GameStartAction();
             ScenePage page = new ScenePage();
             PageList.Main.setPage(page);
             scene_three_button.Visibility = System.Windows.Visibility.Hidden;

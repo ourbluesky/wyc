@@ -164,7 +164,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\油门.png" Stretch="Fill" />
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\刹车.png" Stretch="Fill" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
@@ -176,7 +176,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\刹车.png" Stretch="Fill" />
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\油门.png" Stretch="Fill" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>

@@ -35,9 +35,9 @@ namespace DSIES.Pages
             // 这个是必要的，绑定数据，否则画不出来
             //
             ContentGrid.DataContext = this;
-
-            CU.MG_UDP.PrepareReceive();
-            Svframe frame = CU.MG_UDP.ReceiveFrame();
+            first = true;
+            //CU.MG_UDP.PrepareReceive();
+            //Svframe frame = CU.MG_UDP.ReceiveFrame();
             //float time;
             //float speed;
             //float brake;
@@ -61,7 +61,7 @@ namespace DSIES.Pages
 
 
            // Thread t = new Thread(SetPage);
-            CU.MG_UDP.EndReceive();//关闭
+           // CU.MG_UDP.EndReceive();//关闭
 
 
 
@@ -218,7 +218,7 @@ namespace DSIES.Pages
 
         private void Cache(Svframe record)
         {
-            Svframe f = new Svframe();
+            Svframe f = record;
             Data_DealClass act = new Data_DealClass();
             //act.SPEED = f.Speed;
             act.LINE = f.Lane;
