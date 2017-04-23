@@ -18,14 +18,16 @@
     </Page.Resources>
 
     <Grid>
-        <Canvas x:Name="printArea">
+          
             <Grid Margin="0,0,2,-6">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="0*"/>
                 </Grid.RowDefinitions>
                 <ScrollViewer x:Name="scollviewer1">
-                    <Grid  Height="965" Width="1214">
+                <Grid>
+                <!--<Canvas x:Name="printArea">-->
+                <Grid  Height="965" Width="1214">
                         <Grid.Background>
                             <!--<ImageBrush ImageSource="..\Picture\问卷背景.png"/>-->
                             <ImageBrush ImageSource="..\Picture\qu.png"/>
@@ -130,14 +132,20 @@
                         </Border>
 
                     </Grid>
-
-                </ScrollViewer>
+                <!--</Canvas >-->
+                
+                <Grid HorizontalAlignment="Left" Height="58" Margin="563,889,0,-307" VerticalAlignment="Top" Width="181">
+                    <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="92" 
+                    	  Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="171" Margin="0,0,0,-34" />
+                </Grid>
+                       </Grid>
+            </ScrollViewer>
             </Grid>
-        </Canvas >
-        <Grid HorizontalAlignment="Left" Height="58" Margin="563,889,0,-307" VerticalAlignment="Top" Width="181">
+        <!--</Canvas >-->
+        <!--<Grid HorizontalAlignment="Left" Height="58" Margin="563,889,0,-307" VerticalAlignment="Top" Width="181">
             <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="92" 
                     	  Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="171" Margin="0,0,0,-34" />
-        </Grid>
+        </Grid>-->
     </Grid>
     <!--<Grid>
 

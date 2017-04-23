@@ -21,10 +21,10 @@
                     <ImageBrush ImageSource="..\Picture\框.png"/>
                 </Grid.Background>
                 <Label x:Name="welcome_label" Content="如果您是初次使用我们&#xD;&#xA;的系统请先注册，如果&#xD;&#xA;您是再次使用可以直接&#xD;&#xA;登陆。" HorizontalAlignment="Left" Height="76" Margin="34,36,0,0" VerticalAlignment="Top" Width="133" Foreground="White" Background="{x:Null}"/>
-                <Button x:Name="ToIn" Style="{DynamicResource In_ButtonStyle}" Content="登陆" Click="ToIn_Click" HorizontalAlignment="Left" Height="26" Margin="34,220,0,0" VerticalAlignment="Top" Width="47"/>
-                <Button x:Name="ToLogin" Style="{DynamicResource login_ButtonStyle}" Content="注册" Click="ToLogin_Click" HorizontalAlignment="Left" Height="26" Margin="126,220,0,0" VerticalAlignment="Top" Width="47"/>
+                <Button x:Name="ToLogin" Style="{DynamicResource In_ButtonStyle}" Content="登陆" Click="Login_Button_Click" HorizontalAlignment="Left" Height="26" Margin="34,220,0,0" VerticalAlignment="Top" Width="47"/>
+                <Button x:Name="ToRegister" Style="{DynamicResource login_ButtonStyle}" Content="注册" Click="Register_Button_Click" HorizontalAlignment="Left" Height="26" Margin="126,220,0,0" VerticalAlignment="Top" Width="47"/>
             </Grid>
-            <Grid x:Name="In" HorizontalAlignment="Left" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Visibility="Hidden" Grid.Column="1" >
+            <Grid x:Name="Login" HorizontalAlignment="Left" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Visibility="Hidden" Grid.Column="1" >
                 <Grid.Background>
                     <ImageBrush ImageSource="..\Picture\框.png"/>
                 </Grid.Background>
@@ -33,10 +33,10 @@
                 <Label x:Name="password" Content="密   码:" Height="27" Margin="22,165,113,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_phone" HorizontalAlignment="Left" Height="19" Margin="90,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_password" HorizontalAlignment="Left" Height="19" Margin="90,169,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="88" Foreground="White" Background="{x:Null}"/>
-                <Button Style="{DynamicResource back_ButtonStyle}"  x:Name="In_back_Button" Click="In_back_Button_Click" Margin="0,242,149,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
-                <Button Style="{DynamicResource forword_ButtonStyle}"  x:Name="In_Button" Click="In_Button_Click" Margin="0,242,29,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
+                <Button Style="{DynamicResource back_ButtonStyle}"  x:Name="Login_back_Button" Click="Login_back_Button_Click" Margin="0,242,149,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
+                <Button Style="{DynamicResource forword_ButtonStyle}"  x:Name="Login_in_Button" Click="Login_in_Button_Click" Margin="0,242,29,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
             </Grid>
-            <Grid x:Name="Login" HorizontalAlignment="Left" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Visibility="Hidden" Grid.Column="1">
+            <Grid x:Name="Register" HorizontalAlignment="Left" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Visibility="Hidden" Grid.Column="1">
                 <Grid.Background>
                     <ImageBrush ImageSource="..\Picture\框.png"/>
                 </Grid.Background>
@@ -64,8 +64,8 @@
                 <TextBox x:Name="textBlock_Right_DeepSight" HorizontalAlignment="Left" Height="19" Margin="127,172,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_React" HorizontalAlignment="Left" Height="19" Margin="70,198,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="107" Foreground="White" Background="{x:Null}"/>
                 <TextBox x:Name="textBlock_password_set" HorizontalAlignment="Left" Height="19" Margin="91,221,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="87" Foreground="White" Background="{x:Null}"/>
-                <Button Style="{DynamicResource back_ButtonStyle}"  x:Name="Login_back_Button" Click="Login_back_Button_Click"  Margin="0,242,149,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
-                <Button Style="{DynamicResource forword_ButtonStyle}"  x:Name="login_in_Button" Click="login_in_Button_Click" Margin="0,242,29,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
+                <Button Style="{DynamicResource back_ButtonStyle}"  x:Name="Register_back_Button" Click="Register_back_Button_Click"  Margin="0,242,149,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
+                <Button Style="{DynamicResource forword_ButtonStyle}"  x:Name="Register_in_Button" Click="Register_in_Button_Click" Margin="0,242,29,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="19" Width="19" />
             </Grid>
             <Label x:Name="subject" Content="D S I E S" Height="108" Margin="263,182,515,350" Width="374" Foreground="White" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" FontFamily="Modern No. 20" Grid.Column="1"/>
           </Grid>

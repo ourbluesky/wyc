@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Configurations;
+using System.Threading;
 using DSIES.Pages;
 using DSIES.UDP;
 using DSIES.Class.Control;
@@ -26,18 +27,17 @@ namespace DSIES.Pages
     /// </summary>
     public partial class ScenePage : Page
     {
-
         public ScenePage()
         {
-
+            
             InitializeComponent();
             //SetChart();
             // 这个是必要的，绑定数据，否则画不出来
             //
             ContentGrid.DataContext = this;
 
-            //CU.MG_UDP.PrepareReceive();
-            //Svframe frame = CU.MG_UDP.ReceiveFrame();
+            CU.MG_UDP.PrepareReceive();
+            Svframe frame = CU.MG_UDP.ReceiveFrame();
             //float time;
             //float speed;
             //float brake;
@@ -59,6 +59,8 @@ namespace DSIES.Pages
 
             //CustomMessageBox.Show("tips", "Connect Error!");
 
+
+           // Thread t = new Thread(SetPage);
             CU.MG_UDP.EndReceive();//关闭
 
 
