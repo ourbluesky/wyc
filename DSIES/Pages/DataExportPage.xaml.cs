@@ -141,7 +141,7 @@ namespace DSIES.Pages
             PrintDialog dialog = new PrintDialog();
             if (dialog.ShowDialog() == true)
             {
-                //dialog.PrintVisual(printArea, "Print Test");
+                dialog.PrintVisual(printArea, "Print Test");
             }
         }
     }
