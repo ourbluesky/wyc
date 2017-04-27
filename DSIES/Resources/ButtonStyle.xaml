@@ -201,7 +201,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\场景一copy.png" Stretch="Fill" />
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下场景1.png" Stretch="Fill" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
@@ -225,7 +225,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\场景二copy.png" Stretch="Fill" />
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下场景2.png" Stretch="Fill" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
@@ -249,7 +249,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\场景三copy.png" Stretch="Fill" />
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\按下场景3.png" Stretch="Fill" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>

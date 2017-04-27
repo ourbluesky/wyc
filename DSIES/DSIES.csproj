@@ -360,6 +360,9 @@
     <Resource Include="Picture\按下查询个人信息.png" />
     <Resource Include="Picture\按下退出系统.png" />
     <Resource Include="Picture\print.png" />
+    <Resource Include="Picture\按下场景1.png" />
+    <Resource Include="Picture\按下场景2.png" />
+    <Resource Include="Picture\按下场景3.png" />
     <Content Include="Video\交叉口.mp4" />
     <Content Include="Video\分心.mp4" />
     <Content Include="Video\变道.mp4" />
@@ -372,9 +375,6 @@
     <Resource Include="Picture\start.png" />
     <Resource Include="Picture\stop.png" />
     <Resource Include="Picture\分心copy.png" />
-    <Resource Include="Picture\场景三copy.png" />
-    <Resource Include="Picture\场景二copy.png" />
-    <Resource Include="Picture\场景一copy.png" />
     <Resource Include="Picture\问卷.png" />
     <Resource Include="Picture\naire1.png" />
     <Resource Include="Picture\火苗.png" />
