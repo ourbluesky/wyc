@@ -16,7 +16,7 @@
                     <ImageBrush ImageSource="/DSIES;component/Picture/bg.png" TileMode="Tile"/>
                 </Image.OpacityMask>
             </Image>
-            <Grid x:Name="welcome" HorizontalAlignment="Stretch" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Visibility="Visible" Grid.Column="1" >
+            <Grid x:Name="welcome" HorizontalAlignment="Left" Height="275" Margin="775,100,177,0" VerticalAlignment="Top" Width="200" Visibility="Visible" Grid.Column="1" >
                 <Grid.Background>
                     <ImageBrush ImageSource="..\Picture\框.png"/>
                 </Grid.Background>

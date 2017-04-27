@@ -61,7 +61,7 @@ namespace DSIES.Pages
             shiguqingxiang_explain.DataContext = Sglx_Explain(PageList.Main.Regular.Grade1);
             first_qingxiang_explain.DataContext = shigu_explain();
             Angry_explain.DataContext = Angre_Explain(PageList.Main.Regular.Grade1);
-            jianyi.DataContext = "从您的驾驶测试中我们发现您是一个愤怒等级一般并且驾驶行为倾向一般的驾驶员，在驾驶过程中您的事故倾向是分心驾驶，故而有一下几点建议给您：\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
+            jianyi.DataContext = "     从您的驾驶测试中我们发现您是一个愤怒等级一般并且驾驶行为倾向一般的驾驶员，在驾驶过程中您的事故倾向是分心驾驶.\n  故而有一下几点建议给您：\n  一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n  二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n  三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n  最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
         }
         public double Value
         {

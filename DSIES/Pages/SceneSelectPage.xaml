@@ -8,8 +8,6 @@
 	Title="SceneSelectPage">
 
     <Grid>
-        <!--<Image x:Name="background" Source="..\Picture\bg.png" Margin="0,-34,0,0" />-->
-        <!--<Image x:Name="logo" Source="..\Picture\校徽.png" HorizontalAlignment="Left" Height="150" Margin="20,20,0,0" VerticalAlignment="Top" Width="150"/>-->
         <Image x:Name="police" Source="..\Picture\做场景.png" HorizontalAlignment="Left" Height="269" Margin="76,208,0,0" VerticalAlignment="Top" Width="495"/>
         <Label x:Name="label" Content="请您按照顺序&#xD;&#xA;依次完成三个&#xD;&#xA;场景测试。" HorizontalAlignment="Left" Height="98" Margin="272,225,0,0" VerticalAlignment="Top" Width="143" Foreground="Blue" FontSize="20" />
         <Button Style="{DynamicResource Scene_one_ButtonStyle}" x:Name="scene_one_button" Click="scene_one_button_Click" Content="Button" HorizontalAlignment="Left" Height="150" Margin="500,128,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="1.332,1.058"/>
@@ -18,7 +16,7 @@
         <Button Style="{DynamicResource Scene_one_copy_ButtonStyle}" x:Name="scene_one_button_copy"  Content="Button" HorizontalAlignment="Left" Height="150" Margin="500,128,0,0" VerticalAlignment="Top" Width="200" Background="#FF050000" Visibility="Hidden"/>
         <Button Style="{DynamicResource Scene_two_copy_ButtonStyle}" x:Name="scene_two_button_copy"  Content="Button" HorizontalAlignment="Left" Height="150" Margin="500,378,0,0" VerticalAlignment="Top" Width="200" Background="#FF050000" Visibility="Hidden"/>
         <Button Style="{DynamicResource Scene_three_copy_ButtonStyle}" x:Name="scene_three_button_copy"  Content="Button" HorizontalAlignment="Left" Height="150" Margin="800,250,0,0" VerticalAlignment="Top" Width="218" Background="#FF050000" Visibility="Hidden"/>
-        <Button Style="{DynamicResource Back_ButtonStyle}" x:Name="button" Click="button_Click" Content="Button" HorizontalAlignment="Left" Height="60" Margin="1080,546,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Style="{DynamicResource right_ButtonStyle}" x:Name="button" Click="button_Click" Content="Button" HorizontalAlignment="Left" Height="60" Margin="1080,546,0,0" VerticalAlignment="Top" Width="60"/>
 
     </Grid>
 </Page>

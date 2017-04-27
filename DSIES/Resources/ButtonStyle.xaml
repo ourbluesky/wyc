@@ -99,17 +99,6 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ButtonStyle7" TargetType="{x:Type Button}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\right.png" Stretch="Fill" />
-                    </StackPanel>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 
     <Style x:Key="ButtonStyle8" TargetType="{x:Type Button}">
         <Setter Property="Template">
@@ -183,12 +172,12 @@
         </Setter>
     </Style>
     
-    <Style x:Key="Back_ButtonStyle" TargetType="{x:Type Button}">
+    <Style x:Key="right_ButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\返回.png" Stretch="Fill" />
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\right.png" Stretch="Fill" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
@@ -693,7 +682,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <StackPanel Orientation="Horizontal" Background="Transparent" Margin="0,0,0,0" >
-                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\Print3.jpg" Stretch="Fill" />
+                        <Image Name="ImgBtnBg3" Margin="0,0,0,2" Source="..\Picture\print.png" Stretch="Fill" />
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>

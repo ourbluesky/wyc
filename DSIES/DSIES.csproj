@@ -359,7 +359,7 @@
     <Resource Include="Picture\按下打印测试报表.png" />
     <Resource Include="Picture\按下查询个人信息.png" />
     <Resource Include="Picture\按下退出系统.png" />
-    <Resource Include="Picture\Print3.jpg" />
+    <Resource Include="Picture\print.png" />
     <Content Include="Video\交叉口.mp4" />
     <Content Include="Video\分心.mp4" />
     <Content Include="Video\变道.mp4" />
@@ -400,7 +400,6 @@
     <Resource Include="Picture\油门.png" />
     <Resource Include="Picture\速度.png" />
     <Resource Include="Picture\加速度.png" />
-    <Resource Include="Picture\返回.png" />
     <Resource Include="Picture\场景.png" />
     <Resource Include="Picture\刹车.png" />
     <Resource Include="Picture\背景.png" />
