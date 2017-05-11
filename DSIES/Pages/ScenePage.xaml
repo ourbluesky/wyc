@@ -20,25 +20,25 @@
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="94" Margin="790,290,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="93" Margin="0.2,0.2,-1.2,-0.4" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label_Copy2" Content="刹车：" HorizontalAlignment="Left" Height="43" Margin="5,21,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
-                    <TextBlock x:Name="Break_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,21,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.548,4.205" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Break_textBlock" HorizontalAlignment="Left" Height="29" Margin="69,25,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100"  RenderTransformOrigin="0.548,4.205" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="790,0,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="99" Margin="0.2,0.2,-1.2,-1.6" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label" Content="速度：" HorizontalAlignment="Left" Height="43" Margin="1,22,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
-                    <TextBlock x:Name="Speed_textBlock" HorizontalAlignment="Left" Height="43" Margin="72,22,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Speed_textBlock" HorizontalAlignment="Left" Height="29" Margin="68,28,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="101" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="93" Margin="790,100,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="92" Margin="0.2,0.2,-1.2,-1" VerticalAlignment="Top" Width="169">
-                    <TextBlock x:Name="Acc_textBlock" HorizontalAlignment="Left" Height="43" Margin="76,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
-                    <Label x:Name="label_Copy" Content="加速度：" HorizontalAlignment="Left" Height="43" Margin="0,26,0,0" VerticalAlignment="Top" Width="84" FontSize="20" Foreground="#FFDDCF00"/>
+                    <TextBlock x:Name="Acc_textBlock" HorizontalAlignment="Left" Height="29" Margin="72,30,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="97" FontSize="25" Foreground="#FFE9F304"/>
+                    <Label x:Name="label_Copy" Content="转角：" HorizontalAlignment="Left" Height="35" Margin="0,26,0,0" VerticalAlignment="Top" Width="84" FontSize="20" Foreground="#FFDDCF00"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="97" Margin="790,193,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="96" Margin="0.2,0.2,-1.2,-1.8" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label_Copy1" Content="油门：" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00" Margin="0,26,0,0"/>
-                    <TextBlock x:Name="Accelerator_textBlock" HorizontalAlignment="Left" Height="43" Margin="68,26,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="71" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Accelerator_textBlock" HorizontalAlignment="Left" Height="29" Margin="68,28,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="314" VerticalAlignment="Top" Width="790">
@@ -97,7 +97,7 @@
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="184" Margin="277,466,0,0" VerticalAlignment="Top" Width="266">
                 <Grid HorizontalAlignment="Left" Height="184" Margin="-0.8,-0.8,-1.2,-0.8" VerticalAlignment="Top" Width="266">
-                    <Label x:Name="label2" Content="加速度" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006"/>
+                    <Label x:Name="label2" Content="转角" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="51" Background="{x:Null}" Foreground="#FFF9E006"/>
                     <lvc:CartesianChart x:Name="Chart_Small_3" Margin="17,23,10,10">
                         <lvc:CartesianChart.Series>
                             <!-->Series里面添加多个线就是在同一个图表里面花多条线<-->

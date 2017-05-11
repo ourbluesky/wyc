@@ -38,12 +38,12 @@
                             <Grid HorizontalAlignment="Left" Height="265" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="381">
                                 <Label Content="您的驾驶事故倾向是：" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="189" FontSize="16" Height="29"/>
                                 <TextBlock x:Name="first_qingxiang_grade" HorizontalAlignment="Left" Margin="204,47,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="29" Width="142" FontSize="16"/>
-                                <TextBlock x:Name="first_qingxiang_explain" HorizontalAlignment="Left" Margin="10,128,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="371" Height="137" FontSize="16"/>
+                                <TextBlock x:Name="first_qingxiang_explain" HorizontalAlignment="Left" Margin="46,94,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="335" Height="137" FontSize="16"/>
                             </Grid>
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="267" Margin="418,333,0,0" VerticalAlignment="Top" Width="322">
                             <Grid HorizontalAlignment="Left" Height="266" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="322">
-                                <TextBlock x:Name="Angry_explain" Margin="10,110,10,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="156" FontSize="16"/>
+                                <TextBlock x:Name="Angry_explain" Margin="10,77,10,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="156" FontSize="16"/>
                                 <Label Content="愤怒值：" HorizontalAlignment="Left" Margin="44,45,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="-0.331,0.585" Height="30" Width="86" />
                                 <TextBlock x:Name="Angry_info" HorizontalAlignment="Left" Margin="135,47,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="101"  FontSize="16"/>
                             </Grid>
@@ -52,7 +52,7 @@
                             <Grid HorizontalAlignment="Left" Height="265" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="334">
                                 <Label Content="您的事故倾向级别是:" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="48" Width="183" FontSize="16"/>
                                 <TextBlock x:Name="shiguqingxiang_score" HorizontalAlignment="Left" Margin="173,48,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="151" FontSize="16" Height="48"/>
-                                <TextBlock x:Name="shiguqingxiang_explain" HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="314" Height="154" FontSize="16"/>
+                                <TextBlock x:Name="shiguqingxiang_explain" HorizontalAlignment="Left" Margin="10,78,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="314" Height="154" FontSize="16"/>
                             </Grid>
                         </Border>
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" Margin="84,71,0,0" VerticalAlignment="Top" Width="527">
@@ -122,7 +122,7 @@
                         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="268" Margin="84,599,0,0" VerticalAlignment="Top" Width="1037">
                             <Grid HorizontalAlignment="Left" Height="267" Margin="-1,-1,0,0" VerticalAlignment="Top" Width="1036">
                                 <Label Content="驾驶建议:" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="144" FontSize="20"/>
-                                <TextBlock Name="jianyi" HorizontalAlignment="Left" Height="217" Margin="0,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="1036" FontSize="16" />
+                                <TextBlock Name="jianyi" HorizontalAlignment="Left" Height="217" Margin="43,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="993" FontSize="16" />
 
                             </Grid>
                         </Border>
@@ -134,8 +134,8 @@
                 </Grid>
                 <!--</Canvas >-->
 
-                
-                       <!--</Grid>-->
+
+                <!--</Grid>-->
             </ScrollViewer>
         </Grid>
         <!--</Canvas >-->

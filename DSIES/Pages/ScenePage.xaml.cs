@@ -28,43 +28,10 @@ namespace DSIES.Pages
     public partial class ScenePage : Page
     {
         public ScenePage()
-        {
-            
+        {     
             InitializeComponent();
-            //SetChart();
-            // 这个是必要的，绑定数据，否则画不出来
-            //
             ContentGrid.DataContext = this;
             first = true;
-            //CU.MG_UDP.PrepareReceive();
-            //Svframe frame = CU.MG_UDP.ReceiveFrame();
-            //float time;
-            //float speed;
-            //float brake;
-            //float accelerograph;
-            //float acc;
-            //if (frame != null)
-            //{
-            //    //time = frame.Time;
-            //    //speed = frame.Speed;
-            //    //brake = frame.Brake;
-            //    //accelerograph = frame.Accelerograph;
-            //    //acc = frame.Acc;
-            //    //SetPage(frame);
-            //    SetPage(frame);
-            //}
-            //else
-
-                //CustomMessageBox.Show("", "Please connect the simulation module!");
-
-            //CustomMessageBox.Show("tips", "Connect Error!");
-
-
-           // Thread t = new Thread(SetPage);
-           // CU.MG_UDP.EndReceive();//关闭
-
-
-
         }
 
         

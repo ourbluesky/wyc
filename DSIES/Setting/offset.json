@@ -10,7 +10,7 @@
 	"Speed": "12",
     "X": "15",
     "Y": "16",    
-    "Acc": "17",   
+    "Acc": "1",   
     "Offset": "18",	
     "Distance": "19",
     "Braking": "20"         

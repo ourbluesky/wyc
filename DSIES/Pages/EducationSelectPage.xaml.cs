@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DSIES.Pages;
+using DSIES.Class.Control;
 
 namespace DSIES.Pages
 {
@@ -141,9 +142,10 @@ namespace DSIES.Pages
             // }
             ////else
             //{ 
-                 //}
-            SceneSelectPage page = new SceneSelectPage();
-            PageList.Main.setPage(page);
+                 //}SceneSelectPage page 
+            PageList.SceneSelect= new SceneSelectPage();
+            sceneselectData.education = new Education();
+            PageList.Main.setPage(PageList.SceneSelect);
         }
     }
 }

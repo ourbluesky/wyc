@@ -75,8 +75,8 @@ namespace DSIES.Class.Control
                 {
                     if (recorder.Record(frame))
 
-                        RefreshHandler.Invoke(frame);//执行触发
-                        //RefreshHandler?.Invoke(frame);//执行触发
+                        //RefreshHandler.Invoke(frame);//执行触发
+                    RefreshHandler?.Invoke(frame);//执行触发
 
                 }
                 else

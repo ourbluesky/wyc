@@ -61,7 +61,7 @@ namespace DSIES.Pages
             shiguqingxiang_explain.DataContext = Sglx_Explain(PageList.Main.Regular.Grade1);
             first_qingxiang_explain.DataContext = shigu_explain();
             Angry_explain.DataContext = Angre_Explain(PageList.Main.Regular.Grade1);
-            jianyi.DataContext = "从您的驾驶测试中我们发现您是一个愤怒等级一般并且驾驶行为倾向一般的驾驶员，在驾驶过程中您的事故倾向是分心驾驶，故而有一下几点建议给您：\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
+            jianyi.DataContext = "从您的驾驶测试中我们发现您是一个愤怒等级为"+PageList.Main.Regular.Grade1+ "的驾驶员，在驾驶过程中您的事故倾向是"+ shigu()+ "，故而有一下几点建议给您："+"\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n"+"最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
         }
         public double Value
         {
@@ -122,6 +122,8 @@ namespace DSIES.Pages
                 word+= "行为不规范";
             if (sceneselectData.education.Distraction == true)
                 word+= "态度不端正";
+            if (word == null)
+                word = "操作完美";
             return word;
         }
 
@@ -129,11 +131,13 @@ namespace DSIES.Pages
         {
             string word = null;
             if (sceneselectData.education.Speeding == true || sceneselectData.education.Line == true || sceneselectData.education.Overtake == true)
-                word += "直觉行为缺失的解释";
+                word += "您在日常驾驶中对于相关技术操作未能有良好的把控，在紧要时刻不能做出较好的处理。建议您在日常驾驶中多注意与周边车辆保持距离，不要进行过激的操作，在日常中多学习相关技术，增加自己的操作知识，防止发生事故。";
             if (sceneselectData.education.Lighting == true)
-                word += "行为不规范的解释";
+                word += "您在日常驾驶中对于相关行为操作未能有良好的把控，对于道路情况以及本身的操作没有规范性认知。建议您在日常驾驶中多注意交通信号以及路边告示的指引，不进行过激的操作，在日常中多学习相关规范，增加自己的驾驶知识，对一些典型违法事故有所了解，防止发生事故。";
             if (sceneselectData.education.Distraction == true)
-                word += "态度不端正的解释";
+                word += "您在日常驾驶中对于相关规章未能有良好的了解，容易发生违法行为不自知，建议您在日常驾驶中多注意交通信号以及民警指示，防止发生闯红灯等违法操作，不进行过激的操作。在日常中多学习相关规范，增加自己的驾驶知识，对一些典型违法事故有所了解，且端正态度，尊重生命，防止发生事故";
+            if (word == null)
+                word = "您在日常驾驶中对于各种操作都有良好的把控与了解，请继续保持现状。";
             return word;
         }
         private void Button_Click(object sender, RoutedEventArgs e)

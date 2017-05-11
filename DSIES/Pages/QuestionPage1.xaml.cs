@@ -25,7 +25,7 @@ namespace DSIES.Pages
         public QuestionPage1()
         {
             InitializeComponent();
-            CustomMessageBox.Show( "尊敬的驾驶员，您好！","下面进入问卷测试，请您根据实际情况填写问题。");
+
         }
 
         //  private int PageList.Main.QUESTION.Score1 = 0;

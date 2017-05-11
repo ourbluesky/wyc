@@ -24,7 +24,8 @@ namespace DSIES.Pages
         {
             
             InitializeComponent();
-           
+
+
         }
         private void Read_Register_Data()//注册信息，注册直接进入
         {

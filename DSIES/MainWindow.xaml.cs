@@ -69,7 +69,7 @@ namespace DSIES
         public MainWindow()
         {
             InitializeComponent();
-            //init();
+         
             setPage(PageList.Login);
         }
 
@@ -78,8 +78,8 @@ namespace DSIES
         {
             get { return regular; }
             set { regular = value; }
-         }
-       
+        }
+
         /*   internal Player Player
         {
             get { return player; }
@@ -116,14 +116,16 @@ namespace DSIES
         //    set { udpControl = value; }
         //}*/
 
-        /*void init() {
-        //    udpControl = new UDPController();
-        //    selection = new UserSelections();
-        //    player = new Player();
-        //    User = null;
+        void init()
+        {
+            PageList.PageInit();
+            game = new Game();
+            adminlogindata = new AdminLoginData();
+            question = new Question();
+            i = 0;
+        }
 
-        //    LogOutButtonInvisiable();
-        //}*/
+
 
         /* public bool testConnection()
         {
@@ -198,8 +200,9 @@ namespace DSIES
                 CustomMessageBox.Show("Warning", "Can't logout before the end of experience!");
                 return;
             }
+            this.init();//init上边有定义
             this.setPage(PageList.Login);
-            //    this.init();//init上边有定义
+            
         }
 
         public void LogOutButtonVisiable() //重新登录
@@ -219,8 +222,8 @@ namespace DSIES
                 CustomMessageBox.Show("Warning", "Can't log in as an administrator before the end of user's experience!");
                 return;
             }
-           this.setPage(PageList.AdminLogin);
-            //    this.init();//init上边有定义
+            this.setPage(PageList.AdminLogin);
+            //this.init();//init上边有定义
         }
 
         public void AdminButtonVisiable() //管理员登录
@@ -304,7 +307,7 @@ namespace DSIES
         static UpdateUserPage updateuser;
         static PrintReportPage printreport;
         static UpdateAdminPage updateadmin;
-      
+
 
         public static AdminMainPage AdminMain
         {
@@ -317,6 +320,7 @@ namespace DSIES
                 //     login.ToDefault();
                 return adminmain;
             }
+            set { adminmain = value; }
         }
 
         public static InquiryUserPage InquiryUser
@@ -330,6 +334,7 @@ namespace DSIES
                 //     login.ToDefault();
                 return inquiryuser;
             }
+            set { inquiryuser = value; }
         }
 
         public static UpdateUserPage UpdateUser
@@ -343,6 +348,7 @@ namespace DSIES
                 //     login.ToDefault();
                 return updateuser;
             }
+            set { updateuser = value; }
         }
 
         public static PrintReportPage PrintReport
@@ -356,6 +362,7 @@ namespace DSIES
                 //     login.ToDefault();
                 return printreport;
             }
+            set { printreport = value; }
         }
 
         public static UpdateAdminPage UpdateAdmin
@@ -369,13 +376,15 @@ namespace DSIES
                 //     login.ToDefault();
                 return updateadmin;
             }
+            set { updateadmin = value; }
         }
 
-       
+
 
         public static MainWindow Main //主页面
         {
             get { return main; }
+            set { main = value; }
         }
 
         public static LoginPage Login
@@ -389,6 +398,7 @@ namespace DSIES
                 //     login.ToDefault();
                 return login;
             }
+            set { login = value; }
         }
 
         public static AdminLoginPage AdminLogin
@@ -402,6 +412,7 @@ namespace DSIES
                 //     login.ToDefault();
                 return adminlogin;
             }
+            set { adminlogin = value; }
         }
 
         public static QuesGameSeclectPage Questionandgame //问卷和游戏选择
@@ -415,6 +426,7 @@ namespace DSIES
                 // questionandgame.ToDefault();
                 return questionandgame;
             }
+            set { questionandgame = value; }
         }
 
         public static GamePage Game //游戏界面
@@ -427,6 +439,7 @@ namespace DSIES
                 }
                 return game;
             }
+            set { game = value; }
         }
 
         public static QuestionPage1 Question1  //问卷一
@@ -437,9 +450,9 @@ namespace DSIES
                 {
                     question1 = new QuestionPage1();
                 }
-                // question1.ToDefault();
                 return question1;
             }
+            set { question1 = value; }
         }
 
         public static QuestionPage2 Question2  //问卷二
@@ -450,9 +463,9 @@ namespace DSIES
                 {
                     question2 = new QuestionPage2();
                 }
-                // question2.ToDefault();
                 return question2;
             }
+            set { question2 = value; }
         }
 
         public static SceneSelectPage SceneSelect  //场景选择
@@ -465,6 +478,7 @@ namespace DSIES
                 }
                 return sceneSelect;
             }
+            set { sceneSelect = value; }
         }
 
         public static ScenePage Scene  //场景
@@ -477,6 +491,7 @@ namespace DSIES
                 }
                 return scene;
             }
+            set { scene = value; }
         }
 
         public static EducationPage Education
@@ -489,6 +504,7 @@ namespace DSIES
                 }
                 return education;
             }
+            set { education = value; }
         }
 
         public static EducationLoadPage EducationLoad
@@ -501,6 +517,7 @@ namespace DSIES
                 }
                 return educationLoad;
             }
+            set { educationLoad = value; }
         }
 
         public static Education_educatePage Education_educate
@@ -513,6 +530,7 @@ namespace DSIES
                 }
                 return education_educate;
             }
+            set { education_educate = value; }
         }
 
         public static EducationSelectPage EducationSelect
@@ -525,6 +543,7 @@ namespace DSIES
                 }
                 return educationSelect;
             }
+            set { educationSelect = value; }
         }
 
         public static DataExportPage DataExport
@@ -537,22 +556,30 @@ namespace DSIES
                 }
                 return dataExport;
             }
+            set { dataExport = value; }
         }
 
 
-        //   public bool testConnection()
-        //   {
-        //       UDPTest test = new UDPTest(udpControl.Port);
-        //       Thread thread = new Thread(test.test);
-        //       thread.Start();
-        //       if (thread.Join(TimeSpan.FromSeconds(2)))
-        //       {
-        //           thread.Abort();
-        //       }
-        //       test.close();
-        //       return test.Connected;
-        //   }//udp
-
+        public static void PageInit()
+        {
+            
+            AdminMain = new AdminMainPage();
+            InquiryUser = new InquiryUserPage();
+            UpdateUser = new UpdateUserPage();
+            PrintReport = new PrintReportPage();
+            UpdateUser = new UpdateUserPage();
+            Login = new LoginPage();
+            AdminLogin = new AdminLoginPage();
+            Questionandgame = new QuesGameSeclectPage();
+            Game = new GamePage();
+            Question1 = new QuestionPage1();
+            Question2 = new QuestionPage2();
+            Scene = new ScenePage();
+            EducationLoad = new EducationLoadPage();
+            Education_educate = new Education_educatePage();
+            EducationSelect = new EducationSelectPage();
+            DataExport = new DataExportPage();
+        }
     }
 }
 

@@ -28,8 +28,7 @@ namespace DSIES.Pages
             InitializeComponent();
           if(PageList.Main.GAME.Done==true&&question.Flagquestion==true)
             {
-                SceneSelectPage page = new SceneSelectPage();
-                PageList.Main.setPage(page);
+                PageList.Main.setPage(PageList.SceneSelect);
             }
         }
    
@@ -38,7 +37,8 @@ namespace DSIES.Pages
          private void Game_Button_Click(object sender, RoutedEventArgs e)
         {
             if (PageList.Main.GAME.Done == false)//没完成
-            { 
+            {
+                CustomMessageBox.Show("尊敬的驾驶员，您好！", "下面进入游戏测试，请根据游戏规则完成游戏。");
                 PageList.Main.setPage(PageList.Game);
                 GameButton.Visibility = System.Windows.Visibility.Hidden;
                 GameButton_copy.Visibility = System.Windows.Visibility.Visible;
@@ -59,6 +59,7 @@ namespace DSIES.Pages
         {
             if (question.Flagquestion == false)//没完成
             {
+                CustomMessageBox.Show("尊敬的驾驶员，您好！", "下面进入问卷测试，请您根据实际情况填写问题。");
                 PageList.Main.setPage(PageList.Question1);
                 QuestionButton.Visibility = System.Windows.Visibility.Hidden;
                 QuestionButton_copy.Visibility = System.Windows.Visibility.Visible;
