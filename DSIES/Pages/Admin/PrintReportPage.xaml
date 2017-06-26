@@ -21,7 +21,7 @@
                 </Grid>
             </Border>
             <Grid HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="810"  Margin="150,0,0,0" Background="WhiteSmoke">
-                <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="20" Margin="127,55,333,535"/>
+                <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="20" Margin="244,0,216,590"/>
                 <Label Content="  请输入要打印教育测试报表的用户名（电话）：" Height="50" FontSize="16" Margin="10,55,445,535"/>
                 <TextBox x:Name="telephonename"  FontSize="16" Margin="370,55,310,555"/>
             </Grid>

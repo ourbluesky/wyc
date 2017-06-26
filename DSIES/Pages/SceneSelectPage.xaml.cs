@@ -30,12 +30,13 @@ namespace DSIES.Pages
 
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
         {
+            sceneselectData.scene = 1;
             CU.Player.Start();
             PageList.Scene = new Pages.ScenePage();
             CU.MG_Page.GameStartAction();
             scene_one_button.Visibility = System.Windows.Visibility.Hidden;
             scene_one_button_copy.Visibility = System.Windows.Visibility.Visible;
-            sceneselectData.scene = 1;
+           
         }
 
         private void scenen_two_button_Click(object sender, RoutedEventArgs e)

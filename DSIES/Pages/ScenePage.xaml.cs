@@ -27,6 +27,18 @@ namespace DSIES.Pages
     /// </summary>
     public partial class ScenePage : Page
     {
+        private float s_s;//距离
+        public float S_S
+        {
+            get { return s_s; }
+            set { s_s = value; }
+        }
+        private float speed_out;//保留
+        public float SPEED_OUT
+        {
+            get { return speed_out; }
+            set { speed_out = value; }
+        }
         public ScenePage()
         {     
             InitializeComponent();
@@ -162,6 +174,7 @@ namespace DSIES.Pages
             Acc_textBlock.DataContext = record.Acc;
             Break_textBlock.DataContext = record.Brake;
             Accelerator_textBlock.DataContext = record.Accelerograph;
+
             Cache(record);
         }
 
@@ -207,19 +220,29 @@ namespace DSIES.Pages
             CacheDSTWAngle.Add(new Point(d, f.StwAngle));
             CacheDFarToFront.Add(new Point(d, f.FarToFront));
             CacheDBreak.Add(new Point(t, f.Brake));
+            S_S += record.Speed / 30;
+            x_x.DataContext = S_S;
+            y_y.DataContext=speed_out;
+            
             switch (sceneselectData.scene)
             {
-                case '1':
-                        sceneselectData.education.Speeding = act.speeding_judge();
-                        sceneselectData.education.Line = act.line_judge(f.X, f.Y);
-                        sceneselectData.education.Overtake = act.overtake_judge(f.X, f.Y);
+                case 1:
+                    
+                        sceneselectData.education.Speeding = act.speeding_judge(f.Speed);                    
+                        sceneselectData.education.Line = act.line_judge();
+                        sceneselectData.education.Overtake = act.overtake_judge();
+
+                    //act.line_change();
                     break;
-                case '2':
-                    sceneselectData.education.Lighting = act.lighting_judge(f.X, f.Y);
+                case 2:
+                    sceneselectData.education.Lighting = act.lighting_judge(f.Speed);
+                    //act.line_change();
                     break;
-                case '3':
-                    sceneselectData.education.Distraction = act.distrationg_judge(f.X, f.Y);
+                case 3:
+                    sceneselectData.education.Distraction = act.distrationg_judge(f.Speed);
+                    //act.line_change();
                     break;
+                default:break;
             }
             CacheCount++;
         }
@@ -329,10 +352,10 @@ namespace DSIES.Pages
         //}
 
 
-        private void SetUDPRefreshAction()
-        {
-            CU.Player.RefreshHandler += SetPage;//PageList.Main.setPage(PageList.Scene);
-        }
+        //private void SetUDPRefreshAction()
+        //{
+        //    CU.Player.RefreshHandler += SetPage;//PageList.Main.setPage(PageList.Scene);
+        //}
 
         //private void SetUDPTimeOutAction()
         //{

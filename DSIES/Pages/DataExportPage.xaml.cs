@@ -29,10 +29,10 @@ namespace DSIES.Pages
             
             InitializeComponent();
             printData();
-            //Value = PageList.Main.Regular.Score1;
-            //Value2 = PageList.Main.Regular.Score2;
-            Value = 75;
-            Value2 = 85;
+            Value = PageList.Main.Regular.Score1;
+            Value2 = PageList.Main.Regular.Score2;
+            //Value = 75;
+            //Value2 = 85;
             DataContext = this;
             //  name_info.DataContext=
         }

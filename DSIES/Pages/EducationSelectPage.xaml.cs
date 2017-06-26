@@ -34,7 +34,7 @@ namespace DSIES.Pages
 
             InitializeComponent();
             
-            if (sceneselectData.education.Speeding == false)
+            if (sceneselectData.education.Speeding == true)
             {
                 Speeding_button.Visibility = System.Windows.Visibility.Visible;
                 Speeding_button_Copy.Visibility = System.Windows.Visibility.Hidden;
@@ -44,7 +44,7 @@ namespace DSIES.Pages
                 Speeding_button.Visibility = System.Windows.Visibility.Hidden;
                 Speeding_button_Copy.Visibility = System.Windows.Visibility.Visible;
             }
-            if (sceneselectData.education.Line == false)
+            if (sceneselectData.education.Line == true)
             {
                 Line_button.Visibility = System.Windows.Visibility.Visible;
                 Line_button_Copy.Visibility = System.Windows.Visibility.Hidden;
@@ -54,7 +54,7 @@ namespace DSIES.Pages
                 Line_button.Visibility = System.Windows.Visibility.Hidden;
                 Line_button_Copy.Visibility = System.Windows.Visibility.Visible;
             }
-            if (sceneselectData.education.Overtake == false)
+            if (sceneselectData.education.Overtake == true)
             {
                 Overtake_button.Visibility = System.Windows.Visibility.Visible;
                 Overtake_button_Copy.Visibility = System.Windows.Visibility.Hidden;
@@ -64,7 +64,7 @@ namespace DSIES.Pages
                 Overtake_button.Visibility = System.Windows.Visibility.Hidden;
                 Overtake_button_Copy.Visibility = System.Windows.Visibility.Visible;
             }
-            if (sceneselectData.education.Lighting == false)
+            if (sceneselectData.education.Lighting == true)
             {
                 Lighting_button.Visibility = System.Windows.Visibility.Visible;
                 Lighting_button_Copy.Visibility = System.Windows.Visibility.Hidden;
@@ -74,7 +74,7 @@ namespace DSIES.Pages
                 Lighting_button.Visibility = System.Windows.Visibility.Hidden;
                 Lighting_button_Copy.Visibility = System.Windows.Visibility.Visible;
             }
-            if (sceneselectData.education.Distraction == false)
+            if (sceneselectData.education.Distraction == true)
             {
                 Distraction_button.Visibility = System.Windows.Visibility.Visible;
                 Distraction_button_Copy.Visibility = System.Windows.Visibility.Hidden;
@@ -89,7 +89,7 @@ namespace DSIES.Pages
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
         {
             sceneselectData.education.path = path1;
-            sceneselectData.education.Speeding = true;            
+            sceneselectData.education.Speeding = false;            
             PageList.Main.setPage(PageList.EducationLoad);
             Speeding_button.Visibility = System.Windows.Visibility.Hidden;
             Speeding_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -98,7 +98,7 @@ namespace DSIES.Pages
         private void scene_two_button_Click(object sender, RoutedEventArgs e)
         {
             sceneselectData.education.path = path2;
-            sceneselectData.education.Line = true;
+            sceneselectData.education.Line = false;
             PageList.Main.setPage(PageList.EducationLoad);
             Line_button.Visibility = System.Windows.Visibility.Hidden;
             Line_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -107,7 +107,7 @@ namespace DSIES.Pages
         private void scene_three_button_Click(object sender, RoutedEventArgs e)
         {
             sceneselectData.education.path = path3;
-            sceneselectData.education.Overtake = true;
+            sceneselectData.education.Overtake = false;
             PageList.Main.setPage(PageList.EducationLoad);
             Overtake_button.Visibility = System.Windows.Visibility.Hidden;
             Overtake_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -116,7 +116,7 @@ namespace DSIES.Pages
         private void scene_four_button_Click(object sender, RoutedEventArgs e)
         {
             sceneselectData.education.path = path4;
-            sceneselectData.education.Lighting = true;
+            sceneselectData.education.Lighting = false;
             PageList.Main.setPage(PageList.EducationLoad);
             Lighting_button.Visibility = System.Windows.Visibility.Hidden;
             Lighting_button_Copy.Visibility = System.Windows.Visibility.Visible;
@@ -125,7 +125,7 @@ namespace DSIES.Pages
         private void scene_five_button_Click(object sender, RoutedEventArgs e)
         {
             sceneselectData.education.path = path5;
-            sceneselectData.education.Distraction = true;
+            sceneselectData.education.Distraction = false;
             PageList.Main.setPage(PageList.EducationLoad);
             Distraction_button.Visibility = System.Windows.Visibility.Hidden;
             Distraction_button_Copy.Visibility = System.Windows.Visibility.Visible;
