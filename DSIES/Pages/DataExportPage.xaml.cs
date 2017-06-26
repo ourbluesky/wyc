@@ -31,8 +31,11 @@ namespace DSIES.Pages
             printData();
             Value = PageList.Main.Regular.Score1;
             Value2 = PageList.Main.Regular.Score2;
+
             //Value = 75;
             //Value2 = 85;
+            score1_text.DataContext = Value;
+            score2_text.DataContext = Value2;
             DataContext = this;
             //  name_info.DataContext=
         }

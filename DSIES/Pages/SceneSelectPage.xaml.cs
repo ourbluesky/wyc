@@ -61,7 +61,7 @@ namespace DSIES.Pages
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (PageList.Main.i >=2 || (sceneselectData.education.Speeding == true && sceneselectData.education.Overtake == true && sceneselectData.education.Lighting == true && sceneselectData.education.Distraction == true))
+            if (PageList.Main.i >=2 || (sceneselectData.education.Speeding == false && sceneselectData.education.Overtake == false && sceneselectData.education.Lighting == false && sceneselectData.education.Distraction == false))
             {
                 if (PageList.Main.i == 2)
                     PageList.Main.Regular.Credit = "B";

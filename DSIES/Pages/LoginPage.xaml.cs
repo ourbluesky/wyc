@@ -72,7 +72,7 @@ namespace DSIES.Pages
         private void Register_in_Button_Click(object sender, RoutedEventArgs e) //从注册界面进行到下一步
         {
             Read_Register_Data();
-            PageList.Main.setPage(PageList.SceneSelect);//.Questionandgameqestionandgame别忘改.Questionandgame);//
+            PageList.Main.setPage(PageList.SceneSelect);//Questionandgame);//
         }
     }
 }

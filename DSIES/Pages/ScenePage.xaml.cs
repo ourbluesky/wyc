@@ -222,7 +222,7 @@ namespace DSIES.Pages
             CacheDBreak.Add(new Point(t, f.Brake));
             S_S += record.Speed / 30;
             x_x.DataContext = S_S;
-            y_y.DataContext=speed_out;
+            y_y.DataContext=f.X;
             
             switch (sceneselectData.scene)
             {

@@ -75,7 +75,7 @@ namespace DSIES.Class.Control
         }
         public bool lighting_judge(float speed)
         {
-            if (PageList.Scene.S_S>500 && speed == 0)
+            if (PageList.Scene.S_S>500 && speed >= 0)
             {
                 if (PageList.Main.i <= 1)
                     PageList.Main.Regular.Score1 -= 1;
