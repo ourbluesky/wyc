@@ -346,7 +346,7 @@
                         <RadioButton GroupName="33"  x:Name="button_33E" Checked="RadioButton_Checked_165" Content="E 非常愤怒" FontSize="16"  Margin="590,0,0,10" />
                     </Grid>
                     <!-- <Button  Content="提交!" Height="Auto" Width="Auto" Click="Button_Click"/>-->
-                    <Button Style="{DynamicResource ButtonStyle7}"  x:Name="Button"  Content="提交!" Click="Button_Click" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="80" Width="80" Grid.ColumnSpan="2" />
+                    <Button Style="{DynamicResource right_ButtonStyle}"  x:Name="Button"  Content="提交!" Click="Button_Click" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="80" Width="80" Grid.ColumnSpan="2" />
 
 
                 </StackPanel>

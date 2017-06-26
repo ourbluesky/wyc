@@ -144,18 +144,6 @@ namespace DSIES.Pages
             FarToFrontChart = TFarToFront;
         }
 
-        //private void BindDistance()
-        //{
-        //    CenterChart = DSpeed;
-        //    SpeedChart = DSpeed;
-        //    AccChart = DAcc;
-        //    AccelerographChart = DAccelerograph;
-        //    BreakChart = DBreak;
-        //    OffsetChart = DOffset;
-        //    STWAngleChart = DSTWAngle;
-        //    FarToFrontChart = DFarToFront;
-        //}
-
         private void SetMapper()
         {
             var mapper = Mappers.Xy<Point>()
@@ -220,27 +208,26 @@ namespace DSIES.Pages
             CacheDSTWAngle.Add(new Point(d, f.StwAngle));
             CacheDFarToFront.Add(new Point(d, f.FarToFront));
             CacheDBreak.Add(new Point(t, f.Brake));
-            S_S += record.Speed / 30;
+            S_S += record.Speed / 360;
+            //这两个是场景左边的两个框的内容
             x_x.DataContext = S_S;
             y_y.DataContext=f.X;
-            
             switch (sceneselectData.scene)
             {
-                case 1:
-                    
+                case 1:                
                         sceneselectData.education.Speeding = act.speeding_judge(f.Speed);                    
-                        sceneselectData.education.Line = act.line_judge();
-                        sceneselectData.education.Overtake = act.overtake_judge();
+                        sceneselectData.education.Line = act.line_judge(f.Speed,f.Acc,f.Brake);
+                        sceneselectData.education.Overtake = act.overtake_judge(f.Speed, f.Acc, f.Brake);
 
-                    //act.line_change();
+                    
                     break;
                 case 2:
                     sceneselectData.education.Lighting = act.lighting_judge(f.Speed);
-                    //act.line_change();
+                    
                     break;
                 case 3:
                     sceneselectData.education.Distraction = act.distrationg_judge(f.Speed);
-                    //act.line_change();
+                    
                     break;
                 default:break;
             }
@@ -264,17 +251,6 @@ namespace DSIES.Pages
             DBreak.AddRange(CacheDBreak);
             CacheCount = 0;
         }
-        //    // Point类，表示折线图上的一个坐标点
-        //    public class Point
-        //{
-        //    public Point(float x, float y)
-        //    {
-        //        this.X = x;
-        //        this.Y = y;
-        //    }
-        //    public float X { get; set; }
-        //    public float Y { get; set; }
-        //}
 
         private void Speed_Button_Click(object sender, RoutedEventArgs e)
         {

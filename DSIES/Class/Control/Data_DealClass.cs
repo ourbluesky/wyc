@@ -22,9 +22,8 @@ namespace DSIES.Class.Control
             get { return left_distence; }
             set { left_distence = value; }
         }
-        private bool back;//保留
         
-        public bool speeding_judge(float speed)    //超速行为
+        public bool speeding_judge(float speed)   
         {
             if (speed >= 85.0)
             {
@@ -40,14 +39,10 @@ namespace DSIES.Class.Control
                 return true;
             }
             return false;
-        }
-        public bool line_judge()   //并线行为；缺少车道数
+        } //超速行为
+        public bool line_judge(float speed ,float acc,float Break)   
         {
-            if (PageList.Scene.S_S == 3087)
-            {
-                actline = this.line;              
-            }
-            if (PageList.Scene.S_S >= 3087)
+            if (((PageList.Scene.S_S >622 && PageList.Scene.S_S < 1010) || (PageList.Scene.S_S > 2547 && PageList.Scene.S_S < 3687) || (PageList.Scene.S_S > 5976 && PageList.Scene.S_S < 6969)||(PageList.Scene.S_S > 7554 && PageList.Scene.S_S <7900)) &&  (speed> 70||acc>0.46||Break>0.1)/*这个是阈值*/)
             {
                 if (PageList.Main.i <= 1)
                     PageList.Main.Regular.Score1 -= 1;
@@ -56,14 +51,10 @@ namespace DSIES.Class.Control
                 return true;
             }
             return false;
-        }
-        public bool overtake_judge()  //超车行为；缺少车道数
+        }//并线行为
+        public bool overtake_judge(float speed, float acc, float Break) 
         {
-            if (PageList.Scene.S_S == 2733)
-            {
-                actline = this.line;
-            }
-            if (back == true && PageList.Scene.S_S <= 3200 && left_distence < 30)
+            if (((PageList.Scene.S_S >1010 && PageList.Scene.S_S < 1547) || (PageList.Scene.S_S >5382 && PageList.Scene.S_S < 5976) || (PageList.Scene.S_S >6969 && PageList.Scene.S_S < 7554) ) && (speed > 80 || acc > 0.46 || Break > 0.1)/*这个是阈值*/)
             {
                 if (PageList.Main.i <= 1)
                     PageList.Main.Regular.Score1 -= 1;
@@ -72,10 +63,10 @@ namespace DSIES.Class.Control
                 return true;
             }
             return false;
-        }
+        } //超车行为
         public bool lighting_judge(float speed)
         {
-            if (PageList.Scene.S_S>500 && speed >= 0)
+            if (PageList.Scene.S_S>320 && PageList.Scene.S_S <340 && speed >= 0)
             {
                 if (PageList.Main.i <= 1)
                     PageList.Main.Regular.Score1 -= 1;
@@ -87,7 +78,7 @@ namespace DSIES.Class.Control
         }   //闯红灯行为
         public bool distrationg_judge(float speed)
         {
-            if (PageList.Scene.S_S>700 && speed == 0)
+            if (PageList.Scene.S_S>1336 && PageList.Scene.S_S <1736 && speed >= 0)
             {
                 if (PageList.Main.i <= 1)
                     PageList.Main.Regular.Score1 -= 1;
@@ -97,18 +88,5 @@ namespace DSIES.Class.Control
             }
             return true;
         }   //分心行为
-
-
-        public bool line_change()  //判断是否变道；缺少车道数
-        {
-            if (line_change() == true && this.line == actline)
-            {
-                back = true;
-                return false;
-            }
-            if (line_change() == false && this.line!=actline)    
-                return true;
-            return line_change();
-        }
     }
 }

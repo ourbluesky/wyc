@@ -150,7 +150,9 @@ namespace DSIES.Pages.Admin
 
         private void SavePasswordButton_Click(object sender, RoutedEventArgs e)
         {
-            ChangePassword();
+            if (OldPassword.Password != null && NewPassword.Password != null)
+            { ChangePassword(); }
+            return;
         }
     }
 }
