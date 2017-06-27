@@ -18,29 +18,8 @@
                     <ImageBrush ImageSource="..\Picture\wenjuan.png"></ImageBrush>
                 </Border.Background>
                 <StackPanel Margin="100,0,0,0">
-                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
 
                     <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
-
-                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
-
-                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
-
-                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
-
-                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
-
-                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
-
-                    <!--<Image Source="..\Picture\问卷.png"  Margin="-100,-20,100,-10" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Height="120" Width="160"/>-->
-
 
                     <Image Source="..\Picture\naire1.png"  Margin="600,0,60,-10" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="120" Width="120"/>
 
