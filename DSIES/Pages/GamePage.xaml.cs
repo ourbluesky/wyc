@@ -32,7 +32,7 @@ namespace DSIES.Pages
                        
             textBlock_score.DataContext = game.Score;
             textBlock_times.DataContext = game.Times;
-            PageList.Main.Regular.Grade=Game_score();
+            PageList.Login.Regular.Grade=Game_score();
         }
 
         private void Enter_Button_Click(object sender, RoutedEventArgs e)
@@ -46,7 +46,10 @@ namespace DSIES.Pages
                 game.Done = true;
                 success(game);
                 if (PageList.Main.QUESTION.Flagquestion == true)
+                {
+                    PageList.SceneSelect = new SceneSelectPage();
                     PageList.Main.setPage(PageList.SceneSelect);
+                }
                 else
                     PageList.Main.setPage(PageList.Questionandgame);
             }

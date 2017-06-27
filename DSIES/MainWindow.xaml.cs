@@ -73,12 +73,6 @@ namespace DSIES
             setPage(PageList.Login);
         }
 
-        Regular regular = new Regular();
-        internal Regular Regular
-        {
-            get { return regular; }
-            set { regular = value; }
-        }
 
         /*   internal Player Player
         {
@@ -122,6 +116,7 @@ namespace DSIES
             game = new Game();
             adminlogindata = new AdminLoginData();
             question = new Question();
+
             i = 0;
         }
 
@@ -200,7 +195,7 @@ namespace DSIES
                 CustomMessageBox.Show("Warning", "Can't logout before the end of experience!");
                 return;
             }
-            this.init();//init上边有定义
+            init();//init上边有定义
             this.setPage(PageList.Login);
             
         }
@@ -300,7 +295,7 @@ namespace DSIES
         static EducationLoadPage educationLoad;
         static Education_educatePage education_educate;
         static EducationSelectPage educationSelect;
-        static DataExportPage dataExport;
+        //static DataExportPage dataExport;
 
         static AdminMainPage adminmain;
         static InquiryUserPage inquiryuser;
@@ -546,18 +541,18 @@ namespace DSIES
             set { educationSelect = value; }
         }
 
-        public static DataExportPage DataExport
-        {
-            get
-            {
-                if (dataExport == null)
-                {
-                    dataExport = new DataExportPage();
-                }
-                return dataExport;
-            }
-            set { dataExport = value; }
-        }
+        //public static DataExportPage DataExport
+        //{
+        //    get
+        //    {
+        //        if (dataExport == null)
+        //        {
+        //            dataExport = new DataExportPage();
+        //        }
+        //        return dataExport;
+        //    }
+        //    set { dataExport = value; }
+        //}
 
 
         public static void PageInit()
@@ -568,17 +563,15 @@ namespace DSIES
             UpdateUser = new UpdateUserPage();
             PrintReport = new PrintReportPage();
             UpdateUser = new UpdateUserPage();
-            Login = new LoginPage();
             AdminLogin = new AdminLoginPage();
+
+            Login = new LoginPage();
+
             Questionandgame = new QuesGameSeclectPage();
             Game = new GamePage();
             Question1 = new QuestionPage1();
             Question2 = new QuestionPage2();
-            Scene = new ScenePage();
-            EducationLoad = new EducationLoadPage();
-            Education_educate = new Education_educatePage();
-            EducationSelect = new EducationSelectPage();
-            DataExport = new DataExportPage();
+            //DataExport = new DataExportPage();
         }
     }
 }

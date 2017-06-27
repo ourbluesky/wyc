@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DSIES.Class.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,28 +21,35 @@ namespace DSIES.Pages
     /// </summary>
     public partial class LoginPage : Page
     {
+
+        Regular regular = new Regular();
+        internal Regular Regular
+        {
+            get { return regular; }
+            set { regular = value; }
+        }
         public LoginPage()
         {
-            
             InitializeComponent();
 
 
         }
         private void Read_Register_Data()//注册信息，注册直接进入
         {
-            PageList.Main.Regular.Name = textBlock_name.Text;
-            PageList.Main.Regular.Gender = textBlock_gender.Text;
-            PageList.Main.Regular.Age = textBlock_age.Text;
-            PageList.Main.Regular.DriAge = textBlock_driage.Text;
-            PageList.Main.Regular.Accident_times= textBlock_accident_times.Text;
-            PageList.Main.Regular.Career= textBlock_career.Text;
-            PageList.Main.Regular.Telephone = textBlock_telephone.Text;
-            PageList.Main.Regular.Sight_left =textBlock_Left_Sight.Text;
-            PageList.Main.Regular.Sight_right = textBlock_Right_Sight.Text;
-            PageList.Main.Regular.DeepSight_left =textBlock_Left_DeepSight.Text;
-            PageList.Main.Regular.DeepSight_right= textBlock_Right_DeepSight.Text;
-            PageList.Main.Regular.Reagency =textBlock_React.Text;
-            PageList.Main.Regular.Password = textBlock_password_set.Text;
+
+            Regular.Name = textBlock_name.Text;
+            Regular.Gender = textBlock_gender.Text;
+            Regular.Age = textBlock_age.Text;
+            Regular.DriAge = textBlock_driage.Text;
+            Regular.Accident_times= textBlock_accident_times.Text;
+            Regular.Career= textBlock_career.Text;
+            Regular.Telephone = textBlock_telephone.Text;
+            Regular.Sight_left =textBlock_Left_Sight.Text;
+            Regular.Sight_right = textBlock_Right_Sight.Text;
+            Regular.DeepSight_left =textBlock_Left_DeepSight.Text;
+            Regular.DeepSight_right= textBlock_Right_DeepSight.Text;
+            Regular.Reagency =textBlock_React.Text;
+            Regular.Password = textBlock_password_set.Text;
         }
         private void Login_Button_Click(object sender, RoutedEventArgs e)//进入注册界面
         {
@@ -72,6 +80,7 @@ namespace DSIES.Pages
         private void Register_in_Button_Click(object sender, RoutedEventArgs e) //从注册界面进行到下一步
         {
             Read_Register_Data();
+            PageList.SceneSelect = new SceneSelectPage();
             PageList.Main.setPage(PageList.SceneSelect);//Questionandgame);//
         }
     }

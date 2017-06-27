@@ -189,8 +189,6 @@ namespace DSIES.Pages
             Svframe f = record;
             Data_DealClass act = new Data_DealClass();
             //act.SPEED = f.Speed;
-            act.LINE = f.Lane;
-            act.LEFT_distence = f.Distance;
             float t = f.Time;
             float d = f.Distance;
 

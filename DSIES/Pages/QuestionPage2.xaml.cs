@@ -1567,7 +1567,7 @@ namespace DSIES.Pages
                     }
                     CustomMessageBox.Show("温馨提示：", "您的答案已提交！");
                     //  MessageBox.Show("您的答案已提交！\n驾驶行为得分：" + PageList.Main.QUESTION.Score2.ToString() + "\n驾驶行为等级为：" + grade2.ToString());
-                    PageList.Main.Regular.Grade2 = PageList.Main.QUESTION.Grade2;
+                    PageList.Login.Regular.Grade2 = PageList.Main.QUESTION.Grade2;
                     PageList.Main.QUESTION.Flagquestion = true;
                     if (PageList.Main.GAME.Done == true)
                         PageList.Main.setPage(PageList.SceneSelect);

@@ -1300,7 +1300,7 @@ namespace DSIES.Pages
                     }
                     CustomMessageBox.Show("尊敬的驾驶员，您好！","您的答案已提交！\n下面进入驾驶愤怒量表测验。");
                     //  CustomMessageBox.Show("您的答案已提交！\n驾驶行为得分：" + PageList.Main.QUESTION.Score1.ToString() + "\n驾驶行为等级为：" + grade1.ToString(), "温馨提示：");
-                    PageList.Main.Regular.Grade1 = PageList.Main.QUESTION.Grade1;
+                    PageList.Login.Regular.Grade1 = PageList.Main.QUESTION.Grade1;
                     PageList.Main.setPage(PageList.Question2);
                 //DB
             }
