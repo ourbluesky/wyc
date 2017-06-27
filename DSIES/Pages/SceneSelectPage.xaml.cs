@@ -30,13 +30,13 @@ namespace DSIES.Pages
 
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
         {
-            sceneselectData.scene = 1;
+
             CU.Player.Start();
             PageList.Scene = new Pages.ScenePage();
             CU.MG_Page.GameStartAction();
             scene_one_button.Visibility = System.Windows.Visibility.Hidden;
             scene_one_button_copy.Visibility = System.Windows.Visibility.Visible;
-           
+            sceneselectData.scene = 1;
         }
 
         private void scenen_two_button_Click(object sender, RoutedEventArgs e)
@@ -61,19 +61,26 @@ namespace DSIES.Pages
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (PageList.Main.i >=2 || (sceneselectData.education.Speeding == false && sceneselectData.education.Overtake == false && sceneselectData.education.Lighting == false && sceneselectData.education.Distraction == false))
-            {
-                if (PageList.Main.i == 2)
-                    PageList.Main.Regular.Credit = "B";
-                CustomMessageBox.Show("温馨提示：", "此次教育测试已结束！");//yes or no,设一个参数  
-                PageList.Main.setPage(PageList.DataExport);//报告
-            }
+            if (scene_one_button_copy.Visibility != System.Windows.Visibility.Visible||scene_two_button_copy.Visibility != System.Windows.Visibility.Visible || scene_three_button_copy.Visibility != System.Windows.Visibility.Visible)
+              {
+                    CustomMessageBox.Show("温馨提示：", "您还有场景尚未完成！\n请继续完成测试！");
+               }    
             else
             {
-                sceneselectData.scene = 0;
-                EducationSelectPage page = new EducationSelectPage();
-                PageList.Main.setPage(page);
-                PageList.Main.i++;
+                if (PageList.Main.i >=2 || (sceneselectData.education.Speeding == false && sceneselectData.education.Overtake == false && sceneselectData.education.Lighting == false && sceneselectData.education.Distraction == false))
+               {
+                   if (PageList.Main.i == 2)
+                    PageList.Main.Regular.Credit = "B";
+                   CustomMessageBox.Show("温馨提示：", "此次教育测试已结束！");//yes or no,设一个参数  
+                    PageList.Main.setPage(PageList.DataExport);//报告
+                }
+               else
+              {
+                   sceneselectData.scene = 0;
+                    EducationSelectPage page = new EducationSelectPage();
+                    PageList.Main.setPage(page);
+                  PageList.Main.i++;
+              }
             }
         }
 
