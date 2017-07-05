@@ -11,34 +11,25 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid>
-
-                <!--<Image x:Name="image" Source="..\Picture\bg.png" Margin="-80,-34,-66,-33" />-->
                 <TextBlock x:Name="textBlock_score" HorizontalAlignment="Left" Height="50" Margin="384,115,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100" FontSize="25" Foreground="Gold"/>
                 <TextBlock x:Name="textBlock_times" HorizontalAlignment="Left" Height="50" Margin="384,165,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100" FontSize="25" Foreground="Gold"/>
-                <Button Style="{DynamicResource ButtonStyle9}"  x:Name="Enter_Button" Click="Enter_Button_Click" Margin="0,494,36,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="64" Width="67" />
-                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="A_Button" Click="A_Button_Click" Margin="500,41,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="158" Width="138" />
-                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="B_Button" Click="B_Button_Click" Margin="726,41,102,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="158" Width="132" />
-                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="C_Button" Click="C_Button_Click" Margin="498,272,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="164" Width="122"  >
+                <Button Style="{DynamicResource ButtonStyle9}"  x:Name="Enter_Button" Click="Enter_Button_Click" Margin="0,540,-18,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="64" Width="67" />
+                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="A_Button" Click="A_Button_Click" Margin="500,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="175" Width="120" />
+                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="B_Button" Click="B_Button_Click" Margin="730,100,100,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="175" Width="120" />
+                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="C_Button" Click="C_Button_Click" Margin="500,350,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="175" Width="120"  />
+                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="D_Button" Click="D_Button_Click" Margin="0,350,100,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="175" Width="120" >
                     <Button.Background>
                         <ImageBrush ImageSource="/DSIES;component/Picture/纸牌.jpg"/>
                     </Button.Background>
                 </Button>
-                <Button Style="{DynamicResource ButtonStyle8}"  x:Name="D_Button" Click="D_Button_Click" Margin="0,272,102,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="162" Width="132" >
-                    <Button.Background>
-                        <ImageBrush ImageSource="/DSIES;component/Picture/纸牌.jpg"/>
-                    </Button.Background>
-                </Button>
-
                 <Label x:Name="Score" Content="score:" HorizontalAlignment="Left" Height="53" Margin="293,115,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.346,0.864" Foreground="Gold" FontSize="24" />
                 <Label x:Name="Times" Content="times:" HorizontalAlignment="Left" Height="44" Margin="293,162,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.346,0.864" Foreground="Gold" FontSize="24" />
                 <Image x:Name="Jocker" HorizontalAlignment="Left" Height="238" Margin="28,66,0,0" VerticalAlignment="Top" Width="240" Source="..\Picture\jocker.png"/>
                 <Label x:Name="rule" Content="爱荷华赌博任务：有限的次数内得到高分&#xA;&#xD;&#xA;说明：4副纸牌A，B，C，D，&#xA;          代表不同的奖励与惩罚。&#xA;          每次任意选择一副纸牌。&#xA;          想办法得到更多的得分！" HorizontalAlignment="Left" Height="210" Margin="68,348,0,0" VerticalAlignment="Top" Width="399" Foreground="Gold" FontSize="20"/>
-                <Label x:Name="A" Content="A" HorizontalAlignment="Left" Height="32" Margin="543,204,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold" FontSize="20"/>
-                <Label x:Name="B" Content="B" HorizontalAlignment="Left" Height="32" Margin="772,204,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold"  FontSize="20"/>
-                <Label x:Name="C" Content="C" HorizontalAlignment="Left" Height="32" Margin="543,441,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold"  FontSize="20"/>
-                <Label x:Name="D" Content="D" HorizontalAlignment="Left" Height="32" Margin="772,441,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold"  FontSize="20"/>
-
-
+                <Label x:Name="A" Content="A" HorizontalAlignment="Left" Height="32" Margin="545,280,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold" FontSize="20"/>
+                <Label x:Name="B" Content="B" HorizontalAlignment="Left" Height="32" Margin="785,280,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold"  FontSize="20"/>
+                <Label x:Name="C" Content="C" HorizontalAlignment="Left" Height="32" Margin="545,525,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold"  FontSize="20"/>
+                <Label x:Name="D" Content="D" HorizontalAlignment="Left" Height="32" Margin="785,525,0,0" VerticalAlignment="Top" Width="40" Foreground="Gold"  FontSize="20"/>
             </Grid>
         </Grid>
     </Grid>

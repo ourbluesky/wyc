@@ -127,9 +127,15 @@
                             </Grid>
                         </Border>
                         <Grid HorizontalAlignment="Left" Height="58" Margin="563,889,0,-307" VerticalAlignment="Top" Width="181">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="29*"/>
+                                <RowDefinition Height="15*"/>
+                            </Grid.RowDefinitions>
                             <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="92" 
-                    	  Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="171" Margin="0,0,0,-34" />
+                    	  Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="171" Margin="0,0,0,-3.529" Grid.RowSpan="2" />
+                            <Image x:Name="progress7" Margin="230,383,51,-352.529" Source="..\Picture\7.png" />
                         </Grid>
+
                     </Canvas >
                 </Grid>
                 <!--</Canvas >-->
@@ -143,6 +149,7 @@
             <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="92" 
                     	  Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="171" Margin="0,0,0,-34" />
         </Grid>-->
+
     </Grid>
 
 </Page>

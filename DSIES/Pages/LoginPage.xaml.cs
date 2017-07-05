@@ -81,7 +81,7 @@ namespace DSIES.Pages
         {
             Read_Register_Data();
             PageList.SceneSelect = new SceneSelectPage();
-            PageList.Main.setPage(PageList.SceneSelect);//Questionandgame);//
+            PageList.Main.setPage(PageList.Questionandgame);//Questionandgame);//.SceneSelect
         }
     }
 }

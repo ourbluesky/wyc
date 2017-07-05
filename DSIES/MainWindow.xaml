@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         mc:Ignorable="d" 
 
-        Title="MainWindow" Height="634" Width="1100" MinHeight="600" MinWidth="900" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" Background="{x:Null}"
+        Title="MainWindow" Height="646" Width="1100" MinHeight="600" MinWidth="900" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" Background="{x:Null}"
         StateChanged="WindowStateChange">
 
     <Window.Resources>
@@ -65,7 +65,7 @@
 
         </Grid>
         <Viewbox Margin="0,0,0,0" Grid.Row="1">
-            <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Height="640" Width="1214" Navigated="MainFrame_Navigated">
+            <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Height="652" Width="1214" Navigated="MainFrame_Navigated">
                 <Frame.Background>
                     <ImageBrush ImageSource="Picture/bg.png"/>
                 </Frame.Background>
