@@ -36,10 +36,10 @@
                         <Canvas x:Name="printArea" Margin="0,-20,0,0">
                             <!--<Label Content="危险预测教育驾驶行为评定表 " HorizontalAlignment="Left" Margin="382,22,0,0" VerticalAlignment="Top" FontFamily="Niagara Engraved" FontWeight="Bold" FontSize="40"/>-->
                             <Label Content="日期：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="162" Canvas.Top="43"/>
-                            <TextBlock x:Name="date" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="142" FontSize="16" Canvas.Left="224" Canvas.Top="37"/>
+                            <TextBlock x:Name="date" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="142" FontSize="16" Canvas.Left="222" Canvas.Top="43"/>
                             <Label Content="编号：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="620" Canvas.Top="43"/>
-                            <TextBlock x:Name="ID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="142" FontSize="16" Canvas.Left="684" Canvas.Top="37"/>
-                           
+                            <TextBlock x:Name="ID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="29" Width="142" FontSize="16" Canvas.Left="682" Canvas.Top="44"/>
+
                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" Margin="84,71,0,0" VerticalAlignment="Top" Width="527">
                                 <Grid HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="526" Margin="0,0,-1,-1">
                                     <Label Content="姓名：" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" FontSize="16"/>
@@ -66,21 +66,21 @@
                                     <TextBlock x:Name="reaction" HorizontalAlignment="Left" Height="23" Margin="100,225,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
                                 </Grid>
                             </Border>
-                            
+
                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="138" Margin="611,195,0,0" VerticalAlignment="Top" Width="230">
                                 <Grid HorizontalAlignment="Left" Height="137" VerticalAlignment="Top" Width="229" Margin="0,0,-1,-1">
                                     <Label Content="爱荷华测试人格：" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="133" Height="34" FontSize="16"/>
                                     <TextBlock x:Name="aihehua_score" HorizontalAlignment="Left" Margin="143,51,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="34" Width="76" FontSize="16"/>
                                 </Grid>
                             </Border>
-                            
+
                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="124" Margin="611,71,0,0" VerticalAlignment="Top" Width="230" >
                                 <Grid HorizontalAlignment="Left" Height="124" Margin="-1" VerticalAlignment="Top" Width="230">
                                     <Label Content="事故类型：" HorizontalAlignment="Left" Margin="23,34,0,0" VerticalAlignment="Top" FontSize="16" Height="32" Width="91"/>
                                     <TextBlock x:Name="shiguleixing_info" HorizontalAlignment="Left" Margin="119,38,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="101" FontSize="16"/>
                                 </Grid>
                             </Border>
-                            
+
                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" Margin="841,71,0,0" VerticalAlignment="Top" Width="280">
                                 <Grid HorizontalAlignment="Left" Height="262" Margin="-1" VerticalAlignment="Top" Width="280">
                                     <Grid.RowDefinitions>
@@ -125,14 +125,14 @@
                                     <TextBlock x:Name="shiguqingxiang_explain" HorizontalAlignment="Left" Margin="10,78,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="314" Height="154" FontSize="16"/>
                                 </Grid>
                             </Border>
-                            
+
                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="268" Margin="84,599,0,0" VerticalAlignment="Top" Width="1037">
                                 <Grid HorizontalAlignment="Left" Height="267" Margin="-1,-1,0,0" VerticalAlignment="Top" Width="1036">
                                     <Label Content="驾驶建议:" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="144" FontSize="20"/>
                                     <TextBlock Name="jianyi" HorizontalAlignment="Left" Height="217" Margin="43,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="993" FontSize="16" />
                                 </Grid>
                             </Border>
-                            
+
                             <Grid HorizontalAlignment="Left" Height="58" Margin="563,889,0,-307" VerticalAlignment="Top" Width="181">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="29*"/>
@@ -149,7 +149,7 @@
                 </Grid>
             </ScrollViewer>
         </Grid>
-      
+
     </Grid>
 
 </Page>

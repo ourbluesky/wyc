@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DSIES;
+using System.Windows.Threading;
 
 namespace DSIES.Pages
 {
@@ -24,11 +25,17 @@ namespace DSIES.Pages
     {
         private double _value;
         private double _value2;
+
         public DataExportPage()
         {
             //printData();
             InitializeComponent();
-            
+
+            DateTime dt = DateTime.Now;
+            date.Text = dt.ToShortDateString().ToString();//输出日期
+
+            ID.Text = PageList.Login.Regular.Telephone;//编号即电话号
+
             Value = PageList.Login.Regular.Score1;
             Value2 = PageList.Login.Regular.Score2;
 
@@ -61,13 +68,13 @@ namespace DSIES.Pages
             shiguqingxiang_explain.Text = Sglx_Explain(PageList.Login.Regular.Grade1);
             first_qingxiang_explain.DataContext = shigu_explain();
             Angry_explain.Text = Angre_Explain(PageList.Login.Regular.Grade1);
-            jianyi.Text = "从您的驾驶测试中我们发现您是一个愤怒等级为" + PageList.Login.Regular.Grade1 + "的驾驶员，在驾驶过程中您的事故倾向是" + shigu() + "，故而有一下几点建议给您：" + "\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n" + "最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
+            jianyi.Text = "从您的驾驶测试中，我们发现您是一个愤怒等级为" + PageList.Login.Regular.Grade1 + "的驾驶员，在驾驶过程中您的事故倾向是" + shigu() + "，故而有一下几点建议给您：" + "\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n" + "最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
 
         }
 
         //public void printData()
         //{
-           
+
         //    name_info.Text = PageList.Login.Regular.Name;
         //    MessageBox.Show(name_info.Text);
         //    gender_info.Text =  PageList.Login.Regular.Gender;
@@ -93,6 +100,7 @@ namespace DSIES.Pages
         //    Angry_explain.Text = Angre_Explain(PageList.Login.Regular.Grade1);
         //    jianyi.Text = "从您的驾驶测试中我们发现您是一个愤怒等级为"+PageList.Login.Regular.Grade1+ "的驾驶员，在驾驶过程中您的事故倾向是"+ shigu()+ "，故而有一下几点建议给您："+"\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n"+"最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
         //}
+
         public double Value
         {
             get { return _value; }
@@ -134,11 +142,11 @@ namespace DSIES.Pages
         {
             switch (key)
             {
-                case "A": return "您的愤怒与烦恼的数量相当低。只有很少一部分人在测试中能得这么低的分数。你就属于这一少部分人！";
+                case "A": return "您的愤怒与烦恼的数量相当低。只有很少一部分人在测试中能得这么低的分数。您就属于这一少部分人！";
                 case "B": return "您比事实上要比一般人更平静";
                 case "C": return "您在生活中的烦恼总报以同等数量的愤怒。";
-                case "D": return "您常用一种愤怒的方式来对待生活中所遇到的烦恼。你事实上比一般人更易激怒。";
-                case "E": return "您是愤怒冠军，你被经常出现的狂怒反应所折磨，这种反应不能很快消失。在最初的羞辱过去很久之后，你或许还一直有一种消极情感。你或许在你所知道的人当中有鞭炮或莽夫之名。你可能经常会感到紧张头痛，血压也会经常升高。你的愤怒经常失去控制，非常冲动的爆发出敌意来，这种冲动有时会让你陷入麻烦。成人中只有很少一部分人像你这样做出激烈的反应。";
+                case "D": return "您常用一种愤怒的方式来对待生活中所遇到的烦恼。您事实上比一般人更易激怒。";
+                case "E": return "您是愤怒冠军，您被经常出现的狂怒反应所折磨，这种反应不能很快消失。在最初的羞辱过去很久之后，您或许还一直有一种消极情感。您或许在您所知道的人当中有鞭炮或莽夫之名。您可能经常会感到紧张头痛，血压也会经常升高。您的愤怒经常失去控制，非常冲动的爆发出敌意来，这种冲动有时会让您陷入麻烦。成人中只有很少一部分人像您这样做出激烈的反应。";
                 default: break;
             }
             return "";
