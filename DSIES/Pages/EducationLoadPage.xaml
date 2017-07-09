@@ -10,13 +10,13 @@
     <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Width="1214" Height="640">
 
         <Grid>
-            <Image x:Name="progress4" Margin="130,430,70,-60" Source="..\Picture\4.png"/>
+            <Image x:Name="progress4" Margin="150,0,130,-50" Source="..\Picture\4.png" Height="250" VerticalAlignment="Bottom"/>
             <Image x:Name="police" Source="..\Picture\做场景.png" Margin="0,136,501,114" />
             <local:GifImage x:Name="GIFCtrl" Margin="500,400,200,215"/>
             <!--<Button Style="{DynamicResource ButtonStylenext}" x:Name="button" Click="button_Click" Content="Button" HorizontalAlignment="Left" Margin="804,500,0,0" VerticalAlignment="Top" Width="90" Height="90" RenderTransformOrigin="4.651,0.84"/>-->
             <Button Style="{DynamicResource  right_ButtonStyle}"  x:Name="button"  Click="button_Click"  HorizontalAlignment="Left" Height="60" Width="60" Margin="1080,546,0,0" VerticalAlignment="Top"  />
             <Button Style="{DynamicResource ButtonStyleplay}" x:Name="button_Copy" Click="button_Copy_Click" Content="Button" HorizontalAlignment="Left" Margin="1064,366,0,0" VerticalAlignment="Top" Width="90" Height="90" RenderTransformOrigin="4.256,-0.572"/>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="174" Margin="509,142,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="303" Foreground="White" FontSize="30"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="174" Margin="600,140,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="300" Foreground="White" FontSize="30"/>
             <Label x:Name="label" Content="请按技术员语音&#xD;&#xA;提示点击开始，&#xD;&#xA;进行教育测试。&#xD;&#xA;" HorizontalAlignment="Left" Height="138" Foreground="Blue" Margin="270,190,0,0" VerticalAlignment="Top" Width="234" Background="{x:Null}"  FontSize="20"/>
         </Grid>
     </Grid>
