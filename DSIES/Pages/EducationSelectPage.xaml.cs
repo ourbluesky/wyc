@@ -142,7 +142,9 @@ namespace DSIES.Pages
             // }
             ////else
             //{ 
-                 //}SceneSelectPage page 
+            //}SceneSelectPage page 
+            if (PageList.Main.i == 2)
+                PageList.Login.Regular.Score2 = 100;
             PageList.SceneSelect= new SceneSelectPage();
             sceneselectData.education = new Education();
             PageList.Main.setPage(PageList.SceneSelect);

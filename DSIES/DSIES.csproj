@@ -108,6 +108,7 @@
     <Compile Include="Class\Control\Player.cs" />
     <Compile Include="Class\Control\Recorder.cs" />
     <Compile Include="Class\Control\SceneManager.cs" />
+    <Compile Include="Class\Control\ScoreClass.cs" />
     <Compile Include="Class\Control\ThreadManager.cs" />
     <Compile Include="Class\Control\UserManager.cs" />
     <Compile Include="Class\Model\Action.cs" />

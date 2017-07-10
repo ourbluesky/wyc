@@ -172,5 +172,6 @@ namespace DSIES.Class.Model
           get { return credit; }
           set { credit = value; }
       }
+
     }
 }
