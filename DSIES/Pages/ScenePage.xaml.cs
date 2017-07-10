@@ -209,7 +209,7 @@ namespace DSIES.Pages
             S_S += record.Speed / 360;
             //这两个是场景左边的两个框的内容
             x_x.DataContext = S_S;
-            y_y.DataContext=f.X;
+            y_y.DataContext= PageList.Scene.SPEED_OUT;
             switch (sceneselectData.scene)
             {
                 case 1:                
