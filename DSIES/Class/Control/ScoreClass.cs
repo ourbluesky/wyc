@@ -99,7 +99,7 @@ namespace DSIES.Class.Control
 
          public int add_all(int x1, int x2, int x3, int x4, int x5, int y1, int y2, int y3, int y4, int z1, int z2, int z3, int m, int n)
         {
-            return x1 + x2 + x3 + x4 + x5 + y1 + y2 + y3 + y4 + z1 + z2 + z3 + m + n;
+            return 25+x1 + x2 + x3 + x4 + x5 + y1 + y2 + y3 + y4 + z1 + z2 + z3 + m + n;
         }
 
     }

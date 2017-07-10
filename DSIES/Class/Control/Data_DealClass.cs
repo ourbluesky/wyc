@@ -95,7 +95,7 @@ namespace DSIES.Class.Control
         }   //闯红灯行为...1...false代表没有触发不合规行为
         public bool distrationg_judge(float speed)
         {
-            if (PageList.Scene.S_S>31.2  && PageList.Scene.S_S <45.5  && speed<= 0)
+            if (PageList.Scene.S_S>10.4  && PageList.Scene.S_S <16.7  && speed<= 0)
             {
                 sceneselectData.score.Lighting_Score = 15;
                 return false;

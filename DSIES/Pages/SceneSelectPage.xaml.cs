@@ -70,9 +70,15 @@ namespace DSIES.Pages
             {
                 if (PageList.Main.i >=2 || (sceneselectData.education.Speeding == false && sceneselectData.education.Overtake == false && sceneselectData.education.Lighting == false && sceneselectData.education.Distraction == false))
                {
+                    if (PageList.Main.i == 0)
+                        PageList.Login.Regular.Score1 = sceneselectData.score.add_all(sceneselectData.score.Speed_Score1, sceneselectData.score.Speed_Score2, sceneselectData.score.Speed_Score3, sceneselectData.score.Speed_Score4, sceneselectData.score.Speed_Score5, sceneselectData.score.Line_Score1, sceneselectData.score.Line_Score2, sceneselectData.score.Line_Score3, sceneselectData.score.Line_Score4, sceneselectData.score.Overtake_Score1, sceneselectData.score.Overtake_Score2, sceneselectData.score.Overtake_Score3, sceneselectData.score.Lighting_Score, sceneselectData.score.Distrationg_Score);
+                    if (PageList.Main.i == 1)
+                        PageList.Login.Regular.Score2 = sceneselectData.score.add_all(sceneselectData.score.Speed_Score1, sceneselectData.score.Speed_Score2, sceneselectData.score.Speed_Score3, sceneselectData.score.Speed_Score4, sceneselectData.score.Speed_Score5, sceneselectData.score.Line_Score1, sceneselectData.score.Line_Score2, sceneselectData.score.Line_Score3, sceneselectData.score.Line_Score4, sceneselectData.score.Overtake_Score1, sceneselectData.score.Overtake_Score2, sceneselectData.score.Overtake_Score3, sceneselectData.score.Lighting_Score, sceneselectData.score.Distrationg_Score);
                     if (PageList.Main.i == 2)
+                    {
                         PageList.Login.Regular.Credit = "B";
-                    PageList.Login.Regular.Score2 = sceneselectData.score.add_all(sceneselectData.score.Speed_Score1, sceneselectData.score.Speed_Score2, sceneselectData.score.Speed_Score3, sceneselectData.score.Speed_Score4, sceneselectData.score.Speed_Score5, sceneselectData.score.Line_Score1, sceneselectData.score.Line_Score2, sceneselectData.score.Line_Score3, sceneselectData.score.Line_Score4, sceneselectData.score.Overtake_Score1, sceneselectData.score.Overtake_Score2, sceneselectData.score.Overtake_Score3, sceneselectData.score.Lighting_Score, sceneselectData.score.Distrationg_Score);
+                        PageList.Login.Regular.Score2 = sceneselectData.score.add_all(sceneselectData.score.Speed_Score1, sceneselectData.score.Speed_Score2, sceneselectData.score.Speed_Score3, sceneselectData.score.Speed_Score4, sceneselectData.score.Speed_Score5, sceneselectData.score.Line_Score1, sceneselectData.score.Line_Score2, sceneselectData.score.Line_Score3, sceneselectData.score.Line_Score4, sceneselectData.score.Overtake_Score1, sceneselectData.score.Overtake_Score2, sceneselectData.score.Overtake_Score3, sceneselectData.score.Lighting_Score, sceneselectData.score.Distrationg_Score);
+                    }    
                     CustomMessageBox.Show("温馨提示：", "此次教育测试已结束！");//yes or no,设一个参数  
                     DataExportPage page = new DataExportPage();
                     PageList.Main.setPage(page);
