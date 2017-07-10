@@ -373,6 +373,9 @@
     <Resource Include="Picture\6.png" />
     <Resource Include="Picture\7.png" />
     <Resource Include="Picture\8.png" />
+    <Resource Include="Picture\reporterback.jpg" />
+    <Resource Include="Picture\l2.png" />
+    <Resource Include="Picture\reportback.jpg" />
     <Content Include="Video\交叉口.mp4" />
     <Content Include="Video\分心.mp4" />
     <Content Include="Video\变道.mp4" />

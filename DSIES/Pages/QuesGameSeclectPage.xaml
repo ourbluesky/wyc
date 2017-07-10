@@ -7,13 +7,13 @@
       Height="640" Width="1214"
 	Title="QuesGameSeclectPage">
     <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
-        <Image x:Name="progress2" Margin="130,0,110,-50" Source="..\Picture\2.png" Height="250" VerticalAlignment="Bottom"/>
+        <Image x:Name="progress2" Margin="150,0,130,-50" Source="..\Picture\2.png" Height="250" VerticalAlignment="Bottom"/>
         <Image x:Name="police" Source="..\Picture\做场景.png" Margin="10,92,491,199" />
-        <Button Style="{DynamicResource naire_ButtonStyle}"  x:Name="QuestionButton"  Click="Question_Button_Click" Margin="618,307,179,77" Height="160" Width="160" RenderTransformOrigin="1.124,0.643" />
-        <Button Style="{DynamicResource game_ButtonStyle}"  x:Name="GameButton"   Click="Game_Button_Click" Margin="378,307,415,77" Height="160" Width="160" RenderTransformOrigin="0.51,0.176" />
+        <Button Style="{DynamicResource naire_ButtonStyle}"  x:Name="QuestionButton"  Click="Question_Button_Click" Margin="618,300,179,77" Height="160" Width="160"  />
+        <Button Style="{DynamicResource game_ButtonStyle}"  x:Name="GameButton"   Click="Game_Button_Click" Margin="378,300,415,77" Height="160" Width="160" />
         <Label x:Name="rule" Content="  下面为调查问卷和&#xD;&#xA;爱荷华游戏，准备好后&#xD;&#xA;请点击按钮进入。" Margin="382,126,388,414" Foreground="Blue" FontSize="20" />
-        <Button Style="{DynamicResource naire_copy_ButtonStyle}" x:Name="QuestionButton_copy"  Content="Button" Margin="618,307,179,77" Height="160" Width="160"    Visibility="Hidden"/>
-        <Button Style="{DynamicResource game_copy_ButtonStyle}" x:Name="GameButton_copy"  Content="Button"  Margin="378,307,415,77" Height="160" Width="160"   Visibility="Hidden"/>
+        <Button Style="{DynamicResource naire_copy_ButtonStyle}" x:Name="QuestionButton_copy"  Content="Button" Margin="618,300,179,77" Height="160" Width="160"    Visibility="Hidden"/>
+        <Button Style="{DynamicResource game_copy_ButtonStyle}" x:Name="GameButton_copy"  Content="Button"  Margin="378,300,415,77" Height="160" Width="160"   Visibility="Hidden"/>
     </Grid>
 </Page>
 
