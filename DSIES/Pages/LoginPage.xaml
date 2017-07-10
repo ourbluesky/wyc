@@ -27,7 +27,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="..\Picture\框.png"/>
             </Grid.Background>
-            <Image x:Name="progress1" Margin="-600,340,-85,-320" Height="250" Source="..\Picture\1.png"/>
+            <Image x:Name="progress1" Margin="-622,342,-100,-317" Height="250" Source="..\Picture\1.png" />
             <Label x:Name="login_label" Content="&#xD;&#xA;请输入您的联系方式&#xD;&#xA;作为用户名" HorizontalAlignment="Left" Height="81" Margin="23,26,0,0" VerticalAlignment="Top" Width="148" Background="{x:Null}" Foreground="White"/>
             <Label x:Name="phone" Content="用户名:" HorizontalAlignment="Left" Height="27" Margin="22,138,0,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>
             <Label x:Name="password" Content="密   码:" Height="27" Margin="22,165,113,0" VerticalAlignment="Top" Width="64" Foreground="White" Background="{x:Null}"/>

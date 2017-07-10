@@ -7,7 +7,7 @@
       d:DesignHeight="640" d:DesignWidth="1214"
 	Title="EducationSelectPage">
     <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
-        <Image x:Name="progress3" Margin="150,0,130,-50" Source="..\Picture\3.png" Height="250" VerticalAlignment="Bottom"/>
+        <Image x:Name="progress3" Margin="150,0,130,-60" Source="..\Picture\3.png" Height="250" VerticalAlignment="Bottom"/>
         <Image x:Name="police" Source="..\Picture\做场景.png" HorizontalAlignment="Left" Height="327" Margin="12,333,0,-20" VerticalAlignment="Top" Width="381"/>
         <Label x:Name="label" Content="请按照您所违反&#xD;&#xA;的事项依次进行&#xD;&#xA;教育。" HorizontalAlignment="Left" Height="89" Margin="223,354,0,0" Foreground="Blue" VerticalAlignment="Top" Width="157" FontSize="20"/>
         <Button Style="{DynamicResource Speeding_ButtonStyle}" x:Name="Speeding_button" Click="scene_one_button_Click" HorizontalAlignment="Left" Height="160" Margin="760,80,0,0" VerticalAlignment="Top" Width="215" Visibility="Visible"/>

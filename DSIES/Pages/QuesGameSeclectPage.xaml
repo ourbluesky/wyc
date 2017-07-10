@@ -7,7 +7,7 @@
       Height="640" Width="1214"
 	Title="QuesGameSeclectPage">
     <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
-        <Image x:Name="progress2" Margin="150,0,130,-50" Source="..\Picture\2.png" Height="250" VerticalAlignment="Bottom"/>
+        <Image x:Name="progress2" Margin="150,0,130,-60" Source="..\Picture\2.png" Height="250" VerticalAlignment="Bottom"/>
         <Image x:Name="police" Source="..\Picture\做场景.png" Margin="10,92,491,199" />
         <Button Style="{DynamicResource naire_ButtonStyle}"  x:Name="QuestionButton"  Click="Question_Button_Click" Margin="618,300,179,77" Height="160" Width="160"  />
         <Button Style="{DynamicResource game_ButtonStyle}"  x:Name="GameButton"   Click="Game_Button_Click" Margin="378,300,415,77" Height="160" Width="160" />
