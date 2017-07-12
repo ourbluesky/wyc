@@ -21,5 +21,10 @@
         <Button Style="{DynamicResource Lighting_copy_ButtonStyle}"  x:Name="Lighting_button_Copy"  Visibility="Hidden" HorizontalAlignment="Left" Height="178" Margin="499,392,0,0" VerticalAlignment="Top" Width="236" Background="#FFC2F902"/>
         <Button Style="{DynamicResource Distraction_copy_ButtonStyle}"  x:Name="Distraction_button_Copy"  Visibility="Hidden" HorizontalAlignment="Left" Height="155" Margin="760,440,0,0" VerticalAlignment="Top" Width="235" Background="#FFC2F902"/>
         <Button Style="{DynamicResource  right_ButtonStyle}"  x:Name="Button"  Click="Button_Click"  HorizontalAlignment="Left" Height="60" Width="60" Margin="1080,546,0,0" VerticalAlignment="Top"  />
+        <TextBlock x:Name="x1" HorizontalAlignment="Left" Height="29" Margin="760,46,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="127" FontSize="25" Foreground="#FFE9F304"/>
+        <TextBlock x:Name="x2" HorizontalAlignment="Left" Height="29" Margin="541,91,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="127" FontSize="25" Foreground="#FFE9F304"/>
+        <TextBlock x:Name="x3" HorizontalAlignment="Left" Height="29" Margin="320,171,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="127" FontSize="25" Foreground="#FFE9F304"/>
+        <TextBlock x:Name="x4" HorizontalAlignment="Left" Height="29" Margin="441,496,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="127" FontSize="25" Foreground="#FFE9F304"/>
+        <TextBlock x:Name="x5" HorizontalAlignment="Left" Height="29" Margin="957,496,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="127" FontSize="25" Foreground="#FFE9F304"/>
     </Grid>
 </Page>

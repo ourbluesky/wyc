@@ -31,8 +31,13 @@ namespace DSIES.Pages
 
         public EducationSelectPage()
         {
-
             InitializeComponent();
+            //x1.DataContext = sceneselectData.score.Speed_Score1+ sceneselectData.score.Speed_Score2+sceneselectData.score.Speed_Score3+ sceneselectData.score.Speed_Score4+ sceneselectData.score.Speed_Score5;
+            //x2.DataContext = sceneselectData.score.Line_Score1+sceneselectData.score.Line_Score2+ sceneselectData.score.Line_Score3+ sceneselectData.score.Line_Score4;
+            //x3.DataContext = sceneselectData.score.Overtake_Score1+ sceneselectData.score.Overtake_Score2+ sceneselectData.score.Overtake_Score3;
+            //x4.DataContext = sceneselectData.score.Lighting_Score;
+            //x5.DataContext = sceneselectData.score.Distrationg_Score;
+
             
             if (sceneselectData.education.Speeding == true)
             {
