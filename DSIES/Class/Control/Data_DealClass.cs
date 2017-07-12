@@ -97,7 +97,7 @@ namespace DSIES.Class.Control
         {
             if (PageList.Scene.S_S>10.4  && PageList.Scene.S_S <16.7  && speed<= 0)
             {
-                sceneselectData.score.Lighting_Score = 15;
+                sceneselectData.score.Distrationg_Score = 15;
                 return false;
             }
  
