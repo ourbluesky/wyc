@@ -9,6 +9,7 @@
 
     <Grid>
         <Image x:Name="police" Source="..\Picture\做场景.png" HorizontalAlignment="Left" Height="269" Margin="76,208,0,0" VerticalAlignment="Top" Width="495"/>
+        <Image x:Name="progress3" Margin="150,0,130,-60" Source="..\Picture\3.png" Height="250" VerticalAlignment="Bottom"/>
         <Label x:Name="label" Content="请您按照顺序&#xD;&#xA;依次完成三个&#xD;&#xA;场景测试。" HorizontalAlignment="Left" Height="98" Margin="272,225,0,0" VerticalAlignment="Top" Width="143" Foreground="Blue" FontSize="20" />
         <Button Style="{DynamicResource Scene_one_ButtonStyle}" x:Name="scene_one_button" Click="scene_one_button_Click" Content="Button" HorizontalAlignment="Left" Height="150" Margin="500,128,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="1.332,1.058"/>
         <Button Style="{DynamicResource Scene_two_ButtonStyle}" x:Name="scene_two_button" Click="scenen_two_button_Click" Content="Button" HorizontalAlignment="Left" Height="150" Margin="500,378,0,0" VerticalAlignment="Top" Width="200"/>
