@@ -37,18 +37,19 @@ namespace DSIES.Class.Model
         Totalscore_frist,
         Totalscore_final,
         Credit
-       
+      
     }
 
     public abstract class User
     {
-        private string name="";
+        private string name="";//初始非空
         private string password="";
         //private DateTime regDate;
         //private DateTime lastDate;
         private string telephone="";
         private UserGroup group;
 
+        
         public string Telephone
         {
             get { return telephone; }
