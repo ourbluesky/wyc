@@ -13,13 +13,11 @@ namespace DSIES.Class.Control
     {
         USEREXIST,
         SUCCESS,
-        DBFAILED,
-        VALIDATED,
-        GRANTUSERNOTEXIST,
-        TelephoneEMPTY,
+        DBFAILED,//dbfiled
+        VALIDATED,//数据校验完成后发生
+        TELEPHONEEMPTY,
         PASSWORDEMPTY,
         NAMEEMPTY,
-        REALNAMEEMPTY,
         GENDEREMPTY,
         AGEEMPTY,
         DRIAGEEMPTY,
@@ -94,8 +92,8 @@ namespace DSIES.Class.Control
                 case UserVariable.Telephone:
                     if (value.Equals(""))
                     {
-                        UpdateRegisterState(RegisterState.TelephoneEMPTY);
-                        return RegisterState.TelephoneEMPTY;
+                        UpdateRegisterState(RegisterState.TELEPHONEEMPTY);
+                        return RegisterState.TELEPHONEEMPTY;
                     }
                     if (dbManger.GetUser(value, registerUser.Group) != null)
                     {
@@ -113,6 +111,15 @@ namespace DSIES.Class.Control
                         return RegisterState.PASSWORDEMPTY;
                     }
                     registerUser.Password = value;
+                    break;
+
+                case UserVariable.Name:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.NAMEEMPTY);
+                        return RegisterState.NAMEEMPTY;
+                    }
+                    (registerUser as Regular).Name = value;
                     break;
 
                 case UserVariable.Gender:

@@ -21,9 +21,9 @@ namespace DSIES.Info.Database
 
       class UserDBManager
        {
-        public UserDBManager()
+            public UserDBManager()
             {
-
+            //?
             }
 
             private SQLiteConnection connection;
@@ -42,13 +42,13 @@ namespace DSIES.Info.Database
                 if (!File.Exists(dbPath)
                     && !CreateDB(dbPath,
                     FileManager.GetPath("database", "create_sql")))
-                    return false;
+                return false;
 
                 connection = new SQLiteConnection("Data Source="
                     + dbPath + ";Version=3;");
-
                 return true;
             }
+
             public bool CreateDB(string dbPath, string sqlPath)
             {
                 SQLiteConnection.CreateFile(dbPath);
@@ -57,11 +57,11 @@ namespace DSIES.Info.Database
 
                 string sql = File.ReadAllText(sqlPath);
 
-                return ExecuteNonQuery(sql);
+                return ExecuteNonQuery(sql);//执行命令对象的SQL语句，返回一个int 类型的变量，返回数据库操作之后影响的行数。用来验证对数据库进行增删改。
             }
 
             public Tuple<LoginState, User> ValidateUser(string telephone,
-                string password, UserGroup group)
+                string password, UserGroup group)//事件发生是否有效
             {
                 LoginState state;
                 User user = GetUser(telephone, group);
@@ -123,9 +123,9 @@ namespace DSIES.Info.Database
                 OpenConnection();
                 SQLiteDataReader reader = ExecuteQuery(sql);
 
-                if (reader != null && !reader.HasRows)
-                {
-                    reader.Close();
+                if (reader != null && !reader.HasRows)//判断数据流中是否存在数据，进而执行数据的输出操作
+            {
+                    reader.Close();//关闭reader对象
                     connection.Close();
                     return null;
                 }
@@ -239,18 +239,18 @@ namespace DSIES.Info.Database
                 return ExecuteNonQuery(sql);
             }
 
-            public bool UpdateUserInfo(User user)
+            public bool UpdateUserInfo(User user)//修改表中的数据
             {
                 string sql;
                 switch (user.Group)
                 {
-                    case UserGroup.ADMIN:
+                    case UserGroup.ADMIN://修改管理员的信息
                         Admin admin = user as Admin;
                         sql = "update " + admin.Group + " set "
                             + "name = '" + admin.Name + "' "
                             + "where telephone = " + admin.Telephone;
                         break;
-                    case UserGroup.REGULAR:
+                    case UserGroup.REGULAR://修改用户信息
                         Regular regular = user as Regular;
                         sql = "update " + regular.Group + " set "
                             + "name = " + regular.Name + "', "
@@ -279,7 +279,7 @@ namespace DSIES.Info.Database
                         return false;
                 }
 
-                return ExecuteNonQuery(sql);
+                return ExecuteNonQuery(sql);//返回修改的行数
             }
 
             public bool UpdatePassword(string telephone, string password, UserGroup group)
