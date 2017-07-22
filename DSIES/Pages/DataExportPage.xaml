@@ -35,9 +35,9 @@
                     <Grid Margin="0,80,0,0" >
                         <Canvas x:Name="printArea" Margin="0,-20,0,0">
                             <!--<Label Content="危险预测教育驾驶行为评定表 " HorizontalAlignment="Left" Margin="382,22,0,0" VerticalAlignment="Top" FontFamily="Niagara Engraved" FontWeight="Bold" FontSize="40"/>-->
-                            <Label Content="日期：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="162" Canvas.Top="43"/>
+                            <Label Content="日期：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="160" Canvas.Top="37"/>
                             <TextBlock x:Name="date" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="142" FontSize="16" Canvas.Left="222" Canvas.Top="43"/>
-                            <Label Content="编号：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="620" Canvas.Top="43"/>
+                            <Label Content="编号：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="620" Canvas.Top="37"/>
                             <TextBlock x:Name="ID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="29" Width="142" FontSize="16" Canvas.Left="682" Canvas.Top="44"/>
 
                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" Margin="84,71,0,0" VerticalAlignment="Top" Width="527">
@@ -59,8 +59,8 @@
                                     <TextBlock x:Name="job_info" HorizontalAlignment="Left" Margin="80,85,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
                                     <TextBlock x:Name="tele_info" HorizontalAlignment="Left" Margin="365,85,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
                                     <TextBlock x:Name="weizhang_info" HorizontalAlignment="Left" Margin="168,125,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="leftsight" HorizontalAlignment="Left" Height="23" Margin="85,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
-                                    <TextBlock x:Name="rightsight" HorizontalAlignment="Left" Height="23" Margin="160,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
+                                    <TextBlock x:Name="leftsight" HorizontalAlignment="Left" Height="23" Margin="104,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
+                                    <TextBlock x:Name="rightsight" HorizontalAlignment="Left" Height="23" Margin="192,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
                                     <TextBlock x:Name="leftdeepsight" HorizontalAlignment="Left" Height="23" Margin="100,190,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
                                     <TextBlock x:Name="rightdeepsight" HorizontalAlignment="Left" Height="23" Margin="180,190,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
                                     <TextBlock x:Name="reaction" HorizontalAlignment="Left" Height="23" Margin="100,225,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
@@ -87,12 +87,13 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <lvc:AngularGauge Grid.Row="1" Value="{Binding Value2}" FromValue="0" ToValue="100"  LabelsStep="50" TicksStep="25" Wedge="300" TicksForeground="White" Foreground="White"  FontWeight="Bold" FontSize="16" SectionsInnerRadius=".5" Margin="0,0,0,65">
+                                    <lvc:AngularGauge Name="point_two" Grid.Row="1" Value="{Binding}" FromValue="0" ToValue="100"  LabelsStep="50" TicksStep="25" Wedge="300" TicksForeground="White" Foreground="White"  FontWeight="Bold" FontSize="16" SectionsInnerRadius=".5" Margin="0,0,0,65" NeedleFill="#FFEABF1F">
                                         <lvc:AngularGauge.Sections>
-                                            <lvc:AngularSection FromValue="0" ToValue="{Binding Value}" Fill="#F8A725"/>
-                                            <lvc:AngularSection FromValue="{Binding Value}" ToValue="100" Fill="#FF3939"/>
+                                            <lvc:AngularSection FromValue="0" ToValue="100" Fill="#FF9D9B9B"/>
                                         </lvc:AngularGauge.Sections>
                                     </lvc:AngularGauge>
+                                    <lvc:AngularGauge Name="point_one" Grid.Row="1" Value="{Binding}" FromValue="0" ToValue="100"  LabelsStep="50" TicksStep="25" Wedge="300" TicksForeground="White" Foreground="White"  FontWeight="Bold" FontSize="16" SectionsInnerRadius=".5" Margin="0,0,0,65" NeedleFill="#FFFF0808"/>
+
                                     <Label Content="第一次得分：" HorizontalAlignment="Left" Height="28" Margin="17,216,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="81"/>
                                     <Label Content="第二次得分：" HorizontalAlignment="Left" Height="28" Margin="150,216,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="80"/>
                                     <TextBlock x:Name="score1_text" HorizontalAlignment="Left" Height="28" Margin="98,223,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="47"/>

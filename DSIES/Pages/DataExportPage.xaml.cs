@@ -24,8 +24,8 @@ namespace DSIES.Pages
     /// </summary>
     public partial class DataExportPage : Page
     {
-        private double _value;
-        private double _value2;
+        private double Value;
+        private double Value2;
 
         public DataExportPage()
         {
@@ -42,7 +42,8 @@ namespace DSIES.Pages
 
             //Value = 75;
             //Value2 = 85;
-
+            point_one.DataContext = Value;
+            point_two.DataContext = Value2;
             score1_text.DataContext = Value;
             score2_text.DataContext = Value2;
             //DataContext = this;
@@ -69,24 +70,6 @@ namespace DSIES.Pages
             Angry_explain.Text = Angre_Explain(PageList.Login.Regular.Grade1);
             jianyi.Text = "从您的驾驶测试中，我们发现您是一个愤怒等级为" + PageList.Login.Regular.Grade1 + "的驾驶员，在驾驶过程中您的事故倾向是" + shigu() + "，故而有一下几点建议给您：" + "\n一：在驾驶过程中请您控制自己的情绪，注意不要发生愤怒等影响车辆驾驶的行为。\n二：在驾驶中请严格保持车距以及不良驾驶习惯，摒弃危险驾驶倾向。\n三：请您不要进行分心驾驶，分心驾驶的范围很广，大致包括开车使用手机或者导航等。\n" + "最后，为了您的生命健康以及出行安全，请严格按照本次驾驶教育进行改正，希望您成为一个优秀的，安全的驾驶员。";
 
-        }
-        public double Value
-        {
-            get { return _value; }
-            set
-            {
-                _value = value;
-                OnPropertyChanged("Value");
-            }
-        }
-        public double Value2
-        {
-            get { return _value2; }
-            set
-            {
-                _value2 = value;
-                OnPropertyChanged("Value2");
-            }
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -149,11 +132,7 @@ namespace DSIES.Pages
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //PrintDialog dialog = new PrintDialog();
-            //if (dialog.ShowDialog() == true)
-            //{
-            //    dialog.PrintVisual(printArea, "Print Test");
-            //}
+
             PrintDialog printDialog = new PrintDialog();
 
             //从本地计算机中获取所有打印机对象(PrintQueue)
@@ -161,11 +140,6 @@ namespace DSIES.Pages
             //选择一个打印机
             var selectedPrinter = printers.FirstOrDefault(p => p.Name == "Microsoft Print to PDF");
 
-            if (selectedPrinter == null)
-            {
-                MessageBox.Show("没有找到Microsoft Print to PDF打印机");
-                return;
-            }
 
             //设置打印机
             printDialog.PrintQueue = selectedPrinter;
