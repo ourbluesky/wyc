@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*五种行为对应着五个教育场景*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

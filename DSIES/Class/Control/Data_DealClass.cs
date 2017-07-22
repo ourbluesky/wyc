@@ -1,4 +1,5 @@
-﻿using DSIES.Pages;
+﻿/*通过数据来判断五种行为是否触发，true是有该项行为过失，false代表着没有*/
+using DSIES.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;

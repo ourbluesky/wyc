@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*用户注册时候的各种信息属性，姓名，性别，年龄，驾龄，违章次数，工作，电话号码，左右眼视力，左右眼深视力，反应力，密码*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

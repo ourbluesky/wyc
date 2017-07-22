@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*gif类，网上下载的*/
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows;

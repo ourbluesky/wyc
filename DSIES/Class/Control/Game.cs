@@ -1,4 +1,6 @@
-﻿﻿using System;
+﻿
+/*和游戏有关的属性，是否进行过游戏，总点击次数，得分情况，abcd四个按钮被点击的次数*/
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
