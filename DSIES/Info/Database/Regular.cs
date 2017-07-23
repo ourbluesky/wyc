@@ -26,11 +26,11 @@ namespace DSIES.Class.Model
            string sight_right,
            string reagency,
            string accident_times,
-           string grade,    //true代表AB点击次数大于CD点击次数   ,false代表相反
+           int grade,//true代表AB点击次数大于CD点击次数,false代表相反（游戏的得分等级）
            int score1,
-           string grade1,
+           string grade1,//问卷1的得分等级
            int score2,
-           string grade2,
+           string grade2,//问卷2的得分等级
            string totalscore_frist,
            string totalscore_final,
            string credit
@@ -73,7 +73,7 @@ namespace DSIES.Class.Model
        private string deepSight_right = " ";
        private string reagency = " ";     
        private string grade = " ";
-       private string   grade1 = " ";
+       private string grade1 = " ";
        private string grade2 = " ";
        private int score1=100;
        private int score2=100;

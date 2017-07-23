@@ -43,6 +43,7 @@ namespace DSIES.Pages
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
+            GIFCtrl.Visibility = System.Windows.Visibility.Visible;
             GIFCtrl.StartAnimate();
         }
 

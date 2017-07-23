@@ -15,7 +15,7 @@ namespace DSIES.Class.Model
     }
     public static class Encryptor
     {
-        public static string GetMD5(string plaintext)
+        public static string GetMD5(string plaintext)//plaintext 没加密过的文件（纯文本）
         {
             return GetMD5(plaintext, StringCase.LOWERCASE);
         }
