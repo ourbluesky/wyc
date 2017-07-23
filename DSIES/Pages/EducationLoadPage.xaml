@@ -11,7 +11,7 @@
         <Grid>
             <Image x:Name="progress4" Margin="150,0,130,-60" Source="..\Picture\4.png" Height="250" VerticalAlignment="Bottom"/>
             <Image x:Name="police" Source="..\Picture\做场景.png" Margin="0,136,501,114" />
-            <local:GifImage x:Name="GIFCtrl" Margin="500,400,200,215"/>
+            <local:GifImage x:Name="GIFCtrl" Margin="500,400,200,215" Visibility="Hidden"/>
             <!--<Button Style="{DynamicResource ButtonStylenext}" x:Name="button" Click="button_Click" Content="Button" HorizontalAlignment="Left" Margin="804,500,0,0" VerticalAlignment="Top" Width="90" Height="90" RenderTransformOrigin="4.651,0.84"/>-->
             <Button Style="{DynamicResource  right_ButtonStyle}"  x:Name="button"  Click="button_Click"  HorizontalAlignment="Left" Height="60" Width="60" Margin="1080,546,0,0" VerticalAlignment="Top"  />
             <Button Style="{DynamicResource ButtonStyleplay}" x:Name="button_Copy" Click="button_Copy_Click" Content="Button" HorizontalAlignment="Left" Margin="1064,366,0,0" VerticalAlignment="Top" Width="90" Height="90" RenderTransformOrigin="4.256,-0.572"/>
