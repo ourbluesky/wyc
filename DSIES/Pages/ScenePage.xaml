@@ -14,31 +14,32 @@
 
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="266" Margin="790,384,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="261" Margin="-0.8,-0.8,-1.2,0" VerticalAlignment="Top" Width="170" >
-                    <Button Style="{DynamicResource Shut_down_ButtonStyle}" x:Name="back_button" Content="Button" Click="back_button_Click" HorizontalAlignment="Left" Height="74" Margin="47,87,0,0" VerticalAlignment="Top" Width="73"/>
+                    <Label Margin="0,0,0,158" Content="场景结束后，&#xD;&#xA;请点击此按钮&#xD;&#xA;继续。" FontSize="24" Foreground="#FFDDCF00" />
+                    <Button Style="{DynamicResource Shut_down_ButtonStyle}" x:Name="back_button" Content="Button" Click="back_button_Click" HorizontalAlignment="Left" Height="74" Margin="51,129,0,0" VerticalAlignment="Top" Width="73"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="94" Margin="790,290,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="93" Margin="0.2,0.2,-1.2,-0.4" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label_Copy2" Content="刹车：" HorizontalAlignment="Left" Height="43" Margin="5,21,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
-                    <TextBlock x:Name="Break_textBlock" HorizontalAlignment="Left" Height="29" Margin="69,25,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100"  RenderTransformOrigin="0.548,4.205" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Break_textBlock" Text="{Binding}" HorizontalAlignment="Left" Height="29" Margin="69,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66"  RenderTransformOrigin="0.548,4.205" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="790,0,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="99" Margin="0.2,0.2,-1.2,-1.6" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label" Content="速度：" HorizontalAlignment="Left" Height="43" Margin="1,22,0,0" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00"/>
-                    <TextBlock x:Name="Speed_textBlock" HorizontalAlignment="Left" Height="29" Margin="68,28,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="101" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Speed_textBlock" Text="{Binding}" HorizontalAlignment="Left" Height="29" Margin="68,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="93" Margin="790,100,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="92" Margin="0.2,0.2,-1.2,-1" VerticalAlignment="Top" Width="169">
-                    <TextBlock x:Name="Acc_textBlock" HorizontalAlignment="Left" Height="29" Margin="72,30,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="97" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Acc_textBlock" Text="{Binding}" HorizontalAlignment="Left" Height="29" Margin="72,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontSize="25" Foreground="#FFE9F304"/>
                     <Label x:Name="label_Copy" Content="转角：" HorizontalAlignment="Left" Height="35" Margin="0,26,0,0" VerticalAlignment="Top" Width="84" FontSize="20" Foreground="#FFDDCF00"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="97" Margin="790,193,0,0" VerticalAlignment="Top" Width="170">
                 <Grid HorizontalAlignment="Left" Height="96" Margin="0.2,0.2,-1.2,-1.8" VerticalAlignment="Top" Width="169">
                     <Label x:Name="label_Copy1" Content="油门：" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="71" FontSize="20" Foreground="#FFDDCF00" Margin="0,26,0,0"/>
-                    <TextBlock x:Name="Accelerator_textBlock" HorizontalAlignment="Left" Height="29" Margin="68,28,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="100" FontSize="25" Foreground="#FFE9F304"/>
+                    <TextBlock x:Name="Accelerator_textBlock" Text="{Binding}" HorizontalAlignment="Left" Height="29" Margin="68,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="314" VerticalAlignment="Top" Width="790">
