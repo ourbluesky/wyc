@@ -132,19 +132,14 @@ namespace DSIES.Pages
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
             PrintDialog printDialog = new PrintDialog();
-
             //从本地计算机中获取所有打印机对象(PrintQueue)
             var printers = new LocalPrintServer().GetPrintQueues();
             //选择一个打印机
             var selectedPrinter = printers.FirstOrDefault(p => p.Name == "Microsoft Print to PDF");
-
-
             //设置打印机
             printDialog.PrintQueue = selectedPrinter;
             printDialog.PrintVisual(printArea, "Print Test");
-
         }
     }
 }

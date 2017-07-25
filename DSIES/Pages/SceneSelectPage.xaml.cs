@@ -22,15 +22,13 @@ namespace DSIES.Pages
     /// </summary>
     public partial class SceneSelectPage : Page
     {
- 
         public SceneSelectPage()
-        {           
-         
+        {                   
          InitializeComponent();
         }
+
         private void scene_one_button_Click(object sender, RoutedEventArgs e)
         {
-
             CU.Player.Start();
             PageList.Scene = new Pages.ScenePage();
             CU.MG_Page.GameStartAction();
@@ -40,8 +38,7 @@ namespace DSIES.Pages
         }
 
         private void scenen_two_button_Click(object sender, RoutedEventArgs e)
-        {
-            
+        {         
             PageList.Scene = new Pages.ScenePage();
             CU.Player.Start();
             CU.MG_Page.GameStartAction();
@@ -94,11 +91,9 @@ namespace DSIES.Pages
               }
             }
         }
-
-
     }
      static class sceneselectData                 
-    {
+     {
         static sceneselectData()
         {
             education = new Education();
@@ -106,6 +101,6 @@ namespace DSIES.Pages
         public static Education education;
         public static int scene;
         public static ScoreClass score = new ScoreClass();
-    }
+     }
 
 }

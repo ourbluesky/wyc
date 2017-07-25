@@ -116,7 +116,7 @@
     <Compile Include="Class\Model\Admin.cs" />
     <Compile Include="Class\Model\BrakeAct.cs" />
     <Compile Include="Class\Model\Raction.cs" />
-    <Compile Include="Info\Database\Regular.cs" />
+    <Compile Include="Class\Model\Regular.cs" />
     <Compile Include="Class\Model\User.cs" />
     <Compile Include="Info\Database\UserDBManager.cs" />
     <Compile Include="Info\Report\ReportGenerator.cs" />
