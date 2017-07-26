@@ -6,7 +6,7 @@
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" x:Class="DSIES.Pages.DataExportPage" 
       mc:Ignorable="d"
-      d:DesignHeight="640" d:DesignWidth="1214"
+      d:DesignHeight="3000" d:DesignWidth="1214"
 	Title="DataExportPage">
 
     <Page.Resources>
@@ -26,7 +26,7 @@
             </Grid.RowDefinitions>
             <ScrollViewer x:Name="scollviewer1">
 
-                <Grid  Height="965" Width="1214">
+                <Grid  Height="1585" Width="1214">
                     <Grid.Background>
                         <ImageBrush ImageSource="..\Picture\reportback.jpg"/>
                     </Grid.Background>
@@ -123,22 +123,29 @@
                                 </Grid>
                             </Border>
 
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="268" Margin="84,599,0,0" VerticalAlignment="Top" Width="1037">
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="493" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="599">
+                                <Grid HorizontalAlignment="Left" Height="493" Margin="-0.8,-0.8,0,-1" VerticalAlignment="Top" Width="1036">
+                                    <Image x:Name="image_1" Source="{Binding}" HorizontalAlignment="Left" Height="163" VerticalAlignment="Top" Width="255" Margin="229,17,0,0"/>
+                                    <Image x:Name="image_2" Source="{Binding}" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="276" Margin="750,10,0,0"/>
+                                    <Image x:Name="image_3" Source="{Binding}" HorizontalAlignment="Left" Height="163" VerticalAlignment="Top" Width="255" Margin="229,303,0,0"/>
+                                    <Image x:Name="image_4" Source="{Binding}" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="276" Margin="750,303,0,0"/>
+                                </Grid>
+
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="1092">
                                 <Grid HorizontalAlignment="Left" Height="267" Margin="-1,-1,0,0" VerticalAlignment="Top" Width="1036">
                                     <Label Content="驾驶建议:" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="144" FontSize="20"/>
                                     <TextBlock Name="jianyi" HorizontalAlignment="Left" Height="217" Margin="43,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="993" FontSize="16" />
                                 </Grid>
                             </Border>
 
-                            <Grid HorizontalAlignment="Left" Height="58" Margin="563,889,0,-307" VerticalAlignment="Top" Width="181">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="29*"/>
-                                    <RowDefinition Height="15*"/>
-                                </Grid.RowDefinitions>
-                                <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="92" 
-                    	  Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="171" Margin="0,0,0,-3.529" Grid.RowSpan="2" />
+                            <Grid HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="98" Canvas.Left="541" Canvas.Top="1397">
+                                <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="87" 
+                    	          Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="92" />
                                 <Image x:Name="progress7" Margin="230,383,51,-352.529" Source="..\Picture\7.png" />
                             </Grid>
+
+
 
                         </Canvas >
                     </Grid>

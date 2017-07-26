@@ -31,6 +31,10 @@ namespace DSIES
         //  User user;
         //     Player player;
         public int i = 0;
+        public RenderTargetBitmap image_1;
+        public RenderTargetBitmap image_2;
+        public RenderTargetBitmap image_3;
+        public RenderTargetBitmap image_4;
         Question question = new Question();
         internal Question QUESTION
         {
