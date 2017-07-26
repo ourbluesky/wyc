@@ -286,6 +286,27 @@ namespace DSIES.Pages
         private void back_button_Click(object sender, RoutedEventArgs e)
         {
             CU.MG_UDP.EndReceive();//关闭
+            if (PageList.Main.i == 0)
+            {
+                switch (sceneselectData.scene)
+                {
+                    case 1:
+                        PageList.Main.image_1 = RenderVisaulToBitmap(Chart_Small_1, 210, 130);
+                        PageList.Main.image_2 = RenderVisaulToBitmap(Chart_Small_2, 210, 130);
+                        PageList.Main.image_3 = RenderVisaulToBitmap(Chart_Small_3, 210, 130);
+                        PageList.Main.image_4 = RenderVisaulToBitmap(Chart_Small_4, 210, 130);
+                        break;
+                    case 2:
+
+
+                        break;
+                    case 3:
+
+
+                        break;
+                    default: break;
+                }
+            }
             PageList.Main.setPage(PageList.SceneSelect);
         }
 
@@ -306,6 +327,13 @@ namespace DSIES.Pages
             }
         }
 
+        RenderTargetBitmap RenderVisaulToBitmap(Visual vsual, int width, int height)//控件截图
+        {
+            var rtb = new RenderTargetBitmap(width, height, 96, 96, PixelFormats.Default);
+            rtb.Render(vsual);
+
+            return rtb;
+        }
 
         #region GamePlay
         /* 
