@@ -34,8 +34,8 @@ namespace DSIES.Class.Model
         Grade1,
         Score2,
         Grade2,
-        Totalscore_frist,
-        Totalscore_final,
+        Totalscore_frist,//第一次总得分
+        Totalscore_final,//最后一次总得分
         Credit
       
     }

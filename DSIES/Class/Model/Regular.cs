@@ -15,7 +15,7 @@ namespace DSIES.Class.Model
            (
            string name,
            string password,
-           string telphone,
+           string telephone,
            string age,
            string driAge,
            string carrer,
@@ -26,11 +26,11 @@ namespace DSIES.Class.Model
            string sight_right,
            string reagency,
            string accident_times,
-           string grade,    //true代表AB点击次数大于CD点击次数   ,false代表相反
+           int grade,//true代表AB点击次数大于CD点击次数,false代表相反（游戏的得分等级）
            int score1,
-           string grade1,
+           string grade1,//问卷1的得分等级
            int score2,
-           string grade2,
+           string grade2,//问卷2的得分等级
            string totalscore_frist,
            string totalscore_final,
            string credit
@@ -38,7 +38,7 @@ namespace DSIES.Class.Model
            )
        {
            this.Name = name;
-           this.Telphone = telphone;
+           this.Telephone = telephone;
            this.Password = password;
            this.gender = gender;
            this.age = age;
@@ -61,25 +61,25 @@ namespace DSIES.Class.Model
 
      //  private string name;
      //  private string password;
-     //  private string telphone;
-       private string gender="";
-       private string age="";
-       private string driAge = "";
-       private string carrer = "";
-       private string accident_times = "";     
-       private string sight_left = "";
-       private string sight_right = ""; 
-       private string deepSight_left = "";
-       private string deepSight_right = "";
-       private string reagency = "";     
-       private string grade = "";
-       private string   grade1 = "";
-       private string grade2 = "";
+     //  private string telephone;
+       private string gender=" ";
+       private string age=" ";
+       private string driAge = " ";
+       private string carrer = " ";
+       private string accident_times = " ";     
+       private string sight_left = " ";
+       private string sight_right = " "; 
+       private string deepSight_left = " ";
+       private string deepSight_right = " ";
+       private string reagency = " ";     
+       private string grade = " ";
+       private string grade1 = " ";
+       private string grade2 = " ";
        private int score1=100;
        private int score2=100;
-       private string totalscore_frist = "";
-       private string totalscore_final = "";
-       private string credit = "";
+       private string totalscore_frist = " ";
+       private string totalscore_final = " ";
+       private string credit = " ";
    
 
        public string Gender
@@ -137,7 +137,7 @@ namespace DSIES.Class.Model
            get { return grade; }
            set { grade = value; }
        }
-       public int Score1
+       public int Score1//第一次测试得分
        {
            get { return score1; }
            set { score1 = value; }
@@ -172,5 +172,6 @@ namespace DSIES.Class.Model
           get { return credit; }
           set { credit = value; }
       }
+
     }
 }

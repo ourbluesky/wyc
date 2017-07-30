@@ -1303,12 +1303,12 @@ namespace DSIES.Pages
                     PageList.Login.Regular.Grade1 = PageList.Main.QUESTION.Grade1;
                     PageList.Main.setPage(PageList.Question2);
                 //DB
-            }
-            else
-            {
-                flag = 0;
-                PageList.Main.QUESTION.Score1 = 0;
-            }
+                }
+                else
+                {
+                 flag = 0;
+                 PageList.Main.QUESTION.Score1 = 0;
+                }
 
             }
             else

@@ -31,12 +31,9 @@ namespace DSIES.Pages
         public LoginPage()
         {
             InitializeComponent();
-
-
         }
         private void Read_Register_Data()//注册信息，注册直接进入
         {
-
             Regular.Name = textBlock_name.Text;
             Regular.Gender = textBlock_gender.Text;
             Regular.Age = textBlock_age.Text;
