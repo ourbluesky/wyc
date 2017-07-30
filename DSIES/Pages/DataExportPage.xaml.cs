@@ -29,8 +29,15 @@ namespace DSIES.Pages
 
         public DataExportPage()
         {
-            //printData();
             InitializeComponent();
+            datagive();
+
+
+        }
+
+
+        public void datagive()
+        {
 
             DateTime dt = DateTime.Now;
             date.Text = dt.ToShortDateString().ToString();//输出日期
@@ -76,6 +83,8 @@ namespace DSIES.Pages
             image_3.DataContext = PageList.Main.image_3;
             image_4.DataContext = PageList.Main.image_4;
         }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName = null)
@@ -138,18 +147,19 @@ namespace DSIES.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            PrintDialog printDialog = new PrintDialog();
+            var pic = RenderVisaulToBitmap(printArea, 1214, 1582);
+            PngBitmapEncoder saveEncoder = new PngBitmapEncoder();
+            saveEncoder.Frames.Add(BitmapFrame.Create(pic));
+            System.IO.FileStream fs = System.IO.File.Open("..//..//..//用户报表//" + PageList.Login.Regular.Telephone + ".jpg", System.IO.FileMode.OpenOrCreate);
+            saveEncoder.Save(fs);
 
-            //从本地计算机中获取所有打印机对象(PrintQueue)
-            var printers = new LocalPrintServer().GetPrintQueues();
-            //选择一个打印机
-            var selectedPrinter = printers.FirstOrDefault(p => p.Name == "Microsoft Print to PDF");
+        }
+        RenderTargetBitmap RenderVisaulToBitmap(Visual vsual, int width, int height)
+        {
+            var rtb = new RenderTargetBitmap(width, height, 96, 96, PixelFormats.Default);
+            rtb.Render(vsual);
 
-
-            //设置打印机
-            printDialog.PrintQueue = selectedPrinter;
-            printDialog.PrintVisual(printArea, "Print Test");
-
+            return rtb;
         }
     }
 }
