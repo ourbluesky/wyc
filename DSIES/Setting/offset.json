@@ -1,17 +1,10 @@
-﻿{ 
-    "Time": "0",
-	"StwAngle": "1",
+﻿{
+  "Time": "0",
+  "Acc": "1",  
 	"Accelerograph":"2",
-	"Reacting": "21" ,
 	"Brake": "3", 
-	"Lane": "23",
-	"FarToBehind": "22",    
 	"TrLight": "6",
 	"Speed": "12",
-    "X": "15",
-    "Y": "17",    
-    "Acc": "1",   
-    "Offset": "18",	
-    "Distance": "19",
-  "Braking": "20"     
+  "X": "15"
+ 
 }

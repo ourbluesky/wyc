@@ -89,6 +89,9 @@ namespace DSIES.UDP
                 float aaa = floats[item.Value];
                 var name = item.Key;
                 var offset = item.Value;
+
+
+
                 frame.GetType().GetProperty(name).SetValue(frame, floats[item.Value]);
             }
 

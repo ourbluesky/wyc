@@ -10,11 +10,11 @@ namespace DSIES.UDP
     {
         public static float[] ToFloatArray(byte[] bytes)
         {
-            int size = bytes.Length / 4;
+            int size = bytes.Length/4 ;//bytes.Length / 4
             float[] array = new float[size];
 
             for (int i = 0; i < size; i++)
-                array[i] = BitConverter.ToSingle(bytes, i * 4);
+                array[i] = BitConverter.ToSingle(bytes, i*4 );// i * 4
 
             return array;
         }
