@@ -31,7 +31,7 @@
                     </Grid.Background>
 
                     <Grid Margin="0,10,0,0" >
-                        <Canvas x:Name="printArea" Margin="0,0,0.4,-0.2">
+                        <Canvas x:Name="printArea" Margin="0,0,0.4,124.8">
                             <Canvas.Background>
                                 <ImageBrush ImageSource="/DSIES;component/Picture/reportback.jpg"/>
                             </Canvas.Background>
@@ -104,8 +104,8 @@
 
                             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="381" Canvas.Left="740" Canvas.Top="401">
                                 <Grid HorizontalAlignment="Left" Height="265" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="381">
-                                    <Label Content="您的驾驶事故倾向是：" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="189" FontSize="16" Height="30"/>
-                                    <TextBlock x:Name="first_qingxiang_grade" HorizontalAlignment="Left" Margin="181,47,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="200" FontSize="16"/>
+                                    <Label Content="您的驾驶事故倾向是：" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="189" FontSize="16" Height="30"/>
+                                    <TextBlock x:Name="first_qingxiang_grade" HorizontalAlignment="Left" Margin="181,35,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="60" Width="200" FontSize="16"/>
                                     <TextBlock x:Name="first_qingxiang_explain" HorizontalAlignment="Left" Margin="10,100,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="361" Height="155" FontSize="16"/>
                                 </Grid>
                             </Border>
@@ -124,35 +124,35 @@
                                 </Grid>
                             </Border>
 
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="493" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="667">
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="667">
                                 <Grid HorizontalAlignment="Left" Height="493" Margin="-0.8,-0.8,0,-1" VerticalAlignment="Top" Width="1036">
-                                    <Label Margin="176,10,195,438" Content="在场景一中，驾驶员四项指标与规范指标进行对比" FontSize="30"></Label>
-                                    <Label Margin="176,72,768,376" Content="速度" FontSize="30"></Label>
-                                    <Label Margin="568,72,376,376" Content="油门" FontSize="30"/>
-                                    <Label Margin="176,275,768,173" Content="刹车" FontSize="30"/>
-                                    <Label Margin="568,275,376,173" Content="转角" FontSize="30"/>
-                                    <Image x:Name="image_1" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="221" Margin="246,122,0,0"/>
-                                    <Image x:Name="image_2" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="272" Margin="725,122,0,0"/>
-                                    <Image x:Name="image_3" Source="{Binding}" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="226" Margin="241,344,0,0"/>
-                                    <Image x:Name="image_4" Source="{Binding}" HorizontalAlignment="Left" Height="106" VerticalAlignment="Top" Width="301" Margin="725,352,0,0"/>
-                                    <Image x:Name="速度标准" Source="..//Picture/速度标准.png" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="241" Margin="0,122,0,0"/>
-                                    <Image x:Name="油门标准" Source="..//Picture/油门标准.png" HorizontalAlignment="Left" Height="131" VerticalAlignment="Top" Width="224" Margin="496,117,0,0"/>
-                                    <Image x:Name="刹车标准" Source="..//Picture/刹车标准.png" HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="224" Margin="496,344,0,0"/>
-                                    <Image x:Name="转角标准" Source="..//Picture/转角标准.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="231" Margin="5,342,0,0"/>
+                                    <Label Margin="176,4,178,444" Content="在场景一中，驾驶员四项指标与规范指标进行对比" FontSize="30"></Label>
+                                    <Label Margin="5,54,982,412" Content="速度" FontSize="16"></Label>
+                                    <Label Margin="496,54,497,406" Content="油门" FontSize="16"/>
+                                    <Label Margin="0,213,982,249" Content="刹车" FontSize="16"/>
+                                    <Label Margin="496,213,497,249" Content="转角" FontSize="16"/>
+                                    <Image x:Name="image_1" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="221" Margin="246,86,0,0"/>
+                                    <Image x:Name="image_2" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="272" Margin="725,86,0,0"/>
+                                    <Image x:Name="image_3" Source="{Binding}" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="226" Margin="241,244,0,0"/>
+                                    <Image x:Name="image_4" Source="{Binding}" HorizontalAlignment="Left" Height="106" VerticalAlignment="Top" Width="301" Margin="725,252,0,0"/>
+                                    <Image x:Name="速度标准" Source="..//Picture/速度标准.png" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="241" Margin="0,86,0,0"/>
+                                    <Image x:Name="油门标准" Source="..//Picture/油门标准.png" HorizontalAlignment="Left" Height="131" VerticalAlignment="Top" Width="224" Margin="496,81,0,0"/>
+                                    <Image x:Name="刹车标准" Source="..//Picture/刹车标准.png" HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="224" Margin="496,244,0,0"/>
+                                    <Image x:Name="转角标准" Source="..//Picture/转角标准.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="231" Margin="5,242,0,0"/>
 
                                 </Grid>
 
                             </Border>
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="1160">
+                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="1066">
                                 <Grid HorizontalAlignment="Left" Height="267" Margin="-1,-1,0,0" VerticalAlignment="Top" Width="1036">
                                     <Label Content="驾驶建议:" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="144" FontSize="20"/>
                                     <TextBlock Name="jianyi" HorizontalAlignment="Left" Height="217" Margin="43,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="993" FontSize="16" />
                                 </Grid>
                             </Border>
 
-                            <Grid HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="98" Canvas.Left="541" Canvas.Top="1465">
+                            <Grid HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="98" Canvas.Left="544" Canvas.Top="1365">
                                 <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="55" 
-                    	          Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="82" Margin="6,10,0,0" />
+                    	          Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" HorizontalAlignment="Left" Width="82" Margin="10,28,0,0" />
                                 <Image x:Name="progress7" Margin="230,383,51,-352.529" Source="..\Picture\7.png" />
                             </Grid>
 
