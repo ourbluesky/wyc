@@ -25,7 +25,7 @@
                                     <GradientStop Offset="0.5" Color="#FF95A09E"/>
                                 </LinearGradientBrush>
                             </Border.BorderBrush>
-                            <MediaElement  x:Name="mediaElement" Volume="{Binding Value, ElementName=volumeSlider}" LoadedBehavior="Manual" Margin="-3"/>
+                            <MediaElement  x:Name="mediaElement" Volume="{Binding Value, ElementName=volumeSlider}" LoadedBehavior="Manual" Margin="7,7,-13,-13"/>
                         </Border>
                     </Viewbox>
                     <Grid  x:Name="buttons" Margin="0,389,0,-90" VerticalAlignment="Bottom">
