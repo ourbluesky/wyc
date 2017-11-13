@@ -151,6 +151,7 @@ namespace DSIES.Pages
             PngBitmapEncoder saveEncoder = new PngBitmapEncoder();
             saveEncoder.Frames.Add(BitmapFrame.Create(pic));
             System.IO.FileStream fs = System.IO.File.Open("..//..//..//用户报表//" + PageList.Login.Regular.Telephone + ".jpg", System.IO.FileMode.OpenOrCreate);
+            CustomMessageBox.Show("温馨提示：", "save!");
             saveEncoder.Save(fs);
 
         }

@@ -7,33 +7,35 @@
       d:DesignHeight="640" d:DesignWidth="960"
 	Title="EducationPage">
 
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="960" Height="640">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="960" Height="640">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-        <Grid Margin="0,0,-1,96.8">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Viewbox x:Name="video"  >
-                <Border BorderThickness="3" Background="#FF3FBA57" Height="384" Width="753" Margin="0,0,-0.2,0">
-                    <Border.BorderBrush>
-                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                            <GradientStop Offset="0" Color="White"/>
-                            <GradientStop Offset="0.5" Color="#FF95A09E"/>
-                        </LinearGradientBrush>
-                    </Border.BorderBrush>
-                    <MediaElement  x:Name="mediaElement" Volume="{Binding Value, ElementName=volumeSlider}" LoadedBehavior="Manual" Margin="-3"/>
-                </Border>
-            </Viewbox>
-            <Grid  x:Name="buttons" Margin="0,389,0,-90" VerticalAlignment="Bottom">
-                <Button Style="{DynamicResource ButtonStylenext}" x:Name="backBtn" Click="backBtn_Click" Content="next"  Margin="0,-10,0,10" Height="80" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
-                <Button Style="{DynamicResource ButtonStylepause}"  x:Name="pause_Button" Click="pause_Button_Click"  Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="100" Background="{x:Null}" Margin="10,-10,0,0" />
-                <Button Style="{DynamicResource ButtonStyleplay}"  x:Name="play_Button" Click="play_Button_Click" Visibility="Hidden"  Margin="10,-10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="100" />
-                <Label x:Name="label" Content="教育视频播放完毕后请点击next进行下一步。" HorizontalAlignment="Left" Height="40" Margin="221,18,0,0" VerticalAlignment="Top" Width="508" Background="{x:Null}" Foreground="Gold" FontSize="24"/>
+                <Grid Margin="0,0,-1,96.8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox x:Name="video"  >
+                        <Border BorderThickness="3" Background="#FF3FBA57" Height="384" Width="753" Margin="0,0,-0.2,0">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Offset="0" Color="White"/>
+                                    <GradientStop Offset="0.5" Color="#FF95A09E"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <MediaElement  x:Name="mediaElement" Volume="{Binding Value, ElementName=volumeSlider}" LoadedBehavior="Manual" Margin="-3"/>
+                        </Border>
+                    </Viewbox>
+                    <Grid  x:Name="buttons" Margin="0,389,0,-90" VerticalAlignment="Bottom">
+                        <Button Style="{DynamicResource ButtonStylenext}" x:Name="backBtn" Click="backBtn_Click" Content="next"  Margin="0,-10,0,10" Height="80" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                        <Button Style="{DynamicResource ButtonStylepause}"  x:Name="pause_Button" Click="pause_Button_Click"  Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="100" Background="{x:Null}" Margin="10,-10,0,0" />
+                        <Button Style="{DynamicResource ButtonStyleplay}"  x:Name="play_Button" Click="play_Button_Click" Visibility="Hidden"  Margin="10,-10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="100" />
+                <Label x:Name="label" Content="教育视频播放完毕后请点击next进行下一步。" HorizontalAlignment="Left" Height="40" Margin="221,-35,0,0" VerticalAlignment="Top" Width="508" Background="{x:Null}" Foreground="Gold" FontSize="24"/>
             </Grid>
+            <Image x:Name="progress5" Margin="150,0,124,-157.8" Source="..\Picture\5.png" Height="250" VerticalAlignment="Bottom" OpacityMask="Black"/>
         </Grid>
-    </Grid>
-</Page>
+      </Grid>
+ </Page>
 

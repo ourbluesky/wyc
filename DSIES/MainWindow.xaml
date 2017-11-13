@@ -34,7 +34,7 @@
             <TextBlock Grid.Column="0" Margin="38,10,59,0" Name="Logo" VerticalAlignment="Top" FontFamily="/DSIES;component/Fonts/#AF TOMMY HILFIGER" FontSize="24" FontWeight="Bold" Foreground="#FF999999" TextAlignment="Center" Height="29">DSIES</TextBlock>
 
             <Grid Height="50" VerticalAlignment="Top">
-                <Image x:Name="logo" Source="Picture/校徽.png" HorizontalAlignment="Left" Height="100" Margin="11,61,0,-111" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.663,1.056"/>
+                <!--<Image x:Name="logo" Source="Picture/校徽.png" HorizontalAlignment="Left" Height="100" Margin="11,61,0,-111" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.663,1.056"/>-->
             </Grid>
 
             <Border Grid.Column="2" Name="Line" BorderBrush="#ff999999" Margin="10,12" Height="26" VerticalAlignment="Center" BorderThickness="0.5"/>

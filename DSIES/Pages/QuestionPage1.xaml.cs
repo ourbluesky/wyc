@@ -1269,9 +1269,9 @@ namespace DSIES.Pages
                 flag += 1;
                 CustomMessageBox.Show("温馨提示：","您第27题未答完，请继续答题！");//您有未答完题目，请继续答题！
             }
-            
 
-             // flag = 0;//记得删。
+
+            flag = 0;//记得删。
             if (flag == 0)
             {
                 var dr = CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
