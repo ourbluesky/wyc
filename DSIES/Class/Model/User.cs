@@ -42,7 +42,7 @@ namespace DSIES.Class.Model
 
     public abstract class User
     {
-        private string name="";//初始非空
+        private string name=" ";//初始非空
         private string password="";
         //private DateTime regDate;
         //private DateTime lastDate;

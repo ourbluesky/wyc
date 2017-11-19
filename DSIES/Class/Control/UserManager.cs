@@ -56,8 +56,7 @@ namespace DSIES.Class.Control
             if (group == UserGroup.ADMIN && password.Equals(""))
                 return LoginState.NEEDPASSWORD;
 
-            Tuple<LoginState, User> result
-                = dbManger.ValidateUser(telephone, password, group);
+            Tuple<LoginState, User> result = dbManger.ValidateUser(telephone, password, group);
             if (result.Item1 == LoginState.SUCCESS)
             {
                 user = result.Item2;
@@ -85,7 +84,7 @@ namespace DSIES.Class.Control
             }
         }
 
-        public RegisterState RegisterAdd(UserVariable variable, string value)
+        public RegisterState RegisterAdd(UserVariable variable, string value)      //将信息写入数据库
         {
             switch (variable)
             {
@@ -104,8 +103,7 @@ namespace DSIES.Class.Control
                     break;
 
                 case UserVariable.Password:
-                    if (registerUser.Group
-                        == UserGroup.ADMIN && value.Equals(""))
+                    if (registerUser.Group== UserGroup.ADMIN && value.Equals(""))
                     {
                         UpdateRegisterState(RegisterState.PASSWORDEMPTY);
                         return RegisterState.PASSWORDEMPTY;
@@ -168,6 +166,15 @@ namespace DSIES.Class.Control
                     break;
 
                 case UserVariable.Sight_left:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.SIGHTLEFTEMPTY);
+                        return RegisterState.SIGHTLEFTEMPTY;
+                    }
+                    (registerUser as Regular).Sight_left = value;
+                    break;
+
+                case UserVariable.Sight_right:
                     if (value.Equals(""))
                     {
                         UpdateRegisterState(RegisterState.SIGHTLEFTEMPTY);

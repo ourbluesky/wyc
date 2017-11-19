@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DSIES.UDP;
 
 namespace DSIES.Pages
 {
@@ -34,19 +35,40 @@ namespace DSIES.Pages
         }
         private void Read_Register_Data()//注册信息，注册直接进入
         {
-            Regular.Name = textBlock_name.Text;
-            Regular.Gender = textBlock_gender.Text;
-            Regular.Age = textBlock_age.Text;
-            Regular.DriAge = textBlock_driage.Text;
-            Regular.Accident_times= textBlock_accident_times.Text;
-            Regular.Career= textBlock_career.Text;
-            Regular.Telephone = textBlock_telephone.Text;
-            Regular.Sight_left =textBlock_Left_Sight.Text;
-            Regular.Sight_right = textBlock_Right_Sight.Text;
-            Regular.DeepSight_left =textBlock_Left_DeepSight.Text;
-            Regular.DeepSight_right= textBlock_Right_DeepSight.Text;
-            Regular.Reagency =textBlock_React.Text;
-            Regular.Password = textBlock_password_set.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Name = textBlock_name.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Gender = textBlock_gender.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Age = textBlock_age.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.DriAge = textBlock_driage.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Accident_times= textBlock_accident_times.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Career= textBlock_career.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Telephone = textBlock_telephone.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Sight_left =textBlock_Left_Sight.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Sight_right = textBlock_Right_Sight.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.DeepSight_left =textBlock_Left_DeepSight.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.DeepSight_right= textBlock_Right_DeepSight.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Reagency =textBlock_React.Text;
+            //CU.MG_User.RegisterAdd(UserVariable.Password = textBlock_password_set.Text;
+        }
+
+        private void dbRegister()
+        {
+            CU.MG_User.RegisterStart(UserGroup.REGULAR);
+
+            CU.MG_User.RegisterAdd(UserVariable.Name,textBlock_name.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Gender ,textBlock_gender.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Age , textBlock_age.Text);
+            CU.MG_User.RegisterAdd(UserVariable.DriAge , textBlock_driage.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Accident_times , textBlock_accident_times.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Career , textBlock_career.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Telephone , textBlock_telephone.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Sight_left , textBlock_Left_Sight.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Sight_right , textBlock_Right_Sight.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Deepsight_left , textBlock_Left_DeepSight.Text);
+            CU.MG_User.RegisterAdd(UserVariable.DeepSight_right , textBlock_Right_DeepSight.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Reagency , textBlock_React.Text);
+            CU.MG_User.RegisterAdd(UserVariable.Password , textBlock_password_set.Text);
+            
+
         }
         private void Login_Button_Click(object sender, RoutedEventArgs e)//进入注册界面
         {
@@ -77,8 +99,9 @@ namespace DSIES.Pages
         private void Register_in_Button_Click(object sender, RoutedEventArgs e) //从注册界面进行到下一步
         {
             Read_Register_Data();
+            dbRegister();
             PageList.SceneSelect = new SceneSelectPage();
-            PageList.Main.setPage(PageList.Questionandgame);//.SceneSelect);//
+            PageList.Main.setPage(PageList.SceneSelect);//.Questionandgame);//
         }
     }
 }

@@ -150,8 +150,8 @@
                             </Border>
 
                             <Grid HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="98" Canvas.Left="544" Canvas.Top="1365">
-                                <Button Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="50" 
-                    	          Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" Margin="15,20,20,0" />
+                                <Button Name="print" Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="50" 
+                    	          Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" Margin="15,20,20,0" IsEnabled="True" />
                                 <Image x:Name="progress7" Margin="230,383,51,-352.529" Source="..\Picture\7.png" />
                             </Grid>
 

@@ -13,9 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DSIES;
+using DSIES.UDP;
 using System.Windows.Threading;
 using System.Printing;
+using DSIES.Class.Model;
 
 namespace DSIES.Pages
 {
@@ -44,8 +45,8 @@ namespace DSIES.Pages
 
             ID.Text = PageList.Login.Regular.Telephone;//编号即电话号
 
-            Value = PageList.Login.Regular.Score1;
-            Value2 = PageList.Login.Regular.Score2;
+            //Value = double.Parse(PageList.Login.Regular.Totalscore_frist);
+            //Value2 = double.Parse(PageList.Login.Regular.Totalscore_final);
 
             //Value = 75;
             //Value2 = 85;
@@ -146,17 +147,29 @@ namespace DSIES.Pages
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            CU.MG_User.RegisterAdd(UserVariable.Grade, PageList.Login.Regular.Grade);
+            CU.MG_User.RegisterAdd(UserVariable.Grade1, PageList.Login.Regular.Grade1);
+            CU.MG_User.RegisterAdd(UserVariable.Score1,PageList.Login.Regular.Totalscore_frist.ToString());
+            CU.MG_User.RegisterAdd(UserVariable.Grade2, PageList.Login.Regular.Grade2);
+            CU.MG_User.RegisterAdd(UserVariable.Score2, PageList.Login.Regular.Totalscore_final);
+            CU.MG_User.RegisterAdd(UserVariable.Totalscore_frist, PageList.Login.Regular.Totalscore_frist);
+            CU.MG_User.RegisterAdd(UserVariable.Totalscore_final, PageList.Login.Regular.Totalscore_final);
+            CU.MG_User.RegisterAdd(UserVariable.Credit, PageList.Login.Regular.Credit);
 
+            CU.MG_User.RegisterEnd();
             var pic = RenderVisaulToBitmap(printArea, 1214, 1582);
             PngBitmapEncoder saveEncoder = new PngBitmapEncoder();
             saveEncoder.Frames.Add(BitmapFrame.Create(pic));
             System.IO.FileStream fs = System.IO.File.Open("..//..//..//用户报表//" + PageList.Login.Regular.Telephone + ".jpg", System.IO.FileMode.OpenOrCreate);
             CustomMessageBox.Show("温馨提示：", "save!");
             saveEncoder.Save(fs);
-
+            print.IsEnabled = false;
         }
         RenderTargetBitmap RenderVisaulToBitmap(Visual vsual, int width, int height)
         {
+
+
+
             var rtb = new RenderTargetBitmap(width, height, 96, 96, PixelFormats.Default);
             rtb.Render(vsual);
 

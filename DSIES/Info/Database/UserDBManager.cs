@@ -39,21 +39,17 @@ namespace DSIES.Info.Database
 
             public bool ConnectDB(string dbPath)
             {
-                if (!File.Exists(dbPath)
-                    && !CreateDB(dbPath,
-                    FileManager.GetPath("database", "create_sql")))
+                if (!File.Exists(dbPath)&& !CreateDB(dbPath,FileManager.GetPath("database", "create_sql")))
                 return false;
 
-                connection = new SQLiteConnection("Data Source="
-                    + dbPath + ";Version=3;");
+                connection = new SQLiteConnection("Data Source="+ dbPath + ";Version=3;");
                 return true;
             }
 
             public bool CreateDB(string dbPath, string sqlPath)
             {
                 SQLiteConnection.CreateFile(dbPath);
-                connection = new SQLiteConnection("Data Source="
-                    + dbPath + ";Version=3;");
+                connection = new SQLiteConnection("Data Source="+ dbPath + ";Version=3;");
 
                 string sql = File.ReadAllText(sqlPath);
 
