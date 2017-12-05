@@ -1543,7 +1543,7 @@ namespace DSIES.Pages
                 if (dr == true)
                 {
 
-                    if (PageList.Main.QUESTION.Score2 < 59 && PageList.Main.QUESTION.Score2 > 32)
+                    if (PageList.Main.QUESTION.Score2 < 59 )
                     {
                         PageList.Main.QUESTION.Grade2 = "A";
                     }

@@ -147,11 +147,16 @@ namespace DSIES.Pages
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //PageList.Login.Regular.Grade = "1";
+            //PageList.Login.Regular.Grade1 = "2";
+            //PageList.Login.Regular.Grade2 = "2";
+            //PageList.Login.Regular.Totalscore_frist= "2";
+            //PageList.Login.Regular.Totalscore_final = "2";
+            //PageList.Login.Regular.Credit = "2";
+
             CU.MG_User.RegisterAdd(UserVariable.Grade, PageList.Login.Regular.Grade);
             CU.MG_User.RegisterAdd(UserVariable.Grade1, PageList.Login.Regular.Grade1);
-            CU.MG_User.RegisterAdd(UserVariable.Score1,PageList.Login.Regular.Totalscore_frist.ToString());
             CU.MG_User.RegisterAdd(UserVariable.Grade2, PageList.Login.Regular.Grade2);
-            CU.MG_User.RegisterAdd(UserVariable.Score2, PageList.Login.Regular.Totalscore_final);
             CU.MG_User.RegisterAdd(UserVariable.Totalscore_frist, PageList.Login.Regular.Totalscore_frist);
             CU.MG_User.RegisterAdd(UserVariable.Totalscore_final, PageList.Login.Regular.Totalscore_final);
             CU.MG_User.RegisterAdd(UserVariable.Credit, PageList.Login.Regular.Credit);

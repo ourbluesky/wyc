@@ -35,19 +35,19 @@ namespace DSIES.Pages
         }
         private void Read_Register_Data()//注册信息，注册直接进入
         {
-            //CU.MG_User.RegisterAdd(UserVariable.Name = textBlock_name.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Gender = textBlock_gender.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Age = textBlock_age.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.DriAge = textBlock_driage.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Accident_times= textBlock_accident_times.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Career= textBlock_career.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Telephone = textBlock_telephone.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Sight_left =textBlock_Left_Sight.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Sight_right = textBlock_Right_Sight.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.DeepSight_left =textBlock_Left_DeepSight.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.DeepSight_right= textBlock_Right_DeepSight.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Reagency =textBlock_React.Text;
-            //CU.MG_User.RegisterAdd(UserVariable.Password = textBlock_password_set.Text;
+            regular.Name = textBlock_name.Text;
+            regular.Gender = textBlock_gender.Text;
+            regular.Age = textBlock_age.Text;
+            regular.DriAge = textBlock_driage.Text;
+            regular.Accident_times = textBlock_accident_times.Text;
+            regular.Career = textBlock_career.Text;
+            regular.Telephone = textBlock_telephone.Text;
+            regular.Sight_left = textBlock_Left_Sight.Text;
+            regular.Sight_right = textBlock_Right_Sight.Text;
+            regular.DeepSight_left = textBlock_Left_DeepSight.Text;
+            regular.DeepSight_right = textBlock_Right_DeepSight.Text;
+            regular.Reagency = textBlock_React.Text;
+            regular.Password = textBlock_password_set.Text;
         }
 
         private void dbRegister()
@@ -101,7 +101,7 @@ namespace DSIES.Pages
             Read_Register_Data();
             dbRegister();
             PageList.SceneSelect = new SceneSelectPage();
-            PageList.Main.setPage(PageList.SceneSelect);//.Questionandgame);//
+            PageList.Main.setPage(PageList.Questionandgame);//.SceneSelect);//
         }
     }
 }

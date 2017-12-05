@@ -28,6 +28,13 @@ namespace DSIES.Class.Control
         DEEPSIGHTLEFTEMPTY,
         DEEPSIGHTRIGHTEMPTY,
         REAGENCYEMPTY,
+        GRADEEMPTY,
+        GRADE1EMPTY,
+        GRADE2EMPTY,
+        TOTALSCORE_FIRSTEMPTY,
+        TOTALSCORE_FINALEMPTY,
+        CREDITEMPTY
+
         //不知道加不加测试得分
     }
 
@@ -208,6 +215,60 @@ namespace DSIES.Class.Control
                         return RegisterState.REAGENCYEMPTY;
                     }
                     (registerUser as Regular).Reagency = value;
+                    break;
+
+                case UserVariable.Grade:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.GRADEEMPTY);
+                        return RegisterState.GRADEEMPTY;
+                    }
+                    (registerUser as Regular).Grade = value;
+                    break;
+
+                case UserVariable.Grade1:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.GRADE1EMPTY);
+                        return RegisterState.GRADE1EMPTY;
+                    }
+                    (registerUser as Regular).Grade1 = value;
+                    break;
+
+                case UserVariable.Grade2:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.GRADE2EMPTY);
+                        return RegisterState.GRADE2EMPTY;
+                    }
+                    (registerUser as Regular).Grade2 = value;
+                    break;
+
+                case UserVariable.Totalscore_frist:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.TOTALSCORE_FIRSTEMPTY);
+                        return RegisterState.TOTALSCORE_FIRSTEMPTY;
+                    }
+                    (registerUser as Regular).Totalscore_frist = value;
+                    break;
+
+                case UserVariable.Totalscore_final:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.TOTALSCORE_FINALEMPTY);
+                        return RegisterState.TOTALSCORE_FINALEMPTY;
+                    }
+                    (registerUser as Regular).Totalscore_final = value;
+                    break;
+
+                case UserVariable.Credit:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.CREDITEMPTY);
+                        return RegisterState.CREDITEMPTY;
+                    }
+                    (registerUser as Regular).Credit = value;
                     break;
 
                 default:

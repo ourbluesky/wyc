@@ -202,8 +202,7 @@ namespace DSIES.Info.Database
                     case UserGroup.REGULAR:
                         Regular regular = user as Regular;
                         sql = "insert into " + regular.Group
-                            + " (telephone,name,password,gender,age,driAge,career,accident_times,sight_left,sight_right,deep_sight_left,deep_sight_right,reagency)  values ('"
-                            //grade,score1,grade1,score2,grade2,totalscore_frist,totalscore_final,credit) values ('"                          
+                            + " (telephone,name,password,gender,age,driAge,career,accident_times,sight_left,sight_right,deep_sight_left,deep_sight_right,reagency,grade,grade1,grade2,totalscore_frist,totalscore_final,credit) values('"                          
 
                             + regular.Telephone + "', '"
                             + regular.Name + "', '"
@@ -217,17 +216,16 @@ namespace DSIES.Info.Database
                             + regular.Sight_right + "', '"            
                             + regular.DeepSight_left + "', '"
                             + regular.DeepSight_right + "', '"
-                            + regular.Reagency + "') "          
-                            //+ regular.Grade + "', '"
-                            //+ regular.Score1 + "', '" 
-                            //+ regular.Grade1 + "', '"
-                            //+ regular.Score2 + "', '"                           
-                            //+ regular.Grade2 + "', '"
-                            //+ regular.Totalscore_frist + "', '"
-                            //+ regular.Totalscore_final + "', '"
-                            //+ regular.Credit + "') "
-                            ;        
-                        break;
+                            + regular.Reagency + "','"
+
+                            + regular.Grade + "', '"
+                            + regular.Grade1 + "', '"
+                            + regular.Grade2 + "', '"
+                            + regular.Totalscore_frist + "', '"
+                            + regular.Totalscore_final + "', '"
+                            + regular.Credit + "') "
+                            ;
+                    break;
                     default:
                         return false;
                 }
