@@ -132,9 +132,6 @@
     <Compile Include="Pages\Admin\PrintReportPage.xaml.cs">
       <DependentUpon>PrintReportPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\UpdateAdminPage.xaml.cs">
-      <DependentUpon>UpdateAdminPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Admin\UpdateUserPage.xaml.cs">
       <DependentUpon>UpdateUserPage.xaml</DependentUpon>
     </Compile>
@@ -159,10 +156,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Admin\PrintReportPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Admin\UpdateAdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -40,11 +40,7 @@ namespace DSIES.Pages.Admin
             PrintReportPage page = new PrintReportPage();
             PageList.Main.setPage(PageList.PrintReport);
        }
-        private void update_admin_Button_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateAdminPage page = new UpdateAdminPage();
-            PageList.Main.setPage(PageList.UpdateAdmin);
-       }
+ 
         private void quit_admin_Button_Click(object sender, RoutedEventArgs e)
         {
             quit_admin_Button.Visibility = System.Windows.Visibility.Hidden;
@@ -62,6 +58,9 @@ namespace DSIES.Pages.Admin
             }
         }
 
+        private void check_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

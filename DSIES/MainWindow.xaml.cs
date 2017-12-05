@@ -305,7 +305,6 @@ namespace DSIES
         static InquiryUserPage inquiryuser;
         static UpdateUserPage updateuser;
         static PrintReportPage printreport;
-        static UpdateAdminPage updateadmin;
 
 
         public static AdminMainPage AdminMain
@@ -363,21 +362,6 @@ namespace DSIES
             }
             set { printreport = value; }
         }
-
-        public static UpdateAdminPage UpdateAdmin
-        {
-            get
-            {
-                if (updateadmin == null)
-                {
-                    updateadmin = new UpdateAdminPage();
-                }
-                //     login.ToDefault();
-                return updateadmin;
-            }
-            set { updateadmin = value; }
-        }
-
 
 
         public static MainWindow Main //主页面
