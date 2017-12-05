@@ -11,7 +11,7 @@
         <Grid x:Name="ContentGrid" 
             Height="640" Width="960">
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="150">
-                <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,-1,-326" VerticalAlignment="Top" Width="149">
+                <Grid HorizontalAlignment="Left" Height="639" Margin="-0.8,0.2,-0.4,-0.8" VerticalAlignment="Top" Width="150">
                     <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,10,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
                     <Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,70,0,0" VerticalAlignment="Top" Width="144"/>
                     <Button Style="{DynamicResource update_admin_ButtonStyle}" x:Name="update_admin_Button" Click="update_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,130,0,0" VerticalAlignment="Top" Width="144"/>
@@ -24,6 +24,10 @@
                 <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="20" Margin="244,0,216,590"/>
                 <Label Content="  请输入要打印教育测试报表的用户名（电话）：" Height="50" FontSize="16" Margin="10,55,445,535"/>
                 <TextBox x:Name="telephonename"  FontSize="16" Margin="370,55,310,555"/>
+                <Button x:Name="check" Click="check_Click" Content="查找" HorizontalAlignment="Left" Margin="594,62,0,0" VerticalAlignment="Top" Width="75"/>
+                <ScrollViewer HorizontalAlignment="Left" Height="530" Margin="10,110,0,0" VerticalAlignment="Top" Width="800">
+                    <Image x:Name="image"  HorizontalAlignment="Left" Height="1051" VerticalAlignment="Top" Width="800"  Visibility="Visible" Source="{Binding}" />
+                </ScrollViewer>
             </Grid>
         </Grid>
     </Grid>
