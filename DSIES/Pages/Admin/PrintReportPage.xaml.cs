@@ -73,7 +73,7 @@ namespace DSIES.Pages.Admin
             }
             else
             {
-                MessageBox.Show("error!");
+                CustomMessageBox.Show("温馨提示：", "The User Does Not Exist !");
             }
         }
 

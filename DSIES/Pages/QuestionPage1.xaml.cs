@@ -578,7 +578,7 @@ namespace DSIES.Pages
             {
                 flag += 1;
                 CustomMessageBox.Show("温馨提示：","您第1题未答完，请继续答题！" );//您有未答完题目，请继续答题！
-                //  flag = 0;  
+                //flag = 0;  
             }
 
             if (this.button_2A.IsChecked == true)
@@ -1271,7 +1271,7 @@ namespace DSIES.Pages
             }
 
 
-            flag = 0;//记得删。
+           // flag = 0;//记得删。
             if (flag == 0)
             {
                 var dr = CustomMessageBox.Show("温馨提示：", "您的答案已全部属实回答了吗?");//yes or no,设一个参数
@@ -1309,11 +1309,10 @@ namespace DSIES.Pages
                  flag = 0;
                  PageList.Main.QUESTION.Score1 = 0;
                 }
-
             }
             else
-            { 
-
+            {
+                flag = 0;
             }
 
            

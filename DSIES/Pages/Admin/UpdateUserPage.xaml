@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="640" d:DesignWidth="960"
+      d:DesignHeight="640" d:DesignWidth="1214"
 	Title="UpdateUserPage">
 
     <Page.Resources>
@@ -17,9 +17,9 @@
 
     <Grid>
         <Grid x:Name="ContentGrid"
-            Height="640" Width="960">
-            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="150" >
-                <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,-1,-326" VerticalAlignment="Top" Width="149">
+            Height="640" Width="1214">
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="162" >
+                <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,0,0" VerticalAlignment="Top" Width="162">
                     <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,15,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
                     <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,145,0,0" VerticalAlignment="Top" Width="144"/>
                     <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144"/>
@@ -28,11 +28,9 @@
                 </Grid>
             </Border>
 
-            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="810"  Margin="150,0,0,0" Background="WhiteSmoke">
-                <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="20" Margin="224,0,236,590"/>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="1050"  Margin="162,0,0,0" Background="WhiteSmoke">
+                <Label Content="  欢迎使用DSIES后台管理系统" Height="50" FontSize="24" Margin="325,0,290,588"/>
             </Border>
-
-
 
             <Grid Height="640" VerticalAlignment="Top" Width="810"  Margin="150,0,0,0" >
                 <Grid.ColumnDefinitions>
