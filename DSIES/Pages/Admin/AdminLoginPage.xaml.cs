@@ -27,12 +27,12 @@ namespace DSIES.Pages.Admin
         private void Read_AdminLogin_Data()
         {
             PageList.Main.ADMINLOGINDATA.grantUsername = textBlock_grantusername.Text;
-            PageList.Main.ADMINLOGINDATA.grantPassword = textBlock_grantpassword.DataContext.ToString();
+            PageList.Main.ADMINLOGINDATA.grantPassword = textBlock_grantpassword.Password.ToString();
         }
         private void In_Button_Click(object sender, RoutedEventArgs e)
         {
             Read_AdminLogin_Data();
-            if (textBlock_grantusername.Text.ToString() == "admin" && textBlock_grantpassword.DataContext.ToString() == "admin")
+            if (textBlock_grantusername.Text.ToString() == "admin" && textBlock_grantpassword.Password.ToString() == "admin")
                      PageList.Main.setPage(PageList.AdminMain);
            else{ CustomMessageBox.Show ("温馨提示","管理员用户名或密码错误！"); }
         }

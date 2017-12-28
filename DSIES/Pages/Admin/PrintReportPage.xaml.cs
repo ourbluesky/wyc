@@ -60,6 +60,9 @@ namespace DSIES.Pages.Admin
 
         private void check_Click(object sender, RoutedEventArgs e)
         {
+            image.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/...//...//...//用户报表/" + telephonename.Text.ToString() + ".jpg", UriKind.Absolute));
+
+            image.Visibility = System.Windows.Visibility.Visible;
 
         }
     }
