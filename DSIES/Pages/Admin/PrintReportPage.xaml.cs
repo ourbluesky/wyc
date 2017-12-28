@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,10 +61,16 @@ namespace DSIES.Pages.Admin
 
         private void check_Click(object sender, RoutedEventArgs e)
         {
-            image.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/...//...//...//用户报表/" + telephonename.Text.ToString() + ".jpg", UriKind.Absolute));
-
-            image.Visibility = System.Windows.Visibility.Visible;
-
+            string path = "../../../用户报表/" + telephonename.Text.ToString() + ".jpg";
+            if (File.Exists(@path))
+            {
+                image.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/...//...//...//用户报表/" + telephonename.Text.ToString() + ".jpg", UriKind.Absolute));
+                image.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("error!");
+            }
         }
     }
 }

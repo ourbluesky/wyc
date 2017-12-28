@@ -30,8 +30,13 @@ namespace DSIES.Pages.Admin
         public InquiryUserPage()
         {
             InitializeComponent();
-            User user = dbManger.GetUser(telphone.Text, UserGroup.REGULAR);
-            List<User> users = dbManger.GetAllGrantedUsers("telphone", telphone.Text);
+            InitDBManger();
+
+        }
+        private void InitDBManger()
+        {
+            dbManger = new UserDBManager();
+            dbManger.ConnectDB(FileManager.GetPath("database", "db"));
         }
 
         private void inquiry_user_Button_Click(object sender, RoutedEventArgs e)
@@ -67,6 +72,39 @@ namespace DSIES.Pages.Admin
                 quit_admin_Button.Visibility = System.Windows.Visibility.Visible;
           
             }
+        }
+
+        private void select_Click(object sender, RoutedEventArgs e)
+        {
+
+            Regular user = (Regular)dbManger.GetUser(telphone.Text, UserGroup.REGULAR);
+            if (user == null)
+            {
+                MessageBox.Show("wrong message!");//错误信息提示
+            }
+            else
+            {//信息显示
+                text.Text = user.Telephone + "', '"
+                                + user.Name + "', '"
+                                + user.Gender + "','"
+                                + user.Age + "', '"
+                                + user.DriAge + "', '"
+                                + user.Career + "', '"
+                                + user.Accident_times + "', '"
+                                + user.Sight_left + "', '"
+                                + user.Sight_right + "', '"
+                                + user.DeepSight_left + "', '"
+                                + user.DeepSight_right + "', '"
+                                + user.Reagency + "','"
+                                + user.Grade + "', '"
+                                + user.Grade1 + "', '"
+                                + user.Grade2 + "', '"
+                                + user.Totalscore_frist + "', '"
+                                + user.Totalscore_final + "', '"
+                                + user.Credit + "') "
+                                ;
+            }
+
         }
     }
 }

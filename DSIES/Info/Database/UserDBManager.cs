@@ -142,8 +142,8 @@ namespace DSIES.Info.Database
                             Regular regular = user as Regular;
                             regular.Group = UserGroup.REGULAR;
                             regular.Gender = reader["gender"] as string;
-                            regular.DeepSight_left = reader["deepSight_left"] as string;
-                            regular.DeepSight_right = reader["deepSight_right"] as string;
+                            regular.DeepSight_left = reader["deep_sight_left"] as string;
+                            regular.DeepSight_right = reader["deep_sight_right"] as string;
                             regular.Sight_left = reader["sight_left"] as string;
                             regular.Sight_right = reader["sight_right"] as string;
                             regular.Reagency = reader["reagency"] as string;
@@ -156,10 +156,8 @@ namespace DSIES.Info.Database
                             regular.DeepSight_left=reader["deep_sight_left"] as string;
                             regular.DeepSight_right = reader["deep_sight_right"] as string;
                             regular.Reagency = reader["reagency"] as string;  
-                            regular.Grade = reader["grade"] as string;
-                            regular.Score1 = (int)reader["score1"];                          
+                            regular.Grade = reader["grade"] as string;                               
                             regular.Grade1 = reader["grade1"] as string;
-                            regular.Score2 = (int)reader["score2"];
                             regular.Grade2 = reader["grade2"] as string;
                             regular.Totalscore_frist = reader["totalscore_frist"] as string;
                             regular.Totalscore_final = reader["totalscore_final"] as string;

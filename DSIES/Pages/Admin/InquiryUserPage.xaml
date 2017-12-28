@@ -59,6 +59,7 @@
                     <TextBox  Foreground="Gray" x:Name="driage1" Height="30" Margin="10,105,80,505" FontSize="16" Grid.Column="4"/>
                     <TextBox  Foreground="Gray" x:Name="driage2" Height="30" Margin="80,105,10,505" FontSize="16" Grid.Column="4"/>
                     <TextBox  Foreground="Gray" x:Name="career" Height="30" Margin="20,105,30,505" FontSize="16" Grid.Column="5"/>
+                    <Button x:Name="select" Click="select_Click" Content="Button" HorizontalAlignment="Left" Margin="30.6,39,0,0" VerticalAlignment="Top" Width="75" Grid.Column="5"/>
 
                     <!--<ComboBox Foreground="#ffeeeeee" x:Name="telphoneComboBox"  Loaded="ComboBox_Loaded" 
 								Grid.Column="4"  Style="{StaticResource ComboBoxStyle}" 
@@ -79,6 +80,7 @@
 								Height="30" Width="100" Margin="10,105,25,505" RenderTransformOrigin="0.431,-0.686"/>-->
 
                 </Grid>
+                <TextBlock x:Name="text" HorizontalAlignment="Left" Margin="62,175,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="176" Width="676"/>
 
             </Grid>
 

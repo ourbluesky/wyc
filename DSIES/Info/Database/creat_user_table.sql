@@ -5,8 +5,8 @@
 	--regDate		TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	--lastDate	TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime')),
 	gender		TEXT NOT NULL,
-	age			INTEGER NOT NULL,
-	driAge		INTEGER NOT NULL,
+	age			TEXT NOT NULL,
+	driAge		TEXT NOT NULL,
 	career		TEXT NOT NULL,
 	accident_times  TEXT NOT NULL,
 	sight_left     TEXT NOT NULL,
@@ -17,8 +17,8 @@
 	grade        TEXT  NULL,
 	grade1       TEXT   NULL, 
 	grade2       TEXT   NULL,
-	totalscore_frist    INTEGER  NULL,
-	totalscore_final   INTEGER   NULL,
+	totalscore_frist    TEXT  NULL,
+	totalscore_final   TEXT  NULL,
 	credit       TEXT  NULL,
 	PRIMARY KEY(telephone)
 );
