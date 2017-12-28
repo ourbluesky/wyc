@@ -12,11 +12,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Input;
-//using DSIES.UDP;
 using DSIES.Class.Model;
 using DSIES.Pages.Admin;
-//using DSIES.Widget;
-//using DSIES.Info.Database;
+
 
 
 namespace DSIES
@@ -26,10 +24,7 @@ namespace DSIES
     /// </summary>
     public partial class MainWindow : Window
     {
-        //   UDPController udpControl;
-        //    UserSelections selection;
-        //  User user;
-        //     Player player;
+
         public int i = 0;
         public RenderTargetBitmap image_1;
         public RenderTargetBitmap image_2;
@@ -42,12 +37,7 @@ namespace DSIES
             set { question = value; }
         }
 
-        //LoginData logindata = new LoginData();
-        //internal LoginData LOGINDATA
-        //{
-        //    get { return logindata; }
-        //    set { logindata = value; }
-        //}
+
 
         AdminLoginData adminlogindata = new AdminLoginData();
         internal AdminLoginData ADMINLOGINDATA
@@ -63,12 +53,7 @@ namespace DSIES
             set { game = value; }
         }
 
-        //Education education = new Education();
-        //internal Education EDUCATION
-        //{
-        //    get { return education; }
-        //    set { education = value; }
-        //}
+
 
         public MainWindow()
         {
@@ -78,43 +63,8 @@ namespace DSIES
         }
 
 
-        /*   internal Player Player
-        {
-            get { return player; }
-            set { player = value; }
-        }*/
 
-        //User user = new User();
-        //internal User User
-        //{
-        //    get { return user; }
-        //    set
-        //    {
-        //        user = value;
-        //        if (user != null)
-        //        {
-        //            LogOutButtonVisiable();
-        //        }
-        //        else
-        //        {
-        //            LogOutButtonInvisiable();
-        //        }
-        //    }
-        //}
-
-        /*internal UserSelections Selection
-        //{
-        //    get { return selection; }
-        //    set { selection = value; }
-        //}
-
-        //internal UDPController UdpControl
-        //{
-        //    get { return udpControl; }
-        //    set { udpControl = value; }
-        //}*/
-
-        void init()
+        void init()  //刷新所有页面与数据
         {
             PageList.PageInit();
             game = new Game();
@@ -126,18 +76,6 @@ namespace DSIES
 
 
 
-        /* public bool testConnection()
-        {
-            UDPTest test = new UDPTest(udpControl.Port);
-            Thread thread = new Thread(test.test);
-            thread.Start();
-            if (thread.Join(TimeSpan.FromSeconds(2)))
-            {
-                thread.Abort();
-            }
-            test.close();
-            return test.Connected;
-        }*/
 
         public void setPage(Page page)
         {
@@ -179,10 +117,7 @@ namespace DSIES
             base.OnClosing(e);
         }
 
-        //private void click()
-        //{
-        //    exp.Chosen = true;
-        //}
+
 
         private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)//自定义窗口
         {
@@ -192,26 +127,16 @@ namespace DSIES
             }
         }
 
-        private void LogOutButton_Click(object sender, RoutedEventArgs e)  //登录
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)  //退出账户
         {
             if (isSceneing())
             {
                 CustomMessageBox.Show("Warning", "Can't logout before the end of experience!");
                 return;
             }
-            init();//init上边有定义
+            init();
             this.setPage(PageList.Login);
             
-        }
-
-        public void LogOutButtonVisiable() //重新登录
-        {
-            LogOutBtn.Visibility = System.Windows.Visibility.Visible;
-        }
-
-        public void LogOutButtonInvisiable() //重新登录
-        {
-            LogOutBtn.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void AdminButton_Click(object sender, RoutedEventArgs e)
@@ -221,19 +146,11 @@ namespace DSIES
                 CustomMessageBox.Show("Warning", "Can't log in as an administrator before the end of user's experience!");
                 return;
             }
+            init();
             this.setPage(PageList.AdminLogin);
-            //this.init();//init上边有定义
+            
         }
 
-        public void AdminButtonVisiable() //管理员登录
-        {
-            AdminBtn.Visibility = System.Windows.Visibility.Visible;
-        }
-
-        public void AdminButtonInvisiable() //管理员登录
-        {
-            AdminBtn.Visibility = System.Windows.Visibility.Hidden;
-        }
 
         private void Resize_Click(object sender, RoutedEventArgs e)
         {
@@ -292,14 +209,12 @@ namespace DSIES
         static GamePage game;
         static QuestionPage1 question1;
         static QuestionPage2 question2;
-        //   static AboutPage about;
         static SceneSelectPage sceneSelect;
         static ScenePage scene;
         static EducationPage education;
         static EducationLoadPage educationLoad;
         static Education_educatePage education_educate;
         static EducationSelectPage educationSelect;
-        //static DataExportPage dataExport;
 
         static AdminMainPage adminmain;
         static InquiryUserPage inquiryuser;
@@ -315,7 +230,6 @@ namespace DSIES
                 {
                     adminmain = new AdminMainPage();
                 }
-                //     login.ToDefault();
                 return adminmain;
             }
             set { adminmain = value; }
@@ -329,7 +243,6 @@ namespace DSIES
                 {
                     inquiryuser = new InquiryUserPage();
                 }
-                //     login.ToDefault();
                 return inquiryuser;
             }
             set { inquiryuser = value; }
@@ -343,7 +256,6 @@ namespace DSIES
                 {
                     updateuser = new UpdateUserPage();
                 }
-                //     login.ToDefault();
                 return updateuser;
             }
             set { updateuser = value; }
@@ -357,7 +269,6 @@ namespace DSIES
                 {
                     printreport = new PrintReportPage();
                 }
-                //     login.ToDefault();
                 return printreport;
             }
             set { printreport = value; }
@@ -378,7 +289,6 @@ namespace DSIES
                 {
                     login = new LoginPage();
                 }
-                //     login.ToDefault();
                 return login;
             }
             set { login = value; }
@@ -392,7 +302,6 @@ namespace DSIES
                 {
                     adminlogin = new AdminLoginPage();
                 }
-                //     login.ToDefault();
                 return adminlogin;
             }
             set { adminlogin = value; }
@@ -406,7 +315,6 @@ namespace DSIES
                 {
                     questionandgame = new QuesGameSeclectPage();
                 }
-                // questionandgame.ToDefault();
                 return questionandgame;
             }
             set { questionandgame = value; }
@@ -529,18 +437,6 @@ namespace DSIES
             set { educationSelect = value; }
         }
 
-        //public static DataExportPage DataExport
-        //{
-        //    get
-        //    {
-        //        if (dataExport == null)
-        //        {
-        //            dataExport = new DataExportPage();
-        //        }
-        //        return dataExport;
-        //    }
-        //    set { dataExport = value; }
-        //}
 
 
         public static void PageInit()
@@ -559,7 +455,6 @@ namespace DSIES
             Game = new GamePage();
             Question1 = new QuestionPage1();
             Question2 = new QuestionPage2();
-            //DataExport = new DataExportPage();
         }
     }
 }
