@@ -31,11 +31,11 @@ namespace DSIES.Pages.Admin
             PageList.Main.setPage(PageList.InquiryUser);
        }
 
-        private void update_user_Button_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateUserPage page = new UpdateUserPage();
-            PageList.Main.setPage(PageList.UpdateUser);
-         }
+        //private void update_user_Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    UpdateUserPage page = new UpdateUserPage();
+        //    PageList.Main.setPage(PageList.UpdateUser);
+        // }
         private void print_report_Button_Click(object sender, RoutedEventArgs e)
         {
             PrintReportPage page = new PrintReportPage();

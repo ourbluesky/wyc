@@ -3,20 +3,19 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" 
-      d:DesignHeight="640" d:DesignWidth="1214"
-	 Title="AdminMainPage">
+      mc:Ignorable="d" d:DesignWidth="1214"
+	 Title="AdminMainPage" Height="640">
 
     <Grid>
         <Grid x:Name="ContentGrid" 
             Height="640" Width="1214">
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="162">
-                <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,0,0" VerticalAlignment="Top" Width="162">
-                    <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,15,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
-                    <Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,80,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource print_report_ButtonStyle_copy}" x:Name="print_report_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,145,0,0" VerticalAlignment="Top" Width="144" Background="#FF050000"/>
-                    <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
+                <Grid HorizontalAlignment="Left" Height="639" Margin="0,0,-2,-1" VerticalAlignment="Top" Width="162">
+                    <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,50,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
+                    <!--<Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,80,0,0" VerticalAlignment="Top" Width="144"/>-->
+                    <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144"/>
+                    <Button Style="{DynamicResource print_report_ButtonStyle_copy}" x:Name="print_report_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,120,0,0" VerticalAlignment="Top" Width="144" Background="#FF050000"/>
+                    <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
                 </Grid>
             </Border>
             <Grid HorizontalAlignment="Right" Height="640" VerticalAlignment="Top" Width="1050"  Margin="0,0,0,0" Background="WhiteSmoke">
@@ -29,10 +28,9 @@
                         <Image x:Name="image"  HorizontalAlignment="Left" Height="1050" VerticalAlignment="Top" Width="1042"  Visibility="Visible" Source="{Binding}" />
                     </ScrollViewer>
                 </Canvas>
-                <Button x:Name="print" Click="print_Click" Content="打印" HorizontalAlignment="Left" Margin="896,62,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button Name="print" Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top"  HorizontalAlignment="Left" Height="40" Content="打 印"  Click="print_Click" Margin="896,50,0,0"/>
             </Grid>
         </Grid>
     </Grid>
 </Page>
-
 

@@ -21,11 +21,11 @@
 
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="162">
                 <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,0,0" VerticalAlignment="Top" Width="162">
-                    <Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,80,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,145,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource inquiry_user_ButtonStyle_copy}" x:Name="inquiry_user_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,15,0,0" VerticalAlignment="Top" Width="144" Background="#FF050000" />
-                    <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
+                    <!--<Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,80,0,0" VerticalAlignment="Top" Width="144"/>-->
+                    <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,120,0,0" VerticalAlignment="Top" Width="144"/>
+                    <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144"/>
+                    <Button Style="{DynamicResource inquiry_user_ButtonStyle_copy}" x:Name="inquiry_user_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,50,0,0" VerticalAlignment="Top" Width="144" Background="#FF050000" />
+                    <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="1050"  Margin="160,0,0,0">
@@ -80,7 +80,7 @@
                         </InlineUIContainer>
                     </TextBlock>
 
-                    <Label Content="  用户名（电话）   姓名   年龄 驾龄  职业  事故次数  左右眼视力  左右眼深视力 反应力  人格测试  事故倾向 愤怒值 初始得分 教育后得分 信誉等级" FontSize="15" Margin="0,201,0,403"/>
+                    <Label Content="  时间    用户名（电话）   姓名   年龄 驾龄  职业  事故次数  左右眼视力  左右眼深视力 反应力  人格测试  事故倾向 愤怒值 初始得分 教育后得分 信誉等级" FontSize="15" Margin="0,201,0,403"/>
                     <Label Content="至" Margin="664,105,356,505" Height="30" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />
 
                 </Grid>

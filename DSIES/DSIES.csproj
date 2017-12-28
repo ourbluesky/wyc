@@ -132,9 +132,6 @@
     <Compile Include="Pages\Admin\PrintReportPage.xaml.cs">
       <DependentUpon>PrintReportPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\UpdateUserPage.xaml.cs">
-      <DependentUpon>UpdateUserPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UDP\BytesConverter.cs" />
     <Compile Include="UDP\CentralUnit.cs" />
     <Compile Include="UDP\FileManager.cs" />
@@ -156,10 +153,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Admin\PrintReportPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Admin\UpdateUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

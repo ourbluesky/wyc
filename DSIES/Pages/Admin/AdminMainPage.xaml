@@ -10,18 +10,18 @@
     <Grid Margin="0,0,0,0">
         <Grid x:Name="ContentGrid"
             Height="640" Width="1214">
-   <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,0,0" VerticalAlignment="Top" Width="162">
-            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="162" Grid.RowSpan="4">
-                    <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,0,0" VerticalAlignment="Top" Width="162">
-                        <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,15,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
-                    <Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,80,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,145,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144"/>
-                    <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
+            <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,0,0" VerticalAlignment="Top" Width="162">
+                <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="162">
+                    <Grid HorizontalAlignment="Left" Margin="0,0,0,0" Width="162">
+                        <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,50,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
+                        <!--<Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,80,0,0" VerticalAlignment="Top" Width="144"/>-->
+                        <Button Style="{DynamicResource print_report_ButtonStyle}" x:Name="print_report_Button" Click="print_report_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,120,0,0" VerticalAlignment="Top" Width="144"/>
+                        <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144"/>
+                        <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,190,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
                     </Grid>
                 </Border>
-  </Grid>
-            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="1050"  Margin="162,0,0,0" Grid.RowSpan="4">
+            </Grid>
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="1050"  Margin="162,0,0,0">
                 <Label Content="  欢迎使用DSIES后台管理系统" FontSize="40" Margin="180,150,318,414" Foreground="#FFFEFEFE" RenderTransformOrigin="0.47,0.56"/>
             </Border>
         </Grid>

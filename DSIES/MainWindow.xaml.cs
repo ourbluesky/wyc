@@ -218,7 +218,7 @@ namespace DSIES
 
         static AdminMainPage adminmain;
         static InquiryUserPage inquiryuser;
-        static UpdateUserPage updateuser;
+        //static UpdateUserPage updateuser;
         static PrintReportPage printreport;
 
 
@@ -248,18 +248,18 @@ namespace DSIES
             set { inquiryuser = value; }
         }
 
-        public static UpdateUserPage UpdateUser
-        {
-            get
-            {
-                if (updateuser == null)
-                {
-                    updateuser = new UpdateUserPage();
-                }
-                return updateuser;
-            }
-            set { updateuser = value; }
-        }
+        //public static UpdateUserPage UpdateUser
+        //{
+        //    get
+        //    {
+        //        if (updateuser == null)
+        //        {
+        //            updateuser = new UpdateUserPage();
+        //        }
+        //        return updateuser;
+        //    }
+        //    set { updateuser = value; }
+        //}
 
         public static PrintReportPage PrintReport
         {
@@ -444,9 +444,9 @@ namespace DSIES
             
             AdminMain = new AdminMainPage();
             InquiryUser = new InquiryUserPage();
-            UpdateUser = new UpdateUserPage();
+            //UpdateUser = new UpdateUserPage();
             PrintReport = new PrintReportPage();
-            UpdateUser = new UpdateUserPage();
+            //UpdateUser = new UpdateUserPage();
             AdminLogin = new AdminLoginPage();
 
             Login = new LoginPage();
