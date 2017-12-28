@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -65,11 +67,22 @@ namespace DSIES.Pages.Admin
             if (File.Exists(@path))
             {
                 image.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/...//...//...//用户报表/" + telephonename.Text.ToString() + ".jpg", UriKind.Absolute));
+
+
                 image.Visibility = System.Windows.Visibility.Visible;
             }
             else
             {
                 MessageBox.Show("error!");
+            }
+        }
+
+        private void print_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog dialog = new PrintDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                dialog.PrintVisual(printArea, "Print Test");
             }
         }
     }

@@ -17,6 +17,7 @@ using DSIES.UDP;
 using System.Windows.Threading;
 using System.Printing;
 using DSIES.Class.Model;
+using System.Diagnostics;
 
 namespace DSIES.Pages
 {
@@ -147,13 +148,6 @@ namespace DSIES.Pages
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //PageList.Login.Regular.Grade = "1";
-            //PageList.Login.Regular.Grade1 = "2";
-            //PageList.Login.Regular.Grade2 = "2";
-            //PageList.Login.Regular.Totalscore_frist= "2";
-            //PageList.Login.Regular.Totalscore_final = "2";
-            //PageList.Login.Regular.Credit = "2";
-
             CU.MG_User.RegisterAdd(UserVariable.Grade, PageList.Login.Regular.Grade);
             CU.MG_User.RegisterAdd(UserVariable.Grade1, PageList.Login.Regular.Grade1);
             CU.MG_User.RegisterAdd(UserVariable.Grade2, PageList.Login.Regular.Grade2);
@@ -168,16 +162,17 @@ namespace DSIES.Pages
             System.IO.FileStream fs = System.IO.File.Open("..//..//..//用户报表//" + PageList.Login.Regular.Telephone + ".jpg", System.IO.FileMode.OpenOrCreate);
             CustomMessageBox.Show("温馨提示：", "save!");
             saveEncoder.Save(fs);
+            PrintDialog dialog = new PrintDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                dialog.PrintVisual(printArea, "Print Test");
+            }
             print.IsEnabled = false;
         }
         RenderTargetBitmap RenderVisaulToBitmap(Visual vsual, int width, int height)
         {
-
-
-
             var rtb = new RenderTargetBitmap(width, height, 96, 96, PixelFormats.Default);
             rtb.Render(vsual);
-
             return rtb;
         }
     }
