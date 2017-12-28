@@ -20,6 +20,7 @@
 	totalscore_frist    TEXT  NULL,
 	totalscore_final   TEXT  NULL,
 	credit       TEXT  NULL,
+	time		TEXT	NULL,
 	PRIMARY KEY(telephone)
 );
 

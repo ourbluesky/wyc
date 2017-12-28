@@ -128,7 +128,8 @@ namespace DSIES.Pages.Admin
                                 + user[i].Grade2 + "', '"
                                 + user[i].Totalscore_frist + "', '"
                                 + user[i].Totalscore_final + "', '"
-                                + user[i].Credit + "'"
+                                + user[i].Credit + "'''"
+                                + user[i].Time + "."
                                 ;
             }
 
