@@ -57,7 +57,7 @@ namespace DSIES.Info.Database
             }
 
             public Tuple<LoginState, User> ValidateUser(string telephone,
-                string password, UserGroup group)//事件发生是否有效
+                string password, UserGroup group)//判断登陆是否成功
             {
                 LoginState state;
                 User user = GetUser(telephone, group);
@@ -97,24 +97,24 @@ namespace DSIES.Info.Database
                     return null;
             }
 
-            //public List<User> GetAllRegulars()
-            //{
-            //    string sql = "select * from " + UserGroup.REGULAR;
-            //    List<User> users = GetUsers(sql, UserGroup.REGULAR);
+        //public List<User> GetAllRegulars()
+        //{
+        //    string sql = "select * from " + UserGroup.REGULAR;
+        //    List<User> users = GetUsers(sql, UserGroup.REGULAR);
 
-            //    return users;
-            //}
+        //    return users;
+        //}
 
-            //public List<User> GetAllGrantedUsers(string telephone)//?
-            //{
-            //    string sql = "select * from " + UserGroup.ADMIN
-            //        + " where telephone = " + telephone;
-            //    List<User> users = GetUsers(sql, UserGroup.ADMIN);
+        public List<User> GetAllGrantedUsers(string type,string telephone)//根据type查询，得到所有的用户信息
+        {
+            string sql = "select * from " + UserGroup.REGULAR
+                + " where "+type+" =' " + telephone+"'";
+            List<User> users = GetUsers(sql, UserGroup.REGULAR);
 
-            //    return users;
-            //}
+            return users;
+        }
 
-            private List<User> GetUsers(string sql, UserGroup group)//从数据库里读出的数据，判断有没有这个人的信息，然后再做相应的查询
+        private List<User> GetUsers(string sql, UserGroup group)//从数据库里读出的数据，判断有没有这个人的信息，然后再做相应的查询
             {
                 OpenConnection();
                 SQLiteDataReader reader = ExecuteQuery(sql);
@@ -184,6 +184,8 @@ namespace DSIES.Info.Database
 
                 return users;
             }
+
+
 
             public bool AddUser(User user)
             {

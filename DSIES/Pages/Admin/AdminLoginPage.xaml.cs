@@ -22,16 +22,17 @@ namespace DSIES.Pages.Admin
         public AdminLoginPage()
         {
             InitializeComponent();
-            Read_AdminLogin_Data();
+            
         }
         private void Read_AdminLogin_Data()
         {
             PageList.Main.ADMINLOGINDATA.grantUsername = textBlock_grantusername.Text;
-            PageList.Main.ADMINLOGINDATA.grantPassword = textBlock_grantpassword.Text;
+            PageList.Main.ADMINLOGINDATA.grantPassword = textBlock_grantpassword.DataContext.ToString();
         }
         private void In_Button_Click(object sender, RoutedEventArgs e)
         {
-            if (textBlock_grantusername.Text.ToString() == "admin" && textBlock_grantpassword.Text.ToString() == "admin")
+            Read_AdminLogin_Data();
+            if (textBlock_grantusername.Text.ToString() == "admin" && textBlock_grantpassword.DataContext.ToString() == "admin")
                      PageList.Main.setPage(PageList.AdminMain);
            else{ CustomMessageBox.Show ("温馨提示","管理员用户名或密码错误！"); }
         }

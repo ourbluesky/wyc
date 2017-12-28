@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DSIES.Class.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,17 +13,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DSIES.Info.Database;
+using DSIES.UDP;
 
 namespace DSIES.Pages.Admin
 {
     /// <summary>
     /// InquiryUserPage.xaml 的交互逻辑
     /// </summary>
+    /// 
+
+   
     public partial class InquiryUserPage : Page
     {
+        private UserDBManager dbManger;
         public InquiryUserPage()
         {
             InitializeComponent();
+            User user = dbManger.GetUser(telphone.Text, UserGroup.REGULAR);
+            List<User> users = dbManger.GetAllGrantedUsers("telphone", telphone.Text);
         }
 
         private void inquiry_user_Button_Click(object sender, RoutedEventArgs e)

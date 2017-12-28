@@ -277,6 +277,8 @@ namespace DSIES.Class.Control
             return RegisterState.VALIDATED;
         }
 
+
+
         private void UpdateRegisterState(RegisterState state)
         {
             if (currentState == RegisterState.VALIDATED)

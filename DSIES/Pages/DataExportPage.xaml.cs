@@ -162,7 +162,7 @@ namespace DSIES.Pages
             CU.MG_User.RegisterAdd(UserVariable.Credit, PageList.Login.Regular.Credit);
 
             CU.MG_User.RegisterEnd();
-            var pic = RenderVisaulToBitmap(printArea, 1214, 1582);
+            var pic = RenderVisaulToBitmap(printArea, 1214, 1370);
             PngBitmapEncoder saveEncoder = new PngBitmapEncoder();
             saveEncoder.Frames.Add(BitmapFrame.Create(pic));
             System.IO.FileStream fs = System.IO.File.Open("..//..//..//用户报表//" + PageList.Login.Regular.Telephone + ".jpg", System.IO.FileMode.OpenOrCreate);
