@@ -1580,7 +1580,9 @@ namespace DSIES.Pages
                 }
             }
             else 
-            { }
+            {
+                flag = 0;
+            }
         }
     }
 }

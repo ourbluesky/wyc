@@ -4,14 +4,14 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="640" d:DesignWidth="960"
+      d:DesignHeight="640" d:DesignWidth="1214"
 	 Title="AdminMainPage">
 
     <Grid>
         <Grid x:Name="ContentGrid" 
-            Height="640" Width="960">
-            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="150">
-                <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,-1,-326" VerticalAlignment="Top" Width="150">
+            Height="640" Width="1214">
+            <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="162">
+                <Grid HorizontalAlignment="Left" Height="640" Margin="0,0,0,0" VerticalAlignment="Top" Width="162">
                     <Button Style="{DynamicResource inquiry_user_ButtonStyle}" x:Name="inquiry_user_Button" Click="inquiry_user_Button_Click" HorizontalAlignment="Left" Height="40" Margin="5,15,0,0" VerticalAlignment="Top" Width="144" Background="Black"/>
                     <Button Style="{DynamicResource update_user_ButtonStyle}" x:Name="update_user_Button" Click="update_user_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,80,0,0" VerticalAlignment="Top" Width="144"/>
                     <Button Style="{DynamicResource quit_admin_ButtonStyle}" x:Name="quit_admin_Button" Click="quit_admin_Button_Click" Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144"/>
@@ -19,17 +19,17 @@
                     <Button Style="{DynamicResource quit_admin_ButtonStyle_copy}" x:Name="quit_admin_Button_copy"  Content="Button" HorizontalAlignment="Left" Height="40" Margin="5,560,0,0" VerticalAlignment="Top" Width="144" Visibility="Hidden"/>
                 </Grid>
             </Border>
-            <Grid HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="810"  Margin="150,0,0,0" Background="WhiteSmoke">
-                <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="20" Margin="244,0,216,590"/>
-                <Label Content="  请输入要打印教育测试报表的用户名（电话）：" Height="50" FontSize="16" Margin="10,55,445,535"/>
-                <TextBox x:Name="telephonename"  FontSize="16" Margin="370,55,310,555"/>
-                <Button x:Name="check" Click="check_Click" Content="查找" HorizontalAlignment="Left" Margin="594,62,0,0" VerticalAlignment="Top" Width="75"/>
+            <Grid HorizontalAlignment="Right" Height="640" VerticalAlignment="Top" Width="1050"  Margin="0,0,0,0" Background="WhiteSmoke">
+                <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="24" Margin="244,0,216,590"/>
+                <Label Content="  请输入要打印教育测试报表的用户名（电话）：" Height="50" FontSize="20" Margin="10,55,445,535"/>
+                <TextBox x:Name="telephonename"  FontSize="16" Margin="434,62,336,548"/>
+                <Button x:Name="check" Click="check_Click" Content="查找" HorizontalAlignment="Left" Margin="782,62,0,0" VerticalAlignment="Top" Width="75"/>
                 <Canvas x:Name="printArea">
-                    <ScrollViewer HorizontalAlignment="Left" Height="530" Margin="10,110,0,0" VerticalAlignment="Top" Width="800">
-                        <Image x:Name="image"  HorizontalAlignment="Left" Height="1051" VerticalAlignment="Top" Width="800"  Visibility="Visible" Source="{Binding}" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="1030" Canvas.Left="10" Canvas.Top="110">
+                        <Image x:Name="image"  HorizontalAlignment="Left" Height="1050" VerticalAlignment="Top" Width="1042"  Visibility="Visible" Source="{Binding}" />
                     </ScrollViewer>
                 </Canvas>
-                <Button x:Name="print" Click="print_Click" Content="打印" HorizontalAlignment="Left" Margin="702,62,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="print" Click="print_Click" Content="打印" HorizontalAlignment="Left" Margin="896,62,0,0" VerticalAlignment="Top" Width="75"/>
             </Grid>
         </Grid>
     </Grid>

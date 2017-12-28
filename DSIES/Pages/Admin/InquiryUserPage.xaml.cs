@@ -98,7 +98,7 @@ namespace DSIES.Pages.Admin
 
             if (user == null)
             {
-                MessageBox.Show("wrong message!");//错误信息提示
+                CustomMessageBox.Show("温馨提示：", "Wrong Message!"); //错误信息提示
             }
             else
             {//信息显示

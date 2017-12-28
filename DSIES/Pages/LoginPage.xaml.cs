@@ -57,7 +57,6 @@ namespace DSIES.Pages
         private void dbRegister()
         {
             CU.MG_User.RegisterStart(UserGroup.REGULAR);
-
             CU.MG_User.RegisterAdd(UserVariable.Name,textBlock_name.Text);
             CU.MG_User.RegisterAdd(UserVariable.Gender ,textBlock_gender.Text);
             CU.MG_User.RegisterAdd(UserVariable.Age , textBlock_age.Text);
@@ -70,9 +69,7 @@ namespace DSIES.Pages
             CU.MG_User.RegisterAdd(UserVariable.Deepsight_left , textBlock_Left_DeepSight.Text);
             CU.MG_User.RegisterAdd(UserVariable.DeepSight_right , textBlock_Right_DeepSight.Text);
             CU.MG_User.RegisterAdd(UserVariable.Reagency , textBlock_React.Text);
-            CU.MG_User.RegisterAdd(UserVariable.Password , textBlock_password_set.Text);
-            
-
+            CU.MG_User.RegisterAdd(UserVariable.Password , textBlock_password_set.Text);          
         }
         private void Login_Button_Click(object sender, RoutedEventArgs e)//进入登陆界面
         {
@@ -95,11 +92,11 @@ namespace DSIES.Pages
                 if (Encryptor.GetMD5(textBlock_password.Password) == user.Password)
                     PageList.Main.setPage(PageList.Questionandgame);
                 else
-                    MessageBox.Show("error password");
+                    CustomMessageBox.Show("温馨提示：", "Password Error!"); 
             }
             else//用户手机号不存在，提示请先注册
             {
-                MessageBox.Show("先注册");
+                CustomMessageBox.Show("温馨提示：", "Please Sign In !");
                 Login.Visibility = System.Windows.Visibility.Hidden;
                 Register.Visibility = System.Windows.Visibility.Visible;
                 textBlock_phone.Text = "";
