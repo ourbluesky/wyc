@@ -36,8 +36,8 @@ namespace DSIES.Class.Model
         Grade2,
         Totalscore_frist,//第一次总得分
         Totalscore_final,//最后一次总得分
-        Credit
-      
+        Credit,
+        Time
     }
 
     public abstract class User
@@ -47,6 +47,7 @@ namespace DSIES.Class.Model
         //private DateTime regDate;
         //private DateTime lastDate;
         private string telephone="";
+        private string time = "";
         private UserGroup group;
 
         
@@ -73,7 +74,11 @@ namespace DSIES.Class.Model
             get { return group; }
             set { group = value; }
         }
-
+        public string Time
+        {
+            get { return time; }
+            set { time = value; }
+        }
         //public DateTime RegDate
         //{
         //    get { return regDate; }

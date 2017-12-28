@@ -33,7 +33,8 @@ namespace DSIES.Class.Control
         GRADE2EMPTY,
         TOTALSCORE_FIRSTEMPTY,
         TOTALSCORE_FINALEMPTY,
-        CREDITEMPTY
+        CREDITEMPTY,
+        TIMEMPTY
 
         //不知道加不加测试得分
     }
@@ -271,6 +272,14 @@ namespace DSIES.Class.Control
                     (registerUser as Regular).Credit = value;
                     break;
 
+                case UserVariable.Time:
+                    if (value.Equals(""))
+                    {
+                        UpdateRegisterState(RegisterState.TIMEMPTY);
+                        return RegisterState.TIMEMPTY;
+                    }
+                    registerUser.Time = value;
+                    break;
                 default:
                     break;
             }

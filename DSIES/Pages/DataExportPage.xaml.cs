@@ -26,8 +26,8 @@ namespace DSIES.Pages
     /// </summary>
     public partial class DataExportPage : Page
     {
-        private double Value;
-        private double Value2;
+        private double Value = new double();
+        private double Value2 = new double();
 
         public DataExportPage()
         {
@@ -46,17 +46,14 @@ namespace DSIES.Pages
 
             ID.Text = PageList.Login.Regular.Telephone;//编号即电话号
 
-            //Value = double.Parse(PageList.Login.Regular.Totalscore_frist);
-            //Value2 = double.Parse(PageList.Login.Regular.Totalscore_final);
+            Value = double.Parse(PageList.Login.Regular.Totalscore_frist);
+            Value2 = double.Parse(PageList.Login.Regular.Totalscore_final);
 
-            //Value = 75;
-            //Value2 = 85;
+
             point_one.DataContext = Value;
             point_two.DataContext = Value2;
             score1_text.DataContext = Value;
             score2_text.DataContext = Value2;
-            //DataContext = this;
-            //  name_info.DataContext=
             name_info.Text = PageList.Login.Regular.Name;
             gender_info.Text = PageList.Login.Regular.Gender;
             age_info.Text = PageList.Login.Regular.Age;
@@ -148,13 +145,14 @@ namespace DSIES.Pages
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             CU.MG_User.RegisterAdd(UserVariable.Grade, PageList.Login.Regular.Grade);
             CU.MG_User.RegisterAdd(UserVariable.Grade1, PageList.Login.Regular.Grade1);
             CU.MG_User.RegisterAdd(UserVariable.Grade2, PageList.Login.Regular.Grade2);
             CU.MG_User.RegisterAdd(UserVariable.Totalscore_frist, PageList.Login.Regular.Totalscore_frist);
             CU.MG_User.RegisterAdd(UserVariable.Totalscore_final, PageList.Login.Regular.Totalscore_final);
             CU.MG_User.RegisterAdd(UserVariable.Credit, PageList.Login.Regular.Credit);
-
+            CU.MG_User.RegisterAdd(UserVariable.Time, date.Text);
             CU.MG_User.RegisterEnd();
             var pic = RenderVisaulToBitmap(printArea, 1214, 1370);
             PngBitmapEncoder saveEncoder = new PngBitmapEncoder();
