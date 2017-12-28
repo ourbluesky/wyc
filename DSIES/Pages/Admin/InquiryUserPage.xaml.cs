@@ -89,6 +89,14 @@ namespace DSIES.Pages.Admin
             {
                 user = dbManger.GetAllGrantedUsers("gender", sex.Text);
             }
+            else if(age1.Text!=""&& age2.Text!="")
+            {
+                user = dbManger.GetRangeUsers("age", age1.Text, age2.Text);
+            }
+            else if (driage1.Text != "" && driage2.Text != "")
+            {
+                user = dbManger.GetRangeUsers("driAge", driage1.Text, driage2.Text);
+            }
             else if (career.Text != "")
             {
                 user = dbManger.GetAllGrantedUsers("career", career.Text);

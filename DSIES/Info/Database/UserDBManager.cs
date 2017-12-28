@@ -120,6 +120,21 @@ namespace DSIES.Info.Database
                 return null;
         }
 
+        public List<Regular> GetRangeUsers(string type, string left,string right)//根据type查询，得到所有的用户信息
+        {
+            string sql = "select * from " + UserGroup.REGULAR
+                + " where " + type + " >= '" + left + "' and "+type+" <= '" + right + "'";
+            List<User> users = GetUsers(sql, UserGroup.REGULAR);
+
+            if (users != null && users.Count != 0)
+            {
+                List<Regular> regulars = users.ConvertAll<Regular>(i => (Regular)i);            //将List<User>强制转换为List<Regular>
+                return regulars;
+            }
+            else
+                return null;
+        }
+
         private List<User> GetUsers(string sql, UserGroup group)//从数据库里读出的数据，判断有没有这个人的信息，然后再做相应的查询
             {
                 OpenConnection();

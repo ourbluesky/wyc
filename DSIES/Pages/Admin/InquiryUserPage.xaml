@@ -55,8 +55,8 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBox  Foreground="Gray" x:Name="name" Height="30" Margin="10,110,10,505" FontSize="16"/>
-                        <TextBox  Foreground="Gray" x:Name="telphone" Height="30" Margin="0,110,30,505" FontSize="16" Grid.Column="1"/>
+                        <TextBox  Foreground="Gray" x:Name="name" Height="30" Margin="0.4,110,19.2,500" FontSize="16" Grid.Column="1"/>
+                        <TextBox  Foreground="Gray" x:Name="telphone" Height="30" Margin="0,110,18.6,500" FontSize="16"/>
                         <TextBox  Foreground="Gray" x:Name="sex" Height="30" Margin="0,110,40,505" FontSize="16" Grid.Column="2"/>
                         <TextBox  Foreground="Gray" x:Name="age1" Height="30" Margin="0,110,94,505" FontSize="16" Grid.Column="3"/>
                         <TextBox  Foreground="Gray" x:Name="age2" Height="30" Margin="94,110,10,505" FontSize="16" Grid.Column="3" RenderTransformOrigin="2.089,0.567"/>
