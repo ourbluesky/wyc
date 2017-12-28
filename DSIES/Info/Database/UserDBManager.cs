@@ -105,13 +105,19 @@ namespace DSIES.Info.Database
         //    return users;
         //}
 
-        public List<User> GetAllGrantedUsers(string type,string telephone)//根据type查询，得到所有的用户信息
+        public List<Regular> GetAllGrantedUsers(string type,string telephone)//根据type查询，得到所有的用户信息
         {
             string sql = "select * from " + UserGroup.REGULAR
-                + " where "+type+" =' " + telephone+"'";
+                + " where "+type+" = '" + telephone+"'";
             List<User> users = GetUsers(sql, UserGroup.REGULAR);
 
-            return users;
+            if (users != null && users.Count != 0)
+            {
+                List<Regular> regulars = users.ConvertAll<Regular>(i => (Regular)i);            //将List<User>强制转换为List<Regular>
+                return regulars;
+            }
+            else
+                return null;
         }
 
         private List<User> GetUsers(string sql, UserGroup group)//从数据库里读出的数据，判断有没有这个人的信息，然后再做相应的查询
@@ -141,12 +147,8 @@ namespace DSIES.Info.Database
                             user = new Regular();
                             Regular regular = user as Regular;
                             regular.Group = UserGroup.REGULAR;
+                            regular.Name = reader["name"] as string;
                             regular.Gender = reader["gender"] as string;
-                            regular.DeepSight_left = reader["deep_sight_left"] as string;
-                            regular.DeepSight_right = reader["deep_sight_right"] as string;
-                            regular.Sight_left = reader["sight_left"] as string;
-                            regular.Sight_right = reader["sight_right"] as string;
-                            regular.Reagency = reader["reagency"] as string;
                             regular.Age = reader["age"] as string;
                             regular.DriAge = reader["driage"] as string;
                             regular.Career = reader["career"] as string;

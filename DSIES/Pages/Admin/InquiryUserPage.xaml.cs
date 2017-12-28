@@ -76,32 +76,51 @@ namespace DSIES.Pages.Admin
 
         private void select_Click(object sender, RoutedEventArgs e)
         {
+            List<Regular> user= new List<Regular>();
+            if (name.Text != "")
+            {
+                user = dbManger.GetAllGrantedUsers("name", name.Text);
+            }
+            else if (telphone.Text != "")
+            {
+                user = dbManger.GetAllGrantedUsers("telephone", telphone.Text);
+            }
+            else if (sex.Text != "")
+            {
+                user = dbManger.GetAllGrantedUsers("gender", sex.Text);
+            }
+            else if (career.Text != "")
+            {
+                user = dbManger.GetAllGrantedUsers("career", career.Text);
+            }
 
-            Regular user = (Regular)dbManger.GetUser(telphone.Text, UserGroup.REGULAR);
+
+
             if (user == null)
             {
                 MessageBox.Show("wrong message!");//错误信息提示
             }
             else
             {//信息显示
-                text.Text = user.Telephone + "', '"
-                                + user.Name + "', '"
-                                + user.Gender + "','"
-                                + user.Age + "', '"
-                                + user.DriAge + "', '"
-                                + user.Career + "', '"
-                                + user.Accident_times + "', '"
-                                + user.Sight_left + "', '"
-                                + user.Sight_right + "', '"
-                                + user.DeepSight_left + "', '"
-                                + user.DeepSight_right + "', '"
-                                + user.Reagency + "','"
-                                + user.Grade + "', '"
-                                + user.Grade1 + "', '"
-                                + user.Grade2 + "', '"
-                                + user.Totalscore_frist + "', '"
-                                + user.Totalscore_final + "', '"
-                                + user.Credit + "') "
+                for (int i = 0 ; i < user.Count;i++)
+                text.Text = "'" + user[i].Telephone + "', '"
+                                + user[i].Name + "', '"
+                                + user[i].Gender + "','"
+                                + user[i].Age + "', '"
+                                + user[i].DriAge + "', '"
+                                + user[i].Career + "', '"
+                                + user[i].Accident_times + "', '"
+                                + user[i].Sight_left + "', '"
+                                + user[i].Sight_right + "', '"
+                                + user[i].DeepSight_left + "', '"
+                                + user[i].DeepSight_right + "', '"
+                                + user[i].Reagency + "','"
+                                + user[i].Grade + "', '"
+                                + user[i].Grade1 + "', '"
+                                + user[i].Grade2 + "', '"
+                                + user[i].Totalscore_frist + "', '"
+                                + user[i].Totalscore_final + "', '"
+                                + user[i].Credit + "'"
                                 ;
             }
 
