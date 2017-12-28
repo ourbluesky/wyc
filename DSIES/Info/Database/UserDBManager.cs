@@ -179,8 +179,8 @@ namespace DSIES.Info.Database
                             regular.Totalscore_frist = reader["totalscore_frist"] as string;
                             regular.Totalscore_final = reader["totalscore_final"] as string;
                             regular.Credit = reader["credit"] as string;
-                      
-                            break;
+                            regular.Time= reader["time"] as string;
+                        break;
                         default:
                             user = null;
                             break;

@@ -11,6 +11,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/DSIES;component/Resources/UnifiedColor.xaml"/>
+                <ResourceDictionary Source="/Resources/ButtonStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -66,7 +67,7 @@
                         <Button x:Name="select" Click="select_Click" Content="确认" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="92" Grid.Column="6" Height="30"/>
                     </Grid>
 
-                    <TextBlock x:Name="text" HorizontalAlignment="Left" Margin="10,242,0,0" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="398" Width="1030"><InlineUIContainer/><InlineUIContainer>
+                    <TextBlock x:Name="text" HorizontalAlignment="Left" Margin="10,242,0,0" FontSize="16" TextWrapping="Wrap" VerticalAlignment="Top" Height="398" Width="1030"><InlineUIContainer/><InlineUIContainer>
                             <ScrollBar x:Name="scrollBar" RenderTransformOrigin="0,0" Width="10" Height="396">
                                 <ScrollBar.RenderTransform>
                                     <TransformGroup>
@@ -77,8 +78,7 @@
                                     </TransformGroup>
                                 </ScrollBar.RenderTransform>
                             </ScrollBar>
-                        </InlineUIContainer>
-                    </TextBlock>
+                        </InlineUIContainer></TextBlock>
 
                     <Label Content="  时间    用户名（电话）   姓名   年龄 驾龄  职业  事故次数  左右眼视力  左右眼深视力 反应力  人格测试  事故倾向 愤怒值 初始得分 教育后得分 信誉等级" FontSize="15" Margin="0,201,0,403"/>
                     <Label Content="至" Margin="664,105,356,505" Height="30" RenderTransformOrigin="-4.211,-2.186" FontSize="16" />

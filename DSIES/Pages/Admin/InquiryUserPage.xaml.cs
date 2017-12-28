@@ -76,6 +76,7 @@ namespace DSIES.Pages.Admin
 
         private void select_Click(object sender, RoutedEventArgs e)
         {
+            string word="";
             List<Regular> user= new List<Regular>();
             if (name.Text != "")
             {
@@ -110,27 +111,31 @@ namespace DSIES.Pages.Admin
             }
             else
             {//信息显示
-                for (int i = 0 ; i < user.Count;i++)
-                text.Text = "'" + user[i].Telephone + "', '"
-                                + user[i].Name + "', '"
-                                + user[i].Gender + "','"
-                                + user[i].Age + "', '"
-                                + user[i].DriAge + "', '"
-                                + user[i].Career + "', '"
-                                + user[i].Accident_times + "', '"
-                                + user[i].Sight_left + "', '"
-                                + user[i].Sight_right + "', '"
-                                + user[i].DeepSight_left + "', '"
-                                + user[i].DeepSight_right + "', '"
-                                + user[i].Reagency + "','"
-                                + user[i].Grade + "', '"
-                                + user[i].Grade1 + "', '"
-                                + user[i].Grade2 + "', '"
-                                + user[i].Totalscore_frist + "', '"
-                                + user[i].Totalscore_final + "', '"
-                                + user[i].Credit + "'''"
-                                + user[i].Time + "."
+                for (int i = 0; i < user.Count; i++)
+                {
+                    word += "'" + user[i].Time + "','"
+                                 + user[i].Telephone + "', '"
+                                 + user[i].Name + "', '"
+                                 + user[i].Gender + "','"
+                                 + user[i].Age + "', '"
+                                 + user[i].DriAge + "', '"
+                                 + user[i].Career + "', '"
+                                 + user[i].Accident_times + "', '"
+                                 + user[i].Sight_left + "', '"
+                                 + user[i].Sight_right + "', '"
+                                 + user[i].DeepSight_left + "', '"
+                                 + user[i].DeepSight_right + "', '"
+                                 + user[i].Reagency + "','"
+                                 + user[i].Grade + "', '"
+                                 + user[i].Grade1 + "', '"
+                                 + user[i].Grade2 + "', '"
+                                 + user[i].Totalscore_frist + "', '"
+                                 + user[i].Totalscore_final + "', '"
+                                 + user[i].Credit + "''\n"
+
                                 ;
+                }
+                text.Text = word;
             }
 
         }
