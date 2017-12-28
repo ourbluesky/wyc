@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DSIES.UDP;
+using DSIES.Info.Database;
 
 namespace DSIES.Pages
 {
@@ -22,7 +23,7 @@ namespace DSIES.Pages
     /// </summary>
     public partial class LoginPage : Page
     {
-
+        private UserDBManager dbManger;
         Regular regular = new Regular();
         internal Regular Regular
         {
@@ -32,7 +33,10 @@ namespace DSIES.Pages
         public LoginPage()
         {
             InitializeComponent();
-        }
+            dbManger = new UserDBManager();
+            dbManger.ConnectDB(FileManager.GetPath("database", "db"));
+
+       }
         private void Read_Register_Data()//注册信息，注册直接进入
         {
             regular.Name = textBlock_name.Text;
@@ -70,23 +74,39 @@ namespace DSIES.Pages
             
 
         }
-        private void Login_Button_Click(object sender, RoutedEventArgs e)//进入注册界面
+        private void Login_Button_Click(object sender, RoutedEventArgs e)//进入登陆界面
         {
             welcome.Visibility = System.Windows.Visibility.Hidden;
             Login.Visibility = System.Windows.Visibility.Visible;
         }
-        private void Login_back_Button_Click(object sender, RoutedEventArgs e) //从注册界面返回欢迎界面
+        private void Login_back_Button_Click(object sender, RoutedEventArgs e) //从登陆界面返回欢迎界面
         {
             welcome.Visibility = System.Windows.Visibility.Visible;
             Login.Visibility = System.Windows.Visibility.Hidden;
+            textBlock_phone.Text = "";
+            textBlock_password.Password = "";
         }
         private void Login_in_Button_Click(object sender, RoutedEventArgs e)//登录信息写完点下一步
         {
+            Regular user = (Regular)dbManger.GetUser(textBlock_phone.Text, UserGroup.REGULAR);
             //如果用户名手机号已经存在，说明该用户已存在，可直接登录
-            PageList.Main.setPage(PageList.Questionandgame);
-            //用户手机号不存在，提示请先注册
+            if (user != null)
+            {
+                if (Encryptor.GetMD5(textBlock_password.Password) == user.Password)
+                    PageList.Main.setPage(PageList.Questionandgame);
+                else
+                    MessageBox.Show("error password");
+            }
+            else//用户手机号不存在，提示请先注册
+            {
+                MessageBox.Show("先注册");
+                Login.Visibility = System.Windows.Visibility.Hidden;
+                Register.Visibility = System.Windows.Visibility.Visible;
+                textBlock_phone.Text = "";
+                textBlock_password.Password = "";
+            }
         }
-        private void Register_Button_Click(object sender, RoutedEventArgs e)//返回欢迎界面
+        private void Register_Button_Click(object sender, RoutedEventArgs e)//进入注册界面
         {
             Register.Visibility = System.Windows.Visibility.Visible;
             welcome.Visibility = System.Windows.Visibility.Hidden;
@@ -95,6 +115,19 @@ namespace DSIES.Pages
         {
             Register.Visibility = System.Windows.Visibility.Hidden;
             welcome.Visibility = System.Windows.Visibility.Visible;
+            textBlock_name.Text="";
+            textBlock_gender.Text="";
+            textBlock_age.Text="";
+            textBlock_driage.Text="";
+            textBlock_accident_times.Text = "";
+            textBlock_career.Text = "";
+            textBlock_telephone.Text = "";
+            textBlock_Left_Sight.Text = "";
+            textBlock_Right_Sight.Text = "";
+            textBlock_Left_DeepSight.Text = "";
+            textBlock_Right_DeepSight.Text = "";
+            textBlock_React.Text = "";
+            textBlock_password_set.Text = "";
         }
         private void Register_in_Button_Click(object sender, RoutedEventArgs e) //从注册界面进行到下一步
         {
