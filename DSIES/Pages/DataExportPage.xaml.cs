@@ -18,6 +18,7 @@ using System.Windows.Threading;
 using System.Printing;
 using DSIES.Class.Model;
 using System.Diagnostics;
+using System.Timers;
 
 namespace DSIES.Pages
 {
@@ -26,8 +27,8 @@ namespace DSIES.Pages
     /// </summary>
     public partial class DataExportPage : Page
     {
-        private double Value = new double();
-        private double Value2 = new double();
+        private string Value = "0";
+        private string Value2 = "0";
 
         public DataExportPage()
         {
@@ -42,14 +43,14 @@ namespace DSIES.Pages
         {
 
             DateTime dt = DateTime.Now;
-            date.Text = dt.ToShortDateString().ToString();//输出日期
-
-            ID.Text = PageList.Login.Regular.Telephone;//编号即电话号
-
-            Value = double.Parse(PageList.Login.Regular.Totalscore_frist);
-            Value2 = double.Parse(PageList.Login.Regular.Totalscore_final);
+            date.Text = dt.ToString();//输出日期
 
 
+
+            Value =  PageList.Login.Regular.Totalscore_frist;
+            Value2 = PageList.Login.Regular.Totalscore_final;
+
+            ID.Text = PageList.Login.Regular.Telephone.ToString();//编号即电话号
             point_one.DataContext = Value;
             point_two.DataContext = Value2;
             score1_text.DataContext = Value;
@@ -154,17 +155,21 @@ namespace DSIES.Pages
             CU.MG_User.RegisterAdd(UserVariable.Credit, PageList.Login.Regular.Credit);
             CU.MG_User.RegisterAdd(UserVariable.Time, date.Text);
             CU.MG_User.RegisterEnd();
-            var pic = RenderVisaulToBitmap(printArea, 1214, 1370);
+
+
+            var pic = RenderVisaulToBitmap(printArea, 1214, 1584);
             PngBitmapEncoder saveEncoder = new PngBitmapEncoder();
             saveEncoder.Frames.Add(BitmapFrame.Create(pic));
             System.IO.FileStream fs = System.IO.File.Open("..//..//..//用户报表//" + PageList.Login.Regular.Telephone + ".jpg", System.IO.FileMode.OpenOrCreate);
             CustomMessageBox.Show("温馨提示：", "save!");
             saveEncoder.Save(fs);
-            PrintDialog dialog = new PrintDialog();
-            if (dialog.ShowDialog() == true)
-            {
-                dialog.PrintVisual(printArea, "Print Test");
-            }
+
+            //PrintDialog dialog = new PrintDialog();
+            //if (dialog.ShowDialog() == true)
+            //{
+            //    dialog.PrintVisual(printArea, "Print Test");
+            //}
+
             print.IsEnabled = false;
         }
         RenderTargetBitmap RenderVisaulToBitmap(Visual vsual, int width, int height)

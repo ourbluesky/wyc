@@ -47,7 +47,7 @@ namespace DSIES.Class.Model
         //private DateTime regDate;
         //private DateTime lastDate;
         private string telephone="";
-        private string time = "";
+        private string time="";
         private UserGroup group;
 
         

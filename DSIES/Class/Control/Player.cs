@@ -87,12 +87,12 @@ namespace DSIES.Class.Control
             ////CU.MG_UDP.EndReceive();
         }
 
-        //public void End()//没用
-        //{
-        //    StopRefreshThread();
-        //    //Exp exp = recorder.Stop();
-        //    //exp.ExpType = type;
-        //    //StopHandler?.Invoke(exp);
-        //}
+        public void End()//没用
+        {
+            StopRefreshThread();
+            //Exp exp = recorder.Stop();
+            //exp.ExpType = type;
+            //StopHandler?.Invoke(exp);
+        }
     }
 }

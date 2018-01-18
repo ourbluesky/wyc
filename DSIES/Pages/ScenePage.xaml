@@ -58,8 +58,6 @@
                             <lvc:LineSeries x:Name="Accelerator" Fill="Transparent" Values="{Binding AccelerographChart}" Visibility="Hidden" />
                         </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
-                    <TextBlock x:Name="x_x" HorizontalAlignment="Left" Height="29" Margin="10,233,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="127" FontSize="25" Foreground="#FFE9F304"/>
-                    <TextBlock x:Name="y_y" HorizontalAlignment="Left" Height="29" Margin="10,267,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="130" FontSize="25" Foreground="#FFE9F304"/>
                 </Grid>
             </Border>
             <Border BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="152" Margin="543,314,0,0" VerticalAlignment="Top" Width="247">

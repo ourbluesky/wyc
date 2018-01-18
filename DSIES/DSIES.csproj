@@ -71,6 +71,7 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -350,6 +351,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Video\" />
     <Folder Include="Widget\" />
   </ItemGroup>
   <ItemGroup>
@@ -406,11 +408,6 @@
     <Resource Include="Picture\油门标准.png" />
     <Resource Include="Picture\转角标准.jpg" />
     <Resource Include="Picture\速度标准.png" />
-    <Content Include="Video\交叉口.mp4" />
-    <Content Include="Video\分心.mp4" />
-    <Content Include="Video\变道.mp4" />
-    <Content Include="Video\超车.mp4" />
-    <Content Include="Video\超速.mp4" />
     <Resource Include="Picture\进度条.gif" />
     <Resource Include="Picture\next.png" />
     <Resource Include="Picture\pause.png" />

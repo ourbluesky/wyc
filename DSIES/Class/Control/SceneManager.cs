@@ -38,7 +38,7 @@ namespace DSIES.Class.Control
         }
         private void SetEndAction()//我觉得没什么用
         {
-            //CU.Player.StopHandler += SaveExp;
+           // CU.Player.RefreshHandler == ;//我觉得应该在这里写一些什么，但是不会
         }
     }
 }

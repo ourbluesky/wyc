@@ -207,9 +207,6 @@ namespace DSIES.Pages
             CacheDFarToFront.Add(new Point(d, f.FarToFront));
             CacheDBreak.Add(new Point(t, f.Brake));
             S_S += record.Speed / 360;
-            //这两个是场景左边的两个框的内容
-            x_x.DataContext = S_S;
-            y_y.DataContext=  "";
             switch (sceneselectData.scene)
             {
                 case 1:                

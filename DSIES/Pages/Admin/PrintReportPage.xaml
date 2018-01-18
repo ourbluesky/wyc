@@ -21,13 +21,15 @@
             <Grid HorizontalAlignment="Right" Height="640" VerticalAlignment="Top" Width="1050"  Margin="0,0,0,0" Background="WhiteSmoke">
                 <Label Content="  欢迎使用DSIES后台管理系统" Height="50" Width="350" FontSize="24" Margin="244,0,216,590"/>
                 <Label Content="  请输入要打印教育测试报表的用户名（电话）：" Height="50" FontSize="20" Margin="10,55,445,535"/>
+
+                <ScrollViewer HorizontalAlignment="Left" Height="535" VerticalAlignment="Top" Width="1050" Canvas.Left="10" Canvas.Top="110" Margin="0,105,0,0">
+                    <Canvas x:Name="printArea"  Height="1360" VerticalAlignment="Top" Width="1042">
+                        <Image x:Name="image"  HorizontalAlignment="Left" Height="1360" VerticalAlignment="Top" Width="1042"  Visibility="Visible" Source="{Binding}" />
+                    </Canvas>
+                </ScrollViewer>
                 <TextBox x:Name="telephonename"  FontSize="16" Margin="434,62,336,548"/>
                 <Button x:Name="check" Click="check_Click" Content="查找" HorizontalAlignment="Left" Margin="782,62,0,0" VerticalAlignment="Top" Width="75"/>
-                <Canvas x:Name="printArea">
-                    <ScrollViewer HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="1030" Canvas.Left="10" Canvas.Top="110">
-                        <Image x:Name="image"  HorizontalAlignment="Left" Height="1050" VerticalAlignment="Top" Width="1042"  Visibility="Visible" Source="{Binding}" />
-                    </ScrollViewer>
-                </Canvas>
+
                 <Button Name="print" Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top"  HorizontalAlignment="Left" Height="40" Content="打 印"  Click="print_Click" Margin="896,50,0,0"/>
             </Grid>
         </Grid>

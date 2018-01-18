@@ -16,152 +16,145 @@
         </ResourceDictionary>
     </Page.Resources>
 
-    <Grid>
+    <Grid  Height="1585" Width="1214">
 
-        <Grid Margin="0,0,2,-6">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="0*"/>
-            </Grid.RowDefinitions>
-            <ScrollViewer x:Name="scollviewer1">
-
+        <ScrollViewer x:Name="scollviewer1" Height="640" Width="1214" HorizontalAlignment="Left" VerticalAlignment="Top"  HorizontalScrollBarVisibility="Auto"  >
+            <Canvas x:Name="printArea" Height="1576" Width="1214" >
                 <Grid  Height="1585" Width="1214">
                     <Grid.Background>
                         <ImageBrush ImageSource="..\Picture\reportback.jpg"/>
                     </Grid.Background>
 
-                    <Grid Margin="0,10,0,0" >
-                        <Canvas x:Name="printArea" Margin="0,0,0,0">
-                            <Canvas.Background>
-                                <ImageBrush ImageSource="/DSIES;component/Picture/reportback.jpg"/>
-                            </Canvas.Background>
-                            <Label Content="危险预测教育驾驶行为评定表 " HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="40" Canvas.Left="326" Canvas.Top="24"/>
-                            <Label Content="日期：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="160" Canvas.Top="105"/>
-                            <TextBlock x:Name="date" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="142" FontSize="16" Canvas.Left="222" Canvas.Top="111"/>
-                            <Label Content="编号：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29" Canvas.Left="620" Canvas.Top="105"/>
-                            <TextBlock x:Name="ID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="29" Width="142" FontSize="16" Canvas.Left="682" Canvas.Top="112"/>
-
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" VerticalAlignment="Top" Width="527" Canvas.Left="84" Canvas.Top="139">
-                                <Grid HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="526" Margin="0,0,-1,-1">
-                                    <Label Content="姓名：" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <Label Content="性别：" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <Label Content="年龄：" HorizontalAlignment="Left" Margin="25,45,0,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <Label Content="驾龄：" HorizontalAlignment="Left" Margin="275,45,0,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <Label Content="职业：" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <Label Content="联系方式：" HorizontalAlignment="Left" Margin="273,80,0,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <Label Content="三年内违章次数：" HorizontalAlignment="Left" Margin="25,115,0,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <Label Content="动视力：" HorizontalAlignment="Left" Margin="25,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
-                                    <Label Content="深视力：" HorizontalAlignment="Left" Margin="24,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
-                                    <Label Content="反应力：" HorizontalAlignment="Left" Margin="24,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
-                                    <TextBlock x:Name="name_info" HorizontalAlignment="Left" Margin="80,15,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="gender_info" HorizontalAlignment="Left" Margin="340,15,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="age_info" HorizontalAlignment="Left" Margin="80,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="DrivingYears_info" HorizontalAlignment="Left" Margin="340,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="job_info" HorizontalAlignment="Left" Margin="80,85,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="tele_info" HorizontalAlignment="Left" Margin="365,85,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="weizhang_info" HorizontalAlignment="Left" Margin="168,125,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
-                                    <TextBlock x:Name="leftsight" HorizontalAlignment="Left" Height="23" Margin="104,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
-                                    <TextBlock x:Name="rightsight" HorizontalAlignment="Left" Height="23" Margin="192,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
-                                    <TextBlock x:Name="leftdeepsight" HorizontalAlignment="Left" Height="23" Margin="100,190,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
-                                    <TextBlock x:Name="rightdeepsight" HorizontalAlignment="Left" Height="23" Margin="180,190,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
-                                    <TextBlock x:Name="reaction" HorizontalAlignment="Left" Height="23" Margin="100,225,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
-                                </Grid>
-                            </Border>
-
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="138" VerticalAlignment="Top" Width="230" Canvas.Left="611" Canvas.Top="263">
-                                <Grid HorizontalAlignment="Left" Height="137" VerticalAlignment="Top" Width="229" Margin="0,0,-1,-1">
-                                    <Label Content="爱荷华测试人格：" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="133" Height="34" FontSize="16"/>
-                                    <TextBlock x:Name="aihehua_score" HorizontalAlignment="Left" Margin="143,51,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="34" Width="76" FontSize="16"/>
-                                </Grid>
-                            </Border>
-
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="230" Canvas.Left="611" Canvas.Top="139" >
-                                <Grid HorizontalAlignment="Left" Height="124" Margin="-1" VerticalAlignment="Top" Width="230">
-                                    <Label Content="事故类型：" HorizontalAlignment="Left" Margin="23,34,0,0" VerticalAlignment="Top" FontSize="16" Height="32" Width="91"/>
-                                    <TextBlock x:Name="shiguleixing_info" HorizontalAlignment="Left" Margin="119,38,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="55" Width="101" FontSize="16"/>
-                                </Grid>
-                            </Border>
-
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" VerticalAlignment="Top" Width="280" Canvas.Left="841" Canvas.Top="139">
-                                <Grid HorizontalAlignment="Left" Height="262" Margin="-1" VerticalAlignment="Top" Width="280">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <lvc:AngularGauge Name="point_two" Grid.Row="1" Value="{Binding}" FromValue="0" ToValue="100"  LabelsStep="50" TicksStep="25" Wedge="300" TicksForeground="White" Foreground="White"  FontWeight="Bold" FontSize="16" SectionsInnerRadius=".5" Margin="0,0,0,65" NeedleFill="#FFEABF1F">
-                                        <lvc:AngularGauge.Sections>
-                                            <lvc:AngularSection FromValue="0" ToValue="100" Fill="#FF9D9B9B"/>
-                                        </lvc:AngularGauge.Sections>
-                                    </lvc:AngularGauge>
-                                    <lvc:AngularGauge Name="point_one" Grid.Row="1" Value="{Binding}" FromValue="0" ToValue="100"  LabelsStep="50" TicksStep="25" Wedge="300" TicksForeground="White" Foreground="White"  FontWeight="Bold" FontSize="16" SectionsInnerRadius=".5" Margin="0,0,0,65" NeedleFill="#FFFF0808"/>
-
-                                    <Label Content="第一次得分：" HorizontalAlignment="Left" Height="28" Margin="17,216,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="81"/>
-                                    <Label Content="第二次得分：" HorizontalAlignment="Left" Height="28" Margin="150,216,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="80"/>
-                                    <TextBlock x:Name="score1_text" HorizontalAlignment="Left" Height="28" Margin="98,223,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="47"/>
-                                    <TextBlock x:Name="score2_text" HorizontalAlignment="Left" Height="29" Margin="230,223,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="47"/>
-                                </Grid>
-                            </Border>
-
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="381" Canvas.Left="740" Canvas.Top="401">
-                                <Grid HorizontalAlignment="Left" Height="265" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="381">
-                                    <Label Content="您的驾驶事故倾向是：" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="189" FontSize="16" Height="30"/>
-                                    <TextBlock x:Name="first_qingxiang_grade" HorizontalAlignment="Left" Margin="181,30,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="200" FontSize="16"/>
-                                    <TextBlock x:Name="first_qingxiang_explain" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="361" Height="185" FontSize="16"/>
-                                </Grid>
-                            </Border>
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="322" Canvas.Left="418" Canvas.Top="401">
-                                <Grid HorizontalAlignment="Left" Height="266" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="322">
-                                    <TextBlock x:Name="Angry_explain" Margin="10,80,10,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="186" FontSize="16"/>
-                                    <Label Content="愤怒值：" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="-0.331,0.585" Height="30" Width="86" />
-                                    <TextBlock x:Name="Angry_info" HorizontalAlignment="Left" Margin="101,30,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="101"  FontSize="16"/>
-                                </Grid>
-                            </Border>
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="334" Canvas.Left="84" Canvas.Top="401">
-                                <Grid HorizontalAlignment="Left" Height="265" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="334">
-                                    <Label Content="您的事故倾向级别是:" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="30" Width="183" FontSize="16"/>
-                                    <TextBlock x:Name="shiguqingxiang_score" HorizontalAlignment="Left" Margin="183,30,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="151" FontSize="16" Height="30"/>
-                                    <TextBlock x:Name="shiguqingxiang_explain" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="314" Height="185" FontSize="16"/>
-                                </Grid>
-                            </Border>
-
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="667">
-                                <Grid HorizontalAlignment="Left" Height="493" Margin="-0.8,-0.8,0,-1" VerticalAlignment="Top" Width="1036">
-                                    <Label Margin="200,4,280,444" Content="在场景一中，驾驶员四项指标与规范指标进行对比" FontSize="24"></Label>
-                                    <Label Margin="5,54,982,412" Content="速度" FontSize="16"></Label>
-                                    <Label Margin="496,54,497,406" Content="油门" FontSize="16"/>
-                                    <Label Margin="0,213,982,249" Content="刹车" FontSize="16"/>
-                                    <Label Margin="496,213,497,249" Content="转角" FontSize="16"/>
-                                    <Image x:Name="image_1" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="221" Margin="246,86,0,0"/>
-                                    <Image x:Name="image_2" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="272" Margin="725,86,0,0"/>
-                                    <Image x:Name="image_3" Source="{Binding}" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="226" Margin="241,244,0,0"/>
-                                    <Image x:Name="image_4" Source="{Binding}" HorizontalAlignment="Left" Height="106" VerticalAlignment="Top" Width="301" Margin="725,252,0,0"/>
-                                    <Image x:Name="速度标准" Source="..//Picture/速度标准.png" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="241" Margin="0,86,0,0"/>
-                                    <Image x:Name="油门标准" Source="..//Picture/油门标准.png" HorizontalAlignment="Left" Height="131" VerticalAlignment="Top" Width="224" Margin="496,81,0,0"/>
-                                    <Image x:Name="刹车标准" Source="..//Picture/刹车标准.png" HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="224" Margin="496,244,0,0"/>
-                                    <Image x:Name="转角标准" Source="..//Picture/转角标准.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="231" Margin="5,242,0,0"/>
-                                </Grid>
-
-                            </Border>
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="1037" Canvas.Left="84" Canvas.Top="1066">
-                                <Grid HorizontalAlignment="Left" Height="267" Margin="-1,-1,0,0" VerticalAlignment="Top" Width="1036">
-                                    <Label Content="驾驶建议:" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="144" FontSize="20"/>
-                                    <TextBlock Name="jianyi" HorizontalAlignment="Left" Height="217" Margin="43,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="993" FontSize="16" />
-                                </Grid>
-                            </Border>
-
-                            <Grid HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="98" Canvas.Left="544" Canvas.Top="1365">
-                                <Button Name="print" Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="50" 
-                    	          Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" Margin="15,20,20,0" IsEnabled="True" />
-                                <Image x:Name="progress7" Margin="230,383,51,-352.529" Source="..\Picture\7.png" />
-                            </Grid>
 
 
-                        </Canvas >
+                    <Label Content="危险预测教育驾驶行为评定表 " HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="40"  Margin="326,24,0,0"/>
+                    <Label Content="日期：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" FontSize="16" Height="29"  Margin="160,105,0,0"/>
+                    <TextBlock x:Name="date" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="310" FontSize="16" Margin="222,111"/>
+                    <Label Content="编号：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" FontSize="16" Height="29" Margin="620,105,0,0"/>
+                    <TextBlock x:Name="ID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="29" Width="154" FontSize="16" Margin="682,112,0,0"/>
+
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" VerticalAlignment="Top" Width="527" Margin="84,139">
+                        <Grid HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="526" Margin="0,0,-1,-1">
+                            <Label Content="姓名：" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                            <Label Content="性别：" HorizontalAlignment="Left" Margin="275,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+                            <Label Content="年龄：" HorizontalAlignment="Left" Margin="25,45,0,0" VerticalAlignment="Top" FontSize="16"/>
+                            <Label Content="驾龄：" HorizontalAlignment="Left" Margin="275,45,0,0" VerticalAlignment="Top" FontSize="16"/>
+                            <Label Content="职业：" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" FontSize="16"/>
+                            <Label Content="联系方式：" HorizontalAlignment="Left" Margin="273,80,0,0" VerticalAlignment="Top" FontSize="16"/>
+                            <Label Content="三年内违章次数：" HorizontalAlignment="Left" Margin="25,115,0,0" VerticalAlignment="Top" FontSize="16"/>
+                            <Label Content="动视力：" HorizontalAlignment="Left" Margin="25,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
+                            <Label Content="深视力：" HorizontalAlignment="Left" Margin="24,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
+                            <Label Content="反应力：" HorizontalAlignment="Left" Margin="24,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.521,0.891" FontSize="16"/>
+                            <TextBlock x:Name="name_info" HorizontalAlignment="Left" Margin="80,15,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
+                            <TextBlock x:Name="gender_info" HorizontalAlignment="Left" Margin="340,15,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
+                            <TextBlock x:Name="age_info" HorizontalAlignment="Left" Margin="80,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
+                            <TextBlock x:Name="DrivingYears_info" HorizontalAlignment="Left" Margin="340,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
+                            <TextBlock x:Name="job_info" HorizontalAlignment="Left" Margin="80,85,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
+                            <TextBlock x:Name="tele_info" HorizontalAlignment="Left" Margin="365,85,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
+                            <TextBlock x:Name="weizhang_info" HorizontalAlignment="Left" Margin="168,125,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="20" Width="100" FontSize="16"/>
+                            <TextBlock x:Name="leftsight" HorizontalAlignment="Left" Height="23" Margin="104,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
+                            <TextBlock x:Name="rightsight" HorizontalAlignment="Left" Height="23" Margin="192,155,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
+                            <TextBlock x:Name="leftdeepsight" HorizontalAlignment="Left" Height="23" Margin="100,190,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
+                            <TextBlock x:Name="rightdeepsight" HorizontalAlignment="Left" Height="23" Margin="180,190,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
+                            <TextBlock x:Name="reaction" HorizontalAlignment="Left" Height="23" Margin="100,225,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="76" FontSize="16"/>
+                        </Grid>
+                    </Border>
+
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="138" VerticalAlignment="Top" Width="278" Margin="611,263,0,0">
+                        <Grid HorizontalAlignment="Left" Height="137" VerticalAlignment="Top" Width="229" Margin="0,0,-1,-1">
+                            <Label Content="爱荷华测试人格：" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="133" Height="34" FontSize="16"/>
+                            <TextBlock x:Name="aihehua_score" HorizontalAlignment="Left" Margin="143,51,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="34" Width="76" FontSize="16"/>
+                        </Grid>
+                    </Border>
+
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="278" Margin="611,139,0,0" >
+                        <Grid HorizontalAlignment="Left" Height="124" Margin="-1" VerticalAlignment="Top" Width="230">
+                            <Label Content="事故类型：" HorizontalAlignment="Left" Margin="0,34,0,0" VerticalAlignment="Top" FontSize="16" Height="32" Width="114"/>
+                            <TextBlock x:Name="shiguleixing_info" HorizontalAlignment="Left" Margin="119,38,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="55" Width="101" FontSize="16"/>
+                        </Grid>
+                    </Border>
+
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="262" VerticalAlignment="Top" Width="280" Margin="889,139,0,0">
+                        <Grid HorizontalAlignment="Left" Height="262" Margin="-1" VerticalAlignment="Top" Width="280">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <lvc:AngularGauge Name="point_two" Grid.Row="1" Value="{Binding}" FromValue="0" ToValue="100"  LabelsStep="50" TicksStep="25" Wedge="300" TicksForeground="White" Foreground="White"  FontWeight="Bold" FontSize="16" SectionsInnerRadius=".5" Margin="0,0,0,65" NeedleFill="#FFEABF1F">
+                                <lvc:AngularGauge.Sections>
+                                    <lvc:AngularSection FromValue="0" ToValue="100" Fill="#FF9D9B9B"/>
+                                </lvc:AngularGauge.Sections>
+                            </lvc:AngularGauge>
+                            <lvc:AngularGauge Name="point_one" Grid.Row="1" Value="{Binding}" FromValue="0" ToValue="100"  LabelsStep="50" TicksStep="25" Wedge="300" TicksForeground="White" Foreground="White"  FontWeight="Bold" FontSize="16" SectionsInnerRadius=".5" Margin="0,0,3,65.4" NeedleFill="#FFFF0808"/>
+
+                            <Label Content="第一次得分：" HorizontalAlignment="Left" Height="28" Margin="17,216,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="81"/>
+                            <Label Content="第二次得分：" HorizontalAlignment="Left" Height="28" Margin="150,216,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="80"/>
+                            <TextBlock x:Name="score1_text" HorizontalAlignment="Left" Height="28" Margin="98,223,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="47"/>
+                            <TextBlock x:Name="score2_text" HorizontalAlignment="Left" Height="29" Margin="230,223,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="47"/>
+                        </Grid>
+                    </Border>
+
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="386" Margin="783,401,0,0">
+                        <Grid HorizontalAlignment="Left" Height="265" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="381">
+                            <Label Content="您的驾驶事故倾向是：" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="189" FontSize="16" Height="30"/>
+                            <TextBlock x:Name="first_qingxiang_grade" HorizontalAlignment="Left" Margin="181,30,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="200" FontSize="16"/>
+                            <TextBlock x:Name="first_qingxiang_explain" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="361" Height="185" FontSize="16"/>
+                        </Grid>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="365" Margin="418,401,0,0">
+                        <Grid HorizontalAlignment="Left" Height="266" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="322">
+                            <TextBlock x:Name="Angry_explain" Margin="10,80,10,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="186" FontSize="16"/>
+                            <Label Content="愤怒值：" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="-0.331,0.585" Height="30" Width="86" />
+                            <TextBlock x:Name="Angry_info" HorizontalAlignment="Left" Margin="101,30,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Height="30" Width="101"  FontSize="16"/>
+                        </Grid>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="334" Margin="84,401">
+                        <Grid HorizontalAlignment="Left" Height="265" Margin="-1,-1,-1,0" VerticalAlignment="Top" Width="334">
+                            <Label Content="您的事故倾向级别是:" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="30" Width="183" FontSize="16"/>
+                            <TextBlock x:Name="shiguqingxiang_score" HorizontalAlignment="Left" Margin="183,30,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="151" FontSize="16" Height="30"/>
+                            <TextBlock x:Name="shiguqingxiang_explain" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" Text="{Binding}"  VerticalAlignment="Top" Width="314" Height="185" FontSize="16"/>
+                        </Grid>
+                    </Border>
+
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="1085" Margin="84,667,0,0">
+                        <Grid HorizontalAlignment="Left" Height="493" Margin="-0.8,-0.8,0,-1" VerticalAlignment="Top" Width="1036">
+                            <Label Margin="200,4,280,444" Content="在场景一中，驾驶员四项指标与规范指标进行对比" FontSize="24"></Label>
+                            <Label Margin="5,54,982,412" Content="速度" FontSize="16"></Label>
+                            <Label Margin="496,54,497,406" Content="油门" FontSize="16"/>
+                            <Label Margin="0,213,982,249" Content="刹车" FontSize="16"/>
+                            <Label Margin="496,213,497,249" Content="转角" FontSize="16"/>
+                            <Image x:Name="image_1" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="221" Margin="246,86,0,0"/>
+                            <Image x:Name="image_2" Source="{Binding}" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="272" Margin="725,86,0,0"/>
+                            <Image x:Name="image_3" Source="{Binding}" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="226" Margin="241,244,0,0"/>
+                            <Image x:Name="image_4" Source="{Binding}" HorizontalAlignment="Left" Height="106" VerticalAlignment="Top" Width="301" Margin="725,252,0,0"/>
+                            <Image x:Name="速度标准" Source="..//Picture/速度标准.png" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="241" Margin="0,86,0,0"/>
+                            <Image x:Name="油门标准" Source="..//Picture/油门标准.png" HorizontalAlignment="Left" Height="131" VerticalAlignment="Top" Width="224" Margin="496,81,0,0"/>
+                            <Image x:Name="刹车标准" Source="..//Picture/刹车标准.png" HorizontalAlignment="Left" Height="148" VerticalAlignment="Top" Width="224" Margin="496,244,0,0"/>
+                            <Image x:Name="转角标准" Source="..//Picture/转角标准.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="231" Margin="5,242,0,0"/>
+                        </Grid>
+
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="299" VerticalAlignment="Top" Width="1085" Margin="84,1066,0,0">
+                        <Grid HorizontalAlignment="Left" Height="267" Margin="-1,-1,0,0" VerticalAlignment="Top" Width="1036">
+                            <Label Content="驾驶建议:" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="144" FontSize="20"/>
+                            <TextBlock Name="jianyi" HorizontalAlignment="Left" Height="217" Margin="43,50,0,0" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="993" FontSize="16" />
+                        </Grid>
+                    </Border>
+
+
+
+
+                    <Grid HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="98" Margin="1,1,0,0">
+                        <Button Name="print" Style="{DynamicResource print_ButtonStyle}" VerticalAlignment="Top" Height="50" 
+                    	          Content="打 印" RenderTransformOrigin="-1.195,0.512" Click="Button_Click" Margin="18,20,17,0" IsEnabled="True" />
+
                     </Grid>
 
                 </Grid>
-            </ScrollViewer>
-        </Grid>
+                
+            </Canvas >
+            
+        </ScrollViewer>
 
     </Grid>
 
